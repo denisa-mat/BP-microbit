@@ -57,11 +57,11 @@
     university  = mu,
     faculty     = fi,
     type        = bc,
-    department  = Department of XXXXXX,
+    department  = Katedra počítačových systémů a komunikací,
     author      = Denisa Maťátková,
     advisor     = {doc. Ing. RNDr. Barbora Bühnová, Ph.D.},
-    title       = {Výuka programování a algoritmizace na střední škole s využitím jednodeskového počítače Micro:bit},
-    TeXtitle    = {Výuka programování a algoritmizace na střední škole s využitím jednodeskového počítače},
+    title       = {Výuka programování na střední škole s využitím micro:bit},
+    TeXtitle    = {Výuka programování na střední škole s využitím micro:bit},
     keywords    = {keyword1, keyword2, ...},
     TeXkeywords = {keyword1, keyword2, \ldots},
     abstract    = {%
@@ -123,83 +123,82 @@
 a tak jsem se rozhodl jednu také napsat. Pokud vše půjde podle
 plánu, odnesu si na konci semestru diplom. Držte mi palce!
 
-\begin{otherlanguage}{czech}
-Říká se, že závěrečné práce jsou \enquote{vyvrcholením studia}
-a tak jsem se rozhodl jednu také napsat. Pokud vše půjde podle
-plánu, odnesu si na konci semestru diplom. Držte mi palce!
-\end{otherlanguage}
+\chapter{Kurikulární dokumenty a strategie vzdělávací politiky v oblasti informatiky}
 
-\chapter{Kapitola jedna}
-\shorthandoff{-}
-\begin{markdown*}{%
-  hybrid,
-  definitionLists,
-  footnotes,
-  inlineFootnotes,
-  hashEnumerators,
-  fencedCode,
-  citations,
-  citationNbsps,
-  pipeTables,
-  tableCaptions,
-}
+\section{Vzdělávací politika}
 
-If you decide that \LaTeX{} is too wordy for some parts of your
-document, there are that allow you to use more lightweight markup next
-to it.
+\section{Kurikulární dokumenty}
+\subsection{RVP G}
+\subsection{ŠVP G}
 
-\end{markdown*}
-\shorthandon{-}
+\section{Výuka programování na SŠ}
+    \subsection{Lego}
+    \subsection{Arduino}
 
-\chapter{Kapitola dva}
-\section{nadpis}
-\subsection{podnadpis}
-\subsubsection{podpodnadpis}
-\paragraph{Paragraphs and}
-\subparagraph{subparagraphs are available as well.}
-Inside the text, you can also use unnumbered lists,
+\chapter{Představení prostředků}
+Robotické stavebnice jsou didaktickým prostředkem, který umožňuje na praktických příkladech pochopit principy programování. Současná práce s elektronikou i fyzickou stavebnicí podporuje rozvoj kreativity a logického myšlení. Robotické pomůcky u žáků velmi přirozeným způsobem rozvíjí schopnost algoritmizace, jako jedné ze základních složek informatického myšlení. Většina robotických stavebnic je programovatelná, jak pomocí vizuálních programovacích jazyků, tak i pomocí běžných jazyků, jako Python nebo C. Díky tomu jsou vhodné pro využití ve všech stupních vzdělávání.
 
-\chapter{Kapitola tři}
+\section{Robotické stavebnice}
+Na trhu je velké množství pomůcek určených pro výuku programování, v následujících odstavcích bude představena jedna z nich a její hlavní výhody a nevýhody. 
 
-The logo of \gls{MU} is shown in Figure and
-Figure at pages and. The weather forecast is shown in Table at page. The following
-chapter is Chapter and starts at page.  Items are starred in the following list:
+\subsection{BBC Micro:bit}
+Micro:bit je programovatelný mikropočítač, vytvořený s podporou BBC za účelem výuky programování a principů fungování počítačů. Výhodou zařízení BBC Micro:bit je, jeho finanční dostupnost a velikost. Micro:bit deska má velikost pouze 4 x 5 cma i přesto obsahuje mnoho funkcionalit. Existují tři základní možnosti programování micro:bitu a to prostřednictvím blokového programování, JavaScriptu a MicroPythonu. K dispozici jsou také dva oficiální textové editory, Microsoft MakeCode2 a MicroPython3.
+
+Výhodou využití robotické stavebnice v porovnání s výukou pouze zmíněného Pythonu nebo JavaScriptu je zde možnost pochopit, princip fungování počítače komplexněji v kontextu hardwaru a nejrůznějších zařízeních založených na senzorech. Na rozdíl od dříve/později popisovaných zařízení, jako je Arduino či Raspberry Pi byl micro:bit navržen a vytvořen primárně za účelem vzdělávání a odpadá tak například spouštění plnohodnotného operačního systému a je možné více pozornosti věnovat informatickému myšlení.
+
+\subsection{Nezha Kit}
+Nezha Inventors Kit je robotická stavebnice navržená pro BBC micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit několik desítek různých projektů. Základ setu tvoří modul pro umístění micro:bitu. 
+
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11, které se používají například pro ethernetové připojení. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita s Nezha kitu se stavebnicí lego.
+
+\section{Jazyky a prostředí}
+Platforma micro:bit se díky možnosti blokového programování,, které je velmi populární pro svou jednoduchost a uživatelskou přívětivost, hodí pro úplné začátečníky. Zároveň se však neomezuje jen na bloky a umožňuje jednoduše přejít na Python JavaScript a případně i jiné jazyky.
+
+\subsection{Blokové programování}
+Nejvhodnějším způsobem, jak začít s programováním již u žáků základní školy, je blokové programování. To poskytuje úvod do strukturovaného programování prostřednictvím barevných bloků, které se přetahují a spojují to sekvencí, ty pak tvoří výsledný program.
+
+Pro práci s blokovými jazyky je třeba jen, aby žáci uměli číst a pracovat s myší. Žáci se nemusí tolik trápit technickým řešením a můžou energii věnovat otázce, jak vyřešit problém, což jim umožní si rychleji osvojit algoritmické myšlení. Samotné skládání bloků připomíná puzzle, bloky do sebe zapadnou jen tehdy, není-li porušena syntaxe. Žáci tedy hned ví, že je něco špatně. Z hlediska výuky algoritmizace je výhoda, že se tím žáci zpočátku nemusí zabývat.
+
+\subsubsection{Proměnné a datové typy}
+Protože blokové programování využívá stejné struktury (např. cykly, podmínky, proměnné, atd.), jako běžné programovací jazyky, je pro žáky snazší na tomto pochopit princip fungování jednotlivých příkazů. 
+
+Blokové jazyky obvykle však nepracují s typováním, a proto, to při přechodu na některý ze silně typovaných jazyků může z počátku dělat problémy. Bývá deklarován jen číselný datový typ, který se využívá k uchovávání počtu nějakých jednotek a následné kontrole např. za účelem ukončení programu. Deklarace proměnné probíhá pouze tak, že se vytvoří v sekci proměnné, tam se přiřadí pojmenuje a dále se s ní pracuje jako s libovolným jiným blokem.
+
+\subsubsection{Úvod do programování - blokové jazyky}
+Na základních školách se žáci pravděpodobně již setkali s některým blokovým jazykem.
+
+Scratch je velmi oblíbený jazyk, který se dodává spolu s IDE (Integrated Development Envirnoment), které je multiplatformní. IDE je dostupné z desktopové instalace pro Windows, Mac OS a Linux, i jako webová verze, která se po zaregistrování a přihlášení se do účtu chová jako hub pro uchovávání a sdílení projektů. Scratch vznikl v roce 2005 na MIT jako projekt Mitchela Resnicka. A je poměrně hojně využívaná ve vzdělávání nebo výzkumech.
+
+Dalším zástupcem je Robotanik, robot zahradník. Narozdíl od Scratche nezahrnuje cykly a větvení.
+
+\subsection{Python}
+Přestože v plánu úvodní hodiny budou pro demonstraci využity bloky, všechny ostatní jsou tvořené pro práci v Pythonu. Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, jak již bylo zmíněno, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
+
+Python je vysokoúrovňový, interpretovaný programovací jazyk, který nabízí podporu pro různá programovací paradigmata. V případě microbitů si vystačíme s imperativním. Je dynamicky typovaný a tedy by žáci po přechodu z bloků nemuseli být zásadní problém. Syntaxe je založena na oddělování kódu pomocí bílých znaků, které oddělují jednotlivé bloky a přispívají k dobré čitelnosti. Zároveň tento způsob zápisu do jisté míry připomíná práci s bloky, které zapadají do sebe a tvoří podobnou strukturu.
+
+Python je zvolen z mnoha důvodů. Jedním z nich je jednoduchá syntaxe. Například v porovnání s jazyky Java nebo C klade Python důraz na čitelnost a jednoduchost kódu. Stručná syntaxe jazyka umožňuje vyjadřovat mnohé koncepty v nižším počtu řádků kódu a udržovat tak v kódu přehlednost. I proto stále více výzkumníků tvrdí, že Python by se měl vyučovat jako první programovací jazyk. Ačkoli se pro výuku programování stále využívají i jiné jazyky začínající žáci v nich obvykle čelí problémům. V Pythonu se žáci z počátku nemusí zabývat třídami, metodami a jinými složitějšími konstrukty. První programovací jazyk by dle \textcite{Lo15} měl mít jednoduché vstupní/výstupní příkazy, snadno čitelnou a konzistentní syntaxi a být nezávislý \parencite{Lo15}.
+
+\subsection{IDE}
+
+\subsubsection{MicroPython}
+
+\subsubsection{MakeCode Python}
 
 
-\chapter{Kapitola čtyři}
-\LaTeX{} defines the automatically numbered \texttt{equation} environment:
+\chapter{Metodické zpracování úloh}
+The following chapter is Chapter and starts at page.
 
-For the complete list of environments and commands, consult the
-\textsf{amsmath} package manual.
 
-\chapter{Kapitola pět}
+\chapter{Závěr}
 The serified roman font is used for the main body of the text.
-\textit{Italics are typically used to denote emphasis or
-quotations.} \texttt{The teletype font is typically used for source
-code listings.} The \textbf{bold}, \textsc{small-caps} and
-\textsf{sans-serif} variants of the base roman font can be used to
-denote specific types of information.
 
 
-\chapter{Inserting the bibliography}
-This is just dummy text
-\parencite{borgman03} lightly sprinkled with citations
-\parencite[p.~123]{greenberg98}. Several sources can be cited at
-once: \cite{borgman03,greenberg98,thanh01}.
-\citetitle{greenberg98} was written by \citeauthor{greenberg98} in
-\citeyear{greenberg98}. We can also produce \textcite{greenberg98}%
-\ or %% Let us define a compound command:
-\def\citeauthoryear#1{(\textcite{#1},~\citeyear{#1})}%
-\citeauthoryear{greenberg98}%
-. The full bibliographic citation is:
-\emph{\fullcite{greenberg98}}.
+\printbibliography[heading=bibintoc] %% Print the bibliography.
 
-  \printbibliography[heading=bibintoc] %% Print the bibliography.
-
-  \makeatletter\thesis@blocks@clear\makeatother
-  \phantomsection %% Print the index and insert it into the
-  \addcontentsline{toc}{chapter}{\indexname} %% table of contents.
-  \printindex
+\makeatletter\thesis@blocks@clear\makeatother
+\phantomsection %% Print the index and insert it into the
+\addcontentsline{toc}{chapter}{\indexname} %% table of contents.
+\printindex
 
 \appendix %% Start the appendices.
 
