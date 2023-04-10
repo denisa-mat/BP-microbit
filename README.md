@@ -46,7 +46,16 @@ Taková práce se může i opakovat, a to už je typický příklad využití au
 .
 <a name="hello-world"/>
 ## Hello World
-.
+Vypište na vestavěný displej řetězec Hello World.
+
+V případě zájmu si můžou žáci World substituovat svým jménem.
+--- řešení ---
+```python
+from microbit import *
+
+while True:
+    display.scroll('Hello World')
+```
 <a name="strlek"/>
 ## Struktura lekcí
 .
