@@ -6,7 +6,8 @@
 [2. Prostředky](#resources)  
 [2.1 Jazyk MicroPython](#lang)  
 [2.2 Algoritmus](#alg)  
-[2.2.1 Vývojový diagram](#vd)  
+[2.2.1 Vlatnosti algoritmů](#alg-prop)  
+[2.2.2 Vývojový diagram](#vd)  
 [2.3 Micro:Bit](#mbit)  
 [2.4 IDE](#ide)  
 [3. Hello World](#hello-world)  
@@ -50,7 +51,7 @@ Dobře navržený algoritmus je maximálně efektivní, což umožňuje vykonáv
 
 Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a systémů, protože umožňuje rozdělit složité problémy na menší části, které se snáze řeší.
 
-####Vlastnosti algoritmů
+#### <a name="alg-prop"/> Vlastnosti algoritmů
 
 **Rezultativnost**: Algoritmus vždy vede k výsledku.
 
@@ -59,8 +60,8 @@ Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a sy
 **Obecnost**: Algoritmus by měl být obecný, což znamená, že by měl být použitelný pro různé vstupy a podobné problémy.
 
 **Jednoznačnost**: Algoritmus pro stejné vstupy poskytuje stejné vástupy. Výsledek je ovlivněn pouze vstupem.
-<a name="vd"/>
-#### Vývojový diagram
+
+#### <a name="vd"/> Vývojový diagram
 .
 ```mermaid
   graph TD;
@@ -72,21 +73,20 @@ Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a sy
 Kostra většiny úloh připravených lekcí:
 ```mermaid
   graph TD;
-      A[Start] --> B[posloupnost příkazů];
-      B --> B[posloupnost příkazů];
+      A[Start] --> B[inicializace proměnných];
+      B --> C[posloupnost příkazů];
+      C --> C;
+      A --> C;
 ```
-.
-<a name="mbit"/>
-### Micro:Bit
+
+### Micro:Bit <a name="mbit"/>
 Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například pro detekci pohybu, snímání teploty a světla. Další senzory je možné dokoupit a připojit.
 
 
 Micro:bit lze programovat bez ohledu na platformu, což zlepšuje dostupnost. Program se do Micro:bitu přenáší pomocí bezdrátové komunikace Bluetooth nebo pomocí přiloženého micro USB kabelu.
-<a name="ide"/>
-### IDE
-.
-<a name="hello-world"/>
-## Hello World
+### IDE <a name="ide"/>
+
+## Hello World <a name="hello-world"/>
 Vypište na vestavěný displej řetězec Hello World.
 
 V případě zájmu si můžou žáci World substituovat svým jménem.
@@ -101,8 +101,8 @@ while True:
 Protože se celý řetězec na displej nevejde, využijte metodu scroll na objektu display. Pro opětovná zobrazení bez nutnosti restartování programu obalte direktivu do while cyklu.
 
 pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáři reseni.
-<a name="strlek"/>
-## Struktura lekcí
+
+## Struktura lekcí <a name="strlek"/>
 1. Zadání úlohy
 
 2. Potřebné senzory, schéma zapojení
@@ -111,9 +111,7 @@ pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech 
 
 4. Odkaz na soubor s řešením - v adresáři reseni
 
-.
-<a name="pozn"/>
-## Poznámky pro učitele
+## Poznámky pro učitele <a name="pozn"/>
 Pro začátek žákům zatajte existenci tříd, objektů a metod. Budeme se tomu věnovat v pozdějších lekcích.
 
 Pro náhrávání programu do Micro:Bita oporučuji využít přiložený kabel, vyhnete se potížím, které se s bezdrátovými technologiemi pojí.
