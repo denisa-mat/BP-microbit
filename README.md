@@ -4,11 +4,11 @@
 ### Obsah
 [1. Motivace](#motivace)  
 [2. Prostředky](#prostredky)  
-[__2.1 Jazyk MicroPython](#lang)  
-[__2.2 Algoritmus](#alg)  
-[____2.2.1 Vývojový diagram](#vd)  
-[__2.3 Micro:Bit](#mbit)  
-[__2.4 IDE](#ide)  
+[2.1 Jazyk MicroPython](#lang)  
+[2.2 Algoritmus](#alg)  
+[2.2.1 Vývojový diagram](#vd)  
+[2.3 Micro:Bit](#mbit)  
+[2.4 IDE](#ide)  
 [3. Hello World](#hello-world)  
 [4. Struktura lekcí](#strlek)  
 [5. Poznámky pro učitele](#pozn)  
@@ -25,7 +25,7 @@ Představte si, že máte velké množství fotografií, které chcete přejmeno
 Jako další příklad si představte strukturovaný soubor s daty, např. CSV. Takovýto soubor má tisíce řádků. Řekněme, že nás zajímají nějaké četnosti a další statistiky tohoto souboru dat.
 
 Nejenže je taková práce zdlouhavá, ale je také jednotvárná a nudná.
-Taková práce se může i opakovat, a to už je typický příklad využití automatizace. V tomto případě si představte, že zpracováváte soubor s odjezdy autobusů a pro každý den hledáte spoje s největším zpožděním.
+Taková práce se může i opakovat, a to už je typický příklad využití automatizace. V tomto případě si představte, že zpracováváte soubor s odjezdy autobusů a každý den hledáte spoje s největším zpožděním.
 <a name="prostredky"/>
 ## Prostředky
 .
