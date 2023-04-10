@@ -67,7 +67,7 @@ while True:
 ```
 Protože se celý řetězec na displej nevejde, využijte metodu scroll na objektu display. Pro opětovná zobrazení bez nutnosti restartování programu obalte direktivu do while cyklu.
 
-pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáří reseni.
+pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáři reseni.
 <a name="strlek"/>
 ## Struktura lekcí
 1. Zadání úlohy
@@ -77,6 +77,7 @@ pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech 
 3. Odkaz na potřebné moduly - v adresáři moduly
 
 4. Odkaz na soubor s řešením - v adresáři reseni
+
 .
 <a name="pozn"/>
 ## Poznámky pro učitele
