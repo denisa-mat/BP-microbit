@@ -15,11 +15,15 @@
 <a name="motivace"/>
 ## Motivace
 Jaká je Vaše zkušenost s programováním?
+
 Co si myslíte, že programátor dělá?
+
 Potřebuji umět programovat? Proč?
 ### Problém velkého množství položek
 Představte si, že máte velké množství fotografií, které chcete přejmenovat. Přejmenování by vám zabralo neúměrné množství času. Vytvoření skriptu může zabrat pár minut práce. Přejmenování proběhne také poměrně rychle. Deset minut psaní skriptu nebo hodiny ruční práce?
+
 Jako další příklad si představte strukturovaný soubor s daty, např. CSV. Takovýto soubor má tisíce řádků. Řekněme, že nás zajímají nějaké četnosti a další statistiky tohoto souboru dat.
+
 Nejenže je taková práce zdlouhavá, ale je také jednotvárná a nudná.
 Taková práce se může i opakovat, a to už je typický příklad využití automatizace. V tomto případě si představte, že zpracováváte soubor s odjezdy autobusů a pro každý den hledáte spoje s největším zpožděním.
 <a name="prostredky"/>
