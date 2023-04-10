@@ -57,6 +57,7 @@ Taková práce se může i opakovat, a to už je typický příklad využití au
 Vypište na vestavěný displej řetězec Hello World.
 
 V případě zájmu si můžou žáci World substituovat svým jménem.
+
 --- řešení ---
 ```python
 from microbit import *
@@ -64,10 +65,16 @@ from microbit import *
 while True:
     display.scroll('Hello World')
 ```
-.
+pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáří reseni.
 <a name="strlek"/>
 ## Struktura lekcí
-.
+1. Zadání úlohy
+
+2. Potřebné senzory, schéma zapojení
+
+3. Odkaz na potřebné moduly - v adresáři moduly
+
+4. Odkaz na soubor s řešením - v adresáři reseni
 <a name="pozn"/>
 ## Poznámky pro učitele
 .
