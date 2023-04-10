@@ -45,6 +45,7 @@ Taková práce se může i opakovat, a to už je typický příklad využití au
 	  C --> B;
       B -- NO -->D[Konec];
 ```
+.
 <a name="mbit"/>
 ### Micro:Bit
 .
@@ -63,6 +64,7 @@ from microbit import *
 while True:
     display.scroll('Hello World')
 ```
+.
 <a name="strlek"/>
 ## Struktura lekcí
 .
