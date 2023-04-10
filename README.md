@@ -65,6 +65,8 @@ from microbit import *
 while True:
     display.scroll('Hello World')
 ```
+Protože se celý řetězec na displej nevejde, využijte metodu scroll na objektu display. Pro opětovná zobrazení bez nutnosti restartování programu obalte direktivu do while cyklu.
+
 pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáří reseni.
 <a name="strlek"/>
 ## Struktura lekcí
@@ -75,6 +77,7 @@ pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech 
 3. Odkaz na potřebné moduly - v adresáři moduly
 
 4. Odkaz na soubor s řešením - v adresáři reseni
+.
 <a name="pozn"/>
 ## Poznámky pro učitele
-.
+Pro začátek žákům zatajte existenci tříd, objektů a metod. Budeme se tomu věnovat v pozdějších lekcích.
