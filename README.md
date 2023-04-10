@@ -27,11 +27,10 @@ Jako další příklad si představte strukturovaný soubor s daty, např. CSV. 
 
 Nejenže je taková práce zdlouhavá, ale je také jednotvárná a nudná.
 Taková práce se může i opakovat, a to už je typický příklad využití automatizace. V tomto případě si představte, že zpracováváte soubor s odjezdy autobusů a každý den hledáte spoje s největším zpožděním.
-<a name="resources"/>
-## Prostředky
-.
-<a name="lang"/>
-### Jazyk MicroPython
+
+## Prostředky <a name="resources"/>
+
+### Jazyk MicroPython <a name="lang"/>
 Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
 
 Python je vysokoúrovňový, interpretovaný programovací jazyk, který nabízí podporu pro různá programovací paradigmata. V případě micro:bitů si vystačíme s imperativním. Je dynamicky typovaný a tedy by žáci po přechodu z bloků nemuseli mít zásadní problém. Syntaxe je založena na oddělování kódu pomocí bílých znaků, které oddělují jednotlivé bloky a přispívají k dobré čitelnosti. Zároveň tento způsob zápisu do jisté míry připomíná práci s bloky, které zapadají do sebe a tvoří podobnou strukturu.
@@ -82,9 +81,11 @@ Kostra většiny úloh připravených lekcí:
 ### Micro:Bit <a name="mbit"/>
 Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například pro detekci pohybu, snímání teploty a světla. Další senzory je možné dokoupit a připojit.
 
-
 Micro:bit lze programovat bez ohledu na platformu, což zlepšuje dostupnost. Program se do Micro:bitu přenáší pomocí bezdrátové komunikace Bluetooth nebo pomocí přiloženého micro USB kabelu.
+
 ### IDE <a name="ide"/>
+Jako vhodný editor byl vybrán webový python.microbit.org, se kterým se bude ve všech lekcích pracovat. (Podrobnosti výběru a další alternativy jsou popsány v TODO
+Editor python.microbit.org má tlačítko pro snadný přenos kódu do microbitu, je přívětivý pro začínající programátory, snadno se používá, má sériový výstup. Výhodou python.microbit.org je preview micro:bitu, ovšem bez modulů. Další předností je panel reference, nebo-li dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
 ## Hello World <a name="hello-world"/>
 Vypište na vestavěný displej řetězec Hello World.
