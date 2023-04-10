@@ -38,6 +38,13 @@ Taková práce se může i opakovat, a to už je typický příklad využití au
 <a name="vd"/>
 #### Vývojový diagram
 .
+```mermaid
+  graph TD;
+      A[Start] --> B{Is it True?};
+      A -- YES --> C[write Hello World];
+	  C --> B;
+      B -- NO -->D[Konec];
+```
 <a name="mbit"/>
 ### Micro:Bit
 .
