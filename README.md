@@ -41,7 +41,7 @@ Taková práce se může i opakovat, a to už je typický příklad využití au
 ```mermaid
   graph TD;
       A[Start] --> B{Is it True?};
-      A -- YES --> C[write Hello World];
+      B -- YES --> C[write Hello World];
 	  C --> B;
       B -- NO -->D[Konec];
 ```
