@@ -14,8 +14,7 @@
 [4. Shrnutí](#shrnuti)  
 [5. Poznámky pro učitele](#pozn)  
 
-<a name="motivace"/>
-## Motivace
+## Motivace <a name="motivace"/>
 Otázky na úvod:
 1. Jaká je Vaše zkušenost s programováním?
 2. Co si myslíte, že programátor dělá?
@@ -92,7 +91,6 @@ Editor python.microbit.org má tlačítko pro snadný přenos kódu do microbitu
 ### Zadání
 Napište program, který na vestavěný displej vypíše řetězec Hello World. Následně program nahrajte do micro:bitu.
 ### Vzorová implementace
---- řešení ---
 ```python
 from microbit import *
 
