@@ -17,12 +17,18 @@
 <a name="assignment1"/>
 ## Úloha 1 - 
 ### Zadání
+### Co budete potřebovat
+### Co se naučíte
+### Vzorová implementace
 ### Popis řešení
 ### Doplňující poznámky 
 ...
 <a name="assignment2"/>
 ## Úloha 2 - 
 ### Zadání
+### Co budete potřebovat
+### Co se naučíte
+### Vzorová implementace
 ### Popis řešení
 ### Doplňující poznámky 
 ...
