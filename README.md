@@ -105,7 +105,7 @@ while True:
 Na prvním řádku jsou z modulu microbit je importováno vše co obsahuje. V tomto konkrétním případě lze import celé obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí.
 Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu scroll na objektu display, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
 
-Do mikro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. TODO návod jak nahrát
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. TODO návod jak nahrát
 
 ### Doplňující poznámky
 Cykly budou žákům podrobněji vysvětleny až v lekci X, do té doby si vystačíme s while True, pro neustálé opakování programu.
