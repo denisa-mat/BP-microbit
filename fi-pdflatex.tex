@@ -23,12 +23,12 @@
   nosansbold,  %% The `nosansbold` option prevents the use of the
                %% sans-serif type face for bold text. Replace with
                %% `sansbold` to use sans-serif type face for bold text.
-  nocolorbold, %% The `nocolorbold` option disables the usage of the
+  colorbold, %% The `nocolorbold` option disables the usage of the
                %% blue color for bold text, instead using black. Replace
                %% with `colorbold` to use blue for bold text.
   lof,         %% The `lof` option prints the List of Figures. Replace
                %% with `nolof` to hide the List of Figures.
-  lot,         %% The `lot` option prints the List of Tables. Replace
+  nolot,         %% The `lot` option prints the List of Tables. Replace
                %% with `nolot` to hide the List of Tables.
 ]{fithesis4}
 %% The following section sets up the locales used in the thesis.
@@ -38,7 +38,7 @@
   main=czech, %% By using `czech` or `slovak` as the main locale
                 %% instead of `english`, you can typeset the thesis
                 %% in either Czech or Slovak, respectively.
-  english, german, russian, czech, slovak %% The additional keys allow
+  english, german, czech, slovak %% The additional keys allow
 ]{babel}        %% foreign texts to be typeset as follows:
 %%
 %%   \begin{otherlanguage}{german}  ... \end{otherlanguage}
@@ -64,24 +64,17 @@
     TeXtitle    = {Výuka programování na střední škole s využitím micro:bit},
     keywords    = {keyword1, keyword2, ...},
     TeXkeywords = {keyword1, keyword2, \ldots},
-    abstract    = {%
-      This is the abstract of my thesis, which can
-    },
-    thanks      = {%
-      Děkuji.
-    },
+    abstract    = {Abstrakt},
+    thanks      = {Děkuji},
     bib         = example.bib,
     %% Remove the following line to use the JVS 2018 faculty logo.
-    facultyLogo = fithesis-fi,
+    %facultyLogo = fithesis-fi,
 }
 \usepackage{makeidx}      %% The `makeidx` package contains
 \makeindex                %% helper commands for index typesetting.
-\usepackage[acronym]{glossaries}          %% The `glossaries` package
-\renewcommand*\glspostdescription{\hfill} %% contains helper commands
-\loadglsentries{example-terms-abbrs.tex}  %% for typesetting glossaries
-\makenoidxglossaries                      %% and lists of abbreviations.
 %% These additional packages are used within the document:
 \usepackage{paralist} %% Compact list environments
+\usepackage{comment}
 \usepackage{amsmath}  %% Mathematics
 \usepackage{amsthm}
 \usepackage{amsfonts}
@@ -97,74 +90,146 @@
   stringstyle     = \color{teal},
   commentstyle    = \itshape\color{magenta},
   breaklines      = true,
+  captionpos      = b,
+  numbers         = left,
+  numberstyle     = \scriptsize,
+  xleftmargin     = 2em
 }
+
+\renewcommand{\lstlistingname}{Python kód}% Listing -> Algorithm
+\renewcommand{\lstlistlistingname}{Seznam \lstlistingname ů}% List of Listings -> List of Algorithms
+
+\usepackage{microtype}
+\microtypesetup{nopatch=item}
+
 \usepackage{floatrow} %% Putting captions above tables
 \floatsetup[table]{capposition=top}
 \usepackage[babel]{csquotes} %% Context-sensitive quotation marks
 
 \begin{document}
-%% Uncomment the following lines (by removing the %% at the beginning)
-%% and to print out List of Abbreviations and/or Glossary in your
-%% document. Titles for these tables can be changed by replacing the
-%% titles `Abbreviations` and `Glossary`, respectively.
-%% \clearpage
-%% \printnoidxglossary[title={Abbreviations}, type=\acronymtype]
-%% \printnoidxglossary[title={Glossary}]
-
 %% The \chapter* command can be used to produce unnumbered chapters:
-\chapter*{Úvod}
+
+\chapter{Úvod}
 %% Unlike \chapter, \chapter* does not update the headings and does not
 %% enter the chapter to the table of contents. I we want correct
 %% headings and a table of contents entry, we must add them manually:
-\markright{\textsc{Úvod}}
-\addcontentsline{toc}{chapter}{Úvod}
 
+%\markright{\textsc{Úvod}}
+%\addcontentsline{toc}{chapter}{Úvod}
 Říká se, že závěrečné práce jsou \enquote{vyvrcholením studia}
 a tak jsem se rozhodl jednu také napsat. Pokud vše půjde podle
 plánu, odnesu si na konci semestru diplom. Držte mi palce!
 
-\chapter{Kurikulární dokumenty a strategie vzdělávací politiky v oblasti informatiky}
+\chapter{Kurikulární dokumenty a stávající výukové zdroje}
 
 \section{Vzdělávací politika}
-
 \section{Kurikulární dokumenty}
 \subsection{RVP G}
 \subsection{ŠVP G}
 
-\section{Výuka programování na SŠ}
-    \subsection{Lego}
-    \subsection{Arduino}
+% projít zdroje
+% https://www.sciencedirect.com/science/article/abs/pii/S0164121221002041?casa_token=hmtv5pQCao4AAAAA:1_PRqGqJm5YTjuYbhKlUybxGusz9yRb9k8nGKwtWb6HBiMTrQSL2MfCuMkQoZJQ2OYFO3nEVBQ
+% https://ieeexplore.ieee.org/abstract/document/9357024
+% https://link.springer.com/article/10.1007/s10639-021-10865-w#Sec20
+% https://dl.acm.org/doi/pdf/10.1145/3089799
+
+\section{Výuka informatiky a programování na SŠ}
+Jak bylo napsáno výše, k revizi RVP G dochází téměř po patnácti letech, z toho plyne i aktuální stav výuky informatiky na středních školách. Školy, které se ve svých ŠVP držely pouze minimálních požadavků stanovených RVP, nebyly nikým motivovány dělat změny. Přestože se technologie v posledních letech posunovaly velmi rychle dopředu, obsah hodin informatiky stál na místě. Ze školních praxí, vlastního studia i rozhovory s žáky středních škol je zřejmá obrovská nerovnoměrnost v tom, co která škola učí. Mnoho gymnázií se skutečně snaží připravovat své žáky do měnícího se světa a uzpůsobovat výuku současným potřebám. Zvláště v krajích, kde je nedostatek učitelů to však jde velmi pomalu.
+
+Vzdělávací oblast informatika a informační a komunikační technologie se zaměřovala především na uživatelské používání počítače jako takového. V souvislosti s tím byla většina hodin věnována obsluze kancelářských balíčků nejčastěji Microsoft Office nebo volně dostupné Libre Office. Některé školy využívají také Google dokumenty. V případě výuky programování a algoritmizace se zkušenosti liší. Někteří se v hodinách setkali například s Javou, C\# nebo C. Jinde se vyučující snaží žáky naučit Pascal a Perl. Při rozhovorech jsem zaznamenala, že  žáci gymnázií obecně nebyli spokojeni s kvalitou výuky v hodinách informatiky. Často zmiňovali, že se učitelé nevzdělávají a již mnoho let učí stále totéž.
+
+Moderní trendy výuky informatiky směřují k podpoře informatického a algoritmického myšlení, které se uplatňuje při řešení problému obecně, nikoli pouze v informatice. Jako nástroj pro výuku se rozšiřuje využití robotiky a robotických stavebnic. Vzdělávací robotika je nástroj, který se ukázal být užitečný pro řešení problémů a dovednosti výpočetního myšlení v takové míře, že se vymyká normám konvenčních výukových strategií pro výuku programování a to ve všech stupních vzdělávání \cite{Noor20}. 
+
+%\subsection{Lego}
+%\subsection{Arduino}
+\section{Identifikace potřeb}
+Spolu s revizí rámcového vzdělávacího programu v oblasti informatiky se výuka informačních technologií posouvá směrem k větší praktičnosti a využitelnosti v budoucím studiu i v životě. Nová informatika si klade za cíl rozvíjet informatické a algoritmické myšlení, což je přístup na který mnoho stávajících učitelů není připraveno. Je tedy nezbytné, aby učitelům byly dostupné takové materiály, které jim usnadní přípravu výuky a systematicky je při vyučování provedou jednotlivými kroky. Takto vzniklé úlohy by měly vést k pochopení probírané látky a do jisté míry zamezit studiu nekvalitních podkladů.
+
+Změně výuky informatiky na středních školách předchází změna výuky na školách základních. Ani ty si však často nevědí příliš rady a na střední školy se přesouvají žáci, jejichž znalosti jsou velmi rozdílné. Je proto důležité, aby materiály,  očekávaly od žáků pouze minimální vstupní znalosti, především v letech, kdy se bude nová informatika zavádět.
+
+Aby bylo dosaženo co největšího efektu učení, je vhodné, aby programovací úlohy byly koncipovány pro některou z robotických stavebnic. Vzdělávací robotika stimuluje rozvoj nejen technických dovedností a logického uvažování, ale i schopnosti týmové práce a kreativity\cite{Souza18}. 
+
+Nově vzniklé materiály by měly být interaktivní, umožnit žákům i vyučujícím vyzkoušet různé výukové metody. Zároveň by měly ponechat dostatek prostoru pro vyučujícího, přizpůsobit přípravu svým preferencím i potřebám žáků. Samotná zadání úloh i metodické pokyny pro práci s nimi by měly být v češtině, dobře strukturované a přehledné. Pro dosažení vysokého komfortu při práci s materiály je třeba předem stanovit, jaké technologie a nástroje budou využívány.
+
+\section{Stávající řešení}
+V následujících odstavcích budou popsány materiály, které jsou již pro micro:bit k dispozici. U vybraných z nich budou zhodnocena jejich konkrétní pozitiva i negativa. Primárně se hodnocení zaměří na to, jak pohodlná je práce s nimi a do jaké míry jejich obsah odpovídá revidovanému RVP. 
+
+\subsubsection{iMyšlení}
+Materiály, které se snaží na požadavky rámcového vzdělávacího programu reagovat, lze najít na imyslení.cz. Web iMyšlení je součástí projektu PRIM (podpora rozvíjení informatického myšlení), který má za cíl inovovat obsah vzdělávací oblasti informatika. Vytvořit a pilotně ověřit ucelené sady výukových materiálů pro všechny stupně škol. 
+
+Lze zde najít učebnici \textit{Robotika pro střední školy: programujeme Micro:Bit pomocí Pythonu} včetně metodických pokynů a pracovních listů, které pomohou učitelům s výukou. Již v úvodu učebnice se však dočteme, že \textit{učebnice si klade za úkol dát učitelům a žákům do rukou materiál, s jehož pomocí se naučí základy a principy elektrotechniky (robotiky) pomocí jednočipové vývojové platformy BBC micro:bit1. Současně nenásilnou formou vyučuje či opakuje programovací jazyk Python ve verzi MicroPython a jeho některé konstrukce} \cite{pythonImysleni}. Z tohoto popisu je zřejmé, že autoři učebnice již očekávají alespoň základní zkušenost s Pythonem, což ani s revidovaným RVP nelze očekávat jako standard všech základních škol. 
+
+Není tady zcela jasné zaměření na výuku programování a algoritmizace, učebnice se věnuje spíše robotice, práci s elektronikou a zapojováním obvodů. Při práci s micro:bitem tato učebnice nevyužívá žádné moduly a s výjimkou jedné kapitoly ani rozšiřující senzory. 
+
+Ač se obsahově navržené úlohy v praktické části této práce s učebnicí příliš neshodují, práce s učebnicí je velmi snadná, a metodické podklady pro učitele jsou velmi podrobné. Z těchto důvodů jsem učebnici využila jako podklad při tvorbě vlastních metodických pokynů, které doplňují jednotlivé lekce.
+
+\subsubsection{microbiti.cz}
+Web \href{microbiti.cz}{microbiti cz} vznikl s cílem sdružovat zkušenosti učitelů informatiky s výukou pomocí micro:bitů na jednom místě. Jednotlivé články mají přiřazeny štítky dle programátorských konceptů a použitých příkazů nebo senzorů a zařízení. Protože příspěvky píší různí autoři, nemají všechny stejnou strukturu a je potřeba vyhledávat. Výhodou je, že jde o materiály, které jsou vymyšlené a vyzkoušené českými učiteli na českých školách. Dají se zde najít například i pracovní listy a zajímavé projekty pro blokové i textové programovací jazyky.
+
+\subsubsection{microbit.org}
+Na webové stránce \href{https://microbit.org/teach/classroom-resources/}{microbit.org} lze najít množství volně dostupných úloh, které jsou určeny pro využití ve výuce. Velkým pozitivem je, že se jedná o stránky organizace Micro:bit Educational Foundation, která je tvůrcem za mico:bitu. Stránku lze přeložit do mnoha světových jazyků, čeština však zatím není podporována. Je možné vybírat ze tří úrovní obtížnosti: začátečníci, mírně pokročilí a pokročilí. Pro Python je dostupných osmdesát úloh s návody a řešeními, více než polovina z nich je zařazená do kategorie pro začátečníky. Každá úloha se skládá ze tří kroků:
+\begin{itemize}
+    \item \textit{Make it} - popis toho, co je cílem úlohy, jak to funguje a co bude potřeba k vyřešení
+    \item \textit{Code it} - vzorové řešení, které je možné zobrazit v makeCode blocích nebo MicroPythonu
+    \item \textit{Improve it} - několik možností, jak danou úlohu vylepšit, nebo zkusit najít jiné řešení
+\end{itemize}
+V popisu úlohy se neuvádí, které programovací koncepty budou využívány a neobsahuje žádný popis vzorové implementace. Vyučující se musí rozhodnout, kterou úlohu kdy použít a jak s ní pracovat.
+
+\subsubsection{elecfreaks.com}
+Společnost Elecfreaks je čínská společnost zaměřující se na vývoj příslušenství i kompletních sad pro micro:bit, jehož jsou oficiálním partnerem\cite{elecfreaks}. Na \href{https://www.elecfreaks.com/learn-en/index.html}{elecfreaks wiki} lze najít úlohy pro všechny sady, které pro micro:bit vytvářejí. Celá stránka je dostupná pouze v angličtině a vzhledem k absenci konkrétního zadání slouží spíše jako inspirace. Nutno však říct že je jí zde skutečně velké množství. Například pro Nezha kit využívaný v této práci wiki obsahuje 76 příkladů, které lze realizovat pouze s využitím této sady \cite{nezhaelecfreaks}. 
+
+Výhodou je také velmi podrobný foto návod pro sestavení robota. Co zde naopak zcela chybí je nejen popis kódu ale i toho, co má daný program dělat. Čtenář se zde dozví pouze to co bude stavět bez dalších podrobností. Vzorová implementace je zde v MakeCode editoru a je tedy možné ji zobrazit jak v blocích, tak v Java Scriptu nebo MakeCodePythonu. Až zcela na konci v odstavci \textit{result} je možné se dočíst, co sestavený a naprogramovaný robot vlastně dělá.
+
+\subsubsection{Shrnutí}
+Lze najít mnoho volně dostupných materiálů pro výuku programování s využitím micro:bitu, jen málo z nich je však zasazeno do českého prostředí. S návody a pokyny v angličtině má i v dnešní době část učitelů problém. Existující materiály často nejsou tvořené tak, aby splňovaly nároky kladené ze strany státních institucí. Jejich možnost použití je tedy omezená a aby došlo k naplnění požadavků RVP, je nutné dělat úpravy a kombinovat více zdrojů. Většina materiálů využívajících micro:bit nezahrnuje použití žádné sady, čímž se ochuzuje o benefity spojené s výukou pomocí robotických stavebnic.
 
 \chapter{Představení prostředků}
-Robotické stavebnice jsou didaktickým prostředkem, který umožňuje na praktických příkladech pochopit principy programování. Současná práce s elektronikou i fyzickou stavebnicí podporuje rozvoj kreativity a logického myšlení. Robotické pomůcky u žáků velmi přirozeným způsobem rozvíjí schopnost algoritmizace, jako jedné ze základních složek informatického myšlení. Většina robotických stavebnic je programovatelná, jak pomocí vizuálních programovacích jazyků, tak i pomocí běžných jazyků, jako Python nebo C. Díky tomu jsou vhodné pro využití ve všech stupních vzdělávání.
+Robotické stavebnice jsou didaktickým prostředkem, který umožňuje na praktických příkladech pochopit principy programování. Současná práce s elektronikou i fyzickou stavebnicí podporuje rozvoj kreativity a logického myšlení. Robotické pomůcky u žáků velmi přirozeným způsobem rozvíjí schopnost algoritmizace, jako jedné ze základních složek informatického myšlení. Většina robotických stavebnic je programovatelná, jak pomocí vizuálních programovacích jazyků, tak i pomocí běžných jazyků, jako Python nebo C. Díky tomu jsou vhodné pro využití ve všech stupních vzdělávání. 
 
 \section{Robotické stavebnice}
-Na trhu je velké množství pomůcek určených pro výuku programování, v následujících odstavcích bude představena jedna z nich a její hlavní výhody a nevýhody. 
+Programování fyzicky existujících zařízení je zásadní element podporující porozumění a podněcující zájem žáků. programování robotických stavebnic umožňuje vidět význam naprogramovaného a lépe znalosti propojit s reálným světem \cite{Sentance17}. Na trhu je velké množství pomůcek určených pro výuku programování, tato práce se soustředí na využití micro:bitu a kitu Nezha.
+V následujících odstavcích bude sada představena včetně výhod a nevýhod jejího využití. % REVIEW
 
-\subsection{BBC Micro:bit}
-Micro:bit je programovatelný mikropočítač, vytvořený s podporou BBC za účelem výuky programování a principů fungování počítačů. Výhodou zařízení BBC Micro:bit je, jeho finanční dostupnost a velikost. Micro:bit deska má velikost pouze 4 x 5 cma i přesto obsahuje mnoho funkcionalit. Existují tři základní možnosti programování micro:bitu a to prostřednictvím blokového programování, JavaScriptu a MicroPythonu. K dispozici jsou také dva oficiální textové editory, Microsoft MakeCode2 a MicroPython3.
+\subsection{BBC micro:bit}
+Micro:bit je programovatelný mikropočítač, vytvořený s podporou BBC za účelem výuky programování a principů fungování počítačů. Bylo navrženo tak, aby bylo vizuálně přitažlivé, skladné, snadno použitelné a finančně dostupné. BBC micro:bit má velikost pouze 4 x 5 cm i přesto obsahuje mnoho funkcí.  Má vestavěný displej, dvě tlačítka a několik senzorů, například pro detekci pohybu, snímání teploty a světla. 
 
-Výhodou využití robotické stavebnice v porovnání s výukou pouze zmíněného Pythonu nebo JavaScriptu je zde možnost pochopit, princip fungování počítače komplexněji v kontextu hardwaru a nejrůznějších zařízeních založených na senzorech. Na rozdíl od dříve/později popisovaných zařízení, jako je Arduino či Raspberry Pi byl micro:bit navržen a vytvořen primárně za účelem vzdělávání a odpadá tak například spouštění plnohodnotného operačního systému a je možné více pozornosti věnovat informatickému myšlení.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth] {images/microbit.png}
+    \caption{Schéma micro:bitu}
+    \label{microbit}
+\end{figure}
+
+Micro:bit lze programovat prostřednictvím notebooku, tabletu i stolního počítače, bez ohledu na operační systém. Ač existují i editory, které je třeba na zařízení instalovat, mnoho je jich dostupných na internetu. Program se do micro:bitu přenáší pomocí bezdrátové komunikace Bluetooth. Existují tři základní možnosti programování micro:bitu a to prostřednictvím blokového programování, JavaScriptu a MicroPythonu. K dispozici jsou také dva oficiální textové editory, Microsoft MakeCode2 a MicroPython3.
+
+Výhodou využití robotické stavebnice v porovnání s výukou pouze zmíněného Pythonu nebo JavaScriptu je především možnost pochopit princip fungování počítače komplexněji. Programování v kontextu hardwaru a nejrůznějších zařízeních založených na senzorech je pro žáky klíčový prvek pro podporování zájmu a podpoře porozumění  \cite{Sentance17}. Micro:bit je navržen a vytvořen primárně s cílem podpořit výuku informatiky ve školách a seznámit žáky s tím, jak mohou počítače řídit různá zařízení. Díky jeho velikosti a specifickému zaměření odpadá například spouštění plnohodnotného operačního systému a je možné více pozornosti věnovat informatickému myšlení.
 
 \subsection{Nezha Kit}
-Nezha Inventors Kit je robotická stavebnice navržená pro BBC micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit několik desítek různých projektů. Základ setu tvoří modul pro umístění micro:bitu. 
+Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Základ setu tvoří modul pro umístění micro:bitu. 
 
-Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11, které se používají například pro ethernetové připojení. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita s Nezha kitu se stavebnicí lego.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth] {images/nezha.png}
+    \caption{Nezha kit pro micro:bit}
+    \label{nezha}
+\end{figure}
+
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a fischertechnik.
 
 \section{Jazyky a prostředí}
-Platforma micro:bit se díky možnosti blokového programování,, které je velmi populární pro svou jednoduchost a uživatelskou přívětivost, hodí pro úplné začátečníky. Zároveň se však neomezuje jen na bloky a umožňuje jednoduše přejít na Python JavaScript a případně i jiné jazyky.
+Platforma micro:bit se díky možnosti blokového programování,, které je velmi populární pro svou jednoduchost a uživatelskou přívětivost, hodí pro úplné začátečníky. Zároveň se však neomezuje jen na bloky a umožňuje jednoduše přejít na Python JavaScript a případně i jiné jazyky v závislosti na zvoleném editoru. 
 
 \subsection{Blokové programování}
-Nejvhodnějším způsobem, jak začít s programováním již u žáků základní školy, je blokové programování. To poskytuje úvod do strukturovaného programování prostřednictvím barevných bloků, které se přetahují a spojují to sekvencí, ty pak tvoří výsledný program.
+Blokové programování je velmi vhodný způsob, jak rozvíjet počítačovou gramotnost již od nízkého věku žáků zvláště pokud cílem není vychovat programátory, ale jedince orientující se v technologickém světě \cite{Weintrop19}. Blokové programování poskytuje úvod do strukturovaného programování prostřednictvím barevných bloků, které se přetahují a spojují do sekvencí. Takto poskládané bloky pak tvoří výsledný program.
 
-Pro práci s blokovými jazyky je třeba jen, aby žáci uměli číst a pracovat s myší. Žáci se nemusí tolik trápit technickým řešením a můžou energii věnovat otázce, jak vyřešit problém, což jim umožní si rychleji osvojit algoritmické myšlení. Samotné skládání bloků připomíná puzzle, bloky do sebe zapadnou jen tehdy, není-li porušena syntaxe. Žáci tedy hned ví, že je něco špatně. Z hlediska výuky algoritmizace je výhoda, že se tím žáci zpočátku nemusí zabývat.
+Pro práci s blokovými jazyky je třeba jen, aby žáci uměli číst a pracovat s myší. Pro žáky je takový přístup snazší, protože zamezuje chybám v syntaxi. Žáci můžou více energie věnovat otázce, jak vyřešit problém, což jim umožní si rychleji osvojit algoritmické myšlení. Samotné skládání bloků připomíná puzzle, bloky do sebe zapadnou jen tehdy, není-li porušena syntaxe. Žáci tedy hned ví, že je něco špatně. Z hlediska výuky algoritmizace je výhoda, že se tím žáci zpočátku nemusí zabývat.
 
 \subsubsection{Proměnné a datové typy}
-Protože blokové programování využívá stejné struktury (např. cykly, podmínky, proměnné, atd.), jako běžné programovací jazyky, je pro žáky snazší na tomto pochopit princip fungování jednotlivých příkazů. 
+Protože blokové programování využívá stejné struktury (např. cykly, podmínky, proměnné), jako běžné programovací jazyky, je pro žáky snazší na tomto pochopit princip fungování jednotlivých příkazů. 
 
 Blokové jazyky obvykle však nepracují s typováním, a proto, to při přechodu na některý ze silně typovaných jazyků může z počátku dělat problémy. Bývá deklarován jen číselný datový typ, který se využívá k uchovávání počtu nějakých jednotek a následné kontrole např. za účelem ukončení programu. Deklarace proměnné probíhá pouze tak, že se vytvoří v sekci proměnné, tam se přiřadí pojmenuje a dále se s ní pracuje jako s libovolným jiným blokem.
 
-\subsubsection{Úvod do programování - blokové jazyky}
+\subsubsection{Blokové jazyky}
 Na základních školách se žáci pravděpodobně již setkali s některým blokovým jazykem.
 
 Scratch je velmi oblíbený jazyk, který se dodává spolu s IDE (Integrated Development Envirnoment), které je multiplatformní. IDE je dostupné z desktopové instalace pro Windows, Mac OS a Linux, i jako webová verze, která se po zaregistrování a přihlášení se do účtu chová jako hub pro uchovávání a sdílení projektů. Scratch vznikl v roce 2005 na MIT jako projekt Mitchela Resnicka. A je poměrně hojně využívaná ve vzdělávání nebo výzkumech.
@@ -172,21 +237,187 @@ Scratch je velmi oblíbený jazyk, který se dodává spolu s IDE (Integrated De
 Dalším zástupcem je Robotanik, robot zahradník. Narozdíl od Scratche nezahrnuje cykly a větvení.
 
 \subsection{Python}
-Přestože v plánu úvodní hodiny budou pro demonstraci využity bloky, všechny ostatní jsou tvořené pro práci v Pythonu. Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, jak již bylo zmíněno, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
+%Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, jak již bylo zmíněno, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
 
-Python je vysokoúrovňový, interpretovaný programovací jazyk, který nabízí podporu pro různá programovací paradigmata. V případě microbitů si vystačíme s imperativním. Je dynamicky typovaný a tedy by žáci po přechodu z bloků nemuseli být zásadní problém. Syntaxe je založena na oddělování kódu pomocí bílých znaků, které oddělují jednotlivé bloky a přispívají k dobré čitelnosti. Zároveň tento způsob zápisu do jisté míry připomíná práci s bloky, které zapadají do sebe a tvoří podobnou strukturu.
+Python je vysokoúrovňový, interpretovaný programovací jazyk, který nabízí podporu pro různá programovací paradigmata. V případě micro:bitů si vystačíme s imperativním. Je dynamicky typovaný a tedy by žáci po přechodu z bloků nemuseli mít zásadní problém. Syntaxe je založena na oddělování kódu pomocí bílých znaků, které oddělují jednotlivé bloky a přispívají k dobré čitelnosti. Zároveň tento způsob zápisu do jisté míry připomíná práci s bloky, které zapadají do sebe a tvoří podobnou strukturu.
 
-Python je zvolen z mnoha důvodů. Jedním z nich je jednoduchá syntaxe. Například v porovnání s jazyky Java nebo C klade Python důraz na čitelnost a jednoduchost kódu. Stručná syntaxe jazyka umožňuje vyjadřovat mnohé koncepty v nižším počtu řádků kódu a udržovat tak v kódu přehlednost. I proto stále více výzkumníků tvrdí, že Python by se měl vyučovat jako první programovací jazyk. Ačkoli se pro výuku programování stále využívají i jiné jazyky začínající žáci v nich obvykle čelí problémům. V Pythonu se žáci z počátku nemusí zabývat třídami, metodami a jinými složitějšími konstrukty. První programovací jazyk by dle \textcite{Lo15} měl mít jednoduché vstupní/výstupní příkazy, snadno čitelnou a konzistentní syntaxi a být nezávislý \parencite{Lo15}.
+Python je zvolen z mnoha důvodů. Jedním z nich je jednoduchá syntaxe. Například v porovnání s jazyky Java nebo C klade Python důraz na čitelnost a jednoduchost kódu. Stručná syntaxe jazyka umožňuje vyjadřovat mnohé koncepty v nižším počtu řádků kódu a udržovat tak v kódu přehlednost. I proto se stále více výzkumníků shoduje, že Python  je vhodný programovací jazyk pro začátečníky \cite{Wainer18, Narayanan19, Lo15}. Ačkoli se pro výuku programování využívají i jiné jazyky žáci v nich obvykle čelí problémům. U naprostých začátečníků jde často o potíže se syntaxí. V Pythonu se žáci z počátku nemusí zabývat třídami a dalšími složitějšími konstrukty. První programovací jazyk by měl mít jednoduché vstupní/výstupní příkazy, snadno čitelnou a konzistentní syntaxi a být nezávislý \cite{Lo15}.
 
-\subsection{IDE}
+\subsection{Python pro micro:bit, IDE}
+Výuka programování s micro:bitem umožňuje začít jednoduchými programy s rychle viditelnými výsledky. Je však třeba vybrat programovací jazyk tak, aby byl přizpůsoben práci s micro:bity. Z důvodů zmíněných výše jsou vhodné jazyky založené na Pythonu. V této kapitole bude provedeno porovnání dvou možností: MicroPython a MakeCodePython. Na základě srovnání bude vybrán jazyk nejvíce odpovídající požadavkům a v něm následně řešeny úlohy. % REVIEW - uvést, že zde už začíná moje práce
 
-\subsubsection{MicroPython}
+\subsubsection{MicroPython a vhodné IDE}
+Jazyk MicroPython implementuje standard Pythonu 3.4, respektuje jeho syntax a mnoho funkcí je totožných s Pythonem, ze kterého vychází. Lze tedy s výhodou využívat oficiální dokumentaci Pythonu dostupnou z docs.python.org. MicroPython je zcela kompatibilní s Pythonem, a zároveň je optimalizovaný pro běh na mikrocontrolerech, využívá minimální množství zdrojů \cite{microPython}. Díky této kompatibilitě je možné velmi snadno přenést odladěný kód z PC na zvolený mikrocontroler nebo vestavěný systém.
 
-\subsubsection{MakeCode Python}
+\begin{lstlisting}[language=Python, caption={MicroPython ukázka}, label={ukazkaMicroPython}]
+from microbit import *
 
+while True:
+    display.show(Image.HEART)
+    sleep(1000)
+    display.scroll('Hello')
+\end{lstlisting}
+
+Při výběru IDE pro MicroPython a micro:bit bereme v úvahu několik faktorů. 
+Vzhledem k již zmíněné kompatibilitě, lze využít jakékoliv IDE pro programování Pythonu. Mezi oblíbené patří Visual Studio Code s příslušným pluginem nebo Pycharm od JetBrains. Nevýhoda těchto dvou IDE tkví v jejich komplexitě, která by při výuce a práci s micro:bitem byla spíše na škodu. Pro výuku programování by bylo spíše kontraproduktivní využívat software, který má příliš možností a pro daný účel nadbytečných funkcí. Dále neintegrují funkci přenosu kódu, ta je však nezbytná a musí být pro žáka jednoduchá.
+
+Zástupci těch méně komplexních editorů vhodných pro vývoj MicroPythonu jsou Mu a webový editor python.microbit.org. Obě IDE mají tlačítka pro snadný přenos kódu do microbitu, jsou přívětivá pro začínající programátory, snadno se používají a obě mají sériový výstup. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]  {images/mu.png}
+    \caption{Mu editor}
+    \label{MuED}
+\end{figure}
+
+Výhodou python.microbit.org oproti Mu jsou hned dvě věci. Jedna z nich je náhled micro:bitu, ovšem bez modulů. Druhá je panel reference, nebo-li dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag\&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Významný rozdíl mezi editory je také dostupnost a údržba IDE. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což žákům usnadňuje samostudium. Proti tomu editor Mu je desktopová aplikace, kterou je nutné udržovat.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]  {images/pythonMBE.png}
+    \caption{Python micro:bit editor}
+    \label{MicroBitED}
+\end{figure}
+
+Pro účely výuky programování s využitím micro:bitu je tedy vhodnější python.microbit.org IDE. Jeho použití je snadné, integruje potřebné funkce pro snadné programování micro:bitu.
+%\vspace{1cm}
+
+\subsubsection{MakeCode Python, MakeCode IDE}
+
+MakeCode editor umožňuje přímý překlad mezi JavaScriptem, MakeCodePythonem a bloky. Přímý překlad mezi těmito jazyky způsobuje, že MakeCodePython má určitá omezení proti plnohodnotnému Pythonu. MakeCodePython importuje všechny STS (StaticTypeScript) jmen\-né prostory \cite{makeCodePython}. Tedy i malý program, jako např. Hello World, má obrovské množství importů a přebytečné množství dostupných knihovních funkcí, což snižuje přehlednost nápovědy při psaní programu.
+
+\begin{lstlisting}[language=Python, caption=MakeCode Python ukázka]
+while True:
+    basic.show_icon(IconNames.HEART)
+    basic.pause(1000)
+    basic.show_string("Hello")
+\end{lstlisting}
+
+Pro MakeCodePython existuje jediné IDE a to MakeCode IDE. Zde tedy nemáme jinou možnost a spolu s výběrem jazyka automaticky vybíráme i editor. Programování v MakeCode IDE zpříjemňuje začátečníkům panel s bloky kódu umístěný vlevo. Bloky lze snadno přetáhnout a automaticky převést na kód v Pythonu nebo JavaScriptu, nevýhodou je, nemožnost tento panel zcela skrýt.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]  {images/makecodeE.png}
+    \caption{MakeCode editor}
+    %\label{fig:my_label}
+\end{figure}
+
+\subsubsection{Porovnání možností jazyků a IDE} 
+Oba z popsaných jazyků umožňují uživatelům programovat micro:bit a jsou založené na Pythonu. Je mezi nimi však několik rozdílů.
+
+MicroPython vychází z Pythonu 3 a je mu tedy mnohem podobnější než MakeCodePython. MicroPython umožňuje využívat v programu jen knihovny, které jsou aktuálně potřeba, zároveň je možné importovat i některé z dalších knnihoven Pythonu 3. Proti tomu MakeCodePython využívá pouze vestavěné funkce, které slouží k ovládání modulů.
+
+Pro MakeCodePython je dostupný pouze jeden editor, který umí přepínat mezi blokovým programováním a textovým kódem. Pro MicroPython žádný z nejpoužívanějších editorů tuto funkci nemá. Pro výuku na středních školách  přepínání není nezbytné, vzhledem k aktuálnímu RVP se očekává, že žáci se již na základní škole setkali s blokovým programováním. Nyní je cílem tyto znalosti prohloubit programováním v textovém editoru.  MicroPython má navíc ve zvoleném python.microbit.org editoru zabudovanou dokumentaci s možností přetáhnout ukázky Python kódu do vývojového prostředí.
+
+Na základě uvedených aspektů se jako vhodnější jeví MicroPython s python.microbit.org IDE. Z tohoto důvodu budou v následujících kapitolách úlohy realizovány prostřednictvím jazyka MicroPython. 
+
+
+%Využité metody - aplikovat v konkrétních úlohách?
+\chapter{Výukové metody využívané v lekcích}
+
+\section{PRIMM}
+Metoda PRIMM slouží pro strukturování lekcí programování. Pro začínající programátory může být velmi stresující a nepříjemné začínat psát do prázdného editoru. Když dostanou úvodní část programu od vyučujícího dá se vyvarovat počátečnímu zklamání z neúspěchu v případě, že by jejich vlastní kód nefungoval \cite{hw}.
+
+Metoda se skládá z pěti částí. 
+\begin{itemize}
+\item \textit{Predict} - předvídat, žáci dostanou malou část kódu a jejich úkolem je zjistit, co bude dělat, když se spustí. 
+\item \textit{Run} - spustit kód a ověřit předpoklad. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. 
+\item \textit{Investigate} - vyučující zadá úkol, pomocí kterého žáci důkladně kód prozkoumají. 
+\item \textit{Modify} - žáci upravují program, mění nebo přidávají funkcionalitu dle zadání. Využívají, že v předchozích částech pochopili strukturu kódu. Žák překlene hranici z cizího kódu k částečně vlastnímu. 
+\item \textit{Make} - žáci vytvoří nový program, který využívá stejné struktury a koncepty, jako předchozí, ale řeší jiný problém. V posledním kroku již tedy žáci píší vlastní program.
+\end{itemize}
+
+\section{Koncept převrácené třídy} % REVIEW
+Koncept převrácené třídy, v angličtině označováno \textit{flipped classrooms} je způsob výuky, který vede žáky k odpovědnosti za své studium a výsledky. 
+Žáci dostanou předem materiály a zdroje sloužící k samostudiu a samotné hodiny slouží spíše pro praktické úkoly, či jako prostor pro konzultace. Vyučující se pak může více zaměřit na individuální potřeby každého žáka a poskytovat jim individuální pomoc a zpětnou vazbu.
+Tento koncept má několik výhod. Je flexibilní, žáci mají na studium tolik času, kolik potřebují a mohou se učit v době, která jim vyhovuje. Šetří se čas, není třeba předávat informace, které jsou jednoduše dostupné \cite{mazur09}. Zároveň však hned na úvod vznikají rozdíly mezi těmi žáky, kteří se tématu předem věnovali a těmi, kteří z jakéhokoli důvodu ne.
+
+\section{Párové programování}
+Pedagogický přístup, zahrnující dva žáky pracující spolu na problému, který je třeba vyřešit. Jsou rozděleny role. Jeden z žáků ovládá klávesnici a myš, soustředí se na drobné kroky, které má před sebou a aktuálně neřeší větší problémy. Druhý žák je v roli pozorovatele a navigátora, kontroluje kód, v případě nejasností nebo pochybností je sdílí. Zároveň si udržuje přehled o struktuře a celistvosti kódu.
+
+Je důležité, aby si žáci role pravidelně střídaly, jen tak se zajistí stejnoměrné zapojení obou aktérů \cite{Hanks11}. Mezi partnery jsou neustále předávány znalosti, ale i zkušenosti a návyky. Je obvyklou praxí vytvářet páry nevyvážené, kdy jeden z dvojice je pokročilejší, než druhý. V praxi je tento systém běžně využíván v softwarových firmách při vývoji.
+
+\section{Code review}
+Vzájemné hodnocení kódu je proces založený na sdílení kódu s další osobou, jejíž úkolem je dát zpětnou vazbu. Vzájemné hodnocení je uznáváno jako pedagogicky cenné protože žáky může naučit poskytovat konstruktivní zpětnou vazbu ostatním a zároveň je připravit na zvládání kritiky. Žáci, kteří si psali vzájemné recenze dosahovali lepších výsledků než ti, kteří tak nečinili \cite{Hundhausen13}. Po obdržení hodnocení mají žáci obvykle možnost upravit své řešení na základě zpětné vazby a znovu jej předat k posouzení. Tím, že je po žácích vyžadováno, aby zkoumali kód ostatních a vyjádřili se k němu se zlepšuje jejich schopnost orientovat se v programu, který napsal někdo jiný. 
+
+%\subsection{Read before Write}
+%Metoda podobná metodě PRIMM, 
+%
+\section{Parsons problem}
+Parsons problem je metoda založená na principu skládání již připravených bloků nebo řádků kódu do správného pořadí. Výhodou je například soustředění se na bloky kódu a algoritmus namísto řešení problémů se syntaxí, které je v počátku pro mnohé odrazující. Některé takové skládačky mohou obsahovat řádky nebo bloky kódu, které jsou navíc a je potřeba je vynechat. Použití těchto \textit{distractors} se však ukazuje jako kontraproduktivní\cite{Harms16}. Nemá žádný pozitivní přínos a zároveň snižují efektivitu učení.
 
 \chapter{Metodické zpracování úloh}
-The following chapter is Chapter and starts at page.
+Obsahem této části práce jsou řešené úlohy, doplněné o metodické pokyny pro učitele. Cílem bylo vytvořit úlohy tak, aby byly pro žáky zajímavé a praktické. Díky využití micro:bit kitu je možné programovat fyzické komponenty, které se chovají dle toho, jak je žáci naprogramují. Zadání mají za cíl naplnit požadavky revidovaného RVP, jež je popsáno v předchozích kapitolách. Příklady i jejich řešení obsahují metodické poznámky, aby i učitel, který nemá přehled v dané oblasti měl všechny potřebné informace a mohl žáky bez obtíží provést úlohou. Při tvorbě struktury jsem vycházela z učebnice Python3. %TODO z čeho
+
+\section{Struktura materiálu a obecná doporučení}
+Úlohy jsou koncipované tak, aby byly interaktivní a umožnily žákům v reálném čase vidět, jak jejich kód funguje, což je velmi užitečné pro porozumění a probuzení zájmu o programování. Bylo prokázáno, že zájem žáků o programování roste spolu se získáváním praktických zkušeností \cite{Fagerlund22}. Ukazuje se, že čím déle se žáky učí programovat tím pozitivnější postoj k němu mají. Tento materiál je navrhnut na deset lekcí, což odpovídá rozsahu požadovanému RVP.
+
+\subsection{Struktura výukových materiálů} % REVIEW přepsaná kapitola doporučená struktura lekcí
+
+Materiály jsou dostupné na GitHubu, kde jsou umístěny všechny lekce, zadání příkladů včetně potřebných modulů i zdrojové kódy s jejich ukázkovým řešením. Materiál obsahuje deset lekcí, z nichž každá je koncipována pro dvě vyučovací hodiny ideálně následující hned po sobě. V lekcích je dohromady XXX % END
+úloh, ve kterých žáci pracují s micro:bitem a v editoru python.microbit.org programují v MicroPythonu.
+
+Struktura repozitáře na \href{https://github.com/denisa-mat/BP-microbit}{GitHubu} je následující. Každá kapitola má vlastní větev, v níž jsou umístěny následující soubory:
+\begin{itemize}
+    \item readme.md obsahující kompletní strukturu lekce
+    \item zadání úloh k dané lekci
+    \item vzorová implementace úloh
+    \item využité moduly
+\end{itemize}
+
+%Lekce začínají uvedením cíle a motivací žáků. Následuje popis nově použitých prostředků a konceptů, Dále jsou zde zadání praktických příkladů, spolu s řešením. V neposlední řadě krátké shrnutí doplněné o několik otázek sloužících k ověření znalostí. A doplňující poznámky pro učitele, které není nutné uvádět přímo v plánu lekce.
+
+Lekce začínají uvedením cíle a motivací žáků. Cílem je žáky motivovat, dodat jim energii k přemýšlení a soustředění \cite{Filgona20}. Ukázat jim, jak lze dovednosti, které se naučí, prakticky využít. Nelze předpokládat, že si žáci uvědomují důležitost lekcí. Je třeba ukázat přínos pro jejich potřeby.
+
+Poté následuje teoretická část, kde jsou žákům představeny základní prostředky, teorie, syntax programovacího jazyka a další teoretická východiska, které jsou potřebné pro řešení konkrétních problémů v dané lekci. Účelem je žákům dané koncepty vysvětlit jednoduše a srozumitelně. Stále je však kladen důraz na exaktnost předávané teorie. Snažíme se, aby tato část nebyla pouze frontálním výkladem učitele, proto má v lekcích různé podoby. % END zkontrolavt jestli má ruzné podoby
+
+Po teoretické části žáci dostanou konkrétní úkol nebo problém, který bude jejich úkolem vyřešit. Při zadávání úkolů je důležité, aby byly jasně definované a žákům bylo jasné, co se od nich očekává.  I zde existuje mnoho způsobů, jak lze dosáhnout praktického vyzkoušení a osvojení teoretických konceptů, které jim byly představeny v předchozí části. Žáci mohou pracovat na řešení daného problému samostatně nebo ve skupinách. Vyučující v této fázi působí především jako průvodce, je k dispozici a v případě potřeby žákům nabízí pomoc. Učitel by také měl být schopen rozlišit, kdy poskytnout pomoc a kdy nechat žáky řešit problémy samostatně. Některé lekce jsou založené na jediném větším úkolu, jinde je více menších.
+
+Na závěr lekce přichází krátké shrnutí doplněné o několik otázek sloužících k ověření znalostí. Smyslem je, aby si žáci uvědomili, co bylo pro vyřešení úkolu nejdůležitější a jak to mohou využít při řešení obdobných problémů.
+
+Poslední odstavec obsahuje doplňující poznámky pro učitele, které nepovažuji za nutné uvádět přímo v plánu lekce.
+
+
+\begin{comment}
+\subsection{Doporučená struktura lekcí}
+Je vhodné se v jednotlivých lekcích snažit o dodržení podobné struktury tak, aby byly lekce pro žáky přehledné. V této části práce je uvedeno, jakým způsobem bude snaha lekce strukturovat. V některých lekcích se tato struktura může lišit, v závislosti na zvolené výukové metodě. Využité výukové metody budou popsány v následující kapitole.
+
+Na úvod je vhodné zařadit motivaci, jejíž cílem je žáky stimulovat, dodat jim energii k přemýšlení a soustředění \cite{Filgona20}. Ukázat jim, jak lze dovednosti, které se naučí, prakticky využít. Nelze předpokládat, že si žáci uvědomují důležitost lekcí. Je třeba ukázat přínos pro jejich potřeby. %Motivace má být konkrétní, účelná, stručná a výstižná. ---nemám k tomu zdroj
+
+Poté se hodí zařadit teoretickou část, kde jsou žákům představeny základní prostředky, teorie, syntax programovacího jazyka a další teoretická východiska, které jsou potřebné pro řešení konkrétních problémů. Účelem je žákům dané koncepty vysvětlit jednoduše a srozumitelně. Stále je však kladen důraz na exaktnost předávané teorie, aby žáci byli schopni na jejím základě později řešit zadané úkoly.
+
+Po teoretické části žáci dostanou konkrétní úkol nebo problém, který bude jejich úkolem vyřešit. Při zadávání úkolů je důležité, aby byly jasně definované a žákům bylo jasné se od nich očekává. Cílem úkolů je, aby si žáci prakticky vyzkoušeli a osvojili teoretické koncepty vysvětlené v předchozí části.
+
+Následuje fáze řešení úlohy, kde žáci pracují na konkrétním řešení daného problému. Mohou pracovat samostatně nebo ve skupinách a učitelé jsou k dispozici pro konzultace a podporu. Vyučující v této fázi působí především jako průvodce, je k dispozici a v případě potřeby žákům nabízí pomoc. Učitel monitoruje práci žáků a udržuje je na správné cestě. Měl by také být schopen rozlišit, kdy poskytnout pomoc a kdy nechat žáky řešit problémy samostatně, aby si vytvořili silnější porozumění.
+
+Na závěr lekce je důležité shrnout nejdůležitější poznatky a zkušenosti, které žáci získali během řešení úlohy. Smyslem je, aby si žáci uvědomili, co bylo pro vyřešení úkolu nejdůležitější a jak to mohou využít při řešení obdobných problémů.
+\end{comment}
+
+
+\section{Zpracování lekcí}
+
+Lekce obsahují příklady uspořádané dle náročnosti. Rozvržení lekcí a jejich pořadí vychází z učebnice Python 3: výukový kurz. %Robotika pro střední školy: programujeme micro:Bit pomocí Pythonu, která je schválena ministerstvem mládeže a tělovýchovy a zařazena do seznamu učebnic pro vzdělávací oblast informatika \cite{Summerfield10}. V místech, kde se struktura odlišuje je to vlivem využití Nezha modulu a k němu přidružených senzorů, které uvedený materiál nevyužívá.
+V některých místech se struktura liší a to z důvodů souvisejících s využitím micro:bitu, modulu nezha a k němu přidružených senzorů. 
+
+\subsection{Lekce 0 - Úvodem} %TODO název kapitoly
+
+
+\subsection{Lekce 1 - Seznámení s micro:bitem a editorem, první program}
+
+\subsection{Lekce 2 - Proměnné a datové typy}
+
+\subsection{Lekce 3 - }
+
+\section{Možnosti rozšíření}
+Senzor pro RFID, sledování vlhkosti apod. - umožňuje dále sbírat data, následná možnost využít v tématické oblasti týkající se práce s daty a jejich zpracování. Zároveň široká škála možností využít v ostatních přírodovědných předmětech.
+
+Micro:bit je možné vyměnit za Pico:ed, který poskytuje podporu pro jazyk C, zároveň je stále kompatibilní s Nezha modulem. 
+
+\chapter{Vyhodnocení potřeb}
+
+\section{Zhodnocení učiteli}
+
+\section{Možnosti budoucího vylepšení}
 
 
 \chapter{Závěr}
@@ -195,15 +426,13 @@ The serified roman font is used for the main body of the text.
 
 \printbibliography[heading=bibintoc] %% Print the bibliography.
 
-\makeatletter\thesis@blocks@clear\makeatother
-\phantomsection %% Print the index and insert it into the
-\addcontentsline{toc}{chapter}{\indexname} %% table of contents.
-\printindex
+  \makeatletter\thesis@blocks@clear\makeatother
+  \phantomsection %% Print the index and insert it into the
+  \addcontentsline{toc}{chapter}{\indexname} %% table of contents.
+  \printindex
 
 \appendix %% Start the appendices.
-
-
-\chapter{Přílohy}
+\chapter{Elektronické přílohy}
 Here you can insert the appendices of your thesis.
 
 \end{document}
