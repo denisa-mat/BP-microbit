@@ -18,18 +18,26 @@ Každá lekce je tvořena pro dvě vyučovací hodiny, v ideálním případě n
 <a name="struktura"/>
 ## Struktura materiálu
 ### Motivace
-...
+Cílem je žáky motivovat, dodat jim energii k přemýšlení a soustředění. Ukázat jim, jak lze dovednosti, které se naučí, prakticky využít. Nelze předpokládat, že si žáci uvědomují důležitost lekcí. Je třeba ukázat přínos pro jejich potřeby.
 ### Prostředky - teoretická část
-...
+V teoretické části jsou žákům představeny základní prostředky, teorie, syntax programovacího jazyka a další teoretická východiska, které jsou potřebné pro řešení konkrétních problémů v dané lekci. Účelem je žákům dané koncepty vysvětlit jednoduše a srozumitelně. Stále je však kladen důraz na exaktnost předávané teorie. Snažíme se, aby tato část nebyla pouze frontálním výkladem, proto má v lekcích různé podoby.
 ### Úloha X
 #### Zadání
+Žáci dostanou konkrétní úkol nebo problém, který bude jejich úkolem vyřešit.
+#### Co budete potřebovat
+Soupis senzorů a případně dalších pomůcek, které jsou potřeba k úspěšnému zvládnutí úlohy.
+#### Co se naučíte
+Zde se dozvíte na jaké dovednosti se úloha zaměřuje a co je jejím cílem.
+#### Vzorová implementace
 #### Popis řešení
+Obsahuje detailní popis vzorové implementace. Zaměřuje se především na koncepty, které jsou nové pro danou lekci.
 #### Doplňující poznámky 
-...
+Poznámky k úloze mohou obsahovat časté potíže nebo například vylepšení programu pro rychlejší žáky.
 ### Shrnutí
-...
+Slouží k stručnému zopakování klíčových pojmů lekce a upevnění znalostí. Pro vyučujícího k ověření nabitých znalostí.
 ### Poznámky pro učitele
-...
+Další poznámky týkající se celé lekce
+
 ## Jak vypadá struktura programu v MicroPythonu
 
 ```python
@@ -38,10 +46,12 @@ from microbit import *
 # Nasleduje nekonecny cyklus
 
 while True:
-    display.scroll('Hello World')
+    display.scroll("Hello World")
 ```
 
 Na řádku 1 se importuje knihovna microbit, která obsahuje všechny funkce a metody potřebné pro práci s
 micro:bitem. Tímto řádkem budou začínat všechny programy. V případě, kdy se bude pracovat se senzory, bude potřeba importovat i další moduly. Hvěznička značí, že se importuje vše, co knihovna obsahuje.
+
 Znak # na začátku třetího řádku znamená, že se jedná o komentář. Komentáře nejsou součástí vykonávaného programu, slouží programátorům pro poznámky týkající se kódu.
+
 Syntaxe pythonu používá k identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o úroveň výše.
