@@ -90,6 +90,10 @@ Editor python.microbit.org má tlačítko pro snadný přenos kódu do microbitu
 ## Úloha 1 - Hello World <a name="hello-world"/>
 ### Zadání
 Napište program, který na vestavěný displej vypíše řetězec Hello World. Následně program nahrajte do micro:bitu.
+### Co budete potřebovat
+K této úloze nejsou potřebné žádné senzory ani Nezha sada.
+### Co se naučíte
+Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s IDE a micro:bitem a program nahrát z počítače do micro:bitu. 
 ### Vzorová implementace
 ```python
 from microbit import *
