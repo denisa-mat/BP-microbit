@@ -397,12 +397,72 @@ Na závěr lekce je důležité shrnout nejdůležitější poznatky a zkušenos
 \section{Zpracování lekcí}
 
 Lekce obsahují příklady uspořádané dle náročnosti. Rozvržení lekcí a jejich pořadí vychází z učebnice Python 3: výukový kurz. %Robotika pro střední školy: programujeme micro:Bit pomocí Pythonu, která je schválena ministerstvem mládeže a tělovýchovy a zařazena do seznamu učebnic pro vzdělávací oblast informatika \cite{Summerfield10}. V místech, kde se struktura odlišuje je to vlivem využití Nezha modulu a k němu přidružených senzorů, které uvedený materiál nevyužívá.
-V některých místech se struktura liší a to z důvodů souvisejících s využitím micro:bitu, modulu nezha a k němu přidružených senzorů. 
+V některých místech se struktura liší a to z důvodů souvisejících s využitím micro:bitu, modulu Nezha a k němu přidružených senzorů. 
 
 \subsection{Lekce 0 - Úvodem} %TODO název kapitoly
+Nultá lekce slouží učitelům k seznámení se strukturou tohoto materiálu a vyjasnění některých záležitostí hned v úvodu. Cílem materiálu je přiblížit žákům algoritmizaci a programování bez předchozí znalosti Pythonu. 
 
+Obsah lekcí je sestaven tak, aby odpovídal požadavkům plynoucím z revidovaného RVP. Žáci by na konci měli znát základní programové řídící struktury. Budou schopni vytvořit a zapsat algoritmus řešící zadaný problém a na základě něho vytvoří program v jazyce Python využívající cykly, větvení, proměnné a seznamy. Žáci dokáží program dekomponovat na funkce s parametry a návratovými hodnotami.
 
-\subsection{Lekce 1 - Seznámení s micro:bitem a editorem, první program}
+Praktické úlohy jsou realizovány pomocí MicroPythonu a sady Nezha pro micro:bit, je zde tedy specifikováno jaké nástroje jsou pro práci s materiálem potřeba. Dále je uvedena časová náročnost, která odpovídá deseti blokům výuky. Každý blok na dvě vyučovací hodiny.
+
+Následuje popis struktury vzniklého materiálu, který je v této práci popsán v kapitole 5.1.1. V závěru je stručně popsána struktura a klíčové prvky jednoduchého programu v MicroPythonu. 
+\begin{lstlisting}[language=Python, caption=struktura programu v MicroPythonu]
+from microbit import *
+
+# Nasleduje nekonecny cyklus
+
+while True:
+    display.scroll("Hello World")
+\end{lstlisting}
+
+Na řádku 1 se importuje knihovna microbit, která obsahuje všechny funkce a metody potřebné pro práci s micro:bitem. Tímto řádkem budou začínat všechny programy. V případě, kdy se bude pracovat se senzory, bude potřeba importovat i další moduly. Hvěznička značí, že se importuje vše, co knihovna obsahuje.
+
+Znak \# na začátku třetího řádku znamená, že se jedná o komentář. Komentáře nejsou součástí vykonávaného programu, slouží programátorům pro poznámky týkající se kódu.
+
+Syntaxe Pythonu používá k identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o úroveň výše.
+
+\subsection{Lekce 1 - Seznámení s micro:bitem, IDE a první program}
+První vytvořený program při výuce programovacích jazyků bývá nejčastěji Hello World, jde o krátký program, který obsahuje pouze zápis příkazu, který vypíše text \textit{Hello World} (česky Ahoj světe) \cite{helloWorld}. Tento koncept využijeme i zde v první lekci pro seznámení s prostředím a využívanými nástroji.
+\subsubsection{Obsah lekce}
+\begin{itemize}
+    \item Motivace - Proč potřebují žáci umět programovat? Ukážeme příklad s velkým množstvím fotografií, které potřebujeme přejmenovat. Ručně by zabralo velké množství času, vytvoření skriptu může zabrat pár minut práce.
+    \item Prostředky - V první kapitole je tato část z větší části teoretická. Je potřeba s žáky probrat s čím se bude ve zbytku lekcí pracovat. Představení MicroPythonu jako programovacího jazyka. Popis algoritmu a jeho vlastností spolu s ukázkou vývojových diagramů. Představení micro:bitu a IDE ve kterém se bude micro:bit programovat. 
+    \item Shrnutí - TODO
+    \begin{itemize}
+        \item ?
+        \item ?
+        \item ?
+    \end{itemize}
+    \item Poznámky pro učitele - V první lekci zůstane žákům zatajena existence tříd, objektů a metod, těm se budou věnovat pozdější lekce, zatím se obejdeme bez nich.
+\end{itemize}
+\subsubsection{Úloha 1 - Hello World}
+\begin{itemize}
+    \item Zadání
+
+Napište program, který na vestavěný displej vypíše řetězec Hello World. Následně program nahrajte do micro:bitu.
+    \item Co budete potřebovat
+
+K této úloze nejsou potřebné žádné senzory ani Nezha sada.
+    \item Co se naučíte
+
+Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s IDE a micro:bitem a program nahrát z počítače do micro:bitu.
+    \item Vzorová implementace
+\begin{lstlisting}[language=Python, caption=Úloha 1 - Hello World]
+from microbit import *
+
+while True:
+    display.scroll('Hello World')
+\end{lstlisting}
+    \item Popis řešení
+
+Na prvním řádku jsou z modulu microbit je importováno vše co obsahuje. V tomto konkrétním případě lze import celé obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí. Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu scroll na objektu display, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
+
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. %TODO návod jak nahrát
+    \item Doplňující poznámky
+
+Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s while True, pro neustálé opakování programu. V případě zájmu si můžou žáci World substituovat svým jménem.
+\end{itemize}
 
 \subsection{Lekce 2 - Proměnné a datové typy}
 
