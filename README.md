@@ -10,16 +10,17 @@
 [2.2.2 Vývojový diagram](#vd)  
 [2.3 Micro:Bit](#mbit)  
 [2.4 IDE](#ide)  
-[3. Hello World](#hello-world)  
-[4. Struktura lekcí](#strlek)  
+[3. Úloha 1 - Hello World](#hello-world)  
+[4. Shrnutí](#shrnuti)  
 [5. Poznámky pro učitele](#pozn)  
+
 <a name="motivace"/>
 ## Motivace
-Jaká je Vaše zkušenost s programováním?
+Otázky na úvod:
+1. Jaká je Vaše zkušenost s programováním?
+2. Co si myslíte, že programátor dělá?
+3. Potřebuji umět programovat? Proč?
 
-Co si myslíte, že programátor dělá?
-
-Potřebuji umět programovat? Proč?
 ### Problém velkého množství položek
 Představte si, že máte velké množství fotografií, které chcete přejmenovat. Přejmenování by vám zabralo neúměrné množství času. Vytvoření skriptu může zabrat pár minut práce. Přejmenování proběhne také poměrně rychle. Deset minut psaní skriptu nebo hodiny ruční práce?
 
@@ -87,11 +88,10 @@ Micro:bit lze programovat bez ohledu na platformu, což zlepšuje dostupnost. Pr
 Jako vhodný editor byl vybrán webový python.microbit.org, se kterým se bude ve všech lekcích pracovat. (Podrobnosti výběru a další alternativy jsou popsány v TODO
 Editor python.microbit.org má tlačítko pro snadný přenos kódu do microbitu, je přívětivý pro začínající programátory, snadno se používá, má sériový výstup. Výhodou python.microbit.org je preview micro:bitu, ovšem bez modulů. Další předností je panel reference, nebo-li dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
-## Hello World <a name="hello-world"/>
-Vypište na vestavěný displej řetězec Hello World.
-
-V případě zájmu si můžou žáci World substituovat svým jménem.
-
+## Úloha 1 - Hello World <a name="hello-world"/>
+### Zadání
+Napište program, který na vestavěný displej vypíše řetězec Hello World. Následně program nahrajte do micro:bitu.
+### Vzorová implementace
 --- řešení ---
 ```python
 from microbit import *
@@ -99,20 +99,23 @@ from microbit import *
 while True:
     display.scroll('Hello World')
 ```
-Protože se celý řetězec na displej nevejde, využijte metodu scroll na objektu display. Pro opětovná zobrazení bez nutnosti restartování programu obalte direktivu do while cyklu.
+### Popis řešení
+Na prvním řádku jsou z modulu microbit je importováno vše co obsahuje. V tomto konkrétním případě lze import celé obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí.
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu scroll na objektu display, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
 
-pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáři reseni.
+Do mikro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. TODO návod jak nahrát
 
-## Struktura lekcí <a name="strlek"/>
-1. Zadání úlohy
+### Doplňující poznámky
+Cykly budou žákům podrobněji vysvětleny až v lekci X, do té doby si vystačíme s while True, pro neustálé opakování programu.
+V případě zájmu si můžou žáci World substituovat svým jménem.
 
-2. Potřebné senzory, schéma zapojení
+[//]: # (pozn.: Úlohy v následujích lekcích budou řešeny v samostatných souborech v adresáři reseni.)
 
-3. Odkaz na potřebné moduly - v adresáři moduly
 
-4. Odkaz na soubor s řešením - v adresáři reseni
+## Shrnutí <a name="shrnuti"/>
+shrnutí
 
 ## Poznámky pro učitele <a name="pozn"/>
 Pro začátek žákům zatajte existenci tříd, objektů a metod. Budeme se tomu věnovat v pozdějších lekcích.
 
-Pro náhrávání programu do Micro:Bita oporučuji využít přiložený kabel, vyhnete se potížím, které se s bezdrátovými technologiemi pojí.
+Micro:bit je možné díky webovému editoru programovat i přes telefon nebo tablet, v takovém případě pro nahrání programu do micro:bitu využijte připojení pomocí bluetooth. 
