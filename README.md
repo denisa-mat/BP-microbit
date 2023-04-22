@@ -40,8 +40,8 @@ Python je zvolen z mnoha důvodů. Jedním z nich je jednoduchá syntaxe. Např�
 Ačkoli se pro výuku programování stále využívají i jiné jazyky žáci v nich obvykle čelí problémům, u naprostých začátečníků jde často o syntaxi.
 
 V Pythonu se žáci z počátku nemusí zabývat třídami, metodami a jinými složitějšími konstrukty.
-<a name="alg"/>
-### Algoritmus
+
+### Algoritmus <a name="alg"/>
 Algoritmus je postup nebo soubor kroků, které jsou navrženy tak, aby řešily určitý problém nebo vykonávaly určitou úlohu. Algoritmus může být popsán jako postup instrukcí, které jsou navrženy tak, aby byly provedeny v určitém pořadí a řídily tok dat, aby bylo dosaženo určeného výstupu.
 
 V informatice se algoritmus používá především k řešení problémů a ke vytváření programů.
