@@ -6,16 +6,16 @@
 [Prostředky](#resources)  
 [Úloha 1](#assignment1)  
 [Úloha 2](#assignment2)  
-[Shrnutí](#conclusion)
+[Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
-<a name="motivace"/>
-## Motivace
+
+## Motivace <a name="motivace"/>
 ...
-<a name="resources"/>
-## Prostředky - teoretická část
+
+## Prostředky - teoretická část <a name="resources"/>
 ...
-<a name="assignment1"/>
-## Úloha 1 - 
+
+## Úloha 1 - <a name="assignment1"/>
 ### Zadání
 ### Co budete potřebovat
 ### Co se naučíte
@@ -23,8 +23,8 @@
 ### Popis řešení
 ### Doplňující poznámky 
 ...
-<a name="assignment2"/>
-## Úloha 2 - 
+
+## Úloha 2 - <a name="assignment2"/>
 ### Zadání
 ### Co budete potřebovat
 ### Co se naučíte
@@ -32,8 +32,8 @@
 ### Popis řešení
 ### Doplňující poznámky 
 ...
-<a name="conclusion"/>
-## Shrnutí
+
+## Shrnutí <a name="conclusion"/>
 ...
-<a name="pozn"/>
-## Poznámky pro učitele
+
+## Poznámky pro učitele <a name="pozn"/>
