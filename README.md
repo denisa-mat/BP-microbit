@@ -11,10 +11,9 @@
 [Poznámky pro učitele](#pozn)  
 
 <a name="motivace"/>
-## Motivace
+## Motivace    
 Setkali jste se někde s proměnnými?
-
-	Otázka má žáky navést k matematice a fyzice, kde se s rovnicemi potkají v každé rovnici s neznámou. 
+Otázka má žáky navést k matematice a fyzice, kde se s rovnicemi potkají v každé rovnici s neznámou. 
 	
 Proměnné jsou důležité pro matematické výpočty, například řešení rovnic, vypočítávání průměru, mediánu a dalších matematických funkcí. Zjevné je také využití proměnných při vývoji her, kde mohou uchovávat informace o hráči, jako jsou jeho životy, skóre nebo stavové informace.
 
@@ -51,7 +50,7 @@ while True:
     number1 = number2
 	# Prepsani promenne number2
     number2 = sum
-```python
+```
 
 ### Popis řešení
 Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibobacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2. Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bitu.
