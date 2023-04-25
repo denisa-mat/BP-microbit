@@ -6,8 +6,9 @@
 [Prostředky](#resources)  
 [Úloha 1](#assignment1)  
 [Úloha 2](#assignment2)  
-[Shrnutí](#conclusion)
+[Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
+<<<<<<< HEAD
 <a name="motivace"/>
 ## Motivace
 Setkali jste se někde s proměnnými?
@@ -28,6 +29,16 @@ Datový typ je termín, který definuje jaké druhy hodnot lze uložit do promě
 <a name="assignment1"/>
 ## Úloha 1 - Proměnné
 
+=======
+
+## Motivace <a name="motivace"/>
+...
+
+## Prostředky - teoretická část <a name="resources"/>
+...
+
+## Úloha 1 - <a name="assignment1"/>
+>>>>>>> 1799d30187534d210269276d9e207b06b8764a90
 ### Zadání
 Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnosta vypisovat její výpočet na micro:bit (použijte funkci scrool, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné - dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
 ### Co budete potřebovat
@@ -57,11 +68,16 @@ Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výc
 
 ### Doplňující poznámky 
 ...
+<<<<<<< HEAD
 <a name="assignment2"/>
 ## Prostředky II - teoretická část
 ### NezhaKit
 
 ## Úloha 2 - 
+=======
+
+## Úloha 2 - <a name="assignment2"/>
+>>>>>>> 1799d30187534d210269276d9e207b06b8764a90
 ### Zadání
 ### Co budete potřebovat
 ### Co se naučíte
@@ -69,8 +85,8 @@ Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výc
 ### Popis řešení
 ### Doplňující poznámky 
 ...
-<a name="conclusion"/>
-## Shrnutí
+
+## Shrnutí <a name="conclusion"/>
 ...
-<a name="pozn"/>
-## Poznámky pro učitele
+
+## Poznámky pro učitele <a name="pozn"/>
