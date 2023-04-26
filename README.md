@@ -70,6 +70,10 @@ text
 
 text
 
+<p align="center">
+  <img width="460" height="300" src=/img/nezhaSchema.png>
+</p>
+
 ![Semantic description of image](/img/nezhaSchema.png "Schéma Nezha kitu")
 *Schéma Nezha kitu*
 
