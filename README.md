@@ -22,9 +22,11 @@ Dalším důležitým aspektem proměnných je, že umožňují programátorům 
 ### Proměnná
 Proměnná je základní stavební kamen programování a označuje místo v paměti počítače, které je určeno pro ukládání hodnot. Proměnné mají název, datový typ a obsahují konkrétní hodnotu, která může být v průběhu programu měněna. Používají se pro ukládání vstupních dat, mezivýsledků a výstupních dat programu. Díky proměnným mohou programy uchovávat informace a provádět s nimi operace, což umožňuje tvorbu dynamických a interaktivních programů.
 ### Datový typ
-Datový typ je termín, který definuje jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array) atd. Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
+Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
 ### Operace s proměnnými
-S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy
+S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
+
+[![Semantic description of image](/img/spatneTypy.png "Operace na nepodporovan0 kombinaci typů")*My caption*]
 
 ## Úloha 1 - Proměnné <a name="assignment1"/>
 ### Zadání
@@ -54,7 +56,7 @@ Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsl
 Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na řádku 10 je do proměnné number2 uložena hodnota z proměnné sum. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
 
 ### Doplňující poznámky 
-Fibonnaciho posloupnost je poslopnost čísel začínající nulou a jednočkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
+Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
 
 ## Prostředky II - teoretická část <a name="resources2"/>
 
