@@ -65,7 +65,19 @@ Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou
 
 ### NezhaKit
 
-text
+Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Základ setu tvoří modul pro umístění micro:bitu.
+
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
+
+    * Nezha rozšiřující modul pro micro:bit (zabudovaný akumulátor LiPol 900 mAh, porty pro senzory a další moduly, konektory pro serva a motory, konektor pro micro:bit)
+    * 8 elektronických modulů (3 x LED modul, potenciometr, snímač vlhkosti, snímač vzdálenosti, snímač nárazu, snímač čáry)
+    * 2 x DC motor pro realizaci otáčivých pohybů
+    * servo 360 ° pro natočení na přesný úhel v rozsahu 0 - 360 °
+    * propojovací vodiče s konektory RJ11, USB kabel pro nahrání programu do micro:bitu
+    * kola s pneumatikami pro LEGO®, rejdovací kolečko pro jezdícího robota
+    * více než 400 součástí kompatibilních s LEGO® Technic
+    * mapa s čárou pro ježdění po čáře
+
 
 <p align="center">
   <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu" width="100%">
