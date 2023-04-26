@@ -26,7 +26,8 @@ Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně 
 ### Operace s proměnnými
 S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
-![Semantic description of image](/img/spatneTypy.png "Operace na nepodporovanou kombinací typů")*Operace na nepodporovanou kombinací typů*
+| ![Semantic description of image](/img/spatneTypy.png "Operace na nepodporovanou kombinací typů") |
+| *Operace na nepodporovanou kombinací typů* |
 
 ## Úloha 1 - Proměnné <a name="assignment1"/>
 ### Zadání
@@ -62,9 +63,12 @@ Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou
 
 ### NezhaKit
 
-![Semantic description of image](/img/nezhaKit.jpg "Obsah Nezha kitu")*Obsah Nezha kitu*
+| ![Semantic description of image](/img/nezhaKit.jpg "Obsah Nezha kitu") |
+| :--: |
+| *Obsah Nezha kitu* |
 
-![Semantic description of image](/img/nezhaSchema.png "Schéma Nezha kitu")*Schéma Nezha kitu*
+![Semantic description of image](/img/nezhaSchema.png "Schéma Nezha kitu")
+*Schéma Nezha kitu*
 
 <a name="assignment2"/>
 ## Úloha 2 - 
