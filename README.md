@@ -75,8 +75,7 @@ text
 
 text
 
-<a name="assignment2"/>
-## Úloha 2 - 
+## Úloha 2 - <a name="assignment2"/>
 ...
 ### Zadání
 ### Co budete potřebovat
@@ -85,9 +84,9 @@ text
 ### Popis řešení
 ### Doplňující poznámky 
 ...
-<a name="conclusion"/>
-## Shrnutí
+
+## Shrnutí <a name="conclusion"/>
 ...
-<a name="pozn"/>
-## Poznámky pro učitele
+
+## Poznámky pro učitele <a name="pozn"/>
 ...
