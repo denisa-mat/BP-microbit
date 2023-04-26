@@ -65,7 +65,7 @@ Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou
 
 text
 
-![Semantic description of image](/img/nezhaKit.jpg"Obsah Nezha kitu")
+![Semantic description of image](/img/nezhaKit.jpg "Obsah Nezha kitu")
 *Obsah Nezha kitu*
 
 text
