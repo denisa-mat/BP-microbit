@@ -71,7 +71,7 @@ text
 text
 
 <p align="center">
-  <img width="460" height="300" src=/img/nezhaSchema.png>
+  <src=/img/nezhaSchema.png caption="Obsah Nezha kitu">
 </p>
 
 ![Semantic description of image](/img/nezhaSchema.png "Schéma Nezha kitu")
