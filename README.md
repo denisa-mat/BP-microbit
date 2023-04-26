@@ -3,10 +3,11 @@
 
 ### Obsah
 [Motivace](#motivace)  
-[Prostředky](#resources1)  
+[Prostředky I](#resources1)  
 [Úloha 1](#assignment1)  
-[Prostředky](#resources2)  
+[Prostředky II](#resources2)  
 [Úloha 2](#assignment2)  
+[Úloha 3](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
@@ -77,25 +78,44 @@ Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Sta
 - více než 400 součástí kompatibilních s LEGO® Technic
 - mapa s čárou pro ježdění po čáře
 
-
 <p align="center">
   <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu" width="100%">
   <em>Obsah Nezha kitu</em>
 </p>
+
+Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory následně připojíme k modulu dle barev pomocí příslušných kabelů a konektorů, dle následujícího schématu.
 
 <p align="center">
   <img src=/img/nezhaSchema.png alt="Schéma Nezha kitu" width="100%">
   <em>Schéma Nezha kitu</em>
 </p>
 
-
-## Úloha 2 - <a name="assignment2"/>
+## Úloha 2 - Seznámení s Nezha kitem <a name="assignment2"/>
 ...
 ### Zadání
+Druhou úlohou bude použít již vytvořený program a vypsat čísla na TODO displej
 ### Co budete potřebovat
+Pro tuto úlohu bude potřeba modul Nezha a PlanetX TODO displej
 ### Co se naučíte
+Cílem této úlohy je vyzkoušet použití Nezha modulu a jednoho z dislejů.
 ### Vzorová implementace
+
 ### Popis řešení
+
+### Doplňující poznámky 
+...
+## Úloha 3 - Proměnné a měření vzdálenosti <a name="assignment3"/>
+...
+### Zadání
+Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX LED matrix modulu postupně počet diod dle Fibonacciho posloupnosti. Až počet přesáhne zadaný počet budou svítit všechny diody.
+### Co budete potřebovat
+Pro tuto úlohu bude potřeba modul Nezha a PlanetX LED matrix modul
+### Co se naučíte
+Cílem této úlohy je vyzkoušet použití rozšiřujícího Nezha modulu jednoho z dalších modulů.
+### Vzorová implementace
+
+### Popis řešení
+
 ### Doplňující poznámky 
 ...
 
