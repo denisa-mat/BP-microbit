@@ -27,7 +27,7 @@ Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně 
 S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
 <p align="center">
-  <img src=/img/spatneTypy.png alt="Operace na nepodporované kombinaci typů width="80%">
+  <img src=/img/spatneTypy.png alt="Operace na nepodporované kombinaci typů width="100%">
   <em>Operace na nepodporované kombinaci typů</em>
 </p>
 
@@ -73,7 +73,7 @@ text
 </p>
 
 <p align="center">
-  <img src=/img/nezhaSchema.png alt="Schéma Nezha kitu" width="80%">
+  <img src=/img/nezhaSchema.png alt="Schéma Nezha kitu" width="100%">
   <em>Schéma Nezha kitu</em>
 </p>
 
