@@ -63,7 +63,7 @@ Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou
 
 ### NezhaKit
 
-![Semantic description of image](/img/nezhaKit.jpg"Obsah Nezha kitu"#center)
+![Semantic description of image](/img/nezhaKit.jpg"Obsah Nezha kitu")
 *Obsah Nezha kitu*
 
 ![Semantic description of image](/img/nezhaSchema.png "Schéma Nezha kitu"){ width="800" height="600" style="display: block; margin: 0 auto" }
