@@ -109,7 +109,6 @@ number2 = 1
 sum = number1 + number2
 
 while sum <= 16*8:
-    print(sum)
     matrix.set_matrix_draw_position(sum)
     number1 = number2
     number2 = sum
