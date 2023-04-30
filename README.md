@@ -28,9 +28,28 @@ else
 ```
 TODO algoritmus - graficky
 <a name="assignment1"/>
-## Úloha 1 - 
+## Úloha 1 - Parkovací asistent
 ### Zadání
 TODO
+### Vzorování implementace
+```python
+from microbit import *
+from distance import *
+from nixietube import *
+import music
+
+nixietube = NIXIETUBE(J2)
+distance = DISTANCE(J1)
+
+to_close_dist = 10
+
+while True:
+    dist = (distance.get_distance())//1
+    nixietube.set_show_num(int(dist))
+    if dist < to_close_dist:
+        music.play(music.BA_DING)
+    sleep(300)
+```
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
