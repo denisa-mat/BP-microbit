@@ -1,40 +1,43 @@
 # Lekce 2
-### podtitul
+### proměnné, datové typy, Nezha sada
 
-### Obsah
+## Obsah
 [Motivace](#motivace)  
-[Prostředky I](#resources1)  
-[Úloha 1](#assignment1)  
-[Prostředky II](#resources2)  
-[Úloha 2](#assignment2)  
+[Prostředky I - Proměnné, datové typy](#resources1)  
+[Úloha 1 - Proměnné](#assignment1)  
+[Prostředky II - Nezha kit](#resources2)  
+[Úloha 2 - Seznámení s Nezha kitem](#assignment2)  
 [Úloha 3](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
+
 <a name="motivace"/>
 ## Motivace 
 Setkali jste se někde s proměnnými?
 Otázka má žáky navést k matematice a fyzice, kde se s proměnnými potkají v každé rovnici s neznámou. 
-	
+
 Proměnné jsou důležité pro matematické výpočty, například řešení rovnic, výpočet průměru, mediánu a dalších matematických funkcí. Zjevné je také využití proměnných při vývoji her, kde mohou uchovávat informace o hráči, jako jsou jeho životy, skóre nebo stavové informace.
 
-Dalším důležitým aspektem proměnných je, že umožňují programátorům vytvářet opakovaně použitelný kód a snižovat tak duplikaci kódu. Tím se zvyšuje efektivita vývoje a snižují se náklady na vývoj softwaru protože zjednodušují práci programátorům.
+Dalším důležitým aspektem proměnných je, že umožňují programátorům vytvářet opakovaně použitelný kód a snižovat tak duplikaci kódu. Tím se zvyšuje efektivita vývoje a snižují se náklady na vývoj softwaru, protože zjednodušují práci programátorům.
+
 <a name="resources1"/>
-## Prostředky I - teoretická část 
+## Prostředky I - Proměnné, datové typy 
 ### Proměnná
 Proměnná je základní stavební kamen programování a označuje místo v paměti počítače, které je určeno pro ukládání hodnot. Proměnné mají název, datový typ a obsahují konkrétní hodnotu, která může být v průběhu programu měněna. Používají se pro ukládání vstupních dat, mezivýsledků a výstupních dat programu. Díky proměnným mohou programy uchovávat informace a provádět s nimi operace, což umožňuje tvorbu dynamických a interaktivních programů.
 ### Datový typ
 Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
 ### Operace s proměnnými
-S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
+S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl, jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
 <p align="center">
   <img src=/img/spatneTypy.png alt="Operace na nepodporované kombinaci typů width="100%">
   <em>Operace na nepodporované kombinaci typů</em>
 </p>
 
-## Úloha 1 - Proměnné <a name="assignment1"/>
+<a name="assignment1"/>
+## Úloha 1 - Proměnné
 ### Zadání
-Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnosta vypisovat její výpočet na micro:bit (použijte funkci scrool, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné - dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
+Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte funkci scroll, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
 ### Co budete potřebovat
 K této úloze nejsou potřeba žádné senzory a moduly.
 ### Co se naučíte
@@ -54,22 +57,20 @@ while True:
 ```
 
 ### Popis řešení
-Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibobacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2. 
+Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2. 
 
-Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bitu. Protože scroll bere pouze argumenty typu string přetypujte proměnné number1 a number2 pomocí funkce str(). Aplikace operace + na hodnoty typu string funguje jako řetězení (konkatenace).
+Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bit. Protože scroll bere pouze argumenty typu string přetypujte proměnné number1 a number2 pomocí funkce str(). Aplikace operace + na hodnoty typu string funguje jako řetězení (konkatenace).
 Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na řádku 10 je do proměnné number2 uložena hodnota z proměnné sum. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
 
 ### Doplňující poznámky 
-Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
+Fibonacciho posloupnost je posloupnost čísel začínající nulou a jedničkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
 
-
-## Prostředky II - teoretická část <a name="resources2"/>
-
+<a name="resources2"/>
+## Prostředky II - Nezha kit 
 ### NezhaKit
-
 Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Základ setu tvoří modul pro umístění micro:bitu.
 
-Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
 - Nezha rozšiřující modul pro micro:bit (zabudovaný akumulátor LiPol 900 mAh, porty pro senzory a další moduly, konektory pro serva a motory, konektor pro micro:bit)
 - 8 elektronických modulů (3 x LED modul, potenciometr, snímač vlhkosti, snímač vzdálenosti, snímač nárazu, snímač čáry)
 - 2 x DC motor pro realizaci otáčivých pohybů
@@ -91,22 +92,8 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
   <em>Schéma Nezha kitu</em>
 </p>
 
-## Úloha 2 - Seznámení s Nezha kitem <a name="assignment2"/>
-...
-### Zadání
-Druhou úlohou bude použít již vytvořený program a vypsat čísla na TODO displej
-### Co budete potřebovat
-Pro tuto úlohu bude potřeba modul Nezha a PlanetX TODO displej
-### Co se naučíte
-Cílem této úlohy je vyzkoušet použití Nezha modulu a jednoho z dislejů.
-### Vzorová implementace
-
-### Popis řešení
-
-### Doplňující poznámky 
-...
-## Úloha 3 - Proměnné a měření vzdálenosti <a name="assignment3"/>
-...
+<a name="assignment2"/>
+## Úloha 2 - Seznámení s Nezha kitem
 ### Zadání
 Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX LED matrix modulu postupně počet diod dle Fibonacciho posloupnosti. Až počet přesáhne zadaný počet budou svítit všechny diody.
 ### Co budete potřebovat
@@ -114,14 +101,28 @@ Pro tuto úlohu bude potřeba modul Nezha a PlanetX LED matrix modul
 ### Co se naučíte
 Cílem této úlohy je vyzkoušet použití rozšiřujícího Nezha modulu jednoho z dalších modulů.
 ### Vzorová implementace
-
+TODO
 ### Popis řešení
-
+TODO
 ### Doplňující poznámky 
-...
-
-## Shrnutí <a name="conclusion"/>
-...
-
-## Poznámky pro učitele <a name="pozn"/>
-...
+TODO
+<a name="assignment3"/>
+## Úloha 3 - Proměnné a měření vzdálenosti
+### Zadání
+TODO
+### Co budete potřebovat
+TODO
+### Co se naučíte
+TODO
+### Vzorová implementace
+TODO
+### Popis řešení
+TODO
+### Doplňující poznámky 
+TODO
+<a name="conclusion"/>
+## Shrnutí
+TODO
+<a name="pozn"/>
+## Poznámky pro učitele
+TODO
