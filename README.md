@@ -31,7 +31,7 @@ TODO algoritmus - graficky
 ## Úloha 1 - Parkovací asistent
 ### Zadání
 TODO
-### Vzorování implementace
+### Vzorová implementace
 ```python
 from microbit import *
 from distance import *
@@ -55,9 +55,83 @@ TODO
 ### Doplňující poznámky 
 TODO
 <a name="assignment2"/>
-## Úloha 2 - 
+## Úloha 2 - Test plnoletosti "vyhazovač"
 ### Zadání
 TODO
+### Vzorová implementace
+```python
+from microbit import *
+from distance import *
+from nixietube import *
+from button import *
+
+nixietube = NIXIETUBE(J1)
+button = BUTTON(J2)
+
+age = 0
+age_confirmed = False
+
+while True:
+    if age_confirmed:
+        if age < 5:
+            display.show(Image.SAD)
+        elif age < 18:
+            display.show(Image.NO)
+        else:
+            display.show(Image.YES)
+    else:
+        if button.C_is_pressed():
+            age += 1
+            sleep(300)
+        elif button.D_is_pressed():
+            age_confirmed = True
+    nixietube.set_show_num(age)
+```
+### Popis řešení
+TODO
+### Doplňující poznámky 
+TODO
+## Úloha 3 - Horská dráha
+### Zadání
+TODO
+### Vzorová implementace
+```python
+from microbit import *
+from nixietube import *
+from button import *
+
+nixietube = NIXIETUBE(J1)
+button = BUTTON(J2)
+
+age = 0
+age_confirmed = False
+height = 0
+height_confirmed = False
+
+while True:
+    if age_confirmed and height_confirmed:
+        if age < 5:
+            display.show(Image.SAD)
+        elif age <= 10 and height < 125:
+            display.show(Image.NO)
+        else:
+            display.show(Image.YES)
+    elif age_confirmed:
+        if button.C_is_pressed():
+            height += 5
+            nixietube.set_show_num(height)
+        elif button.D_is_pressed():
+            height_confirmed = True
+            nixietube.set_clear()
+    else:
+        if button.C_is_pressed():
+            age += 1
+            nixietube.set_show_num(age)
+        elif button.D_is_pressed():
+            age_confirmed = True
+            nixietube.set_clear()
+    sleep(150)
+```
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
