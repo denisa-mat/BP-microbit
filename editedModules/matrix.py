@@ -10,9 +10,8 @@ HT16K33_CMD_BRIGHTNESS = 0xE0
 
 
 class MATRIX(object):
-    """基本描述
-
-    8x16 点阵显示屏
+    """
+    8x16 matrix display class
 
     """
 
@@ -30,6 +29,14 @@ class MATRIX(object):
         self.__i2cwrite_matrix(HT16K33_ADDRESS, HT16K33_CMD_BRIGHTNESS | 0xF)
 
     def __matrix_show(self):
+        """
+        performs the lighting up
+        Params:
+            NONE
+
+        Returns:
+            NONE
+        """
         self.__matBuf[0] = 0x00
         i2c.write(HT16K33_ADDRESS, bytearray([
             self.__matBuf[0], self.__matBuf[1], self.__matBuf[2], self.__matBuf[3], self.__matBuf[4], self.__matBuf[5],
@@ -38,35 +45,59 @@ class MATRIX(object):
             self.__matBuf[12], self.__matBuf[13], self.__matBuf[14], self.__matBuf[15], self.__matBuf[16]]))
 
     def set_matrix_clear(self):
+        """
+        clears the matrix
+        Params:
+            NONE
+
+        Returns:
+            NONE
+        """
         for i in range(17):
             self.__matBuf[i] = 0
         self.__matrix_show()
 
     def set_matrix_draw(self, x, y):
         """
-        Args:
-            x (number): X  0-15
-            y (number): Y  0-7
+        ligths up diod on given coordinates
+        Params:
+            x (int): index on x axis, valid values in range 0-15
+            y (int): index on y axis, valid values in range 0-7
 
         Returns:
             NONE
         """
+        if 0 > x > 15:
+            raise ValueError('x error, <0,15>')
+        if 0 > y > 7:
+            raise ValueError('y error, <0,7>')
         idx = int(y) * 2 + int(x) // 8
         tmp = self.__matBuf[idx + 1]
         tmp |= (1 << (x % 8))
         self.__matBuf[idx + 1] = tmp
         self.__matrix_show()
 
-    def set_matrix_draw_position(self, i):
-        x = (i-1) % 16
-        y = (i-1) // 16
+    def set_matrix_draw_position(self, position):
+        """
+        ligths up diod on given position, consider the matrix as line
+        Params:
+            position (int): position on the line, valid values in range 1-128
+
+        Returns:
+            NONE
+        """
+        if 1 > positon > 128:
+            raise ValueError('position error, <1,128>')
+        x = (position-1) % 16
+        y = (position-1) // 16
         print(x, y)
         self.set_matrix_draw(x, y)
 
-    def set_matrix_expression(self, expression):
+    def set_matrix_expression(self, emoji):
         """
-        Args:
-            expression (str): 表情，字符串
+        shows given expression, if expression unknown show nothing
+        Params:
+            emoji (str): valid values Neutral, Sad, Smile, Angry
 
         Returns:
             NONE
@@ -101,21 +132,8 @@ class MATRIX(object):
                      [6, 6], [7, 6], [8, 6], [9, 6],
                      [5, 7], [10, 7]
                      ]
+        else:
+            raise ValueError('unknown emoji')
         self.set_matrix_clear()
         for i in range(len(point)):
             self.set_matrix_draw(point[i][0], point[i][1])
-
-
-if __name__ == '__main__':
-    dis = MATRIX()
-    x, y = 0, 0
-
-    for y in range(8):
-        for x in range(16):
-            dis.set_matrix_draw(x, y)
-    dis.set_matrix_clear()
-    dis.set_matrix_expression("Angry")
-    sleep(500)
-    dis.set_matrix_expression("Sad")
-    sleep(500)
-    dis.set_matrix_expression("Smile")
