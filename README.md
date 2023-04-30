@@ -10,16 +10,16 @@
 [Úloha 3](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
-
-## Motivace <a name="motivace"/>
+<a name="motivace"/>
+## Motivace 
 Setkali jste se někde s proměnnými?
 Otázka má žáky navést k matematice a fyzice, kde se s proměnnými potkají v každé rovnici s neznámou. 
 	
 Proměnné jsou důležité pro matematické výpočty, například řešení rovnic, výpočet průměru, mediánu a dalších matematických funkcí. Zjevné je také využití proměnných při vývoji her, kde mohou uchovávat informace o hráči, jako jsou jeho životy, skóre nebo stavové informace.
 
 Dalším důležitým aspektem proměnných je, že umožňují programátorům vytvářet opakovaně použitelný kód a snižovat tak duplikaci kódu. Tím se zvyšuje efektivita vývoje a snižují se náklady na vývoj softwaru protože zjednodušují práci programátorům.
-
-## Prostředky I - teoretická část <a name="resources1"/>
+<a name="resources1"/>
+## Prostředky I - teoretická část 
 ### Proměnná
 Proměnná je základní stavební kamen programování a označuje místo v paměti počítače, které je určeno pro ukládání hodnot. Proměnné mají název, datový typ a obsahují konkrétní hodnotu, která může být v průběhu programu měněna. Používají se pro ukládání vstupních dat, mezivýsledků a výstupních dat programu. Díky proměnným mohou programy uchovávat informace a provádět s nimi operace, což umožňuje tvorbu dynamických a interaktivních programů.
 ### Datový typ
@@ -61,6 +61,7 @@ Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na ř
 
 ### Doplňující poznámky 
 Fibonnaciho posloupnost je posloupnost čísel začínající nulou a jednočkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
+
 
 ## Prostředky II - teoretická část <a name="resources2"/>
 
