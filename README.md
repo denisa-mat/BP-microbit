@@ -96,7 +96,27 @@ Pro tuto úlohu bude potřeba modul Nezha a PlanetX LED matrix modul
 ### Co se naučíte
 Cílem této úlohy je vyzkoušet použití rozšiřujícího Nezha modulu jednoho z dalších modulů.
 ### Vzorová implementace
-TODO
+```python
+from microbit import *
+from matrix import *
+from nezha import *
+
+nezha = NEZHA()
+matrix = MATRIX()
+
+number1 = 0
+number2 = 1
+sum = number1 + number2
+
+while sum <= 16*8:
+    print(sum)
+    matrix.set_matrix_draw_position(sum)
+    number1 = number2
+    number2 = sum
+    sum = number1 + number2
+    sleep(500)
+```
+
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
