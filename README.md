@@ -11,8 +11,7 @@
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
-<a name="motivace"/>
-## Motivace 
+## Motivace <a name="motivace"/>
 Setkali jste se někde s proměnnými?
 Otázka má žáky navést k matematice a fyzice, kde se s proměnnými potkají v každé rovnici s neznámou. 
 
@@ -20,8 +19,7 @@ Proměnné jsou důležité pro matematické výpočty, například řešení ro
 
 Dalším důležitým aspektem proměnných je, že umožňují programátorům vytvářet opakovaně použitelný kód a snižovat tak duplikaci kódu. Tím se zvyšuje efektivita vývoje a snižují se náklady na vývoj softwaru, protože zjednodušují práci programátorům.
 
-<a name="resources1"/>
-## Prostředky I - Proměnné, datové typy 
+## Prostředky I - Proměnné, datové typy <a name="resources1"/>
 ### Proměnná
 Proměnná je základní stavební kamen programování a označuje místo v paměti počítače, které je určeno pro ukládání hodnot. Proměnné mají název, datový typ a obsahují konkrétní hodnotu, která může být v průběhu programu měněna. Používají se pro ukládání vstupních dat, mezivýsledků a výstupních dat programu. Díky proměnným mohou programy uchovávat informace a provádět s nimi operace, což umožňuje tvorbu dynamických a interaktivních programů.
 ### Datový typ
@@ -34,8 +32,7 @@ S proměnnými lze provádět několik základních operací. Ne všechny operac
   <em>Operace na nepodporované kombinaci typů</em>
 </p>
 
-<a name="assignment1"/>
-## Úloha 1 - Proměnné
+## Úloha 1 - Proměnné <a name="assignment1"/>
 ### Zadání
 Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte funkci scroll, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
 ### Co budete potřebovat
@@ -65,8 +62,7 @@ Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na ř
 ### Doplňující poznámky 
 Fibonacciho posloupnost je posloupnost čísel začínající nulou a jedničkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
 
-<a name="resources2"/>
-## Prostředky II - Nezha kit 
+## Prostředky II - Nezha kit <a name="resources2"/>
 ### NezhaKit
 Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Základ setu tvoří modul pro umístění micro:bitu.
 
@@ -92,8 +88,7 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
   <em>Schéma Nezha kitu</em>
 </p>
 
-<a name="assignment2"/>
-## Úloha 2 - Seznámení s Nezha kitem
+## Úloha 2 - Seznámení s Nezha kitem <a name="assignment2"/>
 ### Zadání
 Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX LED matrix modulu postupně počet diod dle Fibonacciho posloupnosti. Až počet přesáhne zadaný počet budou svítit všechny diody.
 ### Co budete potřebovat
@@ -106,8 +101,7 @@ TODO
 TODO
 ### Doplňující poznámky 
 TODO
-<a name="assignment3"/>
-## Úloha 3 - Proměnné a měření vzdálenosti
+## Úloha 3 - Proměnné a měření vzdálenosti <a name="assignment3"/>
 ### Zadání
 TODO
 ### Co budete potřebovat
@@ -120,9 +114,7 @@ TODO
 TODO
 ### Doplňující poznámky 
 TODO
-<a name="conclusion"/>
-## Shrnutí
+## Shrnutí <a name="conclusion"/>
 TODO
-<a name="pozn"/>
-## Poznámky pro učitele
+## Poznámky pro učitele <a name="pozn"/>
 TODO
