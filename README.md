@@ -17,10 +17,12 @@ Modul Sonar:bit dokáže určit vzdálenost objektu pomocí ultrazvukového senz
 ### Použití
 Může být použit k předběžnému posouzení podmínek na silnici, když ovládáte auto na dálku.
 ### Dostupné metody
-def get_distance(self, unit=0):
-  Parametry: Jednotky (int), 0 pro metrické (centimetry), 1 pro imperiální (palce)
-  Návratová hodnota: Vzdálenost (float)
-  Popis: Spočítá a vrátí vzdálenost od objektu
+get_distance(self, unit=0)
+  * Parametry: 
+    * Jednotky (int), 0 pro metrické (centimetry), 1 pro imperiální (palce)
+  * Návratová hodnota: 
+    * Vzdálenost (float)
+  * Popis: Spočítá a vrátí vzdálenost od objektu
 
 ## Matrix
 ### Fyzická komponenta
@@ -31,26 +33,29 @@ Modul 8 x 16 Matrix je druh maticové obrazovky 8 x 16, která dokáže zobrazov
 ### Použití
 Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
 ### Dostupné metody
-def set_matrix_clear(self):
-  Parametry: None
-  Návratová hodnota: None
-  Popis: Zhasne všechny body matice
+set_matrix_clear(self)
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Zhasne všechny body matice
 
-def set_matrix_draw(self, x, y):
-  Parametry: Index souřadnice x (int) v intervalu 0-15,
-             Index souřadnice y (int) v intervalu 0-7
-  Návratová hodnota: None
-  Popis: Rozsvítí diodu na daných souřadnicích
+set_matrix_draw(self, x, y)
+  * Parametry:
+    * Index souřadnice x (int) v intervalu 0-15,
+    * Index souřadnice y (int) v intervalu 0-7
+  * Návratová hodnota: None
+  * Popis: Rozsvítí diodu na daných souřadnicích
 
-def set_matrix_draw_position(self, position):
-  Parametry: Pozice (int) v intervalu 0-128,
-  Návratová hodnota: None
-  Popis: Rozsvítí diodu na dané pozici dle řádků matice 
+set_matrix_draw_position(self, position)
+  * Parametry:
+    * Pozice (int) v intervalu 0-128,
+  * Návratová hodnota: None
+  * Popis: Rozsvítí diodu na dané pozici dle řádků matice 
 
-def set_matrix_expression(self, emoji):
-  Parametry: Name of emoji (str), platné hodnoty jsou: Neutral, Sad, Smile, Angry
-  Návratová hodnota: None
-  Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
+set_matrix_expression(self, emoji)
+  * Parametry:
+    * Name of emoji (str), platné hodnoty jsou: Neutral, Sad, Smile, Angry
+  * Návratová hodnota: None
+  * Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
 
 ## Nezha
 ### Fyzická komponenta
@@ -60,18 +65,20 @@ TODO
 ### Použití
 TODO
 ### Dostupné metody
-def set_motors(self, motor, speed):
-  Parametry: Konektor (int), do kterého je připojen motor v intervalu 1-4
-             Rychlost (int) motoru v intervalu -100-100
-  Návratová hodnota: None
-  Popis: Nastaví rychlost danému motoru
+set_motors(self, motor, speed)
+  * Parametry:
+    * Konektor (int), do kterého je připojen motor v intervalu 1-4
+    * Rychlost (int) motoru v intervalu -100-100
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost danému motoru
 
 
-def set_servo(self, servo, angle):
-  Parametry: Konektor (int), do kterého je připojeno servo v intervalu 1-4
-             Úhel (int) nákolu v intervalu 0-180
-  Návratová hodnota: None
-  Popis: ??? TODO
+set_servo(self, servo, angle)
+  * Parametry:
+    * Konektor (int), do kterého je připojeno servo v intervalu 1-4
+    * Úhel (int) nákolu v intervalu 0-180
+  * Návratová hodnota: None
+  * Popis: ??? TODO
 
 
 ## Nixietube
