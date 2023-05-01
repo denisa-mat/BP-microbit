@@ -90,7 +90,6 @@ class MATRIX(object):
             raise ValueError('position error, <1,128>')
         x = (position-1) % 16
         y = (position-1) // 16
-        print(x, y)
         self.set_matrix_draw(x, y)
 
     def set_matrix_expression(self, emoji):
