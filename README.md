@@ -25,7 +25,7 @@ Proměnná je základní stavební kamen programování a označuje místo v pam
 ### Datový typ
 Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
 ### Operace s proměnnými
-S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání značíme +, odčítání -, násobení **, dělení /). Operaci + lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl, jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
+S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání `+`, odčítání `-`, násobení `*`, dělení `/`, mocnění `**`, celočíselné dělení `//`). Operaci `+` lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl, jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
 <p align="center">
   <img src=/img/spatneTypy.png alt="Operace na nepodporované kombinaci typů width="100%">
@@ -34,7 +34,7 @@ S proměnnými lze provádět několik základních operací. Ne všechny operac
 
 ## Úloha 1 - Proměnné <a name="assignment1"/>
 ### Zadání
-Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte funkci scroll, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
+Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
 ### Co budete potřebovat
 K této úloze nejsou potřeba žádné senzory a moduly.
 ### Co se naučíte
@@ -65,10 +65,10 @@ while True:
           H --> D;
 ```
 ### Popis řešení
-Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2. 
+Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné `sum` přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných `number1` a `number2`. 
 
-Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bit. Protože scroll bere pouze argumenty typu string přetypujte proměnné number1 a number2 pomocí funkce str(). Aplikace operace + na hodnoty typu string funguje jako řetězení (konkatenace).
-Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na řádku 10 je do proměnné number2 uložena hodnota z proměnné sum. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
+Metoda `scroll` zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bit. Protože `scroll` bere pouze argumenty typu string přetypujte proměnné `number1` a `number2` pomocí funkce `str()`. Aplikace operace `+` na hodnoty typu string funguje jako řetězení (konkatenace).
+Na řádku 9 je do proměnné `number1` uložena hodnota proměnné `number2`, na řádku 10 je do proměnné `number2` uložena hodnota z proměnné `sum`. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
 
 ### Doplňující poznámky 
 Fibonacciho posloupnost je posloupnost čísel začínající nulou a jedničkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
@@ -101,9 +101,9 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
 
 ## Úloha 2 - Seznámení s Nezha kitem <a name="assignment2"/>
 ### Zadání
-Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX LED matrix modulu postupně počet diod dle Fibonacciho posloupnosti. Až počet přesáhne zadaný počet budou svítit všechny diody.
+Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti.
 ### Co budete potřebovat
-Pro tuto úlohu bude potřeba modul Nezha a PlanetX LED matrix modul
+Pro tuto úlohu bude potřeba modul Nezha a PlanetX matrix modul
 ### Co se naučíte
 Cílem této úlohy je vyzkoušet použití rozšiřujícího Nezha modulu jednoho z dalších modulů.
 ### Vzorová implementace
