@@ -82,8 +82,9 @@ V Pythonu se používají tři logické operátory pro kombinaci podmínek: `and
 
 Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
 ```python
-`if podmínka1 and podmínka2:
-    # provede se, pokud jsou obě podmínky pravdivé`
+if podmínka1 and podmínka2:
+    # provede se, pokud jsou obě podmínky pravdivé
+```
 
 Operátor `or` vrací `True`, pokud alespoň jedna z podmínek je pravdivá, jinak vrací `False`.
 ```python
