@@ -32,7 +32,16 @@ else
 	display.scroll(str(choosen_number) + "je 0")
 # tady následuje zbytek programu
 ```
-TODO algoritmus – graficky
+``` mermaid
+  graph TD;
+      A[Start] --> B[choosen_number = 6];
+      B --> C{choosen number != 0}
+      C -- YES --> D[vypis '$choosen_number není 0'];
+	  D --> E[result = 100];
+      C -- NO --> F[vypis '$choosen_number je 0'];
+      E --> G[Konec];
+      F --> G;
+```
 
 V Pythonu se používají následující operátory pro srovnávání hodnot a výrazů:
 
@@ -71,6 +80,19 @@ while True:
     if dist < to_close_dist:
         music.play(music.BA_DING)
     sleep(300)
+```
+### Diagram
+``` mermaid
+  graph TD;
+      A[Start] --> B[to_close_dist = 10];
+      B --> C{Is it True?}
+      C -- YES --> D[uloz vzdalenost do prom dist];
+	  D --> E{dist < to_close_dist};
+	  	E -- YES --> G[rozsvit cervenou led];
+      E -- NO --> H[vyckej 300 ms];
+      G --> H;
+      H --> C;
+	  
 ```
 ### Popis řešení
 TODO
@@ -135,6 +157,29 @@ while True:
         elif button.D_is_pressed():
             age_confirmed = True
     nixietube.set_show_num(age)
+```
+``` mermaid
+  graph TD;
+      A(S) --> B[age = 0];
+      B --> C[age_confirmed = False];
+      C --> D{Is it True};
+	  D -- YES --> E{age_confirmed?};
+	  	E -- YES --> G{age < 5};
+			G -- YES --> H[vykresli na displej Image.Sad];
+		G --> NO --> I{age < 18};
+			I -- YES --> J[vykresli na displej Image.NO];
+			I -- NO --> K[vykresli na displej Image.YES];
+          E -- NO --> L{je button C stisknut?};
+	  	L -- YES --> M[age += 1];
+		M --> N[vyckej 300 ms];
+		L -- NO --> O{je button D stisknut?};
+		O -- YES --> P[age_confirmed = True];
+      H --> Q[vypis age na segmentovy displej];
+      K --> Q;
+      J --> Q;
+      N --> Q;
+      P --> Q;
+      Q --> D;
 ```
 ### Popis řešení
 TODO
