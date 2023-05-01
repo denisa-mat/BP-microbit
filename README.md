@@ -52,7 +52,18 @@ while True:
     number1 = number2
     number2 = sum
 ```
-
+### Diagram
+```mermaid
+  graph TD;
+      A[Start] --> B[number1 = 0];
+      B --> C[number2 = 0];
+      C --> D{Is it True?};
+      D -- YES --> E[sum = number1 + number2];
+          E --> F[vypis vypocet na displej tvaru 'sum = number1 + number2'];
+          F --> G[number1 = number2];
+          G --> H[number2 = sum];
+          H --> D;
+```
 ### Popis řešení
 Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2. 
 
@@ -114,6 +125,22 @@ while sum <= 16*8:
     number2 = sum
     sum = number1 + number2
     sleep(500)
+```
+                                                          
+### Diagram
+```mermaid
+  graph TD;
+      A[Start] --> B[number1 = 0];
+      B --> C[number2 = 1];
+      C --> D[sum = number1 + number2];
+      D --> E{Vejde se na displej?};
+      E -- YES --> F[vykresli bod na displej];
+          F --> G[vypis vypocet na displej tvaru 'sum = number1 + number2'];
+          G --> H[number1 = number2];
+          H --> I[sum = nubmer1 + number2];
+          I --> J[vyckej 500 ms]
+          J --> E
+      E -- NO --> K[Konec]
 ```
 
 ### Popis řešení
