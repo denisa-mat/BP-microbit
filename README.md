@@ -7,7 +7,7 @@
 [Úloha 1 - Parkovací asistent](#assignment1)  
 [Prostředky II – Složené podmínky](#resources2)  
 [Úloha 2 - Test plnoletosti](#assignment2)  
-[Úloha 3 - Horská dráha](#assignment3)
+[Úloha 3 - Horská dráha](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 <a name="motivace"/>
