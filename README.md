@@ -11,11 +11,28 @@ from microbit import foo
 ```
 
 ## Obsah
-[Distance](#distance)  
+[Button tbd](#button)  
+[Crash tbd](#crash)  
+[Distance](#distance) 
+[Led tbd](#led)   
 [Matrix](#matrix)  
-[Nezha](#nezha)  
+[Motor tbd](#motor)  
+[Nezha tbd](#nezha)  
 [Nixitube](#nixietube)  
+[Servo tbd](#servo)  
+[Trimpot tbd](#trimpot)  
 [Další moduly](#more)  
+## Button <a name="button"></a>
+### Fyzická komponenta
+### Fyzická komponenta
+[Button ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05017.html)
+. TODO
+
+## Crash <a name="crash"></a>
+### Fyzická komponenta
+[Crash ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05008.html)
+. TODO
+
 ## Distance <a name="distance"></a>
 ### Fyzická komponenta
 [Sonar:bit ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05007.html)
@@ -30,6 +47,10 @@ get_distance(self, unit=0)
   * Návratová hodnota: 
     * Vzdálenost (float)
   * Popis: Spočítá a vrátí vzdálenost od objektu
+
+## Led <a name="led"></a>
+[Led ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05009.html)
+. TODO
 
 ## Matrix<a name="matrix"></a>
 ### Fyzická komponenta
@@ -62,6 +83,10 @@ set_matrix_expression(self, emoji)
     * Name of emoji (str), platné hodnoty jsou: Neutral, Sad, Smile, Angry
   * Návratová hodnota: None
   * Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
+
+## Motor <a name="motor"></a>
+### Fyzická komponenta
+. TODO
 
 ## Nezha <a name="nezha"></a>
 ### Fyzická komponenta
@@ -96,7 +121,13 @@ TODO
 TODO
 ### Dostupné metody
 
+## Servo <a name="servo"></a>
+### Fyzická komponenta
+. TODO
 
+## Trimpot <a name="trimpot"></a>
+### Fyzická komponenta
+. TODO
 
 ## Další moduly <a name="more"></a>
 Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html)
