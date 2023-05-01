@@ -4,9 +4,9 @@
 ## Obsah
 [Motivace](#motivace)  
 [Prostředky I - While cyklus](#resources1)  
-[Úloha 1 - ](#assignment1)  
+[Úloha 1 -  Auto](#assignment1)  
 [Prostředky II - For cyklus](#resources2)  
-[Úloha 2 - ](#assignment2)  
+[Úloha 2 - For cykly ](#assignment2)  
 [Úloha 3 - ](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
@@ -23,7 +23,7 @@ while podmínka:
 ```
 I u cyklů je důležité dávat pozor na správné odsazení, bez toho nebude program fungovat správně.
 Přestože jsme dosud pro zjednodušení používali nekonečný cyklus `while True`, od této chvíle je to něco, čemu se budeme chtít spíš vyhnout. Každý porgram má nějaký konečný stav v němž chceme aby skončil.
-## Úloha 1 - Proměnné <a name="assignment1"/>
+## Úloha 1 - Auto <a name="assignment1"/>
 ### Zadání
 TODO
 ### Co budete potřebovat
@@ -59,32 +59,53 @@ TODO
 ### Doplňující poznámky 
 TODO
 ## Prostředky II -  <a name="resources2"/>
-TODO
-## Úloha 2 - For cykly <a name="assignment3"/>
+For cyklus je další základní typ cyklu v programování, který slouží k procházení prvků v určité sekvenci, např. v seznamu, řetězci nebo množině, a opakování určitého bloku kódu pro každý prvek v této sekvenci. Tento cyklus se používá tam, kde známe předem počet opakování, nebo je potřeba provádět operace s každým prvkem v dané sekvenci.
+
+Syntaxe for cyklu s daným rozsahem v Pythonu vypadá následovně:
+```python
+for prvek in range(0, 5):
+	# blok kódu, který se opakuje, dokud je podmínka pravdivá
+	# lze zde pracovat s promennou, ktera je aktualne v promenne prvek, napriklad:
+	print(prvek) # do terminalu postupne vypise hodnoty 0, 1, 2, 3, 4
+```
+Funkce `range()`, bere hodnoty typu `int`, první číslo značí ostrý počátek intervalu (tedy včetně), druhé konec intervalu (pro zadanou hodnotu se již cyklus nevykoná). Je možné zadat ještě třetí parametr typu `int`, který umožňuje definovat krok. Pokud s proměnnou označující aktuální hodnotu nepotřebujeme pracovat místo názvu dáme `_`. 
+## Úloha 2 - For cykly <a name="assignment2"/>
 ### Zadání
-TODO
+Úloha má tři části, každá část je jeden drobný úkol, zadání proto bude očíslované 1, 2, 3.
+1. Napište program, který rozsvítí na matrix modulu postupně všechny diody. Začněte na idexu nula a skončete na indexu 127.
+2. Napište program, který rozsvítí na matrix modulu postupně každou třetí diodu (první bude svítit druhá a třetí ne, čtvrtá zase ano.
+3. Napište program, který na matrix modulu vytvoří rozsvícením diod šachovnici.
 ### Co budete potřebovat
-TODO
+Matrix modul
 ### Co se naučíte
 TODO
 ### Vzorová implementace
+1.     
 ```python
 from matrix import *
-import math
 
 matrix = MATRIX()
 
 for i in range(0, 128):
     matrix.set_matrix_draw_index(i)
     sleep(100)
+	
+```
+2. 
+```python
+from matrix import *
+
+matrix = MATRIX()
 
 for i in range(0, 128, 3):
     matrix.set_matrix_draw_index(i)
     sleep(100)
+```
+3. 
+```python
+from matrix import *
 
-for i in range(0, int(math.sqrt(128))):
-    matrix.set_matrix_draw_index(i**2)
-    sleep(100)
+matrix = MATRIX()
 
 for row in range(0, 16):
     for column in range (0, 8):
