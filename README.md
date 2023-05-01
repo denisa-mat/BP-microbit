@@ -60,7 +60,7 @@ TODO
 TODO
 ## Prostředky II -  <a name="resources2"/>
 TODO
-## Úloha 2 - <a name="assignment3"/>
+## Úloha 2 - For cykly <a name="assignment3"/>
 ### Zadání
 TODO
 ### Co budete potřebovat
@@ -69,9 +69,29 @@ TODO
 TODO
 ### Vzorová implementace
 ```python
-from microbit import * 
+from matrix import *
+import math
 
-#TODO
+matrix = MATRIX()
+
+for i in range(0, 128):
+    matrix.set_matrix_draw_index(i)
+    sleep(100)
+
+for i in range(0, 128, 3):
+    matrix.set_matrix_draw_index(i)
+    sleep(100)
+
+for i in range(0, int(math.sqrt(128))):
+    matrix.set_matrix_draw_index(i**2)
+    sleep(100)
+
+for row in range(0, 16):
+    for column in range (0, 8):
+        if (row % 2 == 0) and (column % 2 == 0):
+            matrix.set_matrix_draw(row, column)
+        elif (row % 2 == 1) and (column % 2 == 1):
+            matrix.set_matrix_draw(row, column)
 ```
 
 ### Popis řešení
