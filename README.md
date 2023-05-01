@@ -55,21 +55,18 @@ Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a sy
 **Jednoznačnost**: Algoritmus pro stejné vstupy poskytuje stejné výstupy. Výsledek je ovlivněn pouze vstupem.
 
 #### Vývojový diagram
-.
+Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů a propojení mezi nimi. Používá se jako nástroj pro plánování, návrh, dokumentaci v oblastech jako je vývoj softwaru, inženýrství a dalších odvětvích. Vývojový diagram pomáhá vizualizovat složité procesy nebo postupy a umožňuje snadnější identifikaci problémů, chyb a nedostatků v algoritmu nebo procesu. Diagram usnadňuje spolupráci a komunikaci mezi členy týmu, kteří se podílejí na vývoji a implementaci algoritmu. Při tvorbě vývojového diagramu je třeba myslet na jeho čitelnost a srozumitelnost pro všechny členy týmu. Proto je důležité používat jasně definované symboly a základní pravidla pro tvorbu diagramu, která jsou obecně uznávaná v oboru.
+- kulaté symboly označují počátek a konec programu
+- symbol diamantu se používá pro větvení (v podmínkách a cyklech)
+- vše osttaní zapisujeme do čtverců
+- symboly propojujeme šipkami
+Je možné se setkat ještě například s ovály či rovnoběžníky, ty pro naše účely vynecháme.
 ```mermaid
   graph TD;
-      A[Start] --> B{Is it True?};
-      B -- YES --> C[write Hello World];
+      A((Start)) --> B{Is True true?};
+      B -- YES --> C[write 'Hello World'];
 	  C --> B;
-      B -- NO -->D[Konec];
-```
-Kostra většiny úloh připravených lekcí:
-```mermaid
-  graph TD;
-      A[Start] --> B[inicializace proměnných];
-      B --> C[posloupnost příkazů];
-      C --> C;
-      A --> C;
+      B -- NO -->D((Konec));
 ```
 
 ### Micro:Bit
@@ -78,7 +75,7 @@ Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, 
 Micro:bit lze programovat bez ohledu na platformu, což zlepšuje dostupnost. Program se do Micro:bitu přenáší pomocí bezdrátové komunikace Bluetooth nebo pomocí přiloženého micro USB kabelu.
 
 ### IDE
-Jako vhodný editor byl vybrán webový [python.microbit.org]( python.microbit.org), se kterým se bude ve všech lekcích pracovat (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce).
+Jako vhodný editor byl vybrán webový [python.microbit.org](python.microbit.org), se kterým se bude ve všech lekcích pracovat (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce).
 Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory, snadno se používá, má sériový výstup. Výhodou python.microbit.org je preview micro:bitu, ovšem bez modulů. Další předností je panel reference, neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
 ## Úloha 1 - Hello World <a name="hello-world"/>
