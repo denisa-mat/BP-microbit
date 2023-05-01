@@ -97,7 +97,7 @@ while True:
 ```
 ### Popis řešení
 Na prvním řádku jsou z modulu micro:bit je importováno vše, co obsahuje. V tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí.
-Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu `scroll` na objektu display, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu `scroll` na objektu `display`, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
 
 Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. 
 
