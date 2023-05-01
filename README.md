@@ -2,11 +2,13 @@
 V Pythonu jsou moduly soubory, které obsahují definice funkcí, tříd a proměnných, které lze použít v jiných programech. Moduly jsou používány pro organizaci kódu do logických bloků a pro znovupoužitelnost kódu.
 
 Python má mnoho vestavěných modulů, jako jsou moduly pro práci s řetězci, soubory, datovými strukturami a sítěmi. Dále je možné si vytvořit vlastní moduly a použít je v různých projektech. Moduly jsou načítány pomocí příkazu "import". Například pro načtení modulu pro práci s micro:bitem se použije následující:
+```python
 import microbit
-případně naimportujeme vše
+# případně naimportujeme vše
 from microbit import *
-nebo pouze konkrétní funkce foo pomocí
+# nebo pouze konkrétní funkci foo pomocí
 from microbit import foo 
+```
 
 ## Obsah
 [Distance](#distance)  
