@@ -106,8 +106,8 @@ Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB ka
 Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu i tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
 
 <p align="center">
-  <img src=/img/send2.png alt="Připojit micro:bit" width="100%">
-  <em>Připojit micro:bit</em>
+  <img src=/img/send2.png alt="Nahrát kód" width="100%">
+  <em>Nahrát kód</em>
 </p>
 
 V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a nahrát na micro:bit jako na externí úložiště. 
