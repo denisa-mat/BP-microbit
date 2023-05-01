@@ -41,16 +41,15 @@ nezha = NEZHA()
 crash = CRASH(J1)
 distance = DISTANCE(J2)
 
-nezha.set_motors(3, -100)
+nezha.set_motor(3, -100)
 
 while not crash.crash_is_pressed():
     dist = distance.get_distance()
     if dist < 40:
-       nezha.set_motors(3, -20)
+       nezha.set_motor(3, -20)
     else:
         nezha.set_motors(3, -100)
 nezha.set_motors(3, 0)
-
 
 #do poznamky vysvetlit proc else vetev
 ```
