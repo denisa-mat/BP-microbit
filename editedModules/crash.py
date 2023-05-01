@@ -20,6 +20,8 @@ class CRASH(object):
             self.__pin = pin14
         elif RJ_pin == J4:
             self.__pin = pin16
+        else:
+            raise ValueError("pin error, must be in [J1, J2, J3, J4]")
 
         self.__pin.set_pull(self.__pin.PULL_UP)
 
