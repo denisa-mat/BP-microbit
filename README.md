@@ -24,23 +24,32 @@ Podmínky v Pythonu mají následující zápis:
 ```python
 from microbit import * 
 
-choosen_number = 5
-if choosen_number != 0:
-	display.scroll(str(choosen_number) + "není 0")
-	result = 100 // choosen_number
-else
-	display.scroll(str(choosen_number) + "je 0")
-# tady následuje zbytek programu
+podminka1 = False
+podminka2 = True
+
+if podminka1:
+	print("podminka1 splnena")
+	# kód, který se vykoná je-li splněna podminka1
+elif podminka2:
+	print("podminka2 splnena")
+	# kód, který se vykoná je-li splněna podminka2
+else:
+	print("podminky nesplneny")
+	# kód který se vykoná není li splněna žádná z předchozích podmínek
+# zbytek programu
 ```
 ``` mermaid
   graph TD;
-      A(S) --> B[choosen_number = 6];
-      B --> C{choosen number != 0}
-      C -- YES --> D[vypis '$choosen_number není 0'];
-	  D --> E[result = 100];
-      C -- NO --> F[vypis '$choosen_number je 0'];
-      E --> G(K);
-      F --> G;
+      A((Start)) --> B[podminka1 = False, podminka2 = True];
+      B --> C{podminka1};
+      C -- YES --> D[print 'podminka1 splnena'];
+	  D --> E[zbytek programu];
+      C -- NO --> F[podminka2];
+      F -- YES --> G[print 'podminka2 splnena'];
+	  G --> E[zbytek programu];
+      F -- NO --> H[else, print 'podminky nesplneny'];
+      H --> E[zbytek programu];
+      E --> I((Konec));
 ```
 
 V Pythonu se používají následující operátory pro srovnávání hodnot a výrazů:
@@ -85,15 +94,14 @@ while True:
 ### Diagram
 ``` mermaid
   graph TD;
-      A(S) --> B[to_close_dist = 10];
-      B --> C{Is it True?}
+      A((Start)) --> B[to_close_dist = 10];
+      B --> C{Is it True?};
       C -- YES --> D[uloz vzdalenost do prom dist];
 	  D --> E{dist < to_close_dist};
 	  	E -- YES --> G[rozsvit cervenou led];
       E -- NO --> H[vyckej 300 ms];
       G --> H;
       H --> C;
-	  
 ```
 ### Popis řešení
 TODO
@@ -161,26 +169,27 @@ while True:
 ```
 ``` mermaid
   graph TD;
-      A(S) --> B[age = 0];
+      A((Start)) --> B[age = 0];
       B --> C[age_confirmed = False];
-      C --> D{Is it True};
-	  D -- YES --> E{age_confirmed?};
-	  	E -- YES --> G{age < 5};
-			G -- YES --> H[vykresli na displej Image.Sad];
+      C --> D{True};
+      D -- YES --> E{age_confirmed?};
+	  E -- YES --> G{age < 5};
+		G -- YES --> H[vykresli na displej Image.Sad];
+		 H --> Q[vypis age na segmentovy displej];
 		G --> NO --> I{age < 18};
 			I -- YES --> J[vykresli na displej Image.NO];
+				J --> Q;
+			        Q --> D;
 			I -- NO --> K[vykresli na displej Image.YES];
+				K --> Q;
           E -- NO --> L{je button C stisknut?};
 	  	L -- YES --> M[age += 1];
-		M --> N[vyckej 300 ms];
+		 M --> N[vyckej 300 ms];
+		 N --> Q;
 		L -- NO --> O{je button D stisknut?};
-		O -- YES --> P[age_confirmed = True];
-      H --> Q[vypis age na segmentovy displej];
-      K --> Q;
-      J --> Q;
-      N --> Q;
-      P --> Q;
-      Q --> D;
+			O -- YES --> P[age_confirmed = True];
+      		  	 P --> Q;
+			O -- NO --> Q
 ```
 ### Popis řešení
 TODO
