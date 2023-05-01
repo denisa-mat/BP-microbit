@@ -8,7 +8,12 @@ from microbit import *
 nebo pouze konkrétní funkce foo pomocí
 from microbit import foo 
 
-## Distance
+## Obsah
+[Distance](#distance)  
+[Matrix](#matrix)  
+[Nezha](#nezha)  
+[Nixitube](#nixietube)  
+## Distance<a name="distance"></a>
 ### Fyzická komponenta
 Sonar:bit
 https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05007.html
@@ -24,7 +29,7 @@ get_distance(self, unit=0)
     * Vzdálenost (float)
   * Popis: Spočítá a vrátí vzdálenost od objektu
 
-## Matrix
+## Matrix<a name="matrix"></a>
 ### Fyzická komponenta
 8x16 Matrix Module
 https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05029.html
@@ -57,7 +62,7 @@ set_matrix_expression(self, emoji)
   * Návratová hodnota: None
   * Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
 
-## Nezha
+## Nezha <a name="nezha"></a>
 ### Fyzická komponenta
 TODO
 ### Popis
@@ -81,7 +86,7 @@ set_servo(self, servo, angle)
   * Popis: ??? TODO
 
 
-## Nixietube
+## Nixietube <a name="nixietube"></a>
 ### Fyzická komponenta
 TODO
 ### Popis
