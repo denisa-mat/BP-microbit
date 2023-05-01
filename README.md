@@ -41,7 +41,7 @@ Další poznámky týkající se celé lekce
 ## Moduly
 Pro práci micro:bitem a rozšiřujícími senzory a dipleji je potřeba naimportovat moduly. Moduly jsou způsob, jak organizovat kód, což umožňuje jeho znovupoužití a sdílení s ostatními programátory. Modul je soubor obsahující Python kód, který může být importován do jiných souborů Python kódu. Moduly mohou obsahovat funkce, třídy, proměnné, konstanty a další kód, který chceme sdílet. Kromě vestavěných modulů si také můžeme vytvořit vlastní moduly a používat je ve svých projektech.
 
-Moduly se v Pythonu obvykle importují pomocí klíčového slova `import`. Existují různé způsoby, jak importovat modul a jeho funkce, zde budeme importovat celé moduly pomocí příkazu `from nazev_modulu import *`, kde `*` značí import všeho, co modul obsahuje. Pokud bychom chtěli importovat pouze nějakou funkci z modulu, nahradíme `*` názvem dané fce.
+Moduly se v Pythonu obvykle importují pomocí klíčového slova `import`. Existují různé způsoby, jak importovat modul a jeho funkce, zde budeme importovat celé moduly pomocí příkazu `from nazev_modulu import *`, kde `*` značí import všeho, co modul obsahuje. Pokud bychom chtěli importovat pouze nějakou funkci z modulu, nahradíme `*` názvem dané funkce. Jak nahrát moduly, které nejsou dostupné z IDE bude vysvětleno v lekci 2, předtím než se s nimi bude poprvé pracovat.
 <a name="program"/>
 ## Jak vypadá struktura programu v MicroPythonu
 ```python
