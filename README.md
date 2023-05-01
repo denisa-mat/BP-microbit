@@ -34,12 +34,12 @@ else
 ```
 ``` mermaid
   graph TD;
-      A[Start] --> B[choosen_number = 6];
+      A(S) --> B[choosen_number = 6];
       B --> C{choosen number != 0}
       C -- YES --> D[vypis '$choosen_number není 0'];
 	  D --> E[result = 100];
       C -- NO --> F[vypis '$choosen_number je 0'];
-      E --> G[Konec];
+      E --> G(K);
       F --> G;
 ```
 
@@ -84,7 +84,7 @@ while True:
 ### Diagram
 ``` mermaid
   graph TD;
-      A[Start] --> B[to_close_dist = 10];
+      A(S) --> B[to_close_dist = 10];
       B --> C{Is it True?}
       C -- YES --> D[uloz vzdalenost do prom dist];
 	  D --> E{dist < to_close_dist};
