@@ -62,23 +62,24 @@ TODO
 ### Co se naučíte
 TODO
 ### Vzorová implementace
-TODO změnit hudbu za blikání diod
 ```python
-from microbit import *
 from distance import *
 from nixietube import *
-import music
+from led import *
 
-nixietube = NIXIETUBE(J2)
 distance = DISTANCE(J1)
+nixietube = NIXIETUBE(J2)
+led = LED(J3)
 
-to_close_dist = 10
+to_close_dist = 20
 
 while True:
     dist = (distance.get_distance())//1
     nixietube.set_show_num(int(dist))
     if dist < to_close_dist:
-        music.play(music.BA_DING)
+        led.set_led(1, 50)
+    else:
+        led.set_led(0, 50)
     sleep(300)
 ```
 ### Diagram
