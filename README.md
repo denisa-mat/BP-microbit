@@ -96,9 +96,21 @@ while True:
 Na prvním řádku jsou z modulu micro:bit je importováno vše, co obsahuje. V tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí.
 Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu `scroll` na objektu `display`, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
 
-Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. 
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte "Send to micro:bit", otevře se nápověda a poté okno s kompatibilními zařízeními. 
 
-TODO návod jak nahrát
+<p align="center">
+  <img src=/img/send1.png alt="Připojit micro:bit" width="100%">
+  <em>Připojit micro:bit</em>
+</p>
+
+Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu i tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
+
+<p align="center">
+  <img src=/img/send2.png alt="Připojit micro:bit" width="100%">
+  <em>Připojit micro:bit</em>
+</p>
+
+V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a nahrát na micro:bit jako na externí úložiště. 
 
 ### Doplňující poznámky
 Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s `while True`, pro neustálé opakování programu.
