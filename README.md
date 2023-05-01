@@ -7,7 +7,6 @@
 [Úloha 1 -  Auto](#assignment1)  
 [Prostředky II - For cyklus](#resources2)  
 [Úloha 2 - For cykly ](#assignment2)  
-[Úloha 3 - ](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
@@ -58,7 +57,7 @@ nezha.set_motors(3, 0)
 TODO
 ### Doplňující poznámky 
 TODO
-## Prostředky II -  <a name="resources2"/>
+## Prostředky II - For cyklus <a name="resources2"/>
 For cyklus je další základní typ cyklu v programování, který slouží k procházení prvků v určité sekvenci, např. v seznamu, řetězci nebo množině, a opakování určitého bloku kódu pro každý prvek v této sekvenci. Tento cyklus se používá tam, kde známe předem počet opakování, nebo je potřeba provádět operace s každým prvkem v dané sekvenci.
 
 Syntaxe for cyklu s daným rozsahem v Pythonu vypadá následovně:
@@ -73,7 +72,7 @@ Funkce `range()`, bere hodnoty typu `int`, první číslo značí ostrý počát
 ### Zadání
 Úloha má tři části, každá část je jeden drobný úkol, zadání proto bude očíslované 1, 2, 3.
 1. Napište program, který rozsvítí na matrix modulu postupně všechny diody. Začněte na idexu nula a skončete na indexu 127.
-2. Napište program, který rozsvítí na matrix modulu postupně každou třetí diodu (první bude svítit druhá a třetí ne, čtvrtá zase ano.
+2. Napište program, který rozsvítí na matrix modulu postupně každou třetí diodu (první bude svítit druhá a třetí ne, čtvrtá zase ano).
 3. Napište program, který na matrix modulu vytvoří rozsvícením diod šachovnici.
 ### Co budete potřebovat
 Matrix modul
