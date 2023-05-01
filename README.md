@@ -15,8 +15,7 @@ from microbit import foo
 [Nixitube](#nixietube)  
 ## Distance<a name="distance"></a>
 ### Fyzická komponenta
-Sonar:bit
-https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05007.html
+[Sonar:bit ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05007.html)
 ### Popis
 Modul Sonar:bit dokáže určit vzdálenost objektu pomocí ultrazvukového senzoru. Když signál narazí na objekt, odrazí se a putuje zpět k sonaru. Na základě doby návratu signálu je schopen určit přibližnou vzdálenost. 
 ### Použití
@@ -31,8 +30,7 @@ get_distance(self, unit=0)
 
 ## Matrix<a name="matrix"></a>
 ### Fyzická komponenta
-8x16 Matrix Module
-https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05029.html
+[8x16 Matrix Module in ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05029.html)
 ### Popis
 Modul 8 x 16 Matrix je druh maticové obrazovky 8 x 16, která dokáže zobrazovat čísla, běžně používaná písmena a symboly s rolovací funkcí.
 ### Použití
