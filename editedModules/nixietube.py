@@ -75,7 +75,7 @@ class NIXIETUBE(object):
 
     def set_power_on(self):
         """
-        数码管点亮显示，默认点亮
+        sets display on
 
         """
         self.__ON = 8
@@ -84,7 +84,7 @@ class NIXIETUBE(object):
 
     def set_power_off(self):
         """
-        数码管熄灭
+        sets display off
 
         """
         self.__ON = 0
