@@ -3,13 +3,13 @@
 
 ### Obsah
 [Motivace](#motivace)  
-[Prostředky I – Podmínky] (#resources1)  
-[Úloha 1 - Parkovací asistent] (#assignment1)  
-[Prostředky II – Složené podmínky] (#resources2)  
-[Úloha 2 - Test plnoletosti] (#assignment2)  
-[Úloha 3 - Horská dráha] (#assignment3)
+[Prostředky I – Podmínky](#resources1)  
+[Úloha 1 - Parkovací asistent](#assignment1)  
+[Prostředky II – Složené podmínky](#resources2)  
+[Úloha 2 - Test plnoletosti](#assignment2)  
+[Úloha 3 - Horská dráha](#assignment3)
 [Shrnutí](#conclusion)  
-[Poznámky pro učitele] (#pozn)  
+[Poznámky pro učitele](#pozn)  
 <a name="motivace"/>
 ## Motivace 
 Podmínky v programování umožňují řídit programový tok na základě různých vstupů, bez podmínek není program dynamický. Často je potřeba provést nějakou akci jen v případě, že nastala nějaká konkrétní situace, to se bez podmínek nepodaří. Znalost podmínek je základem pro mnoho pokročilých programovacích konceptů, jako jsou cykly a funkce.
@@ -45,8 +45,7 @@ V Pythonu se používají následující operátory pro srovnávání hodnot a v
 - `in`: Porovnává, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
 - `not in`: Porovnává, zda se první výraz nenachází v druhém výrazu.
 
-<a name="assignment1"/>
-## Úloha 1 - Parkovací asistent
+## Úloha 1 - Parkovací asistent<a name="assignment1"/>
 ### Zadání
 Vytvořte simulaci parkovacího asistenta TODO
 ### Co budete potřebovat
@@ -78,24 +77,29 @@ TODO
 ### Doplňující poznámky 
 TODO
 <a name="resources2"/>
-## Prostředky I - Složené podmínky
+## Prostředky II - Složené podmínky
 V Pythonu se používají tři logické operátory pro kombinaci podmínek: `and`, `or` a `not`.
 
 Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
+```python
 `if podmínka1 and podmínka2:
     # provede se, pokud jsou obě podmínky pravdivé`
 
 Operátor `or` vrací `True`, pokud alespoň jedna z podmínek je pravdivá, jinak vrací `False`.
-`if podmínka1 or podmínka2:
-    # provede se, pokud je alespoň jedna z podmínek pravdivá`
+```python
+if podmínka1 or podmínka2:
+    # provede se, pokud je alespoň jedna z podmínek pravdivá
+```
 
 Operátor `not` neguje pravdivostní hodnotu podmínky, tedy vrací `True`, pokud je podmínka nepravdivá, a `False`, pokud je podmínka pravdivá.
-`if not podmínka1:
-    # provede se, pokud je podmínka1 nepravdivá`
+```python
+if not podmínka1:
+    # provede se, pokud je podmínka1 nepravdivá
+```
 
 Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
-<a name="assignment2"/>
-## Úloha 2 - Test plnoletosti "vyhazovač"
+
+## Úloha 2 - Test plnoletosti "vyhazovač" <a name="assignment2"/>
 ### Zadání
 TODO
 ### Co budete potřebovat
@@ -136,8 +140,7 @@ TODO
 ### Doplňující poznámky 
 TODO
 
-<a name="assignment3"/>
-## Úloha 3 - Horská dráha
+## Úloha 3 - Horská dráha <a name="assignment3"/>
 ### Zadání
 TODO
 ### Co budete potřebovat
