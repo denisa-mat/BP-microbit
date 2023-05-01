@@ -99,7 +99,7 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
   <em>Schéma Nezha kitu</em>
 </p>
 
-## Úloha 2 - Seznámení s Nezha kitem <a name="assignment2"/>
+## Úloha 2 - Seznámení s Nezha kitem, Fibonacciho poslouponost <a name="assignment2"/>
 ### Zadání
 Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti.
 ### Co budete potřebovat
@@ -120,7 +120,7 @@ number2 = 1
 sum = number1 + number2
 
 while sum <= 16*8:
-    matrix.set_matrix_draw_position(sum)
+    matrix.set_matrix_draw_index(sum-1)
     number1 = number2
     number2 = sum
     sum = number1 + number2
@@ -134,10 +134,9 @@ while sum <= 16*8:
       B --> C[number2 = 1];
       C --> D[sum = number1 + number2];
       D --> E{Vejde se na displej?};
-      E -- YES --> F[vykresli bod na displej];
-          F --> G[vypis vypocet na displej tvaru 'sum = number1 + number2'];
-          G --> H[number1 = number2];
-          H --> I[sum = nubmer1 + number2];
+      E -- YES --> F[rozsvit bod v matici];
+          F --> H[number1 = number2];
+          H --> I[sum = number1 + number2];
           I --> J[vyckej 500 ms]
           J --> E
       E -- NO --> K[Konec]
