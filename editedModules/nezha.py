@@ -7,7 +7,6 @@ J4 = pin16
 
 NEZHA_ADDR = 0x10
 
-
 class NEZHA(object):
     """
     nezha module class
@@ -16,9 +15,9 @@ class NEZHA(object):
     def __init__(self):
         i2c.init()
 
-    def set_motors(self, motor, speed):
+    def set_motor(self, motor, speed):
         """
-        sets speed to given motor
+        sets speed to motor on given pin
         Params:
             motor (int): valid values within 1,2,3,4
             speed (int): valid values within -100~100
@@ -35,9 +34,30 @@ class NEZHA(object):
         else:
             i2c.write(NEZHA_ADDR, bytearray([motor, 0x01, speed, 0]))
 
-    def set_servo(self, servo, angle):
-        """
+    def set_motor_forward_slow(self, motor):
+        self.set_motor(motor, 20)
 
+    def set_motor_forward_fast(self, motor):
+        self.set_motor(motor, 60)
+
+    def set_motor_forward_very_fast(self, motor):
+        self.set_motor(motor, 100)
+
+    def set_motor_stop(self, motor):
+        self.set_motor(motor, 0)
+
+    def set_motor_backward_slow(self, motor):
+        self.set_motor(motor, -20)
+
+    def set_motor_backward_fast(self, motor):
+        self.set_motor(motor, -60)
+
+    def set_motor_backward_very_fast(self, motor):
+        self.set_motor(motor, -100)
+    
+    def set_servo(self, servo, angle):
+        """        
+        Sets angle to servo on given pin
         Params:
             servo (int): valid values within 1,2,3,4
             angle (int): valid values within (0,180)
@@ -45,9 +65,9 @@ class NEZHA(object):
             NONE
         """
         if servo > 4 or servo < 1:
-            raise ValueError('select servo error, 1,2,3,4')
+            raise ValueError('select servo error,1,2,3,4')
         if angle > 180 or angle < 0:
-            raise ValueError('angle error, 0~180')
+            raise ValueError('angle error,0~180')
         if servo == 1:
             i2c.write(NEZHA_ADDR, bytearray([0x10, angle, 0, 0]))
         elif servo == 2:
@@ -56,3 +76,4 @@ class NEZHA(object):
             i2c.write(NEZHA_ADDR, bytearray([0x12, angle, 0, 0]))
         elif servo == 4:
             i2c.write(NEZHA_ADDR, bytearray([0x13, angle, 0, 0]))
+
