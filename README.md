@@ -47,7 +47,7 @@ else:
       C -- NO --> F[podminka2];
       F -- YES --> G[print 'podminka2 splnena'];
 	  G --> E[zbytek programu];
-      F -- NO --> H[else, print 'podminky nesplneny'];
+      F -- NO --> H[print 'podminky nesplneny'];
       H --> E[zbytek programu];
       E --> I((Konec));
 ```
@@ -95,7 +95,7 @@ while True:
 ``` mermaid
   graph TD;
       A((Start)) --> B[to_close_dist = 10];
-      B --> C{Is it True?};
+      B --> C{True};
       C -- YES --> D[uloz vzdalenost do prom dist];
 	  D --> E{dist < to_close_dist};
 	  	E -- YES --> G[rozsvit cervenou led];
