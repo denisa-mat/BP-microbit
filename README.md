@@ -3,17 +3,23 @@
 
 ### Obsah
 [Motivace](#motivace)  
-[Prostředky](#resources)  
-[Úloha 1](#assignment1)  
-[Úloha 2](#assignment2)  
+[Prostředky I – Podmínky] (#resources1)  
+[Úloha 1 - Parkovací asistent] (#assignment1)  
+[Prostředky II – Složené podmínky] (#resources2)  
+[Úloha 2 - Test plnoletosti] (#assignment2)  
+[Úloha 3 - Horská dráha] (#assignment3)
 [Shrnutí](#conclusion)  
-[Poznámky pro učitele](#pozn)  
+[Poznámky pro učitele] (#pozn)  
 <a name="motivace"/>
 ## Motivace 
 Podmínky v programování umožňují řídit programový tok na základě různých vstupů, bez podmínek není program dynamický. Často je potřeba provést nějakou akci jen v případě, že nastala nějaká konkrétní situace, to se bez podmínek nepodaří. Znalost podmínek je základem pro mnoho pokročilých programovacích konceptů, jako jsou cykly a funkce.
-<a name="resources"/>
-## Prostředky - Podmínky 
-Podmínky se používají k rozhodování, které akce má program vykonat v závislosti na nějakém vstupu nebo stavu. Pokud je podmínka vyhodnocena jako true, program vykoná nějakou část kódu, která je podmíněna touto podmínkou. Pokud je podmínka vyhodnocena jako false, program pokračuje za podmíněnou částí kódu, případně skončí, pokud následuje konec programu. Pro zápis jednoduché podmínky využíváme klíčová slova if (pokud) a else (jinak). Za if následuje výraz nebo proměnná typu bool. Vyhodnotí-li se výraz jako true vykoná se kód následující pod if, pokud se vyhodnotí jako false vykoná se program následující za else. Zde je důležité dávat pozor na odsazení, dle odsazení Python rozhodne, který řádek vykonat. 
+<a name="resources1"/>
+## Prostředky I - Podmínky
+Podmínky se používají k rozhodování, které akce má program vykonat v závislosti na nějakém vstupu nebo stavu. 
+Pro zápis podmínky využíváme klíčová slova `if` (pokud), `elif` - zkratka pro else if,  `else` (jinak). Za if a elif následuje podmínka (výraz nebo proměnná typu bool) dle toho, jak se vyhodnotí program pokračuje.
+
+Pokud je podmínka vyhodnocena jako `True` (pravda), program vykoná část kódu, která je podmíněna touto podmínkou. Pokud je podmínka vyhodnocena jako `False` (nepravda), program se posune k další podmínce uvedené za `elif`. Pokud ani jedna z podmínek neplatí a již nenásleduje žádná další, program se posune do bloku `else`, který obsahuje výrazy, které se provedou, pokud neplatí ani jedna z podmínek uvedených v `if` ani v `elif`. Program nemusí obsahovat `else` větev vůbec, pokud v případě nesplnění ani jedné z podmínek nechceme vykonávat nic. Je zde důležité dávat pozor na odsazení, dle odsazení Python rozhodne, který řádek vykonat.
+
 Podmínky v Pythonu mají následující zápis:
 ```python
 from microbit import * 
@@ -26,12 +32,29 @@ else
 	display.scroll(str(choosen_number) + "je 0")
 # tady následuje zbytek programu
 ```
-TODO algoritmus - graficky
+TODO algoritmus – graficky
+
+V Pythonu se používají následující operátory pro srovnávání hodnot a výrazů:
+
+- `==` (rovná se): Porovnává, zda jsou dva výrazy rovny.
+- `!=` (nerovná se): Porovnává, zda jsou dva výrazy nerovnající se.
+- `<` (menší než): Porovnává, zda je první výraz menší než druhý výraz.
+- `>` (větší než): Porovnává, zda je první výraz větší než druhý výraz.
+- `<=` (menší nebo rovno): Porovnává, zda je první výraz menší nebo roven druhému výrazu.
+- `>=` (větší nebo rovno): Porovnává, zda je první výraz větší nebo roven druhému výrazu.
+- `in`: Porovnává, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
+- `not in`: Porovnává, zda se první výraz nenachází v druhém výrazu.
+
 <a name="assignment1"/>
 ## Úloha 1 - Parkovací asistent
 ### Zadání
+Vytvořte simulaci parkovacího asistenta TODO
+### Co budete potřebovat
+TODO
+### Co se naučíte
 TODO
 ### Vzorová implementace
+TODO změnit hudbu za blikání diod
 ```python
 from microbit import *
 from distance import *
@@ -54,9 +77,30 @@ while True:
 TODO
 ### Doplňující poznámky 
 TODO
+<a name="resources2"/>
+## Prostředky I - Složené podmínky
+V Pythonu se používají tři logické operátory pro kombinaci podmínek: `and`, `or` a `not`.
+
+Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
+`if podmínka1 and podmínka2:
+    # provede se, pokud jsou obě podmínky pravdivé`
+
+Operátor `or` vrací `True`, pokud alespoň jedna z podmínek je pravdivá, jinak vrací `False`.
+`if podmínka1 or podmínka2:
+    # provede se, pokud je alespoň jedna z podmínek pravdivá`
+
+Operátor `not` neguje pravdivostní hodnotu podmínky, tedy vrací `True`, pokud je podmínka nepravdivá, a `False`, pokud je podmínka pravdivá.
+`if not podmínka1:
+    # provede se, pokud je podmínka1 nepravdivá`
+
+Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
 <a name="assignment2"/>
 ## Úloha 2 - Test plnoletosti "vyhazovač"
 ### Zadání
+TODO
+### Co budete potřebovat
+TODO
+### Co se naučíte
 TODO
 ### Vzorová implementace
 ```python
@@ -91,8 +135,14 @@ while True:
 TODO
 ### Doplňující poznámky 
 TODO
+
+<a name="assignment3"/>
 ## Úloha 3 - Horská dráha
 ### Zadání
+TODO
+### Co budete potřebovat
+TODO
+### Co se naučíte
 TODO
 ### Vzorová implementace
 ```python
@@ -142,3 +192,4 @@ TODO
 <a name="pozn"/>
 ## Poznámky pro učitele 
 TODO
+
