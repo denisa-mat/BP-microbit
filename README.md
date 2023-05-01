@@ -13,7 +13,8 @@ from microbit import foo
 [Matrix](#matrix)  
 [Nezha](#nezha)  
 [Nixitube](#nixietube)  
-## Distance<a name="distance"></a>
+[Další moduly](#more)  
+## Distance <a name="distance"></a>
 ### Fyzická komponenta
 [Sonar:bit ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05007.html)
 ### Popis
@@ -95,6 +96,5 @@ TODO
 
 
 
-
-
-https://www.elecfreaks.com/learn-en/microbitplanetX/index.html
+## Další moduly <a name="more"></a>
+Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html)
