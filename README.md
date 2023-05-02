@@ -4,7 +4,7 @@
 ## Obsah
 [Motivace](#motivace)  
 [Prostředky I - Proměnné, datové typy](#resources1)  
-[Úloha 1 - Proměnné](#assignment1)  
+[Úloha 1 - Proměnné, Fibonacciho posloupnost ](#assignment1)  
 [Prostředky II - Nezha kit](#resources2)  
 [Úloha 2 - Seznámení s Nezha kitem](#assignment2)  
 [Úloha 3](#assignment3)  
@@ -22,8 +22,28 @@ Dalším důležitým aspektem proměnných je, že umožňují programátorům 
 ## Prostředky I - Proměnné, datové typy <a name="resources1"/>
 ### Proměnná
 Proměnná je základní stavební kamen programování a označuje místo v paměti počítače, které je určeno pro ukládání hodnot. Proměnné mají název, datový typ a obsahují konkrétní hodnotu, která může být v průběhu programu měněna. Používají se pro ukládání vstupních dat, mezivýsledků a výstupních dat programu. Díky proměnným mohou programy uchovávat informace a provádět s nimi operace, což umožňuje tvorbu dynamických a interaktivních programů.
+
+Pro přiřazení hodnoty do proměnné v Pythonu použijte operátor přiřazení `=` následovaný hodnotou, kterou chcete uložit do proměnné. Například:
+
+```python
+# přiřazení hodnoty 10 do proměnné x
+x = 10
+
+# přiřazení řetězce 'ahoj' do proměnné y
+y = "ahoj"
+
+# přiřazení logické hodnoty True do proměnné z
+z = True
+```
+Při pojemnování proměnných v Pythonu dodržujte následující pravidla:
+- Název proměnné může obsahovat pouze písmena (velká nebo malá), číslice a podtržítko `_`.
+- Název proměnné musí začínat písmenem nebo podtržítkem, nikdy číslicí.
+- Název proměnné by měl být stručný a popisný, aby byl snadno čitelný a srozumitelný pro ostatní programátory.
+Standardně se při pojmenování požívá angličtina a využívají se pouze malá písmena. U víceslovných názvů se slova oddělují podtržítkem `_`. Zkuste se vyhnout používání klíčových slov jako názvů proměnných v Pythonu, jako jsou například `if`, `while`, `int`, `True`, `class`, `def`, `list`.
+
 ### Datový typ
 Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
+
 ### Operace s proměnnými
 S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání `+`, odčítání `-`, násobení `*`, dělení `/`, mocnění `**`, celočíselné dělení `//`). Operaci `+` lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl, jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
@@ -32,13 +52,21 @@ S proměnnými lze provádět několik základních operací. Ne všechny operac
   <em>Operace na nepodporované kombinaci typů</em>
 </p>
 
-## Úloha 1 - Proměnné <a name="assignment1"/>
+Pokud na proměnných provádíme nějakou operaci, je pravděpodobné, že s ní budeme chtít dále pracovat, nezapomeňte ji proto uložit do proměnné, můžete vytvořit novou nebo přepsat hodnotu již existující.
+
+## Úloha 1 - Proměnné, Fibonacciho posloupnost <a name="assignment1"/>
 ### Zadání
-Napište program, který bude v nekonečném cyklu počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`, kterou jste využili v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
+Napište program, který bude v nekonečném cyklu `while True` počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0``+``1``=``1`
+**Tip1:** Fibonacciho posloupnost je posloupnost čísel, kde každé číslo v posloupnosti je součtem dvou předchozích čísel. Začíná se obvykle číslem 0 a následuje číslo 1. Další číslo je poté součtem 0 a 1, tedy 1, další je 1 + 1, tedy 2, další je 1 + 2, tedy 3, a tak dále. Takto pokračuje posloupnost dál do nekonečna.
+**Tip2:** Metoda `scroll` bere jako parametr `string`, pro přetypování proměnné typu `int` využijet funkci `str()`.
+
 ### Co budete potřebovat
 K této úloze nejsou potřeba žádné senzory a moduly.
 ### Co se naučíte
-Cílem úlohy je Vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem int. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
+Cílem úlohy je vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem `int`. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
+### Jak postupovat
+
+
 ### Vzorová implementace
 ```python
 from microbit import * 
@@ -64,7 +92,7 @@ while True:
           G --> H[number2 = sum];
           H --> D;
 ```
-### Popis řešení
+### Popis vzorové implementace
 Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné `sum` přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných `number1` a `number2`. 
 
 Metoda `scroll` zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bit. Protože `scroll` bere pouze argumenty typu string přetypujte proměnné `number1` a `number2` pomocí funkce `str()`. Aplikace operace `+` na hodnoty typu string funguje jako řetězení (konkatenace).
@@ -99,27 +127,33 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
   <em>Schéma Nezha kitu</em>
 </p>
 
-## Úloha 2 - Seznámení s Nezha kitem, Fibonacciho poslouponost <a name="assignment2"/>
+
+
+## Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost <a name="assignment2"/>
 ### Zadání
-Druhou úlohou bude použít již vytvořený program a rozsvítit na PlanetX matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti.
+Použijte již vytvořený program a modifikujte ho tak, aby rozsvítil na matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti. Naimportujte modul obsahující metody a funkce pro matrix display a využijte jeho metodu `set_matrix_draw_index()`.
 ### Co budete potřebovat
-Pro tuto úlohu bude potřeba modul Nezha a PlanetX matrix modul
+Pro tuto úlohu bude potřeba modul Nezha a PlanetX matrix modul.
 ### Co se naučíte
-Cílem této úlohy je vyzkoušet použití rozšiřujícího Nezha modulu jednoho z dalších modulů.
+Cílem této úlohy je vyzkoušet použití Nezha kitu a import modulu jednoho z displejů.
+### Jak postupovat
+Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru zvolte `Open` a vyberte v adresářové struktuře modul. Poté je důležité zvolit `Add file matrix.py`. Jako výchozí hodnota je zvoleno `Replace main code with matrix.py`, tím byste si přepsali kód, který se nachází v souboru `main.py`.
+
+Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v osmé lekci věnované modulům. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
+
+Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program.
 ### Vzorová implementace
 ```python
 from microbit import *
 from matrix import *
-from nezha import *
 
-nezha = NEZHA()
 matrix = MATRIX()
 
 number1 = 0
 number2 = 1
 sum = number1 + number2
 
-while sum <= 16*8:
+while True:
     matrix.set_matrix_draw_index(sum-1)
     number1 = number2
     number2 = sum
@@ -141,21 +175,7 @@ while sum <= 16*8:
           J --> E
       E -- NO --> K[Konec]
 ```
-
-### Popis řešení
-TODO
-### Doplňující poznámky 
-TODO
-## Úloha 3 - Proměnné a měření vzdálenosti <a name="assignment3"/>
-### Zadání
-TODO
-### Co budete potřebovat
-TODO
-### Co se naučíte
-TODO
-### Vzorová implementace
-TODO
-### Popis řešení
+### Popis vzorové implementace
 TODO
 ### Doplňující poznámky 
 TODO
