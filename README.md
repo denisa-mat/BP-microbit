@@ -6,8 +6,7 @@
 [Prostředky I - Proměnné, datové typy](#resources1)  
 [Úloha 1 - Proměnné, Fibonacciho posloupnost ](#assignment1)  
 [Prostředky II - Nezha kit](#resources2)  
-[Úloha 2 - Seznámení s Nezha kitem](#assignment2)  
-[Úloha 3](#assignment3)  
+[Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost](#assignment2)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
@@ -56,17 +55,24 @@ Pokud na proměnných provádíme nějakou operaci, je pravděpodobné, že s n�
 
 ## Úloha 1 - Proměnné, Fibonacciho posloupnost <a name="assignment1"/>
 ### Zadání
-Napište program, který bude v nekonečném cyklu `while True` počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0``+``1``=``1`
-**Tip1:** Fibonacciho posloupnost je posloupnost čísel, kde každé číslo v posloupnosti je součtem dvou předchozích čísel. Začíná se obvykle číslem 0 a následuje číslo 1. Další číslo je poté součtem 0 a 1, tedy 1, další je 1 + 1, tedy 2, další je 1 + 2, tedy 3, a tak dále. Takto pokračuje posloupnost dál do nekonečna.
-**Tip2:** Metoda `scroll` bere jako parametr `string`, pro přetypování proměnné typu `int` využijet funkci `str()`.
+Napište program, který bude v nekonečném cyklu `while True` počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0+1=1`
 
 ### Co budete potřebovat
 K této úloze nejsou potřeba žádné senzory a moduly.
 ### Co se naučíte
 Cílem úlohy je vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem `int`. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
 ### Jak postupovat
+Nejprve zjistěte, zda žáci znají Fibonnaciho posloupnost a případně vysvětlete, že se jedná o posloupnost čísel, kde každé číslo v posloupnosti je součtem dvou předchozích čísel. Začíná se obvykle číslem 0 a následuje číslo 1. Další číslo je poté součtem 0 a 1, tedy 1, další je 1 + 1, tedy 2, další je 1 + 2, tedy 3, a tak dále. Takto pokračuje posloupnost dál do nekonečna.
 
+Zkuste s žáky probrat, jak bude program vypadat, co jsou jeho klíčové body. Můžete na tabuli spolu s žáky sestavit diagram podobně, jako je níže, to jim zjednodušší následné psaní kódu.
 
+**K zamyšlení:**
+
+- Kde budeme inicializovat proměnné? (V cyklu? Nad ním? Nebo někde jinde?)
+- Podívejte se s žáky na metodu `scroll()`. Jaké bere parametry? Jakým způsobem ji zavoláme?
+
+Metoda `scroll` bere jako parametr `string`, pro přetypování proměnné typu `int` využijte funkci `str()`.
+Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
 ### Vzorová implementace
 ```python
 from microbit import * 
@@ -83,9 +89,9 @@ while True:
 ### Diagram
 ```mermaid
   graph TD;
-      A[Start] --> B[number1 = 0];
+      A((Start)) --> B[number1 = 0];
       B --> C[number2 = 0];
-      C --> D{Is it True?};
+      C --> D{True};
       D -- YES --> E[sum = number1 + number2];
           E --> F[vypis vypocet na displej tvaru 'sum = number1 + number2'];
           F --> G[number1 = number2];
@@ -99,7 +105,7 @@ Metoda `scroll` zavolaná na objektu display postupně zobrazuje výpočet a vý
 Na řádku 9 je do proměnné `number1` uložena hodnota proměnné `number2`, na řádku 10 je do proměnné `number2` uložena hodnota z proměnné `sum`. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
 
 ### Doplňující poznámky 
-Fibonacciho posloupnost je posloupnost čísel začínající nulou a jedničkou, kde každé následující číslo je součet předchozích dvou. Fibonacciho posloupnost se vyskytuje v řadě různých oblastí od přírodních věd až po design a umění.
+Fibonacciho posloupnost je posloupnost je poměrně jednoduchá posloupnost, ale má zásadní využití v řadě různých oblastí od přírodních věd až po design a umění. 
 
 ## Prostředky II - Nezha kit <a name="resources2"/>
 ### NezhaKit
@@ -127,8 +133,6 @@ Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory nás
   <em>Schéma Nezha kitu</em>
 </p>
 
-
-
 ## Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost <a name="assignment2"/>
 ### Zadání
 Použijte již vytvořený program a modifikujte ho tak, aby rozsvítil na matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti. Naimportujte modul obsahující metody a funkce pro matrix display a využijte jeho metodu `set_matrix_draw_index()`.
@@ -139,9 +143,16 @@ Cílem této úlohy je vyzkoušet použití Nezha kitu a import modulu jednoho z
 ### Jak postupovat
 Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru zvolte `Open` a vyberte v adresářové struktuře modul. Poté je důležité zvolit `Add file matrix.py`. Jako výchozí hodnota je zvoleno `Replace main code with matrix.py`, tím byste si přepsali kód, který se nachází v souboru `main.py`.
 
+<p align="center">
+  <img src=/img/modulNahrat.png alt="Přidání modulů do projektu width="100%">
+  <em>Přidání modulů do projektu</em>
+</p>
+
 Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v osmé lekci věnované modulům. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
 
-Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program.
+Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Žáci pravděpodobně do metody zadají proměnnou `sum`. Prodiskutujte s nimi, zda se zobrazují správné hodnoty, a čím by mohlo být, že ne. První dioda má index nula, proto se jako první rozsvítí až druhá s indexem 1 a dále budou všechny o jednu posunuté. Vyřešit to lze snadno odečtením jedničky od proměnné `sum`, při předávání do metody.
+
+Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program. Funkce `sleep()` říká jak dlouho v milisekundách má na daném místě program pozastavit. Při práci s micro:bitem budeme `sleep()` používat poměrně často.
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -164,22 +175,22 @@ while True:
 ### Diagram
 ```mermaid
   graph TD;
-      A[Start] --> B[number1 = 0];
+      A((Start)) --> B[number1 = 0];
       B --> C[number2 = 1];
       C --> D[sum = number1 + number2];
-      D --> E{Vejde se na displej?};
+      D --> E{True};
       E -- YES --> F[rozsvit bod v matici];
           F --> H[number1 = number2];
           H --> I[sum = number1 + number2];
           I --> J[vyckej 500 ms]
           J --> E
-      E -- NO --> K[Konec]
+      E -- NO --> K((Konec))
 ```
 ### Popis vzorové implementace
-TODO
+Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
 ### Doplňující poznámky 
-TODO
+Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. Je třeba změnit podmínku ve while cyklu tak, aby se tělo cyklu vykonalo pouze je-li požadovaný index v rozsahu displeje. Displej má 8x16 diod. podmínka by tedy byla `while sum < 128`.
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
-TODO
+Více o tom, jaké jsou v Pythonu jmenné konvence si můžete přečíst na (peps.python.org)[https://peps.python.org/pep-0008/#introduction]
