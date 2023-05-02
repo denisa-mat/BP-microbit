@@ -193,4 +193,4 @@ Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. J
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
-Více o tom, jaké jsou v Pythonu jmenné konvence si můžete přečíst na (peps.python.org)[https://peps.python.org/pep-0008/#introduction]
+Více o tom, jaké jsou v Pythonu jmenné konvence si můžete přečíst na [peps.python.org](https://peps.python.org/pep-0008/#introduction)
