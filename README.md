@@ -24,11 +24,11 @@ I u cyklů je důležité dávat pozor na správné odsazení, bez toho nebude p
 Přestože jsme dosud pro zjednodušení používali nekonečný cyklus `while True`, od této chvíle je to něco, čemu se budeme chtít spíš vyhnout. Každý porgram má nějaký konečný stav v němž chceme aby skončil.
 ## Úloha 1 - Auto <a name="assignment1"/>
 ### Zadání
-TODO
+Sestavte ze Nezha sady vozidlo, které bude pohánět motor a v předu bude mít distance senzor a crash senzor. Poté ho naprogramujte tak, že pojede rychlostí `fast` dokud crash senzor nebude zmačknutý. Pokud bude vozidlo překážce blíže než 40 centimetrů zpomalí na rychlost `slow`.
 ### Co budete potřebovat
-TODO
+Pro tuto úlohu si připravte crash senzor a dostance senzor. Oba jsou součástí Nezha sady.
 ### Co se naučíte
-TODO
+Žáci si vyzkouší sestavit vlatsního robota a naprogramovat ho s využitím while cyklu.
 ### Vzorová implementace
 ```python
 #from microbit import *
@@ -56,7 +56,9 @@ nezha.set_motors(3, 0)
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
-TODO
+Pokud vozidlo couvá, přestože je nastavena jízda dopředu, umístili jste motor obraceným směrem. Není třeba motor otáčet, stačí vozidlo nastavit na opačný směr.
+
+Else větev program obsahuje z důvodu nepřesnosti senzoru. Někdy senzor zaznamená velmi malou vzdálenost přestože je od překážky daleko. Else větev zajistí, že se opět rozjede rychle.
 ## Prostředky II - For cyklus <a name="resources2"/>
 For cyklus je další základní typ cyklu v programování, který slouží k procházení prvků v určité sekvenci, např. v seznamu, řetězci nebo množině, a opakování určitého bloku kódu pro každý prvek v této sekvenci. Tento cyklus se používá tam, kde známe předem počet opakování, nebo je potřeba provádět operace s každým prvkem v dané sekvenci.
 
@@ -75,8 +77,10 @@ Funkce `range()`, bere hodnoty typu `int`, první číslo značí ostrý počát
 2. Napište program, který rozsvítí na matrix modulu postupně každou třetí diodu (první bude svítit druhá a třetí ne, čtvrtá zase ano).
 3. Napište program, který na matrix modulu vytvoří rozsvícením diod šachovnici.
 ### Co budete potřebovat
-Matrix modul
+Úloha je vytvořena pro maticový displej 8x16 bodů.
 ### Co se naučíte
+Žáci si na jendotlivých úlohách vyzkouší různé varianty for cyklu.
+### Jak postupovat
 TODO
 ### Vzorová implementace
 1.     
@@ -121,5 +125,5 @@ TODO
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
-TODO
+https://wiki.python.org/moin/ForLoop
 
