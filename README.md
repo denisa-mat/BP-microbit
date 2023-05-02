@@ -68,7 +68,6 @@ Je možné se setkat ještě například s ovály či rovnoběžníky, ty pro na
 	  C --> B;
       B -- NO -->D((Konec));
 ```
-
 ### Micro:Bit
 Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například pro detekci pohybu, snímání teploty a světla. Další senzory je možné dokoupit a připojit.
 
@@ -85,25 +84,18 @@ Napište program, který na vestavěný displej vypíše řetězec "Hello World"
 K této úloze nejsou potřebné žádné senzory ani Nezha sada.
 ### Co se naučíte
 Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s IDE a micro:bitem a program nahrát z počítače do micro:bitu. 
-### Vzorová implementace
-```python
-from microbit import *
+### Jak postupovat
+Nejprve je třeba mít naimportován modul microbit pomocí příkazu `from microbit import *` tento zápis značí, že importujeme vše co modul obsahuje. Symbol `*` lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte  Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekončný cyklus má jendoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
 
-while True:
-    display.scroll('Hello World')
-```
-### Popis řešení
-Na prvním řádku jsou z modulu micro:bit je importováno vše, co obsahuje. V tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí.
-Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu `scroll` na objektu `display`, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
-
-Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte "Send to micro:bit", otevře se nápověda a poté okno s kompatibilními zařízeními. 
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte `Send to micro:bit`, otevře se nápověda a poté okno s kompatibilními zařízeními. 
 
 <p align="center">
   <img src=/img/send1.png alt="Připojit micro:bit" width="100%">
   <em>Připojit micro:bit</em>
 </p>
 
-Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu i tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
+Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu o tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
 
 <p align="center">
   <img src=/img/send2.png alt="Nahrát kód" width="100%">
@@ -111,13 +103,19 @@ Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se
 </p>
 
 V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a nahrát na micro:bit jako na externí úložiště. 
+### Vzorová implementace
+```python
+from microbit import *
+
+while True:
+    display.scroll("Hello World")
+```
+### Popis vzorové implementace
+Na prvním řádku importujeme celý modul microbit. V tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí. Na řádku tři vytváříme nekonečný cyklus v jehož těle voláme metodu `scroll()` na objektu `display`, které předáme jako parametr požadovaný textový řetězec "Hello World".
 
 ### Doplňující poznámky
 Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s `while True`, pro neustálé opakování programu.
-V případě zájmu si můžou žáci World substituovat svým jménem.
-
-[//]: # (pozn.: Úlohy v následujících lekcích budou řešeny v samostatných souborech v adresáři reseni.)
-
+V případě zájmu si můžou žáci World substituovat svým jménem. V Pythonu a stejně tak v MicroPythonu lze pro string použít dvojité i jednoduché horní uvozovky.
 
 ## Shrnutí <a name="shrnuti"/>
 shrnutí
