@@ -65,13 +65,18 @@ V Pythonu se používají následující operátory pro srovnávání hodnot a v
 
 ## Úloha 1 - Parkovací asistent<a name="assignment1"/>
 ### Zadání
-Vytvořte simulaci parkovacího asistenta TODO
+Vytvořte simulaci parkovacího asistenta. Napište program, který bude pomocí senzoru pro snímání vzdálenosti hlídat, jak daleko je překážka a tuto vzdálenost vypíše na segmentový displej (nixietube). Pokud je vzdálenost menší než 20, pak rozsviďte červenou led diodu.
 ### Co budete potřebovat
-TODO
+Úloha využívá moduly distance a červenou led diodu ze sady Nezha a nixietube modul, který není součástí sady.
 ### Co se naučíte
+Cílem úlohy je prakticky vyzkoušet jednoduchou podmínku obsahující pouze if a else větev.
+### Jak postupovat
 TODO
+
+Dohromady s učitelem?
 ### Vzorová implementace
 ```python
+from microbit import *
 from distance import *
 from nixietube import *
 from led import *
@@ -80,15 +85,13 @@ distance = DISTANCE(J1)
 nixietube = NIXIETUBE(J2)
 led = LED(J3)
 
-to_close_dist = 20
-
 while True:
     dist = (distance.get_distance())//1
     nixietube.set_show_num(int(dist))
-    if dist < to_close_dist:
-        led.set_led(1, 50)
+    if dist < 20:
+        led.set_led_on()
     else:
-        led.set_led(0, 50)
+        led.set_led_off()
     sleep(300)
 ```
 ### Diagram
@@ -103,10 +106,10 @@ while True:
       G --> H;
       H --> C;
 ```
-### Popis řešení
-TODO
+### Popis vzorové implementace
+Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off`.
 ### Doplňující poznámky 
-TODO
+Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
 <a name="resources2"/>
 ## Prostředky II - Složené podmínky
 V Pythonu se používají tři logické operátory pro kombinaci podmínek: `and`, `or` a `not`.
@@ -131,13 +134,17 @@ if not podmínka1:
 
 Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
 
-## Úloha 2 - Test plnoletosti "vyhazovač" <a name="assignment2"/>
+## Úloha 2 - Test plnoletosti <a name="assignment2"/>
 ### Zadání
-TODO
+Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba oslavila osmnácté narozeniny zobrazte fajfku (`Image.YES`). 
 ### Co budete potřebovat
-TODO
+Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `nixietube`, které nejsou součástí sady.
 ### Co se naučíte
+Cílem úlohy je vyzkoušet práci s podmínkami.
+### Jak postupovat
 TODO
+
+PRIMM
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -191,18 +198,22 @@ while True:
       		  	 P --> Q;
 			O -- NO --> Q
 ```
-### Popis řešení
+### Popis vzorové implementace
 TODO
 ### Doplňující poznámky 
 TODO
 
 ## Úloha 3 - Horská dráha <a name="assignment3"/>
 ### Zadání
-TODO
+Naprogramujte microbita, tak aby na displej zobrazoval zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
 ### Co budete potřebovat
-TODO
+K řešení úlohy jsou využívány moduly button a nixietube, které nejsou součástí Nezha kitu. Pokud je nemáte je možné nahradit button tlačítky přímo na micro:bitu a místo výpisu na segmentový dislej hodnoty scrollovat na displeji micro:bita.
 ### Co se naučíte
+Úloha se zaměřuje na složené a vnořené podmínky.
+### Jak postupovat
 TODO
+
+Pokračující PRIMM
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -219,9 +230,7 @@ height_confirmed = False
 
 while True:
     if age_confirmed and height_confirmed:
-        if age < 5:
-            display.show(Image.SAD)
-        elif age <= 10 and height < 125:
+        if age <= 10 and height < 125:
             display.show(Image.NO)
         else:
             display.show(Image.YES)
@@ -244,11 +253,10 @@ while True:
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
-TODO
+Pokud máte pocit, že je úloha příliš komplexní nastavte hodnotu výšky staticky na začátku porgramu. Pak stačí upravit podmínky a kód zůstane z větší části stejný jako v předchozí úloze.
 <a name="conclusion"/>
 ## Shrnutí 
 TODO
 <a name="pozn"/>
 ## Poznámky pro učitele 
-TODO
-
+Operace AND, OR a NOT jsou v boolovské algebře jsou základními logickými operacemi, které se používají ke kombinování a transformaci logických hodnot. Booleovská algebra se zabývá algebraickými operacemi nad logickými hodnotami, používají se v mnoha oblastech informatiky a elektrotechniky, jako jsou návrh digitálních obvodů, programování, databázové dotazy a další.
