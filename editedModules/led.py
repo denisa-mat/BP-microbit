@@ -32,13 +32,13 @@ class LED(object):
 
         Return: NONE
         """
-        if state:
+        if not state:
             self.__pin.write_analog(0)
         elif state:
-            brightness = (brightness * 1023) / 100;
+            brightness = (brightness * 1023) // 100;
             self.__pin.write_analog(brightness)
         else:
-            raise valueError("brightness error, must 0 <= brightness <= 100")
+            raise ValueError("brightness error, must 0 <= brightness <= 100")
         self.__is_on = state
         self.__brightness = brightness
 
@@ -61,9 +61,10 @@ class LED(object):
 
         Return: NONE
         """
-        self.set_led(False)
+        if self.__is_on:
+            self.set_led(False)
 
-    def set_led_brightness(self, brithness):
+    def set_led_brightness(self, brightness):
         """
         sets brightness
 
@@ -73,7 +74,7 @@ class LED(object):
         Return: NONE
         """
         if self.__is_on:
-            set_led(True, brightness=brithness)
+            self.set_led(True, brightness=brightness)
 
     def get_is_on(self):
         """
@@ -86,7 +87,7 @@ class LED(object):
         return self.__is_on
 
     def get_brightness(self):
-                """
+        """
         returns brightness
 
         Params: NONE
@@ -94,5 +95,4 @@ class LED(object):
         Return:
             (int) brightness
         """
-
         return self.__brightness

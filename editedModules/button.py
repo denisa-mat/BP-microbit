@@ -43,7 +43,7 @@ class BUTTON(object):
         returns True if button D is pressed
 
         Return:
-            boolean: 按下返回True, 未按下返回False
+            boolean: True/False
 
         """
         return self.__pinD.read_digital() == 0 and self.__pinC.read_digital() == 1
