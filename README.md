@@ -55,14 +55,16 @@ motor.set_motor_stop()
 ### Diagram
 ```mermaid
 graph TD;
-	A((Start)) --> B[not crash is pressed];
-	B --> C[dist = distance.get_distance];
-	   	C --> D{dist mensi nez 40};
-	   	     D -- YES --> E[motor zpomali na slow];
-	         D -–NO--> F[motor zrychli na fast];
-	         E --> G[motor zastavi];
-	         F --> G;
-			 G --> ((Konec));
+	A((Start)) --> B{not crash is pressed?};
+	B -- YES --> C[dist = distance get_distance];
+	   	C --> D{dist < 40};
+	   		D -- YES --> E[zpomal motor na slow];
+			D -- NO --> F[zrychli motor na fast];
+		E --> B;
+		F --> B;
+	B -- NO --> G[zastav motor];
+	G --> H((Konec));
+
 ```
 ### Popis řešení
 Provdeme potřebné importy modulů a vytvoříme instance daných tříd. Na řádku 10 vytvoříme cyklus s podmínkou, že není stisknut crash senzor. Uvnitř cyklu měříme vzdálenost a dle její hodnoty necháme auto zrychlit nebo zpomalit.
