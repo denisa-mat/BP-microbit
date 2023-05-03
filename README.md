@@ -3,7 +3,7 @@
 
 ## Obsah
 [Motivace](#motivace)  
-[Prostředky I - Seznam, indexace ](#resources1)  
+[Prostředky I - Seznamy, indexace, foreach ](#resources1)  
 [Úloha 1 - Seznamy](#assignment1)  
 [Úloha 2 - Memory test](#assignment2)  
 [Shrnutí](#conclusion)  
@@ -11,7 +11,7 @@
 
 ## Motivace <a name="motivace"/>
 Seznamy jsou jednou z nejdůležitějších datových struktur, umožňují ukládat hodnoty a manipulovat s nimi, což je velmi užitečné v mnoha různých typech programů. Seznamy mohou být použity pro ukládání seznamů uživatelských vstupů, výsledků zpracování dat, seznamu položek k nákupu, seznamu přátel na sociální síti a mnoho dalších.
-## Prostředky I - <a name="resources1"/>
+## Prostředky I - Seznamy, indexace, foreach <a name="resources1"/>
 V Pythonu jsou seznamy jedním z nejčastěji používaných datových typů. Seznam umožňuje ukládat a pracovat s více hodnotami najednou, které mohou být různých datových typů. Seznamy jsou v Pythonu reprezentovány hranatými závorkami [] a jednotlivé prvky jsou odděleny čárkami.
 
 Například, zde je příklad vytvoření seznamu čísel:
