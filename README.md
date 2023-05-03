@@ -67,20 +67,19 @@ for value in button_values:
 ### 
 ```mermaid
 graph TD;
-    Start((Start)) --> B[inicializuj int_values];
+    A((Start)) --> B[inicializuj int_values];
     B --> C[nastav values_length = 6];
-	C --> D{je v poli int_values 6 cisel?}
-    D -- NO --> E[vloz do pole int_values nahonde 0 nebo 1];
-	E --> D;
+	C --> D{je v poli int_values 6 cisel?};
+    	D -- NO --> E[vloz do pole int_values nahonde 0 nebo 1];
+		E --> D;
 	D -- YES --> G[inicializuj button_values];
 	G --> H[vloz do value prvni prvke z int_values];
 	H --> I{je value posledni?};
-	I -- NO --> J{je value 0?};
-	J -- YES --> K[vloz do button_values "C"];
-	J -- NO --> L[vloz do button_values "D"];
-	L --> M[vloz do value dalsi cislo z int_values];
-	K --> M;
-	I --> N[vloz do value prvni prvek z button values];
+		I -- NO --> J{je value 0?};
+			J -- YES --> K[vloz do button_values "C"];
+			J -- NO --> L[vloz do button_values "D"];
+		L --> M[vloz do value dalsi cislo z int_values];
+	I -- YES --> N[vloz do value prvni prvek z button values];
 	N --> O{je value posledni?};
 	O -- NO --> P[skroluj na displeji value];
 	P --> Q[vloz do value dalsi prvek z button_values];
