@@ -56,11 +56,11 @@ motor.set_motor_stop()
 ```mermaid
 graph TD;
 	A((Start)) --> B[not crash is pressed];
-	B -- YES --> C[dist = distance.get_distance];
-	   	C --> D{dist < 40};
-	   	     D -- YES --> E[motor zpomalí na slow];
-	         D -–NO--> F[motor zrychlý na fast];
-	         E --> G[motor zastaví];
+	B --> C[dist = distance.get_distance];
+	   	C --> D{dist mensi nez 40};
+	   	     D -- YES --> E[motor zpomali na slow];
+	         D -–NO--> F[motor zrychli na fast];
+	         E --> G[motor zastavi];
 	         F --> G;
 			 G --> ((Konec));
 ```
