@@ -29,6 +29,8 @@ Sestavte ze Nezha sady vozidlo, které bude pohánět motor a v předu bude mít
 Pro tuto úlohu si připravte crash senzor a dostance senzor. Oba jsou součástí Nezha sady.
 ### Co se naučíte
 Žáci si vyzkouší sestavit vlatsního robota a naprogramovat ho s využitím while cyklu.
+### Jak postupovat
+Prvním krokem v této úloze je sestavit vozítko, které bude schopné pohybu vpřed a bude mít umístěný distance tak, aby mohl snímat vzdálenost od překážek a crash senzor tak, aby to byla první součástka která do překážky narazí. Ukažte žákům, které senzory je potřeba, aby umístili a kam. Také studentům ukažte motor a Vymezte studentům na stavbu přesný čas, jinak hrozí, že budou celou hodinu stavět.
 ### Vzorová implementace
 ```python
 #from microbit import *
@@ -52,7 +54,6 @@ nezha.set_motors(3, 0)
 
 #do poznamky vysvetlit proc else vetev
 ```
-
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
@@ -126,4 +127,6 @@ TODO
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
 https://wiki.python.org/moin/ForLoop
+
+vozítka https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/index.html
 
