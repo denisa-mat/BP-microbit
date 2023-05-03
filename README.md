@@ -76,14 +76,17 @@ graph TD;
 	G --> H[vloz do value prvni prvke z int_values];
 	H --> I{je value posledni?};
 		I -- NO --> J{je value 0?};
-			J -- YES --> K[vloz do button_values "C"];
-			J -- NO --> L[vloz do button_values "D"];
+			J -- YES --> K[vloz do button_values C];
+			J -- NO --> L[vloz do button_values D];
 		L --> M[vloz do value dalsi cislo z int_values];
+		K --> M;
+		M --> I;
 	I -- YES --> N[vloz do value prvni prvek z button values];
 	N --> O{je value posledni?};
-	O -- NO --> P[skroluj na displeji value];
-	P --> Q[vloz do value dalsi prvek z button_values];
-	Q -- YES --> R((Konec));
+		O -- NO --> P[skroluj na displeji value];
+		P --> Q[vloz do value dalsi prvek z button_values];
+		Q --> O;
+	O -- YES --> R((Konec));
 ```
 ### Popis vzorové implementace
 TODO
