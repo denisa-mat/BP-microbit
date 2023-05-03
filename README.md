@@ -70,10 +70,9 @@ graph TD;
     D -- NO --> E[vloz do promenne random_value nahodne 0 nebo 1];
 		E --> F[je random_value = 0 ?];
 		F -- YES --> K[vloz do memory_list C];
-			K --> C;
+			K --> D;
 		F -- NO --> L[vloz do memory_list D];
-			L --> C
-				M --> I;
+			L --> D
 	D -- YES --> O{je value posledni?};
 		O -- NO --> P[skroluj na displeji value];
 			P --> Q[vloz do value dalsi prvek z button_values];
