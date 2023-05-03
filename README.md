@@ -45,48 +45,40 @@ Využijte počítaný for cyklus pro indexování do seznamu. pro kontrolu půvo
 
 ### Vzorová implementace
 ```python
-import random
+from microbit import *
+from random import randint
 
-int_values = []
-values_length = 6
+memory_test_size = 6
+memory_list = []
 
-for _ in range(values_length):
-    int_values.append(random.randint(0,1))
-
-button_values = []
-
-for value in int_values:
-    if value == 0:
-		button_values.append("C")
+for _ in range(memory_test_size):
+    random_value = randint(0,1)
+    if random_value == 0:
+        memory_list.append("C")
     else:
-		button_values.append("D")
-		
-for value in button_values:
+        memory_list.append("D")
+
+for value in memory_list:
     display.scroll(value)
 ```
 ### 
 ```mermaid
 graph TD;
-    A((Start)) --> B[inicializuj int_values];
-    B --> C[nastav values_length = 6];
-	C --> D{je v poli int_values 6 cisel?};
-    	D -- NO --> E[vloz do pole int_values nahonde 0 nebo 1];
-		E --> D;
-	D -- YES --> G[inicializuj button_values];
-	G --> H[vloz do value prvni prvke z int_values];
-	H --> I{je value posledni?};
-		I -- NO --> J{je value 0?};
-			J -- YES --> K[vloz do button_values C];
-			J -- NO --> L[vloz do button_values D];
-		L --> M[vloz do value dalsi cislo z int_values];
-		K --> M;
-		M --> I;
-	I -- YES --> N[vloz do value prvni prvek z button values];
-	N --> O{je value posledni?};
+    A((Start)) --> B[nastav memory_test_size = 6];
+    B --> C[inicializuj memory_list];
+	C --> D{je v poli int_values memory_test_size polozek?};
+    D -- NO --> E[vloz do promenne random_value nahodne 0 nebo 1];
+		E --> F[je random_value = 0 ?];
+		F -- YES --> K[vloz do memory_list C];
+			K --> C;
+		F -- NO --> L[vloz do memory_list D];
+			L --> C
+				M --> I;
+	D -- YES --> O{je value posledni?};
 		O -- NO --> P[skroluj na displeji value];
-		P --> Q[vloz do value dalsi prvek z button_values];
-		Q --> O;
-	O -- YES --> R((Konec));
+			P --> Q[vloz do value dalsi prvek z button_values];
+			Q --> O;
+		O -- YES --> R((Konec));
 ```
 ### Popis vzorové implementace
 TODO
