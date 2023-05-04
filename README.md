@@ -57,7 +57,7 @@ Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů
 - pro vstupn a výstupní operace se používají rovnoběžníky
 - všechny ostatní příkazy zapisujeme do obdélníků
 - symboly propojujeme šipkami
-- 
+
 <p align="center">
   <img src=/img/diagram1.png alt="diagram" width="100%">
 </p>
