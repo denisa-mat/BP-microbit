@@ -87,17 +87,11 @@ while True:
     number2 = sum
 ```
 ### Diagram
-```mermaid
-  graph TD;
-      A((Start)) --> B[number1 = 0];
-      B --> C[number2 = 0];
-      C --> D{True};
-      D -- YES --> E[sum = number1 + number2];
-          E --> F[vypis vypocet na displej tvaru 'sum = number1 + number2'];
-          F --> G[number1 = number2];
-          G --> H[number2 = sum];
-          H --> D;
-```
+
+<p align="center">
+  <img src=/img/diagram1.svg alt="diagram1 width="100%">
+</p>
+
 ### Popis vzorové implementace
 Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné `sum` přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných `number1` a `number2`. 
 
@@ -173,19 +167,11 @@ while True:
 ```
                                                           
 ### Diagram
-```mermaid
-  graph TD;
-      A((Start)) --> B[number1 = 0];
-      B --> C[number2 = 1];
-      C --> D[sum = number1 + number2];
-      D --> E{True};
-      E -- YES --> F[rozsvit bod v matici];
-          F --> H[number1 = number2];
-          H --> I[sum = number1 + number2];
-          I --> J[vyckej 500 ms]
-          J --> E
-      E -- NO --> K((Konec))
-```
+
+<p align="center">
+  <img src=/img/diagram1.svg alt="diagram1 width="100%">
+</p>
+
 ### Popis vzorové implementace
 Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
 ### Doplňující poznámky 
