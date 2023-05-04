@@ -59,7 +59,7 @@ Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů
 - symboly propojujeme šipkami
 
 <p align="center">
-  <img src=/img/diagram1.png alt="diagram" width="100%">
+  <img src=/img/diagram1.svg alt="diagram" width="100%">
 </p>
 
 ### Micro:Bit
