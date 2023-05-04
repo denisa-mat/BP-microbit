@@ -1,5 +1,5 @@
 # Lekce 3 - Podmínky
-### if, elif, else, logické operátory
+### If, elif, else, logické operátory
 
 ### Obsah
 [Motivace](#motivace)  
@@ -71,9 +71,13 @@ Vytvořte simulaci parkovacího asistenta. Napište program, který bude pomocí
 ### Co se naučíte
 Cílem úlohy je prakticky vyzkoušet jednoduchou podmínku obsahující pouze if a else větev.
 ### Jak postupovat
-TODO
+Úlohu začněte kresbou diagramu, poté pracujte dohromady se studenty, nechte si d nich radit.
+Můžte použít návodné otázky:
+- Jaké moduly je potřeba naimportovat?
+- Jak budete volat metody z modulů?
+- Skončí program někdy?
 
-Dohromady s učitelem?
+Vyvětlete studentům proč při ukládání do porměnné `dist` dělíte hodnotu celočíselně jednou. Metoda `set_show_number()` bere jako argument celé číslo typu `int`, metoda `get_distance()` vrací `double`, který na `int` nelze přetypovat, dělením dosteme hodnotu typu `float`, kterou už přetypovat lze. Následují jednoduché podmínky. Kdy chcete aby se dioda rozsvítila? Když je vzdálenost menší než 20 centimetrů, jinak ji zhasněte. Aby dioda změsile neblikala použijte `sleep(300)`.
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -107,7 +111,7 @@ while True:
       H --> C;
 ```
 ### Popis vzorové implementace
-Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off`.
+Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
 ### Doplňující poznámky 
 Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
 <a name="resources2"/>
@@ -142,9 +146,11 @@ Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `n
 ### Co se naučíte
 Cílem úlohy je vyzkoušet práci s podmínkami.
 ### Jak postupovat
-TODO
-
-PRIMM
+Dejte žákům k dispozici vzorovou implementaci, ideálně vytištěné na papíře a využijte metodu PRIMM. Nechte žáky odhadnout co program dělá, zatím jim nedávejte zadání. Žáci ve skupinách diskutují o fukci programu. Následně nechte žáky připojit moduly a kód spustit v editoru. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. Zadejte žákům otázku/úkol který slouží k důkladnému prozkoumání programu. Například:
+- Je mi přesně 5, jaký dostanu výstup? (odhadněte bez spuštění s danou hdonotou)
+- Co se stane, když zmáčku obe tlačítka najednou?
+- Co když budu držet talčítko C dlouhou dobu?
+- Jak by se prorgam choval pokud by neobsahoval `seep()`?
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -205,15 +211,13 @@ TODO
 
 ## Úloha 3 - Horská dráha <a name="assignment3"/>
 ### Zadání
-Naprogramujte microbita, tak aby na displej zobrazoval zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
+Naprogramujte microbita, tak aby na displej zobrazoval, zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
 ### Co budete potřebovat
 K řešení úlohy jsou využívány moduly button a nixietube, které nejsou součástí Nezha kitu. Pokud je nemáte je možné nahradit button tlačítky přímo na micro:bitu a místo výpisu na segmentový dislej hodnoty scrollovat na displeji micro:bita.
 ### Co se naučíte
 Úloha se zaměřuje na složené a vnořené podmínky.
 ### Jak postupovat
-TODO
-
-Pokračující PRIMM
+Dejte studentům program z předchozí úlohy a nechte je modifikovat dle zadání. Žáci využívají, že v předchozích částech pochopili strukturu kódu a překlenou hranici mezi cizím kódem a částečně vlastním.
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -254,6 +258,8 @@ while True:
 TODO
 ### Doplňující poznámky 
 Pokud máte pocit, že je úloha příliš komplexní nastavte hodnotu výšky staticky na začátku porgramu. Pak stačí upravit podmínky a kód zůstane z větší části stejný jako v předchozí úloze.
+
+Zbyde-li vám čas, nechte žáky vytvořit vlastní porgram, který bude testovat jiné hodnoty. 
 <a name="conclusion"/>
 ## Shrnutí 
 TODO
