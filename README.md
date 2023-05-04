@@ -12,17 +12,13 @@
 Otázky na úvod:
 1. Jaká je Vaše zkušenost s programováním?
 2. Co si myslíte, že programátor dělá?
-3. Potřebuji umět programovat? Proč?
+3. K čemu je dobrá znalost programování a algoritmizace?
 
-### Problém velkého množství položek
-Představte si, že máte velké množství fotografií, které chcete přejmenovat. Přejmenování by vám zabralo neúměrné množství času. Vytvoření skriptu může zabrat pár minut práce. Přejmenování proběhne také poměrně rychle. Deset minut psaní skriptu nebo hodiny ruční práce?
+Představte si, že máte rutinní úkol, který vykonáváte pravidelně, vyžaduje pokaždé udělat stejný sled akcí a zabere vám nezanedbatelné množství času. Takový úkol je ideálním kandidátem pro automatizaci. Nezáleží na tom, v jakém oboru se nacházíme, automatizovat mnoho procesů a rutinních úkolů může ušetřit čas a zdroje.
 
-Jako další příklad si představte strukturovaný soubor s daty, např. CSV. Takovýto soubor má tisíce řádků. Řekněme, že nás zajímají nějaké četnosti a další statistiky tohoto souboru dat.
+Znalost algoritmizace může být užitečná pro různé obory a profese, nejen pro přírodní a technické vědy. Například v oblasti ekonomie a financí je důležité umět navrhovat a vyhodnocovat algoritmy pro rozhodování v oblasti investic a řízení finančních toků. V oblasti obchodu a marketingu může být znalost algoritmů užitečná pro analýzu dat a vytváření efektivních strategií pro reklamu a prodej.
 
-Nejenže je taková práce zdlouhavá, ale je také jednotvárná a nudná.
-Taková práce se může i opakovat, a to už je typický příklad využití automatizace. V tomto případě si představte, že zpracováváte soubor s odjezdy autobusů a každý den hledáte spoje s největším zpožděním.
-
-## Prostředky <a name="resources"/>
+## Prostředky - MicroPython, algoritmus, micro:bit, IDE <a name="resources"/>
 
 ### Jazyk MicroPython
 Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
@@ -56,36 +52,35 @@ Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a sy
 
 #### Vývojový diagram
 Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů a propojení mezi nimi. Používá se jako nástroj pro plánování, návrh, dokumentaci v oblastech jako je vývoj softwaru, inženýrství a dalších odvětvích. Vývojový diagram pomáhá vizualizovat složité procesy nebo postupy a umožňuje snadnější identifikaci problémů, chyb a nedostatků v algoritmu nebo procesu. Diagram usnadňuje spolupráci a komunikaci mezi členy týmu, kteří se podílejí na vývoji a implementaci algoritmu. Při tvorbě vývojového diagramu je třeba myslet na jeho čitelnost a srozumitelnost pro všechny členy týmu. Proto je důležité používat jasně definované symboly a základní pravidla pro tvorbu diagramu, která jsou obecně uznávaná v oboru.
-- kulaté symboly označují počátek a konec programu
+- oválné symboly označují počátek a konec programu
 - symbol diamantu se používá pro větvení (v podmínkách a cyklech)
-- vše osttaní zapisujeme do čtverců
+- pro vstupn a výstupní operace se používají rovnoběžníky
+- všechny ostatní příkazy zapisujeme do obdélníků
 - symboly propojujeme šipkami
-Je možné se setkat ještě například s ovály či rovnoběžníky, ty pro naše účely vynecháme.
-```mermaid
-  graph TD;
-      A((Start)) --> B{Is True true?};
-      B -- YES --> C[write 'Hello World'];
-	  C --> B;
-      B -- NO -->D((Konec));
-```
-### Micro:Bit
-Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například pro detekci pohybu, snímání teploty a světla. Další senzory je možné dokoupit a připojit.
+- 
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram" width="100%">
+</p>
 
-Micro:bit lze programovat bez ohledu na platformu, což zlepšuje dostupnost. Program se do Micro:bitu přenáší pomocí bezdrátové komunikace Bluetooth nebo pomocí přiloženého micro USB kabelu.
+### Micro:Bit
+Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například gyroskop, nebo snímání dotyku. Další senzory je možné připojit.
+
+Micro:bit lze programovat na široké škále zařízení bez ohledu na platformu, což snižuje požadavky na hardwarové i prorgamové vybavení. Program se do Micro:bitu přenáší pomocí přiloženého micro USB kabelu nebo bezdrátové komunikace Bluetoot.
 
 ### IDE
 Jako vhodný editor byl vybrán webový [python.microbit.org](python.microbit.org), se kterým se bude ve všech lekcích pracovat (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce).
-Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory, snadno se používá, má sériový výstup. Výhodou python.microbit.org je preview micro:bitu, ovšem bez modulů. Další předností je panel reference, neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
+Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory a snadno se používá. Výhodou python.microbit.org je simulátor micro:bitu, ovšem bez modulů. Další předností je panel reference, neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
 ## Úloha 1 - Hello World <a name="hello-world"/>
 ### Zadání
 Napište program, který na vestavěný displej vypíše řetězec "Hello World". Následně program nahrajte do micro:bitu.
 ### Co budete potřebovat
-K této úloze nejsou potřebné žádné senzory ani Nezha sada.
+K této úloze je potřeba pouze micro:bit a kabel k nahrání porgramu.
 ### Co se naučíte
-Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s IDE a micro:bitem a program nahrát z počítače do micro:bitu. 
+Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s vývojovým prostředím (IDE) a micro:bitem. Žáci také nahrají první program z počítače do micro:bitu. 
 ### Jak postupovat
-Nejprve je třeba mít naimportován modul microbit pomocí příkazu `from microbit import *` tento zápis značí, že importujeme vše co modul obsahuje. Symbol `*` lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
+Do okna editoru naimportujte modul microbit pomocí příkazu `from microbit import *`. Tento zápis značí, že importujete vše co modul obsahuje. Symbol `*` lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
+
 Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte  Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekončný cyklus má jendoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
 
 Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte `Send to micro:bit`, otevře se nápověda a poté okno s kompatibilními zařízeními. 
@@ -115,7 +110,7 @@ Na prvním řádku importujeme celý modul microbit. V tomto konkrétním příp
 
 ### Doplňující poznámky
 Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s `while True`, pro neustálé opakování programu.
-V případě zájmu si můžou žáci World substituovat svým jménem. V Pythonu a stejně tak v MicroPythonu lze pro string použít dvojité i jednoduché horní uvozovky.
+V případě zájmu si můžou žáci World nahradit svým jménem. V Pythonu a stejně tak v MicroPythonu lze pro string použít dvojité uvozovky nebo apostrof.
 
 ## Shrnutí <a name="shrnuti"/>
 shrnutí
