@@ -14,7 +14,7 @@
 Setkali jste se někde s proměnnými?
 Otázka má žáky navést k matematice a fyzice, kde se s proměnnými potkají v každé rovnici s neznámou. 
 
-Proměnné jsou důležité pro matematické výpočty, například řešení rovnic, výpočet průměru, mediánu a dalších matematických funkcí. Zjevné je také využití proměnných při vývoji her, kde mohou uchovávat informace o hráči, jako jsou jeho životy, skóre nebo stavové informace.
+Proměnné jsou důležité pro matematické výpočty, například řešení rovnic, výpočet průměru a dalších matematických funkcí. Zjevné je také využití proměnných při vývoji her, kde mohou uchovávat informace o hráči, jako jsou jeho životy, skóre nebo stavové informace.
 
 Dalším důležitým aspektem proměnných je, že umožňují programátorům vytvářet opakovaně použitelný kód a snižovat tak duplikaci kódu. Tím se zvyšuje efektivita vývoje a snižují se náklady na vývoj softwaru, protože zjednodušují práci programátorům.
 
@@ -38,7 +38,7 @@ Při pojemnování proměnných v Pythonu dodržujte následující pravidla:
 - Název proměnné může obsahovat pouze písmena (velká nebo malá), číslice a podtržítko `_`.
 - Název proměnné musí začínat písmenem nebo podtržítkem, nikdy číslicí.
 - Název proměnné by měl být stručný a popisný, aby byl snadno čitelný a srozumitelný pro ostatní programátory.
-Standardně se při pojmenování požívá angličtina a využívají se pouze malá písmena. U víceslovných názvů se slova oddělují podtržítkem `_`. Zkuste se vyhnout používání klíčových slov jako názvů proměnných v Pythonu, jako jsou například `if`, `while`, `int`, `True`, `class`, `def`, `list`.
+Standardně se při pojmenování požívá angličtina a využívají se pouze malá písmena. U víceslovných názvů se slova oddělují podtržítkem `_`. Vyhněte se používání klíčových slov jako názvů proměnných, jde například o `if`, `while`, `int`, `True`, `class`, `def`, `list`.
 
 ### Datový typ
 Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
@@ -58,7 +58,7 @@ Pokud na proměnných provádíme nějakou operaci, je pravděpodobné, že s n�
 Napište program, který bude v nekonečném cyklu `while True` počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0+1=1`
 
 ### Co budete potřebovat
-K této úloze nejsou potřeba žádné senzory a moduly.
+K této úloze je potřeba jen micro:bit a kabel pro přenesení programu.
 ### Co se naučíte
 Cílem úlohy je vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem `int`. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
 ### Jak postupovat
@@ -71,7 +71,7 @@ Zkuste s žáky probrat, jak bude program vypadat, co jsou jeho klíčové body.
 - Kde budeme inicializovat proměnné? (V cyklu? Nad ním? Nebo někde jinde?)
 - Podívejte se s žáky na metodu `scroll()`. Jaké bere parametry? Jakým způsobem ji zavoláme?
 
-Metoda `scroll` bere jako parametr `string`, pro přetypování proměnné typu `int` využijte funkci `str()`.
+Metoda `scroll` bere jako parametr `string`, my jí však chceme dávat hodnotu typu `int`, musíme ji proto přetypovat. Přetypování je proces změny datového typu proměnné na jiný datový typ. V Pythonu je možné přetypování provést pomocí vestavěných funkcí, jako jsou `int()`, `float()`, `str()`. Je důležité mít na paměti, že některé datové typy nemohou být přetypovány na jiné typy a v takovém případě dojde k chybě při běhu programu. Pro přetypování proměnné typu `int` využijte funkci `str()`.
 Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
 ### Vzorová implementace
 ```python
@@ -99,13 +99,20 @@ Metoda `scroll` zavolaná na objektu display postupně zobrazuje výpočet a vý
 Na řádku 9 je do proměnné `number1` uložena hodnota proměnné `number2`, na řádku 10 je do proměnné `number2` uložena hodnota z proměnné `sum`. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
 
 ### Doplňující poznámky 
-Fibonacciho posloupnost je posloupnost je poměrně jednoduchá posloupnost, ale má zásadní využití v řadě různých oblastí od přírodních věd až po design a umění. 
+Fibonacciho posloupnost je poměrně jednoduchá posloupnost, ale má zásadní využití v řadě různých oblastí od přírodních věd až po design a umění. 
 
 ## Prostředky II - Nezha kit <a name="resources2"/>
 ### NezhaKit
-Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Základ setu tvoří modul pro umístění micro:bitu.
+Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Další senzory se dají pořídit zvlášť. Základ setu tvoří Nezha modul pro umístění micro:bitu.
 
-Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s modulem a tedy i s micro:bitem. Propojení je snadné a spolehlivé. Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s Nezhou a tedy i s micro:bitem. Propojení je snadné a spolehlivé. 
+
+<p align="center">
+  <img src=/img/moduly.png alt="Moduly využívané v lekcích" width="100%">
+  <em>Moduly využívané v lekcích</em>
+</p>
+
+Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
 - Nezha rozšiřující modul pro micro:bit (zabudovaný akumulátor LiPol 900 mAh, porty pro senzory a další moduly, konektory pro serva a motory, konektor pro micro:bit)
 - 8 elektronických modulů (3 x LED modul, potenciometr, snímač vlhkosti, snímač vzdálenosti, snímač nárazu, snímač čáry)
 - 2 x DC motor pro realizaci otáčivých pohybů
@@ -173,9 +180,9 @@ while True:
 </p>
 
 ### Popis vzorové implementace
-Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
+Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. Inicializace je proces přiřazení počáteční hodnoty proměnné, objektu nebo datové struktury před dalším použitím. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
 ### Doplňující poznámky 
-Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. Je třeba změnit podmínku ve while cyklu tak, aby se tělo cyklu vykonalo pouze je-li požadovaný index v rozsahu displeje. Displej má 8x16 diod. podmínka by tedy byla `while sum < 128`.
+Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. Je třeba změnit podmínku ve while cyklu tak, aby se tělo cyklu vykonalo pouze je-li požadovaný index v rozsahu displeje. Displej má 128 diod v osmi řádcích a šestnácti sloupcích. podmínka by tedy byla `while sum < 128`.
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
