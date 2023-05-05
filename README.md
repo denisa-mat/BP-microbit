@@ -15,7 +15,7 @@ Cykly obecně umožňují značně zkrátit kód. Vše, co bychom jinak museli p
 ## Prostředky I – While cyklus <a name="resources1"/>
 While cyklus využívá podmínky, čímž plynule navazuje na předchozí lekci. Má také podobnou syntax. While cyklus se používá k řešení situací, kdy nevíme přesně, kolikrát bude třeba provést určitou akci. Smyslem cyklů je opakování zanořeného bloku kódu, dokud je podmínka splněna. Není-li podmínka splněna již v první iteraci, blok kódu se vůbec nevykoná.
 Zápis while cyklu vypadá následovně:
-```python
+```python=
 while podmínka:
     # blok kódu, který se opakuje, dokud je podmínka pravdivá
 # blok kódu, kde program pokračuje, když podmínka není pravdivá
@@ -41,7 +41,7 @@ Prvním krokem v této úloze je sestavit vozítko, které bude schopné pohybu 
 
 Nechte žáky ve dvojicích prozkoumat jaké metody jsou pro dané senzory dostupné a zamyslet se, jak by se mohly hodit při plnění zadání. Dohlížejte na dodržování metody párového programování. V případě, že některá dvojice nebude vědět, jak postupovat dále, zkuste sestavit diagram.
 ### Vzorová implementace
-```python
+```python =
 from microbit import *
 from motor import *
 from crash import *
@@ -62,8 +62,7 @@ motor.set_motor_stop()
 ### Diagram
 
 <p align="center">
-  <img src=/img/diagram1.png alt="Ukázka sestavených vozítek" width="100%">
-  <em>Ukázka sestavených vozítek</em>
+  <img src=/img/diagram1.png alt="diagram1" width="100%">
 </p>
 
 ### Popis řešení
