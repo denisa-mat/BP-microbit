@@ -51,6 +51,9 @@ else:
       H --> E[zbytek programu];
       E --> I((Konec));
 ```
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram1>
+</p>
 
 V Pythonu se používají následující operátory pro srovnávání hodnot a výrazů:
 
@@ -110,6 +113,10 @@ while True:
       G --> H;
       H --> C;
 ```
+<p align="center">
+  <img src=/img/diagram2.png alt="diagram2>
+</p>
+
 ### Popis vzorové implementace
 Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
 ### Doplňující poznámky 
@@ -204,6 +211,9 @@ while True:
       		  	 P --> Q;
 			O -- NO --> Q
 ```
+<p align="center">
+  <img src=/img/diagram3.png alt="diagram3>
+</p>
 ### Popis vzorové implementace
 TODO
 ### Doplňující poznámky 
