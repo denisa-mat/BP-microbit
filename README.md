@@ -38,19 +38,6 @@ else:
 	# kód který se vykoná není li splněna žádná z předchozích podmínek
 # zbytek programu
 ```
-``` mermaid
-  graph TD;
-      A((Start)) --> B[podminka1 = False, podminka2 = True];
-      B --> C{podminka1};
-      C -- YES --> D[print 'podminka1 splnena'];
-	  D --> E[zbytek programu];
-      C -- NO --> F[podminka2];
-      F -- YES --> G[print 'podminka2 splnena'];
-	  G --> E[zbytek programu];
-      F -- NO --> H[print 'podminky nesplneny'];
-      H --> E[zbytek programu];
-      E --> I((Konec));
-```
 <p align="center">
   <img src=/img/diagram1.png alt="diagram1>
 </p>
@@ -102,17 +89,6 @@ while True:
     sleep(300)
 ```
 ### Diagram
-``` mermaid
-  graph TD;
-      A((Start)) --> B[to_close_dist = 10];
-      B --> C{True};
-      C -- YES --> D[uloz vzdalenost do prom dist];
-	  D --> E{dist < to_close_dist};
-	  	E -- YES --> G[rozsvit cervenou led];
-      E -- NO --> H[vyckej 300 ms];
-      G --> H;
-      H --> C;
-```
 <p align="center">
   <img src=/img/diagram2.png alt="diagram2>
 </p>
@@ -186,30 +162,6 @@ while True:
         elif button.D_is_pressed():
             age_confirmed = True
     nixietube.set_show_num(age)
-```
-``` mermaid
-  graph TD;
-      A((Start)) --> B[age = 0];
-      B --> C[age_confirmed = False];
-      C --> D{True};
-      D -- YES --> E{age_confirmed?};
-	  E -- YES --> G{age < 5};
-		G -- YES --> H[vykresli na displej Image.Sad];
-		 H --> Q[vypis age na segmentovy displej];
-		G --> NO --> I{age < 18};
-			I -- YES --> J[vykresli na displej Image.NO];
-				J --> Q;
-			        Q --> D;
-			I -- NO --> K[vykresli na displej Image.YES];
-				K --> Q;
-          E -- NO --> L{je button C stisknut?};
-	  	L -- YES --> M[age += 1];
-		 M --> N[vyckej 300 ms];
-		 N --> Q;
-		L -- NO --> O{je button D stisknut?};
-			O -- YES --> P[age_confirmed = True];
-      		  	 P --> Q;
-			O -- NO --> Q
 ```
 <p align="center">
   <img src=/img/diagram3.png alt="diagram3>
