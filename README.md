@@ -21,7 +21,7 @@ Znalost algoritmizace může být užitečná pro různé obory a profese, nejen
 ## Prostředky - MicroPython, algoritmus, micro:bit, IDE <a name="resources"/>
 
 ### Jazyk MicroPython
-Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně ulehčí přechod k Pythonu.
+Žáci by se dle RVP měli na základní škole setkat s algoritmizací, k čemuž jsou, právě blokové jazyky vhodné a často využívané. Ukázka, jak daný kód vypadá v blocích, které již znají, značně usnadní přechod k Pythonu.
 
 Python je vysokoúrovňový, interpretovaný programovací jazyk, který nabízí podporu pro různá programovací paradigmata. V případě micro:bitu si vystačíme s imperativním. Je dynamicky typovaný, a tedy by žáci po přechodu z bloků nemuseli mít zásadní problém. Syntaxe je založena na oddělování kódu pomocí bílých znaků, které oddělují jednotlivé bloky a přispívají k dobré čitelnosti. Zároveň tento způsob zápisu do jisté míry připomíná práci s bloky, které zapadají do sebe a tvoří podobnou strukturu.
 
@@ -54,7 +54,7 @@ Algoritmus se také používá jako nástroj pro analýzu a návrh procesů a sy
 Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů a propojení mezi nimi. Používá se jako nástroj pro plánování, návrh, dokumentaci v oblastech jako je vývoj softwaru, inženýrství a dalších odvětvích. Vývojový diagram pomáhá vizualizovat složité procesy nebo postupy a umožňuje snadnější identifikaci problémů, chyb a nedostatků v algoritmu nebo procesu. Diagram usnadňuje spolupráci a komunikaci mezi členy týmu, kteří se podílejí na vývoji a implementaci algoritmu. Při tvorbě vývojového diagramu je třeba myslet na jeho čitelnost a srozumitelnost pro všechny členy týmu. Proto je důležité používat jasně definované symboly a základní pravidla pro tvorbu diagramu, která jsou obecně uznávaná v oboru.
 - oválné symboly označují počátek a konec programu
 - symbol diamantu se používá pro větvení (v podmínkách a cyklech)
-- pro vstupn a výstupní operace se používají rovnoběžníky
+- pro vstupní a výstupní operace se používají rovnoběžníky
 - všechny ostatní příkazy zapisujeme do obdélníků
 - symboly propojujeme šipkami
 
@@ -65,36 +65,36 @@ Vývojový diagram je grafické znázornění postupu algoritmu pomocí symbolů
 ### Micro:Bit
 Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, přesto však skýtá mnoho funkcí. Má vestavěný displej, dvě tlačítka a několik vestavěných senzorů, například gyroskop, nebo snímání dotyku. Další senzory je možné připojit.
 
-Micro:bit lze programovat na široké škále zařízení bez ohledu na platformu, což snižuje požadavky na hardwarové i prorgamové vybavení. Program se do Micro:bitu přenáší pomocí přiloženého micro USB kabelu nebo bezdrátové komunikace Bluetoot.
+Micro:bit lze programovat na široké škále zařízení bez ohledu na platformu, což snižuje požadavky na hardwarové i programové vybavení. Program se do Micro:bitu přenáší pomocí přiloženého micro USB kabelu nebo bezdrátové komunikace Bluetooth.
 
 ### IDE
 Jako vhodný editor byl vybrán webový [python.microbit.org](python.microbit.org), se kterým se bude ve všech lekcích pracovat (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce).
-Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory a snadno se používá. Výhodou python.microbit.org je simulátor micro:bitu, ovšem bez modulů. Další předností je panel reference, neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
+Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory a snadno se používá. Výhodou python.microbit.org je simulátor micro:bitu, ovšem bez modulů. Další předností je panel reference neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, zeditovat a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
 ## Úloha 1 - Hello World <a name="hello-world"/>
 ### Zadání
 Napište program, který na vestavěný displej vypíše řetězec "Hello World". Následně program nahrajte do micro:bitu.
 ### Co budete potřebovat
-K této úloze je potřeba pouze micro:bit a kabel k nahrání porgramu.
+K této úloze je potřeba pouze micro:bit a kabel k nahrání programu.
 ### Co se naučíte
 Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s vývojovým prostředím (IDE) a micro:bitem. Žáci také nahrají první program z počítače do micro:bitu. 
 ### Jak postupovat
 Do okna editoru naimportujte modul microbit pomocí příkazu `from microbit import *`. Tento zápis značí, že importujete vše co modul obsahuje. Symbol `*` lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
 
-Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte  Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekončný cyklus má jendoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte  Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekonečný cyklus má jednoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
 
 Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte `Send to micro:bit`, otevře se nápověda a poté okno s kompatibilními zařízeními. 
 
 <p align="center">
-  <img src=/img/send1.png alt="Připojit micro:bit" width="100%">
-  <em>Připojit micro:bit</em>
+  <img src=/img/send1.png alt="Jak připojit micro:bit" width="100%">
+  <em>Jak připojit micro:bit</em>
 </p>
 
-Vybete micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu o tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
+Vyberte micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu o tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit". 
 
 <p align="center">
-  <img src=/img/send2.png alt="Nahrát kód" width="100%">
-  <em>Nahrát kód</em>
+  <img src=/img/send2.png alt=" Jak nahrát kód " width="100%">
+  <em>Jak nahrát kód</em>
 </p>
 
 V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a nahrát na micro:bit jako na externí úložiště. 
