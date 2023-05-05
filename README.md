@@ -11,7 +11,7 @@
 
 ## Motivace <a name="motivace"/>
 Seznamy jsou jednou z nejdůležitějších datových struktur, umožňují ukládat hodnoty a manipulovat s nimi, což je velmi užitečné v mnoha různých typech programů. Seznamy mohou být použity pro ukládání seznamů uživatelských vstupů, výsledků zpracování dat, seznamu položek k nákupu, seznamu přátel na sociální síti a mnoho dalších.
-## Prostředky I - Seznamy, indexace, foreach <a name="resources1"/>
+## Prostředky I – Seznamy, indexace, foreach <a name="resources1"/>
 V Pythonu jsou seznamy jedním z nejčastěji používaných datových typů. Seznam umožňuje ukládat a pracovat s více hodnotami najednou, které mohou být různých datových typů. Seznamy jsou v Pythonu reprezentovány hranatými závorkami [] a jednotlivé prvky jsou odděleny čárkami.
 
 Například, zde je příklad vytvoření seznamu čísel:
@@ -35,7 +35,7 @@ Kromě toho mohou být prvky seznamu přidávány, mazány a modifikovány.
 Nad seznamy lze provádět několik dalších operací:
 - přidat prvek na konec seznamu `nazev_seznamu.append(prvek)`
 - zjistit délku seznamu pomocí funkce `len(nazev_seznamu)`
-- zjistit zda je prvek v seznamu `prvek in nazev_seznamu`
+- zjistit, zda je prvek v seznamu `prvek in nazev_seznamu`
 - zjistit počet výskytů daného prvku `nazev_seznamu.count(prvek)`
 - vybrat ze seznamu podseznam `nazev_seznamu[1:3]`
 - odstranit ze seznamu poslední prvek a vrátit ho `nazev_seznamu.pop()`
@@ -71,6 +71,12 @@ for _ in range(memory_test_size):
 for value in memory_list:
     display.scroll(value)
 ```
+### Diagram
+
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram1" width="100%">
+</p>
+
 ### Popis vzorové implementace
 Po standardním importu modulu microbit následuje import funkce randint z modulu random. Na řádku 4 definujeme délku seznamu, na řádku 5 vytváříme prázdný seznam. Poté počítaným for cyklem do seznamu generujeme náhodné hodnoty a ty díky podmínce transformujeme na požadované hodnoty, které přidáváme do seznamu. V závěru opět metodou `scroll()`, zobrazíme hodnoty z listu postupně na displej.
 ### Doplňující poznámky 
@@ -146,6 +152,4 @@ Obtížnost přizpůsobíte schopnostem skupiny podle toho, na jak velké bloky 
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
-TODO
-
-
+Pseudonáhodné číslo, které vypadá jako náhodné, ale ve skutečnosti bylo vypočítáno pomocí matematického algoritmu. Tyto algoritmy jsou obvykle generovány na základě počátečního "seed" čísla, které je zpravidla odvozeno z aktuálního času nebo jiného proměnného parametru. Pseudonáhodné čísla jsou široce používána v počítačových simulacích, kryptografii, hraní her a dalších aplikacích.
