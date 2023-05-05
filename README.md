@@ -53,7 +53,7 @@ V Pythonu se používají následující operátory pro srovnávání hodnot a v
 - `in`: Porovnává, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
 - `not in`: Porovnává, zda se první výraz nenachází v druhém výrazu.
 
-## Úloha 1 - Parkovací asistent<a name="assignment1"/>
+## Úloha 1 - Parkovací asistent <a name="assignment1"/>
 ### Zadání
 Vytvořte simulaci parkovacího asistenta. Napište program, který bude pomocí senzoru pro snímání vzdálenosti hlídat, jak daleko je překážka a tuto vzdálenost vypíše na segmentový displej (nixietube). Pokud je vzdálenost menší než 20, pak rozsviďte červenou led diodu.
 ### Co budete potřebovat
@@ -99,7 +99,7 @@ Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty př�
 Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
 <a name="resources2"/>
 ## Prostředky II - Složené podmínky
-V Pythonu se používají tři logické operátory pro kombinaci podmínek: `and`, `or` a `not`.
+V Pythonu se používají logické operátory pro kombinaci podmínek: `and`, `or` a operátor negace `not`.
 
 Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
 ```python
@@ -130,10 +130,10 @@ Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `n
 Cílem úlohy je vyzkoušet práci s podmínkami.
 ### Jak postupovat
 Dejte žákům k dispozici vzorovou implementaci, ideálně vytištěné na papíře a využijte metodu PRIMM. Nechte žáky odhadnout co program dělá, zatím jim nedávejte zadání. Žáci ve skupinách diskutují o fukci programu. Následně nechte žáky připojit moduly a kód spustit v editoru. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. Zadejte žákům otázku/úkol který slouží k důkladnému prozkoumání programu. Například:
-- Je mi přesně 5, jaký dostanu výstup? (odhadněte bez spuštění s danou hdonotou)
+- Je mi přesně 5, jaký dostanu výstup? (odhadněte bez spuštění s danou hodnotou)
 - Co se stane, když zmáčku obe tlačítka najednou?
 - Co když budu držet talčítko C dlouhou dobu?
-- Jak by se prorgam choval pokud by neobsahoval `seep()`?
+- Jak by se prorgam choval pokud by neobsahoval `sleep()`?
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -166,10 +166,11 @@ while True:
 <p align="center">
   <img src=/img/diagram3.png alt="diagram3>
 </p>
+
 ### Popis vzorové implementace
-TODO
+Nejprve proveďte import modulů nixietube a button, z nichž následně vytvoříte objekty. Na řádcích 9 a 10 vytvořte pomocné proměnné pro věk a značku o potvrzení zadaného věku. Ve while cyklu kontrolujte, zda byl věk potvrzen pokud ano zobrazte dle výsedku příslušného smajlíka. Pokud věk potvrzen nebyl zkontrolujte, které tlačítko bylo zmačknuto. Při zmáčknutí tlačítka C přičtěte jedničku k věku, pokud bylo zmáčknuto D, nastavte značku o potvrzení na hodnotu `True`.
 ### Doplňující poznámky 
-TODO
+Pokud vznecháte `sleep()` přičte se jednička opakovaně, protože program stihne za dobu zmáčknutí tlačítka více opakování těla while cyklu.
 
 ## Úloha 3 - Horská dráha <a name="assignment3"/>
 ### Zadání
@@ -217,7 +218,7 @@ while True:
     sleep(150)
 ```
 ### Popis řešení
-TODO
+Podobně jako v minulé úloze naimportujte moduly a inicializujte objekty. Dále vytvořte pomocné proměnné. Zbytek kódu již bude v těle while cyklu. Kontrolujete zda byl potvrzen pouze věk i výška, či ani jedno. Pokud bylo potvrzeno obojí zobrazte smajlíky dle zadání. Na řádcích 21 a 28 načítáme hodnotu do proměnné na základě zmáčknutí tlačítka C, v případě stisknutí tlačítka D je věk potvrzen. Na konci while cyklu využijte metodu sleep().
 ### Doplňující poznámky 
 Pokud máte pocit, že je úloha příliš komplexní nastavte hodnotu výšky staticky na začátku porgramu. Pak stačí upravit podmínky a kód zůstane z větší části stejný jako v předchozí úloze.
 
