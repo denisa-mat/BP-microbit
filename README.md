@@ -5,6 +5,7 @@
 [Motivace](#motivace)  
 [Prostředky I - While cyklus](#resources1)  
 [Úloha 1 - Auto](#assignment1)  
+[Úloha 2 - Auto vylepšení](#assignment2)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
@@ -13,7 +14,7 @@ Cykly obecně umožňují značně zkrátit kód. Vše, co bychom jinak museli p
 ## Prostředky I – While cyklus <a name="resources1"/>
 While cyklus využívá podmínky, čímž plynule navazuje na předchozí lekci. Má také podobnou syntax. While cyklus se používá k řešení situací, kdy nevíme přesně, kolikrát bude třeba provést určitou akci. Smyslem cyklů je opakování zanořeného bloku kódu, dokud je podmínka splněna. Není-li podmínka splněna již v první iteraci, blok kódu se vůbec nevykoná.
 Zápis while cyklu vypadá následovně:
-```python=
+```python
 while podmínka:
     # blok kódu, který se opakuje, dokud je podmínka pravdivá
 # blok kódu, kde program pokračuje, když podmínka není pravdivá
@@ -39,7 +40,7 @@ Prvním krokem v této úloze je sestavit vozítko, které bude schopné pohybu 
 
 Nechte žáky ve dvojicích prozkoumat jaké metody jsou pro dané senzory dostupné a zamyslet se, jak by se mohly hodit při plnění zadání. Dohlížejte na dodržování metody párového programování. V případě, že některá dvojice nebude vědět, jak postupovat dále, zkuste sestavit diagram.
 ### Vzorová implementace
-```python =
+```python
 from microbit import *
 from motor import *
 from crash import *
@@ -72,6 +73,55 @@ Else větev program obsahuje z důvodu nepřesnosti senzoru. Někdy senzor zazna
 
 Pro opětovné spuštění programu, který je nahrán micro:bitu použijte tlačítko na jeho zadní straně.
 
+## Úloha 2 - Auto vylepšení <a name="assignment2"/>
+### Zadání
+Využijde kód z předchozí lekce a modifikujte ho tak, aby si před startem auto uložilo vzdálenost od překážky a když narazí, tak aby vycouvalo zpět a zastavilo se na stejném místě, ze kterého vyjelo.
+Následně zkuste sami vymyslet, jak by se dalo ještě auto vylepšit. Přidejte další modul a naprogramujte nějakou další funkcionalitu.
+### Co budete potřebovat
+Pro tuto úlohu si připravte crash senzor a distance senzor. Oba jsou součástí Nezha sady. Dále záleží, jaký modul se rozhodnou žáci na vozítko přidat.
+### Co se naučíte
+Žáci si vyzkouší rozšířit vlastní program o funkcionalitu, kterou si sami zvolí. Budou muset vymyslet jakou funkci přidají, jaký použijí modul a jak ho zakomponují do již postaveného vozidla.
+### Jak postupovat
+Nejprve modifikujte předchozí program. Před while cyklem změřte vzdálenost k nejbližší překážce a uložte ji do proměnné. Následně po zastavení auta přidejte druhý while cyklus, v němž bude vozidlo couvat, dokud senzor nenaměří vzdálenost menší než byla uložená do proměnné na začátku programu.
+
+Druhá část úlohy záleží na tom, jak náročný úkol si žáci zvolí. Dejte jim prostor pro rozmyšlení toho, co chtějí vytvářet. Následně nechte žáky, aby vám popsali svůj záměr, budou tak více motivovaní pro jeho dokončení a nebudou ho v průběhu měnit. Pokud po dokončení zbude dostatek času nechte žáky své inovace krátce odprezentovat ostatním. Využít můžete následující otázky. Jaký modul využili a jak ho zakomponovali do konstrukce vozidla? Jak upravili program? Co nyní umí vozidlo navíc? Přišlo o nějakou svou funkcionalitu?
+### Vzorová implementace
+```python =
+from microbit import *
+from motor import *
+from crash import *
+from distance import *
+
+motor = MOTOR(1)
+crash = CRASH(J1)
+distance = DISTANCE(J2)
+
+start_distance = distance.get_distance()
+
+while not crash.crash_is_pressed():
+    dist = distance.get_distance()
+    if dist < 40:
+        motor.set_motor_forward_slow()
+    else:
+        motor.set_motor_forward_fast()
+motor.set_motor_stop()
+
+while start_distance > distance.get_distance():
+    motor.set_motor_backward_slow()
+motor.set_motor_stop()
+```
+### Popis řešení
+Před while cyklem je do proměnné `start_distance` uložena hodnota rovna vzdálenosti, kterou sejme ultrazvukový senzor snímající vzdálenost. Po části programu, kde vozidlo narazí do překážky a zastaví následuje while cyklus, který kontroluje, zda je start distance větší než aktuální vzdálenost. Pokud ano, nastaví se motor na pomalé couvání. jinak se vozidlo zastaví a program skončí.
+### Doplňující poznámky 
+Obdobě jako v minulé úloze, pokud máte motor umístěný obráceně, než bylo předpokládáno budete muset pro couvání použít jízdu vpřed.
+
+Je možné, že se vozidlo při couvání zastaví dříve, než je očekáváno, to je způsobeno senzorem, který někdy vrátí velkou vzdálenost přestože je k překážce blízko.
+
+Možná vylepšení vozidla žáky:
+- přidání senzoru pro sledování čáry a předpřipravené cesty, která se součástí sady.
+- vozidlu můžou cestou blikat diody
+- lze ukazovat na segmentovém displeji vzdálenost od překážky
+- nastavit vozidlu rychlost poocí potenciometru
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
