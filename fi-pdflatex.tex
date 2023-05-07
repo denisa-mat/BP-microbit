@@ -62,9 +62,9 @@
     advisor     = {doc. Ing. RNDr. Barbora Bühnová, Ph.D.},
     title       = {Výuka programování na střední škole s využitím micro:bit},
     TeXtitle    = {Výuka programování na střední škole s využitím micro:bit},
-    keywords    = {keyword1, keyword2, ...},
-    TeXkeywords = {keyword1, keyword2, \ldots},
-    abstract    = {Abstrakt},
+    keywords    = {Micro:bit, Nezha, MicroPython (Python), algoritmizace, výuka, programování na SŠ, RVP, výukové materiály},
+    TeXkeywords = {Micro:bit, Nezha, MicroPython (Python), algoritmizace, výuka, programování na SŠ, RVP, výukové materiály, \ldots},
+    abstract    = {Cílem této práce bylo představit platformu micro:bit jako prostředek pro výuku algoritmizace na středních školách v kontextu revidovaného RVP G pro oblast informatiky. Na základě získaných znalostí vytvořit a zrealizovat sadu úloh s využitím vybraného kitu. Vytvořené úlohy jsou součástí deseti kompletních lekcí, které pokrývají oblast algoritmizace a programování z revidovaného RVP a jsou doplněny o metodické pokyny pro učitele. Na vytvořených úlohách si žáci osvojí základní programovací koncepty a návrh algoritmů s využitím programovacího jazyka MicroPython.},
     thanks      = {Děkuji},
     bib         = example.bib,
     %% Remove the following line to use the JVS 2018 faculty logo.
@@ -116,9 +116,17 @@
 
 %\markright{\textsc{Úvod}}
 %\addcontentsline{toc}{chapter}{Úvod}
-Říká se, že závěrečné práce jsou \enquote{vyvrcholením studia}
-a tak jsem se rozhodl jednu také napsat. Pokud vše půjde podle
-plánu, odnesu si na konci semestru diplom. Držte mi palce!
+V současné době se programování stává důležitým nástrojem pro rozvoj kreativity, logického myšlení a analytických schopností. Revidovaný rámcový vzdělávací program pro oblast informatiky (RVP G) klade důraz na algoritmizaci a programování jako klíčové prvky výuky. Je tedy nezbytné, aby byly vytvořeny vhodné výukové materiály a prostředky, které žákům umožní si osvojit tyto dovednosti efektivně.
+
+V úvodní kapitole se práce zaměří na základní pojmy související s vzděláváním, jako je vzdělávací politika, kurikulární dokumenty. Dále se práce soustředí na současný stav výuky informatiky a programování na středních školách a na stávající řešení existujících materiálů. Je provedena jejich analýza a na základě získaných poznatků je navržena a realizována sada úloh využívající micro:bit Nezha kit. 
+
+V další kapitole se práce věnuje představení prostředků. Mezi tyto prostředky patří různé robotické stavebnice, které umožňují žákům praktickou aplikaci naučených programovacích dovedností. Těmito prostředky jsou robotické stavebnice BBC micro:bit v kombinaci s Nezha Kitem, programovací jazyk Python a různá vývojová prostředí.
+
+V následující kapitole jsou popsány vybrané výukové metody, které jsou využity v metodickém zpracování lekcí. Mezi tyto metody patří metoda PRIMM (Predict-Run-Investigate-Modify-Make), párové programování, Parsons problem a další. 
+
+Následuje zpracování sady úloh, které jsou součástí deseti kompletních lekcí, které pokrývají klíčové oblasti algoritmizace a programování podle revidovaného RVP G. Každá lekce je doplněna metodickými pokyny pro učitele, které jim pomohou připravit se na výuku a efektivně provést žáky tématem. Úlohy ve vytvořené sadě se zaměřují na základní programovací koncepty a návrh algoritmů s využitím programovacího jazyka MicroPython. Žáci budou mít možnost se  seznámit s programováním pomocí projektů, které kombinují hardware micro:bitu se softwarem. 
+
+V poslední kapitole dojde k hodnocení vytvořené sady úloh v kontextu celých lekcí učiteli středních škol. Cílem této kapitoly je zjistit reálnou využitelnost v hodinách informatiky a získat podněty na budoucí vylepšení materiálu.
 
 \chapter{Kurikulární dokumenty a stávající výukové zdroje}
 
@@ -327,7 +335,6 @@ Pro MakeCodePython je dostupný pouze jeden editor, který umí přepínat mezi 
 
 Na základě uvedených aspektů se jako vhodnější jeví MicroPython s python.microbit.org IDE. Z tohoto důvodu budou v následujících kapitolách úlohy realizovány prostřednictvím jazyka MicroPython. 
 
-
 %Využité metody - aplikovat v konkrétních úlohách?
 \chapter{Výukové metody využívané v lekcích}
 
@@ -454,7 +461,7 @@ Na prvním řádku jsou je z modulu microbit importováno vše, co obsahuje. V t
 Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. TODO návod jak nahrát
     \item Doplňující poznámky
 
-Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s while True, pro neustálé opakování programu. V případě zájmu si můžou žáci World substituovat svým jménem.
+Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s while True, pro neustálé opakování programu. V případě zájmu si můžou žáci World nahradit svým jménem.
 \end{itemize}
 
 \subsection{Lekce 2 -- Proměnné a datové typy}
@@ -467,15 +474,44 @@ Senzor pro RFID, sledování vlhkosti apod. - umožňuje dále sbírat data, ná
 Micro:bit je možné vyměnit za Pico:ed, který poskytuje podporu pro jazyk C, zároveň je stále kompatibilní s Nezha modulem. 
 
 \chapter{Vyhodnocení potřeb}
+Vytvořený materiál byl před dokončením konzultován se středoškolskými učiteli informatiky, kteří jsou hlavní  skupinou pro kterou je materiál tvořen. Dostalo se mi velmi cenné zpětné vazby a důležitých poznatků týkajících se reálné použitelnosti v hodinách informatiky na středních školách.
 
 \section{Zhodnocení učiteli}
+Cílem konzultací bylo zjistit míru skutečné použitelnosti a identifikovat možnosti dalšího vylepšení. Mezi učiteli nejprve panovaly obavy z toho, do jaké míry je micro:bit na středních školách skutečně využitelný. Zprvu se někteří domnívali, že k programování chci využívat bloky, po objasnění skutečnosti obavy opadly.
+
+Učitelé informatiky, s nimiž jsi měla schůzky, ocenili, že výukový materiál obsahuje nultou lekci s úvodními informacemi a speciálně uvedení doporučeného prohlížeče a editoru. V jiných materiálech se často setkávají s tím, že není uveden například operační systém nebo právě prohlížeč a následně se program chová jinak než je popsáno. 
+
+Dalším pozitivním prvkem jsou popsané vzorové implementace, které umožňují učitelům nahlédnout do toho, jak by mohl program vypadat a co by mohlo být špatně v případě, že jim něco nefunguje. Učitelé by byli rádi, kdyby i vzorových implementací byli řádky programu očíslované i vzhledem k tomu, že v popisu implementace se na konkrétní řádky odkazuji Tento problém jsem řešila, bohužel se mi nepodařilo na GitHubu, kde jsou materiály k dispozici tuto funkci přidat. Dále by se učitelům líbilo, kdyby byl k dispozici i obrazově znázorněný výstup, který ukazuje, jak daný kód funguje v praxi.
+
+Text samotný byl hodnocen jako srozumitelný a vhodný pro začátečníky. Zvláště pozitivně hodnotili  popisnost obrázkových návodů. U některých úloh by především začínající učitelé ocenili detailnější popis, řešení úlohy. Naopak zkušenější učitelé považovali některé popisy za zbytečně podrobné.
+
+Ke koncepci lekcí učitelé neměli, žádné námitky. Pouze navrhují, aby bylo na začátku každé lekce uvedeno, co bude pro danou lekci potřebovat a mohli se jednoduše připravit na lekci. Někteří učitelé měli obavu, zda se lekce během 90 minut stihne, sami však uznali, že je to velmi těžké odhadnout a záleží od typu školy, ale i šikovnosti konkrétní třídy.  Učitelé také zmiňovali, že ne vždy mají hodiny informatiky spojené do jednoho bloku a tak by ocenili, kdyby v materiálu bylo označeno, kde lze lekci rozdělit. 
+
+Učitelé celkově hodnotili materiál jako kvalitní a vhodný pro výuku na středních školách především na školách s obecným vzděláním, nebo školách s jiným zaměřením než jsou informační technologie.
 
 \section{Možnosti budoucího vylepšení}
+Na základě zpětné vazby lze provést několik vylepšení. V první řadě k vzorovým implementacím přidat číslování řádků, což umožní učitelům snadno odkazovat na konkrétní řádky programu při vysvětlování nebo řešení problémů.
 
+Dále lze doplnit obrazové a video ukázky zobrazující očekávaný výstup programu. To poskytne žákům lepší představu o tom, jak kód funguje v praxi, a pomůže jim lépe pochopit požadovaný výstup.
+
+Bylo by vhodné uvést informace o tom, kde je možné lekci rozdělit, aby se lépe přizpůsobila různým školním rozvrhům. Například může být uvedeno, že první polovina lekce se zaměřuje na úvod a teorii, zatímco druhá polovina se věnuje praktickým cvičením a programování.
+
+Nyní je materiál dostupný ve veřejném repozitáři na GitHubu, do budoucna by mohlo být přínosné vytvoření webové aplikace, kde by bylo vše pohodlně dostupné. Lze také vytvořit pracovní listy, zadání a kostry úloh pro žáky, aktuální materiál je určen primárně pro učitele.
+
+Na základě zpětné vazby během využívání materiálů, lze vytvořit odpovědi a otázky na často se vyskytující problémy a chyby.
+
+Je důležité si uvědomit, že tato práce není konečným řešením, ale spíše prvním krokem ke zlepšení výuky algoritmizace na středních školách. Existuje potenciál pro další rozšíření sadou úloh, implementaci dalších výukových metod a využití dalších technologií. Důkladné monitorování a hodnocení využití platformy micro:bit ve výuce a průběžná aktualizace výukových materiálů jsou klíčové pro udržení jejich relevance a efektivity.
 
 \chapter{Závěr}
-The serified roman font is used for the main body of the text.
+Tato práce představila platformu micro:bit jako prostředek pro výuku algoritmizace na středních školách v kontextu revidovaného rámcového vzdělávacího programu pro gymnázia pro oblast informatiky (RVP G). Cílem bylo vytvořit a zrealizovat sadu úloh, které by pomohly žákům osvojit si základní programovací koncepty a návrh algoritmů s využitím programovacího jazyka MicroPython.
 
+V průběhu práce byla provedena analýza současného stavu výuky informatiky na středních školách a zhodnocení existujících řešení a materiálů dostupných pro učitele. Na základě získaných znalostí bylo navrženo deset kompletních lekcí, které pokrývají klíčové oblasti algoritmizace a programování podle revidovaného RVP G. Tyto lekce byly doplněny metodickými pokyny, které učitelům pomohou připravit se na výuku a efektivně provést žáky jednotlivými tématy.
+
+Došlo k představení nástrojů a výukových metod, které jsou využívány jako prostředky při řešení úloh. Mezi tyto nástroje patří robotická stavebnice, micro:bit v kombinaci s Nezha kitem, programovací jazyk Python a MicroPython a jejich IDE.
+
+Sada úloh zahrnuje různé praktické projekty, ve kterých žáci mohou využít hardware micro:bitu spolu s programovacím jazykem MicroPython. Úlohy se zaměřují na interaktivní a experimentální přístup, který umožňuje žákům aktivně se zapojit do procesu učení a rozvíjet své programovací dovednosti. Důraz byl kladen na základní programovací koncepty, jako jsou podmínky, cykly, proměnné a funkce, a jejich aplikaci při návrhu algoritmů.
+
+Důležitým aspektem této práce byla také zpětná vazba od učitelů na vytvořené úlohy. Jejich názory a hodnocení přispěly k  vylepšení vytvořených lekcí a úpravě metodických pokynů. 
 
 \printbibliography[heading=bibintoc] %% Print the bibliography.
 
