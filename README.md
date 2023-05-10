@@ -39,7 +39,7 @@ Popisuje konkrétní způsob, jak s danou úlohou pracovat. V některých kapito
 #### Popis řešení
 Obsahuje detailní popis vzorové implementace. Zaměřuje se především na koncepty, které jsou nové pro danou lekci.
 #### Doplňující poznámky 
-Poznámky k úloze mohou obsahovat časté potíže nebo například vylepšení programu pro rychlejší žáky, nebo potíže, které mohou nastat
+Poznámky k úloze mohou obsahovat časté potíže nebo například vylepšení programu pro rychlejší žáky.
 ### Shrnutí
 Slouží k stručnému zopakování klíčových pojmů lekce a upevnění znalostí. Pro vyučujícího k ověření získaných znalostí.
 ### Poznámky pro učitele
