@@ -58,7 +58,6 @@ while True:
 Na řádku 1 se importuje modul pro micro:bit, který obsahuje všechny funkce a metody potřebné pro práci s micro:bitem. Znak `#` na začátku třetího řádku znamená, že se jedná o komentář. Komentáře nejsou součástí vykonávaného programu, slouží programátorům pro poznámky týkající se kódu.
 
 Syntaxe pythonu používá k identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o úroveň výše. Všechny další koncepty a principy budou vysvětleny v lekcích.
-
 <a name="moduly"/>
 ## Moduly
 Pro práci micro:bitem a rozšiřujícími senzory a displeji je potřeba naimportovat moduly. Moduly jsou způsob, jak organizovat kód, což umožňuje jeho znovupoužití a sdílení s ostatními programátory. Modul je soubor obsahující Python kód, který může být importován do jiných souborů Python kódu. Moduly mohou obsahovat funkce, třídy, proměnné, konstanty a další kód, který chceme sdílet. Kromě vestavěných modulů si také můžeme vytvořit vlastní moduly a používat je ve svých projektech.
