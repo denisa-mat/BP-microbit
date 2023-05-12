@@ -89,7 +89,7 @@ while True:
 ### Diagram
 
 <p align="center">
-  <img src=/img/diagram1.svg alt="diagram1 width="100%">
+  <img src=/img/diagram1.png alt="diagram1 width="100%">
 </p>
 
 ### Popis vzorové implementace
@@ -145,7 +145,7 @@ Cílem této úlohy je vyzkoušet použití Nezha kitu a import modulu jednoho z
 Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru zvolte `Open` a vyberte v adresářové struktuře modul. Poté je důležité zvolit `Add file matrix.py`. Jako výchozí hodnota je zvoleno `Replace main code with matrix.py`, tím byste si přepsali kód, který se nachází v souboru `main.py`.
 
 <p align="center">
-  <img src=/img/modulNahrat.png alt="Přidání modulů do projektu width="100%">
+  <img src=/img/modulNahrat.png alt="Přidání modulů do projektu" width="100%">
   <em>Přidání modulů do projektu</em>
 </p>
 
@@ -176,7 +176,7 @@ while True:
 ### Diagram
 
 <p align="center">
-  <img src=/img/diagram1.svg alt="diagram1 width="100%">
+  <img src=/img/diagram2.png alt="diagram2" width="100%">
 </p>
 
 ### Popis vzorové implementace
