@@ -125,3 +125,5 @@ Otázky k zopakování:
 Pro začátek žákům zatajte existenci tříd, objektů a metod. Budeme se tomu věnovat v pozdějších lekcích.
 
 Micro:bit je možné díky webovému editoru programovat i přes telefon nebo tablet, v takovém případě pro nahrání programu do micro:bitu využijte připojení pomocí Bluetooth.
+
+Všechny informace o Micro:Pythonu lze nalézt v oficiální dokumentaci [docs.micropython.org](https://docs.micropython.org/en/latest/)
