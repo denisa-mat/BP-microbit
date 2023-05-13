@@ -39,7 +39,7 @@ else:
 # zbytek programu
 ```
 <p align="center">
-  <img src=/img/diagram1.png alt="diagram1>
+  <img src=/img/diagram1.png alt="diagram1">
 </p>
 
 V Pythonu se používají následující operátory pro srovnávání hodnot a výrazů:
@@ -90,15 +90,15 @@ while True:
 ```
 ### Diagram
 <p align="center">
-  <img src=/img/diagram2.png alt="diagram2>
+  <img src=/img/diagram2.png alt="diagram2">
 </p>
 
 ### Popis vzorové implementace
 Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
 ### Doplňující poznámky 
 Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
-<a name="resources2"/>
-## Prostředky II - Složené podmínky
+
+## Prostředky II - Složené podmínky <a name="resources2"/> 
 V Pythonu se používají logické operátory pro kombinaci podmínek: `and`, `or` a operátor negace `not`.
 
 Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
@@ -164,7 +164,7 @@ while True:
     nixietube.set_show_num(age)
 ```
 <p align="center">
-  <img src=/img/diagram3.png alt="diagram3>
+  <img src=/img/diagram3.png alt="diagram3">
 </p>
 
 ### Popis vzorové implementace
