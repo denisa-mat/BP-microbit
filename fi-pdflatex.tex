@@ -62,8 +62,8 @@
     advisor     = {doc. Ing. RNDr. Barbora Bühnová, Ph.D.},
     title       = {Výuka programování na střední škole s~využitím micro:bit},
     TeXtitle    = {Výuka programování na střední škole s~využitím micro:bit},
-    keywords    = {Micro:bit, Nezha, MicroPython (Python), algoritmizace, výuka, programování na SŠ, RVP, výukové materiály},
-    TeXkeywords = {Micro:bit, Nezha, MicroPython (Python), algoritmizace, výuka, programování na SŠ, RVP, výukové materiály, \ldots},
+    keywords    = {Micro:bit, Nezha, MicroPython, Python, algoritmizace, výuka, programování na SŠ, RVP, výukové materiály},
+    TeXkeywords = {Micro:bit, Nezha, MicroPython, Python, algoritmizace, výuka, programování na SŠ, RVP, výukové materiály, \ldots},
     abstract    = {Cílem této práce bylo představit platformu micro:bit jako prostředek pro výuku algoritmizace na středních školách v~kontextu revidovaného RVP G pro oblast informatiky. Na základě získaných znalostí vytvořit a~zrealizovat sadu úloh s~využitím vybrané sady. Vytvořené úlohy jsou součástí deseti kompletních lekcí, které pokrývají oblast algoritmizace a~programování z~revidovaného RVP a~jsou doplněny o~metodické pokyny pro učitele. Na vytvořených úlohách si žáci osvojí základní programovací koncepty a~návrh algoritmů s~využitím programovacího jazyka MicroPython.},
     thanks      = {Děkuji},
     bib         = example.bib,
@@ -451,13 +451,13 @@ Materiály jsou dostupné na \href{https://github.com/denisa-mat/BP-microbit}{Gi
 
 Struktura repozitáře na \href{https://github.com/denisa-mat/BP-microbit}{GitHubu} je následující. Každá kapitola má vlastní větev, v~níž jsou umístěny následující soubory:
 \vspace{0,1cm}
-\begin{compactitem}
+\begin{itemize}
     \item readme.md obsahující kompletní strukturu lekce,
     \item XX\_exercises.py se zadáním a vzorovou implementací úloh
     \item složka s moduly využitými v dané lekci
-\end{compactitem}
-
-Lekce začínají uvedením cíle a~motivací žáků. Cílem je žáky motivovat, dodat jim energii k~přemýšlení a~soustředění~\cite{Filgona20}. Ukázat jim, jak lze dovednosti, které se naučí, prakticky využít. Nelze předpokládat, že si žáci uvědomují důležitost lekcí. Je třeba ukázat přínos pro jejich potřeby.
+\end{itemize}
+\vspace{0,1cm}
+Lekce začínají motivací žáků. Cílem je žáky motivovat, dodat jim energii k~přemýšlení a~soustředění~\cite{Filgona20}. Ukázat jim, jak lze dovednosti, které se naučí, prakticky využít. Nelze předpokládat, že si žáci uvědomují důležitost lekcí. Je třeba ukázat přínos pro jejich potřeby.
 
 Poté následuje teoretická část, kde jsou žákům představeny základní prostředky, teorie, syntax programovacího jazyka a~další teoretická východiska, které jsou potřebné pro řešení konkrétních problémů v~dané lekci. Účelem je žákům dané koncepty vysvětlit jednoduše a~srozumitelně. Stále je však kladen důraz na exaktnost předávané teorie. Snažíme se, aby tato část nebyla pouze frontálním výkladem učitele, proto má v~lekcích různé podoby. 
 
@@ -469,7 +469,12 @@ Poslední odstavec obsahuje doplňující poznámky pro učitele, které se vzta
 
 \section{Zpracování lekcí}
 
-Tato kapitola se věnuje samotné realizaci lekcí a k nim vytvořeným úlohám. Popsány zde budou pouze vybrané z nich. %TODO - vybrané jak?
+Tato kapitola se věnuje samotné realizaci lekcí a k nim vytvořeným úlohám. Popsány zde budou pouze některé z nich. 
+
+K představení jsem vybrala lekci označenou jako nula, která učitele seznamuje s materiálem. A úvodní dvě lekce, které jsou klíčové pro seznámení s prostředky na nichž jsou postaveny úlohy v dalších kapitolách. Dále již nejsou představeny celé lekce, ale pouze vybrané úlohy z ostatních kapitol, které využívají některé z výukových metod popsaných v kapitole 4. %TODO doplněno
+
+Obsah lekcí je zkrácen a upraven pro účely této práce. Část podkapitol věnující se úlohám zcela odpovídá znění ve vytvořeném materiálu. %TODO je tak ok?
+
 Celý materiál je možné najít v příloze této práce v archivu %TODO - název archivu
 a také ve veřejném repozitáři na \href{https://github.com/denisa-mat/BP-microbit}{GitHubu}. Materiál je zveřejněn pod licencí CC BY 3.0 CZ a je možné jej volně využívat a upravovat.
 
@@ -480,9 +485,10 @@ Obsah lekcí je sestaven tak, aby odpovídal požadavkům plynoucím z~revidovan
 
 Praktické úlohy jsou realizovány pomocí MicroPythonu a~sady Nezha pro micro:bit, je zde tedy specifikováno jaké nástroje jsou pro práci s~materiálem potřeba. Dále je uvedena časová náročnost, která odpovídá deseti blokům výuky. Každý blok na dvě vyučovací hodiny.
 
-Následuje popis struktury vzniklého materiálu, který je v~této práci popsán v~kapitole 5.1.1. v~závěru je stručně popsána struktura a~klíčové prvky jednoduchého programu v~MicroPythonu. 
+Následuje popis struktury vzniklého materiálu, který je v~této práci popsán v~kapitole 5.1.1. Je zde stručně popsána struktura a~klíčové prvky jednoduchého programu v~MicroPythonu. 
+\vspace{0,2cm}
 \begin{footnotesize}
-\begin{lstlisting}[language=Python, caption=struktura programu v~MicroPythonu]
+\begin{lstlisting}[language=Python, caption=Struktura programu v~MicroPythonu]
 from microbit import *
 
 # Nasleduje nekonecny cyklus
@@ -492,30 +498,33 @@ while True:
 \end{lstlisting}
 \end{footnotesize}
 
-Na prvním řádku je import knihovny microbit, která obsahuje všechny funkce a~metody potřebné pro práci s~micro:bitem. Tento řádek uvozuje všechny vzorové implementace. v~případě, kdy úloha obsahuje práci se senzory, následuje import dalších modulů. Hvězdička značí, že příkaz importuje vše, co knihovna obsahuje.
+Syntaxe Pythonu používá k identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o~úroveň výše.
 
-Znak \# na začátku třetího řádku značí jednořádkový komentář. Komentáře nejsou součástí vykonávaného programu, slouží programátorům pro poznámky týkající se kódu.
+V~závěru je vysvětleno, co jsou to moduly a jakým způsobem se s nimi bude v tomto materiálu pracovat. Pro úlohy, které jsou umístěné v těchto materiálech doporučuji využívat moduly z přiloženého adresáře, pro snazší práci zde byla upravena dokumentace metod a některé byly přidány.
 
-Syntaxe Pythonu používá k~identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o~úroveň výše.
 
 \subsection{Lekce 1 -- Seznámení s~micro:bitem, IDE a~první program}
-První vytvořený program při výuce programovacích jazyků bývá nejčastěji Hello World, jde o~krátký program, který obsahuje pouze zápis příkazu, který vypíše text \textit{Hello World} (česky Ahoj světe)~\cite{helloWorld}. Tento koncept využijeme i~zde v~první lekci pro seznámení s~prostředím a~využívanými nástroji.
+První vytvořený program při výuce programovacích jazyků bývá nejčastěji Hello World, jde o~krátký program, který obsahuje pouze zápis příkazu, který vypíše text \textit{Hello World} (česky Ahoj světe)~\cite{helloWorld}. Tento koncept jsem využila i~zde v~první lekci pro seznámení s~prostředím a~využívanými nástroji.
+
 \subsubsection{Obsah lekce}
 \begin{itemize}
-    \item Motivace -- Proč potřebují žáci umět programovat? Ukážeme příklad s~velkým množstvím fotografií, které potřebujeme přejmenovat. Ručně by zabralo velké množství času, vytvoření skriptu může zabrat pár minut práce.
-    \item Prostředky -- v~první kapitole je tato část z~větší části teoretická. Je potřeba s~žáky probrat s~čím se bude ve zbytku lekcí pracovat. Představení MicroPythonu jako programovacího jazyka. Popis algoritmu a~jeho vlastností spolu s~ukázkou vývojových diagramů. Představení micro:bitu a~IDE ve kterém se bude micro:bit programovat. 
-    \item Shrnutí -- TODO
+    \item Motivace -- Proč potřebují žáci znát algoritmizaci? Ukážeme na příkladu rutinního úkolu, který je prováděn pravidělně a vždy stejně. Ručně by zabralo velké množství času, vytvoření skriptu pro automatizaci může zabrat pár minut práce.
+    \item Prostředky -- První kapitola je z velké části postavena na představení teoretických základů. Je potřeba s~žáky probrat s~čím se bude ve zbytku lekcí pracovat. Představení MicroPythonu jako programovacího jazyka. Popis algoritmu a~jeho vlastností spolu s~ukázkou vývojových diagramů. Představení micro:bitu a~IDE ve kterém se bude micro:bit programovat. 
+    \item Úloha -- na představení prostředků navazuje první úloha představující klasický výpis \textit{Hello World}.
+    \item Shrnutí -- Je zde zaměřeno na zopakování představených nástrojů. Obsahuje čtyři otázky, které mají za cíl ověřit zapamatování vybraných bodů z teoretické části i praktické části. 
     \begin{itemize}
-        \item ?
-        \item ?
-        \item ?
+        \item Co je algoritmus a jaké má vlastnosti?
+        \item Jaké symboly se používají ve vývojovém diagramu?
+        \item Jak se jmenuje použitý programovací jazyk?
+        \item Jakým způsobem se do micro:bita nahrává program?
     \end{itemize}
-    \item Poznámky pro učitele -- v~první lekci zůstane žákům zatajena existence tříd, objektů a~metod, těm se budou věnovat pozdější lekce, zatím se obejdeme bez nich.
+    \item Poznámky pro učitele -- Zde je učitelům objasněno záměrné dočasné vynechání některých složitějších konstruktů. Také je připomenuta možnost programovat micro:bita na libovolné platformě, včetně tabletů nebo mobilních zařízení. Na závěr je ještě odkaz na oficiální dokumentaci MicroPythonu \href{https://docs.micropython.org/en/latest/}{docs.micropython.org}
 \end{itemize}
+
 \subsubsection{Úloha 1 -- Hello World}
 \begin{itemize}
     \item Zadání
-
+    
 Napište program, který na vestavěný displej vypíše řetězec Hello World. Následně program nahrajte do micro:bitu.
     \item Co budete potřebovat
 
@@ -523,6 +532,30 @@ K této úloze nejsou potřebné žádné senzory ani Nezha sada.
     \item Co se naučíte
 
 Cílem úlohy je především vytvoření prvního programu v~MicroPythonu. Dále prakticky seznámit žáky s~IDE a~micro:bitem a~program nahrát z~počítače do micro:bitu.
+\item Jak postupovat
+
+Do okna editoru naimportujte modul microbit pomocí příkazu from microbit import *. Tento zápis značí, že importujete vše co modul obsahuje. Symbol * lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
+
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekonečný cyklus má jednoduchou podmínku, která se splní vždy. Stačí tedy použít while True.
+
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte Send to micro:bit, otevře se nápověda a poté okno s kompatibilními zařízeními.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]  {images/send1.png}
+    \caption{Jak připojit micro:bit}
+    %\label{fig:my_label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]  {images/send2.png}
+    \caption{Jak nahrát program}
+    %\label{fig:my_label}
+\end{figure}
+Vyberte micro:bit a klikněte na připojit, zobrazí se progress bar a program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu o tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit".
+
+V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a~nahrát na micro:bit jako na externí úložiště.
+\vspace{0,4cm}
     \item Vzorová implementace
 \begin{footnotesize}
 \begin{lstlisting}[language=Python, caption=Úloha 1 - Hello World]
@@ -532,38 +565,82 @@ while True:
     display.scroll('Hello World')
 \end{lstlisting}
 \end{footnotesize}
-    \item Popis řešení
+    \item Popis vzorové implementace
 
-Na prvním řádku jsou je z~modulu microbit importováno vše, co obsahuje. v~tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí. Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte metodu scroll na objektu display, které předáte jako parametr požadovaný textový řetězec "Hello World". Pro opětovná zobrazení bez nutnosti restartování programu obalte příkaz do nekonečného while cyklu.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\textwidth]  {images/send1.png}
-    \caption{Jak připojit micro:bit}
-    %\label{fig:my_label}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\textwidth]  {images/send2.png}
-    \caption{Jak nahrát program}
-    %\label{fig:my_label}
-\end{figure}
-
-Do micro:bitu program z~počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte "Send to micro:bit", otevře se nápověda a~poté okno s~kompatibilními zařízeními.
-
-Vyberte micro:bit a~klikněte na připojit, zobrazí se progress bar a~program se nahraje do micro:bitu. Ve spodní části obrazovky uvidíte zprávu o~tom, zda se podařilo. Nyní až do odpojení micro:bita stačí pro nové nahrání vždy jen kliknout na tlačítko "Send to micro:bit".
-
-V případě, že tento postup nefunguje je možné program stáhnout ve formátu .hex a~nahrát na micro:bit jako na externí úložiště.
+Na prvním řádku importujeme celý modul microbit. V tomto konkrétním případě lze import celého obsahu nahradit pouze importem objektu display, který pro tuto úlohu stačí. Na řádku tři vytváříme nekonečný cyklus v jehož těle voláme metodu scroll() na objektu display, které předáme jako parametr požadovaný textový řetězec "Hello World".
 
     \item Doplňující poznámky
 
-Cykly budou žákům podrobněji vysvětleny až v~lekci 4, do té doby si vystačíme s~while True, pro neustálé opakování programu. v~případě zájmu si můžou žáci World nahradit svým jménem.
+Cykly budou žákům podrobněji vysvětleny až v~lekci 4, do té doby si vystačíme s~while True, pro neustálé opakování programu. V~případě zájmu si můžou žáci World nahradit svým jménem.
 \end{itemize}
 
 \subsection{Lekce 2 -- Proměnné a~datové typy}
+Lekce dva se mimo proměnných a datových typů věnuje také představení a práci s Nezha kitem a využití prvních modulů.
 
-\subsection{Lekce 3 -- }
+\subsubsection{Obsah lekce}
+\begin{itemize}
+    \item Motivace -- Na začátek je žákům objasněno, že byť se jim proměnné mohou zdát abstraktní a nové, ve skutečnosti je to něco co běžně využívají. V matematice neznámé pouze označují jako proměnné. Dále je ukázáno využití proměnných ve vývoji počítačových her, kde se do proměnných ukládají například počty životů.
+    \item Prostředky -- 
+
+    \item Úloha -- Proměnné, Fibonacciho posloupnost
+
+    \item Shrnutí --
+
+    \item Poznámky pro učitele -- 
+\end{itemize}
+
+\subsubsection{Úloha 1 - Proměnné, Fibonacciho posloupnost}
+\begin{itemize}
+    \item Zadání
+Napište program, který bude v nekonečném cyklu while True počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu scrollobdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: 0+1=1
+    \item Co budete potřebovat
+K této úloze je potřeba jen micro:bit a kabel pro přenesení programu.
+    \item Co se naučíte
+Cílem úlohy je vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem int. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
+\item Jak postupovat
+Nejprve zjistěte, zda žáci znají Fibonnaciho posloupnost a případně vysvětlete, že se jedná o posloupnost čísel, kde každé číslo v posloupnosti je součtem dvou předchozích čísel. Začíná se obvykle číslem 0 a následuje číslo 1. Další číslo je poté součtem 0 a 1, tedy 1, další je 1 + 1, tedy 2, další je 1 + 2, tedy 3, a tak dále. Takto pokračuje posloupnost dál do nekonečna.
+
+Zkuste s žáky probrat, jak bude program vypadat, co jsou jeho klíčové body. Můžete na tabuli spolu s žáky sestavit diagram podobně, jako je níže, to jim zjednodušší následné psaní kódu.
+
+K zamyšlení:
+\begin{compactitem}
+    \item Kde budeme inicializovat proměnné? 
+    \item  Jaké parametry bere metoda scroll?
+\item                                                   Jakým způsobem ji zavoláme?
+\end{compactitem}
+
+Metoda scroll bere jako parametr string, my jí však chceme dávat hodnotu typu int, musíme ji proto přetypovat. Přetypování je proces změny datového typu proměnné na jiný datový typ. V Pythonu je možné přetypování provést pomocí vestavěných funkcí, jako jsou int(), float(), str(). Je důležité mít na paměti, že některé datové typy nemohou být přetypovány na jiné typy a v takovém případě dojde k chybě při běhu programu. Pro přetypování proměnné typu int využijte funkci str(). Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
+    \item Vzorová implementace
+\begin{lstlisting}[language=Python, caption=Úloha 1 - Hello World]
+from microbit import * 
+
+number1 = 0
+number2 = 1   
+
+while True:   
+    sum = number1 + number2     
+    display.scroll(str(number1) + "+" + str(number2) + "=" + str(sum))
+    number1 = number2
+    number2 = sum
+\end{lstlisting}
+    \item Popis vzorové implementace
+Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné sum přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných number1 a number2.
+
+Metoda scroll zavolaná na objektu display postupně zobrazuje výpočet a výsledek na micro:bit. Protože scroll bere pouze argumenty typu string přetypujte proměnné number1 a number2 pomocí funkce str(). Aplikace operace + na hodnoty typu string funguje jako řetězení (konkatenace). Na řádku 9 je do proměnné number1 uložena hodnota proměnné number2, na řádku 10 je do proměnné number2 uložena hodnota z proměnné sum. Tato změna hodnot v proměnných umožňuje v další iteraci vypočítat následující hodnotu Fibonacciho posloupnosti.
+    \item Doplňující poznámky
+Fibonacciho posloupnost je poměrně jednoduchá posloupnost, ale má zásadní využití v řadě různých oblastí od přírodních věd až po design a umění.
+
+\end{itemize}
+
+\subsection{Vybrané úlohy}
+
+\subsubsection{Úloha X z Lekce Y - }
+
+\subsubsection{Úloha X z Lekce Y - }
+
+\subsubsection{Úloha X z Lekce Y - }
+
+\subsubsection{Úloha X z Lekce Y - }
 
 \section{Možnosti rozšíření}
 Senzor pro RFID, sledování vlhkosti apod. -- umožňuje dále sbírat data, následná možnost využít v~tématické oblasti týkající se práce s~daty a~jejich zpracování. Zároveň široká škála možností využít v~ostatních přírodovědných předmětech.
@@ -587,7 +664,7 @@ Ke koncepci a~návaznosti lekcí učitelé neměli žádné námitky. Pouze navr
 Učitelé celkově hodnotili materiál jako kvalitní a~vhodný pro výuku na středních školách především na školách s~obecným vzděláním, nebo školách s~jiným zaměřením než jsou informační technologie.
 
 \section{Možnosti budoucího vylepšení}
-Na základě zpětné vazby lze provést několik vylepšení. v~první řadě k~vzorovým implementacím přidat číslování řádků, což umožní učitelům snadno odkazovat na konkrétní řádky programu při vysvětlování nebo řešení problémů. Dále lze doplnit obrazové a~video ukázky zobrazující očekávaný výstup programu. To poskytne žákům lepší představu o~tom, jak kód funguje v~praxi, a~pomůže jim lépe pochopit požadovaný výstup.
+Na základě zpětné vazby lze provést několik vylepšení. v~první řadě k~vzorovým implementacím přidat číslování řádků, což umožní snadno odkazovat na konkrétní řádky programu. Dále lze doplnit obrazové a~video ukázky zobrazující očekávaný výstup programu. To poskytne žákům lepší představu o~tom, jak kód funguje v~praxi, a~pomůže jim lépe pochopit požadovaný výstup.
 
 Bylo by vhodné uvést informace o~tom, kde je možné lekci rozdělit, aby se lépe přizpůsobila různým školním rozvrhům. Například uvést, že první polovina lekce se zaměřuje na úvod a~teorii, zatímco druhá polovina se věnuje praktickým cvičením a~programování.
 
