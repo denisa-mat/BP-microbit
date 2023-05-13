@@ -113,7 +113,13 @@ Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vysta
 V případě zájmu si můžou žáci World nahradit svým jménem. V Pythonu a stejně tak v MicroPythonu lze pro string použít dvojité uvozovky nebo apostrof.
 
 ## Shrnutí <a name="shrnuti"/>
-shrnutí
+V této lekci byly představeny nástroje se kterými bude následně pracováno ve všech lekcích. Bylo zde mnoho infomací, které budou sloužit jako opěrné body pro následující kapitoly.
+
+Otázky k zopakování:
+- Co je algoritmus a jaké má vlastnosti?
+- Jaké symboly se standardně používají ve vývojovém diagramu?
+- Jak se jmenuje použitý programovací jazyk?
+- Jakým způsobem se do micro:bita nahrává program?
 
 ## Poznámky pro učitele <a name="pozn"/>
 Pro začátek žákům zatajte existenci tříd, objektů a metod. Budeme se tomu věnovat v pozdějších lekcích.
