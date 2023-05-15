@@ -1,20 +1,102 @@
-# Lekce 3 - Podmínky
-### If, elif, else, logické operátory
+# Lekce 3 - Nezha sada, podmínky
+#### Seznámení s Nezha sadou, if, elif, else, logické operátory
 
 ### Obsah
 [Motivace](#motivace)  
-[Prostředky I – Podmínky](#resources1)  
+[Prostředky I – Nezha kit](#resources1)  
 [Úloha 1 - Parkovací asistent](#assignment1)  
-[Prostředky II – Složené podmínky](#resources2)  
-[Úloha 2 - Test plnoletosti](#assignment2)  
-[Úloha 3 - Horská dráha](#assignment3)  
+[Prostředky II – Podmínky](#resources2)  
+[Úloha 2 - Parkovací asistent](#assignment2)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 <a name="motivace"/>
 ## Motivace 
 Podmínky v programování umožňují řídit programový tok na základě různých vstupů, bez podmínek není program dynamický. Často je potřeba provést nějakou akci jen v případě, že nastala nějaká konkrétní situace, to se bez podmínek nepodaří. Znalost podmínek je základem pro mnoho pokročilých programovacích konceptů, jako jsou cykly a funkce.
-<a name="resources1"/>
-## Prostředky I - Podmínky
+
+## Prostředky I - Nezha kit <a name="resources1"/>
+### NezhaKit
+Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s jeho první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Další senzory se dají pořídit zvlášť. Základ setu tvoří Nezha modul pro umístění micro:bitu.
+
+Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s Nezhou a tedy i s micro:bitem. Propojení je snadné a spolehlivé. 
+
+<p align="center">
+  <img src=/img/moduly.png alt="Moduly využívané v lekcích" width="100%">
+  <em>Moduly využívané v lekcích</em>
+</p>
+
+Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
+- Nezha rozšiřující modul pro micro:bit (zabudovaný akumulátor LiPol 900 mAh, porty pro senzory a další moduly, konektory pro serva a motory, konektor pro micro:bit)
+- 8 elektronických modulů (3 x LED modul, potenciometr, snímač vlhkosti, snímač vzdálenosti, snímač nárazu, snímač čáry)
+- 2 x DC motor pro realizaci otáčivých pohybů
+- servo 360 ° pro natočení na přesný úhel v rozsahu 0 - 360 °
+- propojovací vodiče s konektory RJ11, USB kabel pro nahrání programu do micro:bitu
+- kola s pneumatikami pro LEGO®, rejdovací kolečko pro jezdícího robota
+- více než 400 součástí kompatibilních s LEGO® Technic
+- mapa s čárou pro ježdění po čáře
+
+<p align="center">
+  <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu" width="100%">
+  <em>Obsah Nezha kitu</em>
+</p>
+
+Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory následně připojíme k modulu dle barev pomocí příslušných kabelů a konektorů, dle následujícího schématu.
+
+<p align="center">
+  <img src=/img/nezhaSchema.png alt="Schéma Nezha kitu" width="100%">
+  <em>Schéma Nezha kitu</em>
+</p>
+
+## Úloha 1 - Seznámení s Nezha kitem, Fibonacciho posloupnost <a name="assignment1"/>
+### Zadání
+Použijte program vyvtvořený v minulé lekci a modifikujte ho tak, aby rozsvítil na matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti. Naimportujte modul obsahující metody a funkce pro matrix display a využijte jeho metodu `set_matrix_draw_index()`.
+### Co budete potřebovat
+Pro tuto úlohu bude potřeba modul Nezha a PlanetX matrix modul.
+### Co se naučíte
+Cílem této úlohy je vyzkoušet použití Nezha kitu a import modulu jednoho z displejů.
+### Jak postupovat
+Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru zvolte `Open` a vyberte v adresářové struktuře modul. Poté je důležité zvolit `Add file matrix.py`. Jako výchozí hodnota je zvoleno `Replace main code with matrix.py`, tím byste si přepsali kód, který se nachází v souboru `main.py`.
+
+<p align="center">
+  <img src=/img/modulNahrat.png alt="Přidání modulů do projektu" width="100%">
+  <em>Přidání modulů do projektu</em>
+</p>
+
+Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v osmé lekci věnované modulům. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
+
+Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Žáci pravděpodobně do metody zadají proměnnou `sum`. Prodiskutujte s nimi, zda se zobrazují správné hodnoty, a čím by mohlo být, že ne. První dioda má index nula, proto se jako první rozsvítí až druhá s indexem 1 a dále budou všechny o jednu posunuté. Vyřešit to lze snadno odečtením jedničky od proměnné `sum`, při předávání do metody.
+
+Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program. Funkce `sleep()` říká jak dlouho v milisekundách má na daném místě program pozastavit. Při práci s micro:bitem budeme `sleep()` používat poměrně často.
+
+### Vzorová implementace
+```python
+from microbit import *
+from matrix import *
+
+matrix = MATRIX()
+
+number1 = 0
+number2 = 1
+sum = number1 + number2
+
+while True:
+    matrix.set_matrix_draw_index(sum-1)
+    number1 = number2
+    number2 = sum
+    sum = number1 + number2
+    sleep(500)
+```
+### Diagram
+
+<p align="center">
+  <img src=/img/diagram2.png alt="diagram2" width="100%">
+</p>
+
+### Popis vzorové implementace
+Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. Inicializace je proces přiřazení počáteční hodnoty proměnné, objektu nebo datové struktury před dalším použitím. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
+### Doplňující poznámky 
+Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. Je třeba změnit podmínku ve while cyklu tak, aby se tělo cyklu vykonalo pouze je-li požadovaný index v rozsahu displeje. Displej má 128 diod v osmi řádcích a šestnácti sloupcích. podmínka by tedy byla `while sum < 128`.
+
+## Prostředky II - Podmínky <a name="resources2"/>
 Podmínky se používají k rozhodování, které akce má program vykonat v závislosti na nějakém vstupu nebo stavu. 
 Pro zápis podmínky využíváme klíčová slova `if` (pokud), `elif` - zkratka pro else if,  `else` (jinak). Za if a elif následuje podmínka (výraz nebo proměnná typu bool) dle toho, jak se vyhodnotí program pokračuje.
 
@@ -53,7 +135,7 @@ V Pythonu se používají následující operátory pro srovnávání hodnot a v
 - `in`: Porovnává, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
 - `not in`: Porovnává, zda se první výraz nenachází v druhém výrazu.
 
-## Úloha 1 - Parkovací asistent <a name="assignment1"/>
+## Úloha 2 - Parkovací asistent <a name="assignment2"/>
 ### Zadání
 Vytvořte simulaci parkovacího asistenta. Napište program, který bude pomocí senzoru pro snímání vzdálenosti hlídat, jak daleko je překážka a tuto vzdálenost vypíše na segmentový displej (nixietube). Pokud je vzdálenost menší než 20, pak rozsviďte červenou led diodu.
 ### Co budete potřebovat
@@ -95,137 +177,14 @@ while True:
 
 ### Popis vzorové implementace
 Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
+
 ### Doplňující poznámky 
 Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
 
-## Prostředky II - Složené podmínky <a name="resources2"/> 
-V Pythonu se používají logické operátory pro kombinaci podmínek: `and`, `or` a operátor negace `not`.
+## Shrnutí <a name="conclusion"/>
+- Jak nahrát modul pro ovládání displejů a senzorů do projektu?
+- Jak se připojují senzory k NezhaKitu potažmo k micro:bitu?
+- Jaké znáte operace pro srovnání hodnot v proměnných
 
-Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
-```python
-if podmínka1 and podmínka2:
-    # provede se, pokud jsou obě podmínky pravdivé
-```
-
-Operátor `or` vrací `True`, pokud alespoň jedna z podmínek je pravdivá, jinak vrací `False`.
-```python
-if podmínka1 or podmínka2:
-    # provede se, pokud je alespoň jedna z podmínek pravdivá
-```
-
-Operátor `not` neguje pravdivostní hodnotu podmínky, tedy vrací `True`, pokud je podmínka nepravdivá, a `False`, pokud je podmínka pravdivá.
-```python
-if not podmínka1:
-    # provede se, pokud je podmínka1 nepravdivá
-```
-
-Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
-
-## Úloha 2 - Test plnoletosti <a name="assignment2"/>
-### Zadání
-Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba oslavila osmnácté narozeniny zobrazte fajfku (`Image.YES`). 
-### Co budete potřebovat
-Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `nixietube`, které nejsou součástí sady.
-### Co se naučíte
-Cílem úlohy je vyzkoušet práci s podmínkami.
-### Jak postupovat
-Dejte žákům k dispozici vzorovou implementaci, ideálně vytištěné na papíře a využijte metodu PRIMM. Nechte žáky odhadnout co program dělá, zatím jim nedávejte zadání. Žáci ve skupinách diskutují o fukci programu. Následně nechte žáky připojit moduly a kód spustit v editoru. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. Zadejte žákům otázku/úkol který slouží k důkladnému prozkoumání programu. Například:
-- Je mi přesně 5, jaký dostanu výstup? (odhadněte bez spuštění s danou hodnotou)
-- Co se stane, když zmáčku obe tlačítka najednou?
-- Co když budu držet talčítko C dlouhou dobu?
-- Jak by se prorgam choval pokud by neobsahoval `sleep()`?
-### Vzorová implementace
-```python
-from microbit import *
-from distance import *
-from nixietube import *
-from button import *
-
-nixietube = NIXIETUBE(J1)
-button = BUTTON(J2)
-
-age = 0
-age_confirmed = False
-
-while True:
-    if age_confirmed:
-        if age < 5:
-            display.show(Image.SAD)
-        elif age < 18:
-            display.show(Image.NO)
-        else:
-            display.show(Image.YES)
-    else:
-        if button.C_is_pressed():
-            age += 1
-            sleep(300)
-        elif button.D_is_pressed():
-            age_confirmed = True
-    nixietube.set_show_num(age)
-```
-<p align="center">
-  <img src=/img/diagram3.png alt="diagram3">
-</p>
-
-### Popis vzorové implementace
-Nejprve proveďte import modulů nixietube a button, z nichž následně vytvoříte objekty. Na řádcích 9 a 10 vytvořte pomocné proměnné pro věk a značku o potvrzení zadaného věku. Ve while cyklu kontrolujte, zda byl věk potvrzen pokud ano zobrazte dle výsedku příslušného smajlíka. Pokud věk potvrzen nebyl zkontrolujte, které tlačítko bylo zmačknuto. Při zmáčknutí tlačítka C přičtěte jedničku k věku, pokud bylo zmáčknuto D, nastavte značku o potvrzení na hodnotu `True`.
-### Doplňující poznámky 
-Pokud vznecháte `sleep()` přičte se jednička opakovaně, protože program stihne za dobu zmáčknutí tlačítka více opakování těla while cyklu.
-
-## Úloha 3 - Horská dráha <a name="assignment3"/>
-### Zadání
-Naprogramujte microbita, tak aby na displej zobrazoval, zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
-### Co budete potřebovat
-K řešení úlohy jsou využívány moduly button a nixietube, které nejsou součástí Nezha kitu. Pokud je nemáte je možné nahradit button tlačítky přímo na micro:bitu a místo výpisu na segmentový dislej hodnoty scrollovat na displeji micro:bita.
-### Co se naučíte
-Úloha se zaměřuje na složené a vnořené podmínky.
-### Jak postupovat
-Dejte studentům program z předchozí úlohy a nechte je modifikovat dle zadání. Žáci využívají, že v předchozích částech pochopili strukturu kódu a překlenou hranici mezi cizím kódem a částečně vlastním.
-### Vzorová implementace
-```python
-from microbit import *
-from nixietube import *
-from button import *
-
-nixietube = NIXIETUBE(J1)
-button = BUTTON(J2)
-
-age = 0
-age_confirmed = False
-height = 0
-height_confirmed = False
-
-while True:
-    if age_confirmed and height_confirmed:
-        if age <= 10 and height < 125:
-            display.show(Image.NO)
-        else:
-            display.show(Image.YES)
-    elif age_confirmed:
-        if button.C_is_pressed():
-            height += 5
-            nixietube.set_show_num(height)
-        elif button.D_is_pressed():
-            height_confirmed = True
-            nixietube.set_clear()
-    else:
-        if button.C_is_pressed():
-            age += 1
-            nixietube.set_show_num(age)
-        elif button.D_is_pressed():
-            age_confirmed = True
-            nixietube.set_clear()
-    sleep(150)
-```
-### Popis řešení
-Podobně jako v minulé úloze naimportujte moduly a inicializujte objekty. Dále vytvořte pomocné proměnné. Zbytek kódu již bude v těle while cyklu. Kontrolujete zda byl potvrzen pouze věk i výška, či ani jedno. Pokud bylo potvrzeno obojí zobrazte smajlíky dle zadání. Na řádcích 21 a 28 načítáme hodnotu do proměnné na základě zmáčknutí tlačítka C, v případě stisknutí tlačítka D je věk potvrzen. Na konci while cyklu využijte metodu sleep().
-### Doplňující poznámky 
-Pokud máte pocit, že je úloha příliš komplexní nastavte hodnotu výšky staticky na začátku porgramu. Pak stačí upravit podmínky a kód zůstane z větší části stejný jako v předchozí úloze.
-
-Zbyde-li vám čas, nechte žáky vytvořit vlastní porgram, který bude testovat jiné hodnoty. 
-<a name="conclusion"/>
-## Shrnutí 
-TODO
-<a name="pozn"/>
-## Poznámky pro učitele 
-Operace AND, OR a NOT jsou v boolovské algebře jsou základními logickými operacemi, které se používají ke kombinování a transformaci logických hodnot. Booleovská algebra se zabývá algebraickými operacemi nad logickými hodnotami, používají se v mnoha oblastech informatiky a elektrotechniky, jako jsou návrh digitálních obvodů, programování, databázové dotazy a další.
+## Poznámky pro učitele <a name="pozn"/>
+Oficiální infomace k Nezha kitu naleznete na [elecfreaks.com](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/Nezha-Inventor-s-kit-for-microbit.html)
