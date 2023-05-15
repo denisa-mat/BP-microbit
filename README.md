@@ -75,7 +75,7 @@ Pro opětovné spuštění programu, který je nahrán micro:bitu použijte tla�
 
 ## Úloha 2 - Auto vylepšení <a name="assignment2"/>
 ### Zadání
-Využijde kód z předchozí lekce a modifikujte ho tak, aby si před startem auto uložilo vzdálenost od překážky a když narazí, tak aby vycouvalo zpět a zastavilo se na stejném místě, ze kterého vyjelo.
+Využijte kód z předchozí lekce a modifikujte ho tak, aby si před startem auto uložilo vzdálenost od překážky a když narazí, tak aby vycouvalo zpět a zastavilo se na stejném místě, ze kterého vyjelo.
 Následně zkuste sami vymyslet, jak by se dalo ještě auto vylepšit. Přidejte další modul a naprogramujte nějakou další funkcionalitu.
 ### Co budete potřebovat
 Pro tuto úlohu si připravte crash senzor a distance senzor. Oba jsou součástí Nezha sady. Dále záleží, jaký modul se rozhodnou žáci na vozítko přidat.
@@ -115,7 +115,7 @@ Před while cyklem je do proměnné `start_distance` uložena hodnota rovna vzd�
 ### Doplňující poznámky 
 Obdobě jako v minulé úloze, pokud máte motor umístěný obráceně, než bylo předpokládáno budete muset pro couvání použít jízdu vpřed.
 
-Je možné, že se vozidlo při couvání zastaví dříve, než je očekáváno, to je způsobeno senzorem, který někdy vrátí velkou vzdálenost přestože je k překážce blízko.
+Je možné, že se vozidlo při couvání zastaví dříve, než je očekáváno, to je způsobeno senzorem, který někdy vrátí velkou vzdálenost, přestože je k překážce blízko.
 
 Možná vylepšení vozidla žáky:
 - přidání senzoru pro sledování čáry a předpřipravené cesty, která se součástí sady.
