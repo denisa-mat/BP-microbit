@@ -123,7 +123,9 @@ Možná vylepšení vozidla žáky:
 - lze ukazovat na segmentovém displeji vzdálenost od překážky
 - nastavit vozidlu rychlost poocí potenciometru
 ## Shrnutí <a name="conclusion"/>
-TODO
+- K čemu slouží cyklus?
+- Co se stane, když tělo cyklu nebude odsazené?
+- Jak se spustí program v micro:bitu, když skončí?
 ## Poznámky pro učitele <a name="pozn"/>
 Inspiraci pro stavbu vozítek můžete čerpat například na webu [elecfraks](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/index.html). Je zde mnoho různých projektů, z nichž některé využívají pohybující se roboty.
 
