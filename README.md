@@ -1,4 +1,4 @@
-# Lekce 6
+# Lekce 7
 ### Seznamy, indexace, foreach
 
 ## Obsah
@@ -12,14 +12,14 @@
 ## Motivace <a name="motivace"/>
 Seznamy jsou jednou z nejdůležitějších datových struktur, umožňují ukládat hodnoty a manipulovat s nimi, což je velmi užitečné v mnoha různých typech programů. Seznamy mohou být použity pro ukládání seznamů uživatelských vstupů, výsledků zpracování dat, seznamu položek k nákupu, seznamu přátel na sociální síti a mnoho dalších.
 ## Prostředky I – Seznamy, indexace, foreach <a name="resources1"/>
-V Pythonu jsou seznamy jedním z nejčastěji používaných datových typů. Seznam umožňuje ukládat a pracovat s více hodnotami najednou, které mohou být různých datových typů. Seznamy jsou v Pythonu reprezentovány hranatými závorkami [] a jednotlivé prvky jsou odděleny čárkami.
+V Pythonu jsou seznamy jedním z nejčastěji používaných datových typů. Seznam umožňuje ukládat a pracovat s více hodnotami najednou, které mohou být různých datových typů. Seznamy jsou v Pythonu reprezentovány hranatými závorkami `[ ]` a jednotlivé prvky jsou odděleny čárkami.
 
 Například, zde je příklad vytvoření seznamu čísel:
 ```python
 cisla = [1, 2, 3, 4, 5]
 ```
 Seznamy mohou být prázdné, nebo mohou obsahovat libovolný počet prvků. 
-V Pythonu můžeme seznamy procházet pomocí cyklu for prvek po prvku a s každým provést nějakou operaci. Zápis takového cyklu vypadá následovně:
+V Pythonu můžeme seznamy procházet pomocí cyklu `for` prvek po prvku a s každým provést nějakou operaci. Zápis takového cyklu vypadá následovně:
 ```python
 for cislo in cisla:
 	print(cislo)
@@ -150,6 +150,8 @@ else:
 ### Doplňující poznámky 
 Obtížnost přizpůsobíte schopnostem skupiny podle toho, na jak velké bloky program rozdělíte. Nejnáročnější varianta je rozdělit kód na samostatné řádky. Tato metoda umožňuje škálovat zadání, rychlejší skupině žáků lze dát program rozdělen na menší části, pomalejší nechat větší bloky. 
 ## Shrnutí <a name="conclusion"/>
-TODO
+- Jak v Pythonu značíme seznam?
+- Jakým způsobem získáte ze seznamu třetí položku v pořadí?
+- Jaké znáte operace nad seznamy?
 ## Poznámky pro učitele <a name="pozn"/>
 Pseudonáhodné číslo, které vypadá jako náhodné, ale ve skutečnosti bylo vypočítáno pomocí matematického algoritmu. Tyto algoritmy jsou obvykle generovány na základě počátečního "seed" čísla, které je zpravidla odvozeno z aktuálního času nebo jiného proměnného parametru. Pseudonáhodné čísla jsou široce používána v počítačových simulacích, kryptografii, hraní her a dalších aplikacích.
