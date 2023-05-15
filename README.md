@@ -1,5 +1,5 @@
-# Lekce 4
-### While cyklus
+# Lekce 5
+#### While cyklus
 
 ## Obsah
 [Motivace](#motivace)  
