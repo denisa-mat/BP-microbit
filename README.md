@@ -6,6 +6,9 @@
 [Prostředky I – Složené podmínky](#resources1)  
 [Úloha 1 - Test plnoletosti](#assignment1)  
 [Úloha 2 - Horská dráha](#assignment2)  
+[Shrnutí](#conclusion)  
+[Poznámky pro učitele](#pozn)
+
 
 ## Motivace
 Složené podmínky umožňují kombinovat více jednoduchých podmínek do jedné. To umožňuje vytvářet sofistikovanější rozhodovací struktury a ovládat tok programu na základě více podmínek najednou. Také podporuje v rozvoj kritického myšlení a logického uvažování. 
