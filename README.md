@@ -1,4 +1,4 @@
-# Lekce 5
+# Lekce 6
 ### For cyklus
 ## Obsah
 [Motivace](#motivace)    
@@ -115,8 +115,10 @@ green_led_object.set_on()
 ### Popis řešení
 Naimportujeme modul pro LED diody, stejně jako v předchozích lekcích a vytvořte objekty pro obě diody. Na začátku programu rozsviťte červenou diodu. Ve for cyklu se třemi iteracemi zobrazte požadovaná čísla na displej tak, že od čísla tři odečtete iterační proměnnou, tím se bude číslo na výstupu snižovat. Již mimo cyklus rozsviťte červenou diodu a následně zasněte zelenou.
 ### Doplňující poznámky 
-je možné, že některé z žáků nenapadne odečítat od tří a pokusí se to obejít pomocí kontroly iterační proměnné a dle toho vypsat. Pokuste se jim vysvětlit, že pokus by odpočet běžel například od sta, nebyla vhodná cesta.
+Je možné, že některé z žáků nenapadne odečítat od tří a pokusí se to obejít pomocí kontroly iterační proměnné a dle toho vypsat. Pokuste se jim vysvětlit, že pokus by odpočet běžel například od sta, nebyla vhodná cesta.
 ## Shrnutí <a name="conclusion"/>
-TODO
+- Čím se liší for cyklus od while cyklu?
+- Jak se zapisuje for cyklus?
+- Co je iterační porměnná?
 ## Poznámky pro učitele <a name="pozn"/>
 Více informací o tom, jak funguje for cyklus si můžete přečíst v [dokumentaci Pythonu](https://wiki.python.org/moin/ForLoop).
