@@ -1,12 +1,11 @@
 # Lekce 2
-### proměnné, datové typy, Nezha sada
+### Proměnné, datové typy
 
 ## Obsah
 [Motivace](#motivace)  
 [Prostředky I - Proměnné, datové typy](#resources1)  
-[Úloha 1 - Proměnné, Fibonacciho posloupnost ](#assignment1)  
-[Prostředky II - Nezha kit](#resources2)  
-[Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost](#assignment2)  
+[Úloha 1 - Proměnné, výpis ](#assignment1)  
+[Úloha 2 - Proměnné, Fibonacciho posloupnost ](#assignment1)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
@@ -43,6 +42,26 @@ Standardně se při pojmenování požívá angličtina a využívají se pouze 
 ### Datový typ
 Datový typ definuje, jaké druhy hodnot lze uložit do proměnné. Konkrétně určuje, jaký typ dat může být uložen v paměti počítače. Každý programovací jazyk má své vlastní datové typy, například celá čísla (integer), reálná čísla (float), textové řetězce (string), pole (array). Používání správných datových typů je důležité pro korektní běh programu a tvorbu efektivních a bezpečných aplikací.
 
+V Pythonu jsou tři základní datové typy
+
+Číselné datové typy:
+
+Python podporuje celá čísla `integer` a desetinná čísla `float`. Celá čísla slouží k reprezentaci celých čísel bez desetinné části, například `age = 25`. Desetinná čísla se používají pro reprezentaci čísel s desetinnou částí, například `pi = 3.14`
+
+Řetězcový datový typ:
+
+Řetězce jsou sekvence znaků, které mohou být považovány za text. Řetězce se v Pythonu zapisují uvozením jednoduchými `''` nebo dvojitými `""` uvozovkami. Příkladem je `name = 'John'`, kde je jméno John přiřazeno proměnné `name`.
+
+Logický datový typ:
+
+Logický datový typ může nabývat dvou hodnot: `True` (`pravda`) a `False` (`nepravda`). Tyto hodnoty se používají pro vyhodnocování logických výrazů a řízení toku programu na základě podmínek. Využívá k tomu základní logické operace Booleovy algebry, které jsou také aplikovány na logické datové typy.
+- Konjunkce `AND`: Vrací `True` pouze tehdy, pokud jsou oba vstupní výrazy `True`, jinak vrací `False`.
+- Disjunkce `OR`: Vrací `True`, pokud je alespoň jeden z vstupních výrazů `True`, jinak vrací `False`.
+- Negace `NOT`: Vrací opačnou hodnotu k vstupnímu výrazu. Pokud je vstupní výraz `True`, vrátí `False`, a naopak.
+
+Dále můžeme používat rozšiřující datové typy, jako jsou seznamy (list), slovníky (dictionary) a tuple. Tyto datové typy nám umožňují pracovat s kolekcemi hodnot a poskytují další flexibilitu a možnosti při programování.
+
+
 ### Operace s proměnnými
 S proměnnými lze provádět několik základních operací. Ne všechny operace lze provádět nad všemi datovými typy. Nad číselnými proměnnými můžeme provádět matematické operace s klasickým způsobem (sčítání `+`, odčítání `-`, násobení `*`, dělení `/`, mocnění `**`, celočíselné dělení `//`). Operaci `+` lze použít také na typ string, kde funguje jako řetězení. Protože Python není typovaný jazyk, je na programátorovi, aby věděl, jaký datový typ je v proměnné uložený. Python při přiřazení nové hodnoty umožňuje vložit hodnotu jiného datového typu. V případě, že se pokusíme provést operaci, která na dané kombinaci typů není podporována editor nás upozorní červenou značkou před číslem řádku a chybovou zprávou.
 
@@ -51,9 +70,40 @@ S proměnnými lze provádět několik základních operací. Ne všechny operac
   <em>Operace na nepodporované kombinaci typů</em>
 </p>
 
+V Pythonu je také možné hodnoty přetypovat pomocí funkcí nebo metod určených pro daný datový typ. Základní funkce pro přetypování jsou:
+- `int()`: Přetypuje hodnotu na celé číslo.
+- `float()`: Přetypuje hodnotu na desetinné číslo.
+- `str()`: Přetypuje hodnotu na řetězec.
+
 Pokud na proměnných provádíme nějakou operaci, je pravděpodobné, že s ní budeme chtít dále pracovat, nezapomeňte ji proto uložit do proměnné, můžete vytvořit novou nebo přepsat hodnotu již existující.
 
-## Úloha 1 - Proměnné, Fibonacciho posloupnost <a name="assignment1"/>
+## Úloha 1 - Proměnné, výpis <a name="assignment1"/>
+### Zadání
+Napište program, na jehož začátku do porměnných uložíte vaše jméno a věk a násedně zobrazte postupně na displej text ve tvaru `Vase jmeno je Anonym a vek je 99 let.`
+### Co budete potřebovat
+K této úloze je potřeba jen micro:bit a kabel pro přenesení programu.
+### Co se naučíte
+Cílem úlohy je vyzkoušet si práci s proměnnými a datovými typy. Žáci si také zopakují práci s editorem a micro:bitem z minulé lekce.
+### Jak postupovat
+Nejprve si do proměnných olžte dané hodnoty a následně se pokuste řetězec vypsat. Pro výpis použijte display.show(), která předejte požadovaný řetezec. Řetezce je možné sčítat, použijte tedy pro zřetězení operaci +. Pro výpis vynechejte diagritiku, micro:bit není schopen ji zobrazit.
+### Vzorová implementace
+```python
+from microbit import *
+
+name = "Anonym"
+age = 99
+
+display.show("Vase jmeno je " + name + " a vek je " + str(age) + " let.")
+
+```
+
+### Popis vzorové implementace
+Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené požadované hodnoty. Metoda `show()` zavolaná na objektu display postupně zobrazuje požadovaný text na micro:bit.
+
+### Doplňující poznámky 
+Pokud se pokusíte zobrazit z naky s diagritikou, místo požadovaného znaku uvidíte otazník. Zde je možnost se s žáky pobavi o kódování.
+
+## Úloha 2 - Proměnné, Fibonacciho posloupnost <a name="assignment1"/>
 ### Zadání
 Napište program, který bude v nekonečném cyklu `while True` počítat Fibonaccioho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll`obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0+1=1`
 
@@ -101,89 +151,11 @@ Na řádku 9 je do proměnné `number1` uložena hodnota proměnné `number2`, n
 ### Doplňující poznámky 
 Fibonacciho posloupnost je poměrně jednoduchá posloupnost, ale má zásadní využití v řadě různých oblastí od přírodních věd až po design a umění. 
 
-## Prostředky II - Nezha kit <a name="resources2"/>
-### NezhaKit
-Nezha Inventors Kit je robotická stavebnice navržená pro micro:bit a je kompatibilní s první i druhou verzí. Tato sada pro vynálezce obsahuje několik senzorů PlanetX, díky nimž je možné se sadou vytvořit desítky různých projektů. Další senzory se dají pořídit zvlášť. Základ setu tvoří Nezha modul pro umístění micro:bitu.
-
-Pro propojení jednotlivých modulů jsou použity vodiče s konektory RJ11. Stačí zacvaknout a senzory jsou propojené s Nezhou a tedy i s micro:bitem. Propojení je snadné a spolehlivé. 
-
-<p align="center">
-  <img src=/img/moduly.png alt="Moduly využívané v lekcích" width="100%">
-  <em>Moduly využívané v lekcích</em>
-</p>
-
-Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechnik. Sada je uložena v praktickém boxu, který obsahuje:
-- Nezha rozšiřující modul pro micro:bit (zabudovaný akumulátor LiPol 900 mAh, porty pro senzory a další moduly, konektory pro serva a motory, konektor pro micro:bit)
-- 8 elektronických modulů (3 x LED modul, potenciometr, snímač vlhkosti, snímač vzdálenosti, snímač nárazu, snímač čáry)
-- 2 x DC motor pro realizaci otáčivých pohybů
-- servo 360 ° pro natočení na přesný úhel v rozsahu 0 - 360 °
-- propojovací vodiče s konektory RJ11, USB kabel pro nahrání programu do micro:bitu
-- kola s pneumatikami pro LEGO®, rejdovací kolečko pro jezdícího robota
-- více než 400 součástí kompatibilních s LEGO® Technic
-- mapa s čárou pro ježdění po čáře
-
-<p align="center">
-  <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu" width="100%">
-  <em>Obsah Nezha kitu</em>
-</p>
-
-Do modulu Nezha připojíme micro:bit pomocí hranového konektoru. Senzory následně připojíme k modulu dle barev pomocí příslušných kabelů a konektorů, dle následujícího schématu.
-
-<p align="center">
-  <img src=/img/nezhaSchema.png alt="Schéma Nezha kitu" width="100%">
-  <em>Schéma Nezha kitu</em>
-</p>
-
-## Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost <a name="assignment2"/>
-### Zadání
-Použijte již vytvořený program a modifikujte ho tak, aby rozsvítil na matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti. Naimportujte modul obsahující metody a funkce pro matrix display a využijte jeho metodu `set_matrix_draw_index()`.
-### Co budete potřebovat
-Pro tuto úlohu bude potřeba modul Nezha a PlanetX matrix modul.
-### Co se naučíte
-Cílem této úlohy je vyzkoušet použití Nezha kitu a import modulu jednoho z displejů.
-### Jak postupovat
-Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru zvolte `Open` a vyberte v adresářové struktuře modul. Poté je důležité zvolit `Add file matrix.py`. Jako výchozí hodnota je zvoleno `Replace main code with matrix.py`, tím byste si přepsali kód, který se nachází v souboru `main.py`.
-
-<p align="center">
-  <img src=/img/modulNahrat.png alt="Přidání modulů do projektu" width="100%">
-  <em>Přidání modulů do projektu</em>
-</p>
-
-Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v osmé lekci věnované modulům. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
-
-Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Žáci pravděpodobně do metody zadají proměnnou `sum`. Prodiskutujte s nimi, zda se zobrazují správné hodnoty, a čím by mohlo být, že ne. První dioda má index nula, proto se jako první rozsvítí až druhá s indexem 1 a dále budou všechny o jednu posunuté. Vyřešit to lze snadno odečtením jedničky od proměnné `sum`, při předávání do metody.
-
-Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program. Funkce `sleep()` říká jak dlouho v milisekundách má na daném místě program pozastavit. Při práci s micro:bitem budeme `sleep()` používat poměrně často.
-### Vzorová implementace
-```python
-from microbit import *
-from matrix import *
-
-matrix = MATRIX()
-
-number1 = 0
-number2 = 1
-sum = number1 + number2
-
-while True:
-    matrix.set_matrix_draw_index(sum-1)
-    number1 = number2
-    number2 = sum
-    sum = number1 + number2
-    sleep(500)
-```
-                                                          
-### Diagram
-
-<p align="center">
-  <img src=/img/diagram2.png alt="diagram2" width="100%">
-</p>
-
-### Popis vzorové implementace
-Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. Inicializace je proces přiřazení počáteční hodnoty proměnné, objektu nebo datové struktury před dalším použitím. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
-### Doplňující poznámky 
-Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. Je třeba změnit podmínku ve while cyklu tak, aby se tělo cyklu vykonalo pouze je-li požadovaný index v rozsahu displeje. Displej má 128 diod v osmi řádcích a šestnácti sloupcích. podmínka by tedy byla `while sum < 128`.
 ## Shrnutí <a name="conclusion"/>
-TODO
+- Co je to proměnná?
+- Jak by měl vypadat název proměnné v Pythonu?
+- Jaké znáte datové typy?
+- Lze změnit datový typ? Pokud ano, jak?
+
 ## Poznámky pro učitele <a name="pozn"/>
 Více o tom, jaké jsou v Pythonu jmenné konvence si můžete přečíst na [peps.python.org](https://peps.python.org/pep-0008/#introduction)
