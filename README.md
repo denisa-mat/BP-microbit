@@ -1,7 +1,7 @@
 # Lekce 0
-### Úvodem 
+#### Úvodem 
 
-### Obsah
+## Obsah
 [Co se žáci naučí](#napln)  
 [Co budete potřebovat](#potreby)  
 [Časová náročnost](#cas)  
@@ -32,10 +32,10 @@ V teoretické části jsou žákům představeny základní prostředky, teorie,
 Soupis senzorů a případně dalších pomůcek, které jsou potřeba k úspěšnému zvládnutí úlohy.
 #### Co se naučíte
 Zde se dozvíte, na jaké dovednosti se úloha zaměřuje a co je jejím cílem.
-#### Co se naučíte
 #### Jak postupovat
 Popisuje konkrétní způsob, jak s danou úlohou pracovat. V některých kapitolách obsahuje také různé metody výuky.
 #### Vzorová implementace
+Zde bude jedna z možných implementací zadané úlohy.
 #### Popis řešení
 Obsahuje detailní popis vzorové implementace. Zaměřuje se především na koncepty, které jsou nové pro danou lekci.
 #### Doplňující poznámky 
@@ -60,7 +60,7 @@ Na řádku 1 se importuje modul pro micro:bit, který obsahuje všechny funkce a
 Syntaxe pythonu používá k identifikaci zanoření odsazení pomocí daného počtu mezer/tabulátoru (v závislosti na IDE). Každý příkaz, který je zanořen je součástí kódu, který je o úroveň výše. Všechny další koncepty a principy budou vysvětleny v lekcích.
 <a name="moduly"/>
 ## Moduly
-Pro práci micro:bitem a rozšiřujícími senzory a displeji je potřeba naimportovat moduly. Moduly jsou způsob, jak organizovat kód, což umožňuje jeho znovupoužití a sdílení s ostatními programátory. Modul je soubor obsahující Python kód, který může být importován do jiných souborů Python kódu. Moduly mohou obsahovat funkce, třídy, proměnné, konstanty a další kód, který chceme sdílet. Kromě vestavěných modulů si také můžeme vytvořit vlastní moduly a používat je ve svých projektech.
+Pro práci micro:bitem a rozšiřujícími senzory a displeji je potřeba naimportovat moduly. Moduly jsou způsob, jak organizovat kód, což umožňuje jeho znovupoužití a sdílení s ostatními programátory. Modul je soubor obsahující Python kód, který může být importován do jiných souborů Python kódu. Moduly mohou obsahovat funkce, třídy, proměnné, konstanty a další prvky, které chceme sdílet. Kromě vestavěných modulů si také můžeme vytvořit vlastní moduly a používat je ve svých projektech.
 
-Moduly se v Pythonu obvykle importují pomocí klíčového slova `import`. Existují různé způsoby, jak importovat modul a jeho funkce, zde budeme importovat celé moduly pomocí příkazu `from nazev_modulu import *`, kde `*` značí import všeho, co modul obsahuje. Pokud bychom chtěli importovat pouze nějakou funkci z modulu, nahradíme `*` názvem dané funkce. Jak nahrát moduly, které nejsou dostupné z IDE bude vysvětleno v lekci 2 předtím, než se s nimi bude poprvé pracovat. Pro úlohy, které jsou umístěné v těchto materiálech doporučuji využívat moduly z přiloženého adresáře. Pro snažší práci zde byla upravena dokumentace metod a některé byly přidány.
+Moduly se v Pythonu obvykle importují pomocí klíčového slova `import`. Existují různé způsoby, jak importovat modul a jeho funkce, zde budeme importovat celé moduly pomocí příkazu `from nazev_modulu import *`, kde `*` značí import všeho, co modul obsahuje. Pokud bychom chtěli importovat pouze nějakou funkci z modulu, nahradíme `*` názvem dané funkce. Jak nahrát moduly, které nejsou dostupné z IDE bude vysvětleno ve třetí lekci předtím, než se s nimi bude poprvé pracovat. Pro úlohy, které jsou umístěné v těchto materiálech doporučuji využívat moduly z přiloženého adresáře. Pro snažší práci zde byla upravena dokumentace metod a některé byly přidány.
 
