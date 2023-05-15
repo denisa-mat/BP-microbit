@@ -1,7 +1,7 @@
 # Lekce 3 - Nezha sada, podmínky
 #### Seznámení s Nezha sadou, if, elif, else, logické operátory
 
-### Obsah
+## Obsah
 [Motivace](#motivace)  
 [Prostředky I – Nezha kit](#resources1)  
 [Úloha 1 - Parkovací asistent](#assignment1)  
@@ -61,9 +61,9 @@ Nejprve naimportujte s žáky modul `matrix.py`. V levém spodním rohu editoru 
   <em>Přidání modulů do projektu</em>
 </p>
 
-Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v osmé lekci věnované modulům. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
+Jako další krok importujte modul matrix stejným způsobem, jako je naimportován modul microbit, tedy příkazem `from matrix import *`. Dále do proměnné `matrix` přiřaďtě instanci třídy `MATRIX` příkazem `matrix = MATRIX()`. Žákům v tuto chvíli není třeba vysvětlovat, co přesně tento příkaz dělá, tomu se budeme věnovat v desáté lekci, ve které se modulům budeme věnovat více. Nyní je možné na objektu matrix volat metody z modulu. Jaké to jsou zjistíme z nápovědy IDE po napsání `matrix.`.
 
-Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Žáci pravděpodobně do metody zadají proměnnou `sum`. Prodiskutujte s nimi, zda se zobrazují správné hodnoty, a čím by mohlo být, že ne. První dioda má index nula, proto se jako první rozsvítí až druhá s indexem 1 a dále budou všechny o jednu posunuté. Vyřešit to lze snadno odečtením jedničky od proměnné `sum`, při předávání do metody.
+Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_index()`. Žáci pravděpodobně do metody zadají proměnnou `sum`. Prodiskutujte s nimi, zda se zobrazují správné hodnoty, a čím by mohlo být způsobeno, že ne. První dioda má index nula, proto se jako první rozsvítí až druhá s indexem 1 a dále budou všechny o jednu posunuté. Vyřešit to lze snadno odečtením jedničky od proměnné `sum`, při předávání do metody.
 
 Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program. Funkce `sleep()` říká jak dlouho v milisekundách má na daném místě program pozastavit. Při práci s micro:bitem budeme `sleep()` používat poměrně často.
 
@@ -98,7 +98,7 @@ Pokud by žáci projevili zájem o opravu kódu tak, aby nevyhazoval výjimku. J
 
 ## Prostředky II - Podmínky <a name="resources2"/>
 Podmínky se používají k rozhodování, které akce má program vykonat v závislosti na nějakém vstupu nebo stavu. 
-Pro zápis podmínky využíváme klíčová slova `if` (pokud), `elif` - zkratka pro else if,  `else` (jinak). Za if a elif následuje podmínka (výraz nebo proměnná typu bool) dle toho, jak se vyhodnotí program pokračuje.
+Pro zápis podmínky využíváme klíčová slova `if` (pokud), `elif` (zkratka pro else if) a `else` (jinak). Za if a elif následuje podmínka (výraz nebo proměnná typu `bool`), na jejímž vyhodnocení závisí pokračování programu.
 
 Pokud je podmínka vyhodnocena jako `True` (pravda), program vykoná část kódu, která je podmíněna touto podmínkou. Pokud je podmínka vyhodnocena jako `False` (nepravda), program se posune k další podmínce uvedené za `elif`. Pokud ani jedna z podmínek neplatí a již nenásleduje žádná další, program se posune do bloku `else`, který obsahuje výrazy, které se provedou, pokud neplatí ani jedna z podmínek uvedených v `if` ani v `elif`. Program nemusí obsahovat `else` větev vůbec, pokud v případě nesplnění ani jedné z podmínek nechceme vykonávat nic. Je zde důležité dávat pozor na odsazení, dle odsazení Python rozhodne, který řádek vykonat.
 
@@ -110,14 +110,14 @@ podminka1 = False
 podminka2 = True
 
 if podminka1:
-	print("podminka1 splnena")
 	# kód, který se vykoná je-li splněna podminka1
+	print("podminka1 splnena")
 elif podminka2:
-	print("podminka2 splnena")
 	# kód, který se vykoná je-li splněna podminka2
+	print("podminka2 splnena")
 else:
-	print("podminky nesplneny")
 	# kód který se vykoná není li splněna žádná z předchozích podmínek
+	print("podminky nesplneny")
 # zbytek programu
 ```
 <p align="center">
@@ -132,8 +132,8 @@ V Pythonu se používají následující operátory pro srovnávání hodnot a v
 - `>` (větší než): Porovnává, zda je první výraz větší než druhý výraz.
 - `<=` (menší nebo rovno): Porovnává, zda je první výraz menší nebo roven druhému výrazu.
 - `>=` (větší nebo rovno): Porovnává, zda je první výraz větší nebo roven druhému výrazu.
-- `in`: Porovnává, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
-- `not in`: Porovnává, zda se první výraz nenachází v druhém výrazu.
+- `in`: Zjišťuje, zda se první výraz nachází v druhém výrazu (seznamu, řetězci apod.).
+- `not in`: Ověřuje, zda se první výraz nenachází v druhém výrazu.
 
 ## Úloha 2 - Parkovací asistent <a name="assignment2"/>
 ### Zadání
@@ -141,15 +141,15 @@ Vytvořte simulaci parkovacího asistenta. Napište program, který bude pomocí
 ### Co budete potřebovat
 Úloha využívá moduly distance a červenou led diodu ze sady Nezha a nixietube modul, který není součástí sady.
 ### Co se naučíte
-Cílem úlohy je prakticky vyzkoušet jednoduchou podmínku obsahující pouze if a else větev.
+Cílem úlohy je prakticky vyzkoušet jednoduchou podmínku obsahující pouze `if` a `else` větev.
 ### Jak postupovat
-Úlohu začněte kresbou diagramu, poté pracujte dohromady se studenty, nechte si d nich radit.
+Úlohu začněte kresbou diagramu, poté pracujte dohromady se studenty, nechte si od nich radit.
 Můžte použít návodné otázky:
 - Jaké moduly je potřeba naimportovat?
 - Jak budete volat metody z modulů?
 - Skončí program někdy?
 
-Vyvětlete studentům proč při ukládání do porměnné `dist` dělíte hodnotu celočíselně jednou. Metoda `set_show_number()` bere jako argument celé číslo typu `int`, metoda `get_distance()` vrací `double`, který na `int` nelze přetypovat, dělením dosteme hodnotu typu `float`, kterou už přetypovat lze. Následují jednoduché podmínky. Kdy chcete aby se dioda rozsvítila? Když je vzdálenost menší než 20 centimetrů, jinak ji zhasněte. Aby dioda změsile neblikala použijte `sleep(300)`.
+Při vytváření proměnných distance a nixietube jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Vyvětlete studentům proč při ukládání do proměnné `dist` dělíte hodnotu celočíselně jednou. Metoda `set_show_number()` bere jako argument celé číslo typu `int`, metoda `get_distance()` vrací `double`, který na `int` nelze přetypovat, dělením dosteme hodnotu typu `float`, kterou už přetypovat lze. Následují jednoduché podmínky. Kdy chcete aby se dioda rozsvítila? Když je vzdálenost menší než 20 centimetrů, jinak ji zhasněte. Aby dioda změsile neblikala použijte `sleep(300)`.
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -179,7 +179,7 @@ while True:
 Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
 
 ### Doplňující poznámky 
-Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
+Je vhodné zmínit, možnost zavést si před cyklem proměnnou do níž uložíme požadovanou vzdálenost, kdy má dioda začít svítit. V přípdě dalšího programu v němž by se hodnota opakovala se bude lépe měnit hodnota. Změna proběhne pouze na jednom místě. Navíc je čitelnější co dané číslo znamená.
 
 ## Shrnutí <a name="conclusion"/>
 - Jak nahrát modul pro ovládání displejů a senzorů do projektu?
@@ -187,4 +187,4 @@ Je vhodné zmínit, možnost zavést si ořed cyklem porměnnou do níž uloží
 - Jaké znáte operace pro srovnání hodnot v proměnných
 
 ## Poznámky pro učitele <a name="pozn"/>
-Oficiální infomace k Nezha kitu naleznete na [elecfreaks.com](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/Nezha-Inventor-s-kit-for-microbit.html)
+Oficiální infomace k Nezha kitu naleznete na [elecfreaks.com](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/Nezha-Inventor-s-kit-for-microbit.html).
