@@ -4,18 +4,17 @@
 ## Obsah
 [Motivace](#motivace)  
 [Prostředky I - ](#resources1)  
-[Úloha 1 - ](#assignment1)  
+[Úloha 1 - Honzův zkouškový úkol ](#assignment1)  
 [Prostředky II - ](#resources2)  
 [Úloha 2 - ](#assignment2)  
-[Úloha 3 - ](#assignment3)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
 ## Motivace <a name="motivace"/>
 Už jste setkali s nefunční aplikací či chybou v ní? Od toho, aby se to stávalo co nejméně, provádíme testování.
-Aplikace, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
+Aplikaci, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
 ## Prostředky I - <a name="resources1"/>
-V této lekci budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
+V této lekci budete potřebovat papír a tužku, tablet nebo obyčejný notepad a samozřejmě svou ostrou mysl. Zvolte si to, s čím se vám bude nejlépe pracovat.
 ## Úloha 1 - Honzův zkouškový úkol <a name="assignment1"/>
 ### Zadání
 Student Honza se zúčastnil zkoušky a měl za úkol splnit následující zadání.
@@ -96,9 +95,9 @@ if fact % 3 != 0:
 TODO
 ## Prostředky II -  <a name="resources2"/>
 TODO
-## Úloha 2 - <a name="assignment3"/>
+## Úloha 2 - <a name="assignment2"/>
 ### Zadání
-TODO
+Naimportovat si funkci a otestovat si ručně chování na několika vhodně zvolených vstupech.
 ### Co budete potřebovat
 TODO
 ### Co se naučíte
