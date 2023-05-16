@@ -1,38 +1,25 @@
 # Lekce 8
-### Funkce a metody
+#### Funkce a metody
 ## Obsah
 [Motivace](#motivace)  
-[Prostředky I - ](#resources1)  
-[Úloha 1 - ](#assignment1)  
-[Prostředky II - ](#resources2)  
-[Úloha 2 - ](#assignment2)  
-[Úloha 3 - ](#assignment3)  
+[Prostředky - Funkce a metody](#resources1)  
+[Úloha 1 - Semafor](#assignment1)  
+[Úloha 2 - SOS ](#assignment2)  
 [Shrnutí](#conclusion)  
 [Poznámky pro učitele](#pozn)  
 
 ## Motivace <a name="motivace"/>
 Všimli jste si, že s vám kód opakuje? Ano? Pak vězte, že tomu lze zabránit. Jedno z programátorských (ale i obecně využitlených) pravidel je pravidlo zkráceně pojmenované DRY. DRY je zkratka anglického Don't Repeat Yourself, česky neopakuj sám sebe.
-Údržba kódu: Když potřebujete využít nějakou část kódu na více místech v programu, je třeba provádět změny na každém místě, kde se nachází. To zvyšuje riziko chyb a ztěžuje údržbu. S dodržováním "dry" principu se zabrání duplikaci kódu a v případě změny je potřeba upravit pouze jedno místo.
+Když potřebujete využít nějakou část kódu na více místech v programu, je v případě úpravy potřeba provádět změny na každém místě, kde se nachází. To zvyšuje riziko chyb a ztěžuje údržbu. S dodržováním "dry" principu se zabrání duplikaci kódu a změny stačí provádět pouze na jednom místě, což šetří čas. Dále, eliminace duplikovaného kódu zvyšuje čitelnost a porozumitelnost programu, což usnadňuje spolupráci mezi vývojáři. Dodržování "dry" principu také umožňuje snadnější refaktorování a znovupoužitelnost kódu v různých částech programu. 
 
-Proč dodržovat DRY?
-1. Údržba kódu: Když je funkcionalita implementována na více místech ve vašem kódu, je třeba provádět změny na každém místě, kde se nachází. To zvyšuje riziko chyb a ztěžuje údržbu. S dodržováním "dry" principu se zabrání duplikaci kódu a v případě změny je potřeba upravit pouze jedno místo.
+Nejde jen o DRY. Také jste si mohli všimnout, že je kód dlouhý a hůře čitelný. Když však nějakou menší logickou část uzavřete do vhodně pojmenované funkce a tu na přílušném místě zavoláte, čtení kódu se stane příjemnějším.
 
-1. Čitelnost a porozumitelnost: Duplikovaný kód může ztížit čtení a pochopení programu. Čím méně duplikovaného kódu máte, tím snazší je jeho čtení a porozumění ostatním vývojářům, kteří s ním pracují.
+A právě zde budou funkce užitečné.
 
-2. Šetření času: Duplikace kódu znamená, že musíte napsat, testovat a udržovat více řádků kódu. Dodržování "dry" principu vám umožní efektivněji využívat svůj čas a zkrátit dobu potřebnou k vývoji a údržbě kódu.
+## Prostředky - Funkce a metody <a name="resources1"/>
+Termín funkce odkazuje na samostatnou část kódu, která provádí určitou úlohu nebo výpočet. Funkce je blok kódu, který může přijímat vstupní hodnoty (argumenty), provádět určité operace a vrátit výsledek (návratovou hodnotu). Funkce slouží k rozdělení programu na menší, logicky oddělené části. 
 
-3. Snížení chyb: Duplikovaný kód zvyšuje riziko chyb, protože změny provedené na jednom místě nemusí být provedeny na všech místech, kde se kód duplikuje. Tím se zvyšuje pravděpodobnost, že budou existovat rozdíly mezi různými verzemi kódu, což může vést k neočekávanému chování programu.
-
-4. Refaktorování a znovupoužitelnost: Dodržování "dry" principu umožňuje snadnější refaktorování kódu a zvyšuje jeho znovupoužitelnost. Když je funkcionalita oddělena a sdílena pomocí metod, funkcí nebo tříd, je snazší ji upravit, rozšířit a znovu použít v jiných částech programu.
-
-Celkově lze říci, že dodržování "dry" principu zvyšuje kvalitu a údržbu kódu, usnadňuje spolupráci vývojářů a šetří čas a náklady při vývoji softwaru.
-
-Nejde jen o DRY. Také jste si mohli všimnout, že je kód dlouhý a hůře čitelný. Když však nějakou menší logickou část uzavřete do funkce a funkci si napřílušném místě zavoláte, čtení kódu se stane příjemnějším.
-
-A právě zde nám budou funkce užitečné.
-
-## Prostředky I - <a name="resources1"/>
-Existují funkce a procedury. Při vytváření funkcí a procedur, potažmo metod, využíváme stejné klíčové slovo `def`. Tělo funkce se odsazuje podobně jako u cyklů nebo podmínek. Klíčové slovo `pass` říká, že tělo funkce/procedury (ale i podmínek nebo cyklů) je prázdné. Tělo je povinné a nelze vynechat, proto využíváme klíčového slova `pass`.
+Při vytváření funkcí potažmo metod, využíváme stejné klíčové slovo `def`. Tělo funkce se odsazuje podobně jako u cyklů nebo podmínek. Klíčové slovo `pass` říká, že tělo funkce/procedury (ale i podmínek nebo cyklů) je prázdné. Tělo je povinné a nelze vynechat, proto využíváme klíčového slova `pass`.
 ```python
 def moje_rocedura():
     pass
@@ -43,7 +30,7 @@ def multiply():
     product = 2 * 4
     return product
 ```
-Co když ale takovou funkci chceme využít i pro jiná čísla? Pak jsou tu takzvané parametry. Parametry už znáte z hodin matematiky nebo fyziky. Matematickým funckím, jako např. sinus, také předáváme parametry. Pak nám funkce nevrací vždy konstantní hodnotu. Její výstup je závislý na parametrech. Vlastnosti algoritmů platí i pro funkce. Ona funkce je vlastně alogritmus. Mějme funkci `mulitply`, která bude mít dva parametry. Tyto parametry vynásobí a výsledek nám vrátí.
+Co když ale takovou funkci chceme využít i pro jiná čísla? Pak jsou tu takzvané parametry. Parametry už znáte z hodin matematiky nebo fyziky. Matematickým funckím, jako např. sinus, také předáváme parametry. Pak nám funkce nevrací vždy konstantní hodnotu. Její výstup je závislý na vstupu - parametrech. Vlastnosti algoritmů platí i pro funkce. Ona funkce je vlastně alogritmus. Mějme funkci `multiply`, která bude mít dva parametry. Tyto parametry funkce vynásobí a výsledek nám vrátí.
 ```python
 def multiply(number1, number2):
     product = number1 * number2
@@ -59,7 +46,7 @@ Silně doporučuji využívat tzv. type hinting. Je v Pythonu nepovinný, ale p�
 def multiply(number1: int, number2: int) -> int:
     return number1 * number2
 ```
-Takto vzniklou funci bychom mohli chtít i využít. K tomu využijeme název funkce, za který přidáme závorky a do závorek parametry oddělené čárkou.
+Když takto vzniklou funkci chceme využít, využijeme její název, za který přidáme závorky a do závorek parametry oddělené čárkou. Tomu říkáme volání funkce.
 ```python
 def multiply(number1: int, number2: int) -> int:
     return number1 * number2
@@ -72,66 +59,99 @@ number_b = 3
 product = mulitply(number_a, number_b)
 ```
 
-### Procedura
-Procedura je ucelený blok kódu, který má svůj identifikátor. Taková procedura vždy jen něco provádí, mění hodnoty v proměnných, upravuje soubory atd. Nic nevrací.
-
 ### Funkce
-Funkce je také ucelený blok kódu a též má vlastní identifikátor. Funkce nic nemění, pouze vypočítá/zjistí a vrací nějakou hodnotu. Vrácená hodnota je vždy jen jedna. Potřebujeme-li jich vracet více, využijeme nějakou vhodnou datovou strukturu, např. pole.
+Funkce je ucelený blok kódu s vlastním identifikátorem. Funkce něco provede a vrátí nějakou hodnotu, pokud nepotřebujeme, aby funkce něco vrátila vrátíme None. Vrácená hodnota je vždy jen jedna. Potřebujeme-li jich vracet více, využijeme nějakou vhodnou datovou strukturu, např. `list` nebo `touple`.
 
 ### Metoda
-Metoda není nic jiného než procedura nebo funkce. Rozdíl je však v tom, jaké využíváme paradigma. Imperativní, kterému jsme se věnovali doposud, využívá procedury a funkce. S metodami se setkáme v objektově orientovaném programování (OOP).
-Už je ale znáte, setkali jste se s nimi už v první lekci. Na displej microbita jste vypisovali text či zobrazovali nějaký obrazec. Objekt `display`, metoda `scroll`. Objekt `display` pochází z modulu microbit a ten má metodu `scroll`. Metody se volají podobně jako funkce. Rozdíl však je v tom, že metoda se volá "přes" tečku. Více v lekci OOP.
+Metoda není nic jiného než funkce. Rozdíl je však v tom, jaké využíváme paradigma. Imperativní, kterému jsme se věnovali doposud, využívá funkce. S metodami se setkáme v objektově orientovaném programování (OOP).
+Už je ale znáte, setkali jste se s nimi již v první lekci. Na displej micro:bita jste vypisovali text či zobrazovali nějaký obrazec. Objekt `display`, metoda `scroll`. Objekt `display` pochází z modulu microbit a ten má metodu `scroll`. Metody se volají podobně jako funkce. Rozdíl však je v tom, že metoda se volá "přes" tečku. Více v lekci OOP.
 
 ```python
 from microbit import * 
     display.scroll("Hello World")
 ```
  
-
-## Úloha 1 - Proměnné <a name="assignment1"/>
+## Úloha 1 - Semafor <a name="assignment1"/>
 ### Zadání
 Vytvořte funkci, která rozsvítí diody jako na semaforu. Zvolte vhodné konstanty pro délku svícení diod. Metodu poté zavolejte a opakujte desetkrát. K opakování použijte for cyklus.
 ### Co budete potřebovat
-microbit, diody
+K řešení úlohy využijete všechny tři LED diody, které jsou součástí Nezha sady.
 ### Co se naučíte
-Naučíte se tvořit procedury a následně je volat.
+Žáci se naučí vytvářet vlastní funkce a ve vhodnou chvíli je zavolat.
+### Jak postupovat
+TODO
 ### Vzorová implementace
 ```python
 from microbit import * 
+from led import *
+
+red_diod = LED(J1)
+yellow_diod = LED(J2)
+green_diod = LED(J3)
 
 def switch_on_traffic_lights() -> None:
-    pass
+    sleep_time = 2000
+
+    red_diod.turn_led_on()
+    sleep(sleep_time)
+    red_diod.turn_led_off()
+    yellow_diod.turn_led_on()
+    sleep(sleep_time)
+    yellow_diod.turn_led_off()
+    green_diod.turn_led_on()
+    sleep(sleep_time)
+    green_diod.turn_led_off()
+    yellow_diod.turn_led_on()
+    sleep(sleep_time)
+    yellow_diod.turn_led_off()
 
 for _ in range(10):
     switch_on_traffic_lights()
 ```
-
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
 TODO
-## Prostředky II -  <a name="resources2"/>
-TODO
-## Úloha 2 - <a name="assignment3"/>
+## Úloha 2 - SOS <a name="assignment2"/>
 ### Zadání
-TODO
+Napište funkci, která bude blikat SOS v Morseově abecedě. Nezapomeňte, že uvnitř funkce můžete volat jiné funkce. Nejprve napište funkci pro jeden znak, která bude brát jako parametr délku jednoho znaku v milisekundách. Dále vytvořte funkce pro obě potřebná písmena a teprve potom pro celý signál SOS.
 ### Co budete potřebovat
-TODO
+Pro tuto úlohu bude z modulů stačit jedna led dioda z Nezha sady.
 ### Co se naučíte
+V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí.
+### Jak postupovat
 TODO
 ### Vzorová implementace
 ```python
 from microbit import * 
+from led import *
 
-#TODO
+def dot_or_dash(int: pause_time) -> None:
+    led_diod.turn_led_on()
+    sleep(pause_time)
+    led_diod.turn_led_off()
+
+def morse_S() -> None:
+    for _ in range(3):
+        dot_or_dash(200)
+
+def morse_O() -> None:
+    for _ in range(3):
+        dot_or_dash(500)
+
+def morse_SOS() -> None:
+    morse_S()
+    sleep(800)
+    morse_O()
+    sleep(800)
+    morse_S()
 ```
-
 ### Popis řešení
 TODO
 ### Doplňující poznámky 
-TODO
+Vzorová implementace by se jistě dala ještě vylepšit například využitím konstatních globálních proměnných, v nichž by byli uloženy hodnoty pro dobu čekání. 
 ## Shrnutí <a name="conclusion"/>
 TODO
 ## Poznámky pro učitele <a name="pozn"/>
-TODO
+Pro zjednodušení je zde vynechán pojem procedura. Procedury jsou zahrnuty pod pojem funkce. Procedura je ucelený blok kódu, který má svůj identifikátor a na rozdíl od funkce jen něco provádí, například mění hodnoty v proměnných, upravuje soubory. Její návratový typ je vždy `None`.
 
