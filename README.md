@@ -12,7 +12,7 @@
 
 ## Motivace <a name="motivace"/>
 Už jste setkali s nefunční aplikací či chybou v ní? Od toho, aby se to stávalo co nejméně, provádíme testování.
-Aplikaci, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
+Aplikace, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
 ## Prostředky I - <a name="resources1"/>
 V této lekci budete potřebovat papír a tužku, tablet nebo obyčejný notepad a samozřejmě svou ostrou mysl. Zvolte si to, s čím se vám bude nejlépe pracovat.
 ## Úloha 1 - Honzův zkouškový úkol <a name="assignment1"/>
@@ -25,10 +25,11 @@ Student Honza se zúčastnil zkoušky a měl za úkol splnit následující zad�
 Honza ale nechodil na přednášky. A tak tam má spoustu chyb. Vaším úkolem je chyby najít.
 Postupujte postupně:
 1. Kód zanalyzujte a pokuste se najít co nejvíce chyb. Nalezené či domnělé chyby si zapište.
-2. Kód spusťte a ověřte si, jak se vám podařilo chyby odhalit.
-3. Kód se pokuste opravit.
+2. Kód přepište do editoru a opravte v něm nalezené chyby.
+3. Kód spusťte a ověřte si, jak se vám podařilo chyby odhalit.
+4. Kód se pokuste opravit.
 ### Co budete potřebovat
-V této úloze budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
+V této úloze budete potřebovat papír a tužku.
 ### Co se naučíte
 TODO
 ### Honzova implementace
@@ -64,10 +65,9 @@ Honza se dopustil následujících chyb:
 2. z výpočtu vynechal číslo 7, protože nerovnost je ostrá
 3. funkci faktoriál vytvořil jednoparamaterovou, ale parametry předává dva
 4. podmínka má být součástí cyklu, úkolem bylo kontrolu provést pro každé číslo number
-5. číslo number zapomněl inkrementovat a vytvořil tak nekončený cyklus
+5. číslo number zapomněl inkrementovat a vytvořil tak nekonečný cyklus
 
-Honza si zkoušku bude muset zopakovat.
-Správné řešení může vypadat takto:
+Honza si zkoušku bude muset zopakovat Správné řešení může vypadat takto:
 ```python
 from microbit import * 
 
@@ -78,7 +78,7 @@ def factorial(number: int) -> int:
         return 1
 
     factorial_result = 1
-    for i in range(number):
+    for i in range(1, number + 1):
         factorial_result *= i
 
     return factorial_result
