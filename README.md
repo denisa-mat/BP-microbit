@@ -15,12 +15,12 @@
 Už jste setkali s nefunční aplikací či chybou v ní? Od toho, aby se to stávalo co nejméně, provádíme testování.
 Aplikace, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
 ## Prostředky I - <a name="resources1"/>
-V této úloze budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
+V této lekci budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
 ## Úloha 1 - Honzův zkouškový úkol <a name="assignment1"/>
 ### Zadání
 Student Honza se zúčastnil zkoušky a měl za úkol splnit následující zadání.
 1. Vytvořte parametrickou funkci na výpočet faktoriálu.
-2. Výsledek pro čísla v rozmezí 0-7 postupně zobrazte na segmentový displej. Pro opakování použijte while cyklus.
+2. Výsledek pro čísla v rozmezí 0-7 včetně postupně zobrazte na segmentový displej. Pro opakování použijte while cyklus.
 3. Je-li výsledek dělitelný 3, rozsviťte libovolnou diodu. Nechejte krátce svítit a poté ji zhasněte.
 
 Honza ale nechodil na přednášky. A tak tam má spoustu chyb. Vaším úkolem je chyby najít.
@@ -29,18 +29,69 @@ Postupujte postupně:
 2. Kód spusťte a ověřte si, jak se vám podařilo chyby odhalit.
 3. Kód se pokuste opravit.
 ### Co budete potřebovat
-TODO
+V této úloze budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
 ### Co se naučíte
 TODO
-### Vzorová implementace
+### Honzova implementace
 ```python
 from microbit import * 
 
-#TODO
+def factorial(number: int) -> int:
+    if number < 0:
+        return -1
+    if number == 0:
+        return 1
+
+    factorial_result = 0
+    for i in range(number):
+        factorial_result += i
+
+    return factorial_result
+
+number = 0
+
+while number < 7:
+    fact = factorial(0, 7)
+    //TODO: zobraz vysledek
+if fact % 3 != 0:
+    //TODO: rozsvit diodu
 ```
 
 ### Popis řešení
-TODO
+Honza se dopustil následujících chyb:
+1. neví, že faktoriál je součin
+    a. `factorial_result` měl iniciálně nastavit na 1
+    b. `i` neměl k `factorial_result` přičítat, ale měl jím násobit
+2. z výpočtu vynechal číslo 7, protože nerovnost je ostrá
+3. funkci faktoriál vytvořil jednoparamaterovou, ale parametry předává dva
+4. podmínka má být součástí cyklu, úkolem bylo kontrolu provést pro každé číslo number
+5. číslo number zapomněl inkrementovat a vytvořil tak nekončený cyklus
+
+Honza si zkoušku bude muset zopakovat.
+Správné řešení může vypadat takto:
+```python
+from microbit import * 
+
+def factorial(number: int) -> int:
+    if number < 0:
+        return -1
+    if number == 0:
+        return 1
+
+    factorial_result = 1
+    for i in range(number):
+        factorial_result *= i
+
+    return factorial_result
+
+number = 0
+
+while number < 7:
+    fact = factorial(number)
+    //TODO: zobraz vysledek
+if fact % 3 != 0:
+    //TODO: rozsvit diodu
+```
 ### Doplňující poznámky 
 TODO
 ## Prostředky II -  <a name="resources2"/>
