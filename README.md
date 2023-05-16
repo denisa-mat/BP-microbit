@@ -120,7 +120,7 @@ Pro tuto úlohu bude z modulů stačit jedna led dioda z Nezha sady.
 ### Co se naučíte
 V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí.
 ### Jak postupovat
-TODO
+TODO - Code REWIEW
 ### Vzorová implementace
 ```python
 from microbit import * 
