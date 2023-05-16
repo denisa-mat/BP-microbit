@@ -1,5 +1,5 @@
-# Lekce X
-### o čem
+# Lekce 9
+### Testování
 
 ## Obsah
 [Motivace](#motivace)  
@@ -12,11 +12,17 @@
 [Poznámky pro učitele](#pozn)  
 
 ## Motivace <a name="motivace"/>
-TODO
+Už jste setkali s nefunční aplikací či chybou v ní? Od toho, aby se to stávalo co nejméně, provádíme testování.
+Aplikace, resp. její funkčnost se testuje v několika fázích na několika úrovních. V této lekci se budeme věnovat té nejnižší. Budeme zjišťovat, zda se daný algoritmus chová, jak očekáváme, případně jak by měl.
 ## Prostředky I - <a name="resources1"/>
+V této úloze budete potřebovat papír a tužku, tablet nebo obyčejný notepad. Zvolte si to, s čím se vám bude nejlépe pracovat.
 ## Úloha 1 - Proměnné <a name="assignment1"/>
 ### Zadání
-TODO
+Následující kód má za úkol provádět následující: TODO
+Postupujte postupně:
+1. Kód zanalyzujte a pokuste se najít co nejvíce chyb. Nalezené či domnělé chyby si zapište.
+2. Kód spusťte a ověřte si, jak se vám podařilo chyby odhalit.
+3. Kód se pokuste opravit.
 ### Co budete potřebovat
 TODO
 ### Co se naučíte
