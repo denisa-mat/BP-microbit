@@ -38,9 +38,9 @@ if not podmínka1:
 
 Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
 
-## Úloha 2 - Test plnoletosti <a name="assignment2"/>
+## Úloha 1 - Test plnoletosti <a name="assignment1"/>
 ### Zadání
-Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba oslavila osmnácté narozeniny zobrazte fajfku (`Image.YES`). 
+Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba dosáhla osmnácti let zobrazte fajfku (`Image.YES`).
 ### Co budete potřebovat
 Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `nixietube`, které nejsou součástí sady.
 ### Co se naučíte
@@ -89,9 +89,9 @@ Nejprve proveďte import modulů nixietube a button, z nichž následně vytvoř
 ### Doplňující poznámky 
 Pokud vynecháte `sleep()` přičte se jednička opakovaně, protože program stihne za dobu zmáčknutí tlačítka více opakování těla while cyklu.
 
-## Úloha 3 - Horská dráha <a name="assignment3"/>
+## Úloha 2 - Horská dráha <a name="assignment2"/>
 ### Zadání
-Naprogramujte micro:bita, tak aby na displej zobrazoval, zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
+Naprogramujte micro:bita, tak aby na displej zobrazoval, zda může zájemce jít na horskou dráhu. Na horskou dráhu může zájemce, jen pokud je mu alespoň 11 let nebo měří více než 125 centimetrů. Zkuste pro řešení využít kód z předcházející úlohy, věk a výška se bude načítat stejným způsobem, jako věk v předchozí úloze.
 ### Co budete potřebovat
 K řešení úlohy jsou využívány moduly button a nixietube, které nejsou součástí Nezha kitu. Pokud je nemáte je možné nahradit button tlačítky přímo na micro:bitu a místo výpisu na segmentový displej hodnoty scrollovat na displeji micro:bita.
 ### Co se naučíte
