@@ -53,6 +53,11 @@ Aby bylo možné hodnoty přidávat do seznamu, je potřeba seznam nejprve vytvo
 
 Nakonec projděte hodnoty memory listu a metodou `scroll()`, je zobrazte na displej micro:bita. Je pravděpodobné, že pokud budou žáci pracovat sami budou se jejich řešení více či méně lišit. Netrvejte na svém řešení, cest je mnoho a každý půjde na řešení jiným způsobem.
 
+### Diagram
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram1" width="100%">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -71,11 +76,6 @@ for _ in range(memory_test_size):
 for value in memory_list:
     display.scroll(value)
 ```
-### Diagram
-
-<p align="center">
-  <img src=/img/diagram1.png alt="diagram1" width="100%">
-</p>
 
 ### Popis vzorové implementace
 Po standardním importu modulu microbit následuje import funkce randint z modulu random. Na řádku 4 definujeme délku seznamu, na řádku 5 vytváříme prázdný seznam. Poté počítaným for cyklem do seznamu generujeme náhodné hodnoty a ty díky podmínce transformujeme na požadované hodnoty, které přidáváme do seznamu. V závěru opět metodou `scroll()`, zobrazíme hodnoty z listu postupně na displej.
