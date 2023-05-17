@@ -28,7 +28,7 @@ class MATRIX(object):
         self.__i2cwrite_matrix(HT16K33_ADDRESS, HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (0 << 1))
         self.__i2cwrite_matrix(HT16K33_ADDRESS, HT16K33_CMD_BRIGHTNESS | 0xF)
 
-    def __matrix_show(self):
+    def __matrix_show(self) -> None:
         """
         performs the lighting up
         Params:
@@ -44,7 +44,7 @@ class MATRIX(object):
             self.__matBuf[11],
             self.__matBuf[12], self.__matBuf[13], self.__matBuf[14], self.__matBuf[15], self.__matBuf[16]]))
 
-    def set_matrix_clear(self):
+    def set_matrix_clear(self) -> None:
         """
         clears the matrix
         Params:
@@ -57,7 +57,7 @@ class MATRIX(object):
             self.__matBuf[i] = 0
         self.__matrix_show()
 
-    def set_matrix_draw(self, x, y):
+    def set_matrix_draw(self, x: int, y: int) -> None:
         """
         ligths up diod on given coordinates
         Params:
@@ -77,7 +77,7 @@ class MATRIX(object):
         self.__matBuf[idx + 1] = tmp
         self.__matrix_show()
 
-    def set_matrix_draw_position(self, position):
+    def set_matrix_draw_position(self, position: int) -> None:
         """
         ligths up diod on given position, consider the matrix as line
         Params:
@@ -92,7 +92,7 @@ class MATRIX(object):
         y = (position-1) // 16
         self.set_matrix_draw(x, y)
 
-    def set_matrix_expression(self, emoji):
+    def set_matrix_expression(self, emoji: str) -> None:
         """
         shows given expression, if expression unknown show nothing
         Params:
