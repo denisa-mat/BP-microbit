@@ -108,7 +108,7 @@ Pokud se pokusíte zobrazit znaky s diakritikou, místo požadovaného znaku uvi
 Napište program, který bude v nekonečném cyklu `while True` počítat Fibonacciho posloupnost a vypisovat její výpočet na micro:bit (použijte metodu `scroll` obdobně jako v minulé lekci). Program bude obsahovat tři proměnné – dva sčítance a výsledek. Proměnné vhodně pojmenujte. První výpis bude vypadat následovně: `0+1=1`
 
 ### Co budete potřebovat
-K této úloze je potřeba jen micro:bit a kabel pro přenesení programu.
+K této úloze není potřeba žádný rozšiřující modul.
 ### Co se naučíte
 Cílem úlohy je vyzkoušet si práci s proměnnými a vybranou operací nad datovým typem `int`. Zároveň si žáci zopakují práci s editorem a micro:bitem z minulé lekce.
 ### Jak postupovat
@@ -118,10 +118,11 @@ Zkuste s žáky probrat, jak bude program vypadat, co jsou jeho klíčové body.
 
 **K zamyšlení:**
 
-- Kde budeme inicializovat proměnné? (V cyklu? Nad ním? Nebo někde jinde?)
-- Podívejte se s žáky na metodu `scroll()`. Jaké bere parametry? Jakým způsobem ji zavoláme?
+- Kde budeme inicializovat proměnné? 
+- Jaké parametry bere metoda scroll?
+- Jakým způsobem ji zavoláme?
 
-Metoda `scroll` bere jako parametr `string`, my jí však chceme dávat hodnotu typu `int`, musíme ji proto přetypovat. Pro přetypování proměnné typu `int` na `string` využijte funkci `str()`. Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
+Metoda `scroll` bere jako parametr `string`, my jí však chceme dávat hodnotu typu `int`, musíme ji proto přetypovat. Přetypování je proces změny datového typu proměnné na jiný datový typ. V Pythonu je možné přetypování provést pomocí vestavěných funkcí, jako jsou `int()`, `float()`, `str()`. Je důležité mít na paměti, že některé datové typy nemohou být přetypovány na jiné typy a v takovém případě dojde k chybě při běhu programu. Pro přetypování proměnné typu int využijte funkci `str()`. Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
 
 ### Diagram
 
