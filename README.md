@@ -81,7 +81,7 @@ Pokud na proměnných provádíme nějakou operaci, je pravděpodobné, že s n�
 ### Zadání
 Napište program, na jehož začátku do proměnných uložíte vaše jméno a věk a následně zobrazte postupně na displej text ve tvaru `Vase jmeno je Anonym a vek je 99 let.`
 ### Co budete potřebovat
-K této úloze je potřeba jen micro:bit a kabel pro přenesení programu.
+K této úloze není potřeba kromě micro:bitu a kabelu pro přenesení programu žádný rozšiřující modul.
 ### Co se naučíte
 Cílem úlohy je vyzkoušet si práci s proměnnými a datovými typy. Žáci si také zopakují práci s editorem a micro:bitem z minulé lekce.
 ### Jak postupovat
