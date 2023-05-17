@@ -1,7 +1,7 @@
 # Moduly
 V Pythonu jsou moduly soubory, které obsahují definice funkcí, tříd a proměnných, které lze použít v jiných programech. Moduly jsou používány pro organizaci kódu do logických bloků a pro znovupoužitelnost kódu.
 
-Python má mnoho vestavěných modulů, jako jsou moduly pro práci s řetězci, soubory, datovými strukturami a sítěmi. Dále je možné si vytvořit vlastní moduly a použít je v různých projektech. Moduly jsou načítány pomocí příkazu "import". Například pro načtení modulu pro práci s micro:bitem se použije následující:
+Python má mnoho vestavěných modulů, jako jsou moduly pro práci s řetězci, soubory, datovými strukturami a sítěmi. Dále je možné si vytvořit vlastní moduly a použít je v různých projektech. Moduly jsou načítány pomocí příkazu `import`. Například pro načtení modulu pro práci s micro:bitem se použije následující:
 ```python
 import microbit
 # případně naimportujeme vše
@@ -150,8 +150,6 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
   * Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
 
 ## Motor <a name="motor"></a>
-### Fyzická komponenta
-
 ### Popis
 :warning: Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
 
@@ -212,79 +210,65 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
   * Popis: Slouží ke zjištění, zda motor jede vpřed. Pro zjištění, zda couvá, použijte metodu `get_motor_speed`
   
 ## Nezha <a name="nezha"></a>
-### Fyzická komponenta
-TODO
-### Popis
-TODO
-### Použití
-TODO
 ### Dostupné metody
 set_motors(self, motor, speed)
   * Parametry:
     * Konektor (int), do kterého je připojen motor v intervalu 1-4
     * Rychlost (int) motoru v intervalu -100-100
   * Návratová hodnota: None
-  * Popis: Nastaví rychlost danému motoru.
+  * Popis: Nastaví rychlost danému motoru
 
 set_servo(self, servo, angle)
   * Parametry:
     * Konektor (int), do kterého je připojeno servo v intervalu 1-4
     * Úhel (int) nákolu v intervalu 0-180
   * Návratová hodnota: None
-  * Popis: Nastavuje úhel serva.
+  * Popis: Nastavuje úhel serva
 
 ## Nixietube <a name="nixietube"></a>
 ### Fyzická komponenta
 [7-Seg LED Nixietube in ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05026.html)
 ### Popis
-TODO
+Jde o sedmisegmentový displej, primárně pro zobrazování čísel.
 ### Použití
-Sensor je schopen zobrazit čísla, např. čas.
+Sensor je schopen zobrazit čas, skóre nebo jiné číselné údaje.
 ### Dostupné metody
 `set_power_on(self) -> None`
   * Parametry: None
   * Návratová hodnota: None
-  * Popis: Rozsvěcí celý?????????????????????????????????????.
+  * Popis: Rozsvěcí celý displej
 
 `set_power_off(self) -> None`
   * Parametry: None
   * Návratová hodnota: None
-  * Popis: Zhasíná celý displej?????????????????????????????????????.
+  * Popis: Zhasíná celý displej
 
 `set_intensity(self, intensity) -> None`
   * Parametry:
     * intensity (int): intenzita v rozmezí <0, 8>
   * Návratová hodnota: None
-  * Popis: Nastavuje intenzitu svícení displeje?????????????????????????????????????.
+  * Popis: Nastavuje intenzitu svícení displeje
   
 `set_clear(self) -> None`
   * Parametry: None
   * Návratová hodnota: None
-  * Popis: Resetuje hodnoty na displeji?????????????????????????????????????.
+  * Popis: Resetuje hodnoty na displeji
 
 `set_show_bit(self, num: int, bit=0) -> None`
   * Parametry:
     * num (int): číslo k zobrazení v rozmezí <0, 9>
     * Optional[bit] (int): pozice, na kterém se má číslo zobrazit, default = 0, v rozmezí <0, 3>
   * Návratová hodnota: None
-  * Popis: Zobrazuje číslo z parametru num na displeji. Lze specifikovat pozici užitím paramteru bit.
-
-`set_show_DP(self, bit=1, show=True) -> None`
-  * Parametry:
-    * Optional[bit] (int): pozice, na kterém se má číslo zobrazit, default = 1, v rozmezí <0, 3>
-    * show (bool): ?????????????????????????????????????
-  * Návratová hodnota: None
-  * Popis: ?????????????????????????????????????.
+  * Popis: Zobrazuje číslo z parametru num na displeji. Lze specifikovat pozici užitím paramteru bit
 
 `set_show_num(self, num: int) -> None`
   * Parametry:
     * num (int): number to be shown, valid within <-999, 9999>
   * Návratová hodnota: None
-  * Popis: Zobrazuje číslo num na displeji. Číslice na bitech, které se na displej nevejdou, se zahazují.
+  * Popis: Zobrazuje číslo num na displeji. Číslice na bitech, které se na displej nevejdou, se zahazují
 
 ## Servo <a name="servo"></a>
 :warning: Třída `Servo` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
-### Fyzická komponenta
 ### Dostupné metody
 `set_servo(self, angle)`
   * Parametry:
@@ -295,13 +279,12 @@ Sensor je schopen zobrazit čísla, např. čas.
   * Popis: Nastavuje úhel serva.
 
 ## Trimpot <a name="trimpot"></a>
-### Fyzická komponenta
 ### Dostupné metody
 `get_trimpot_value(self)`
   * Parametry: None
   * Návratová hodnota:
     * value (float): hodnota naměřené odporu v intervalu <0, 1023>
-  * Popis: Vrací hodnotu naměřeného odporu v intervalu <0, 1023>.
+  * Popis: Vrací hodnotu naměřeného odporu v intervalu <0, 1023>
 
 ## Další moduly <a name="more"></a>
 Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html)
