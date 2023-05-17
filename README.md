@@ -9,10 +9,10 @@
 [Poznámky pro učitele](#pozn)  
 
 ## Motivace <a name="motivace"/>
-Všimli jste si, že s vám kód opakuje? Ano? Pak vězte, že tomu lze zabránit. Jedno z programátorských (ale i obecně využitlených) pravidel je pravidlo zkráceně pojmenované DRY. DRY je zkratka anglického Don't Repeat Yourself, česky neopakuj sám sebe.
-Když potřebujete využít nějakou část kódu na více místech v programu, je v případě úpravy potřeba provádět změny na každém místě, kde se nachází. To zvyšuje riziko chyb a ztěžuje údržbu. S dodržováním "dry" principu se zabrání duplikaci kódu a změny stačí provádět pouze na jednom místě, což šetří čas. Dále, eliminace duplikovaného kódu zvyšuje čitelnost a porozumitelnost programu, což usnadňuje spolupráci mezi vývojáři. Dodržování "dry" principu také umožňuje snadnější refaktorování a znovupoužitelnost kódu v různých částech programu. 
+Všimli jste si, že s vám kód opakuje? Ano? Pak vězte, že tomu lze zabránit. Jedno z programátorských (ale i obecně využitelných) pravidel je pravidlo zkráceně pojmenované DRY. DRY je zkratka anglického Don't Repeat Yourself, česky neopakuj sám sebe.
+Když potřebujete využít nějakou část kódu na více místech v programu, je v případě úpravy potřeba provádět změny na každém místě, kde se nachází. To zvyšuje riziko chyb a ztěžuje údržbu. S dodržováním "dry" principu se zabrání duplikaci kódu a změny stačí provádět pouze na jednom místě, což šetří čas. Dále, eliminace duplikovaného kódu zvyšuje čitelnost a srozumitelnost programu, což usnadňuje spolupráci mezi vývojáři. Dodržování "dry" principu také umožňuje snadnější refaktorování a znuvupoužitelnost kódu v různých částech programu. 
 
-Nejde jen o DRY. Také jste si mohli všimnout, že je kód dlouhý a hůře čitelný. Když však nějakou menší logickou část uzavřete do vhodně pojmenované funkce a tu na přílušném místě zavoláte, čtení kódu se stane příjemnějším.
+Nejde jen o DRY. Také jste si mohli všimnout, že je kód dlouhý a hůře čitelný. Když však nějakou menší logickou část uzavřete do vhodně pojmenované funkce a tu na příslušném místě zavoláte, čtení kódu se stane příjemnějším.
 
 A právě zde budou funkce užitečné.
 
@@ -30,7 +30,7 @@ def multiply():
     product = 2 * 4
     return product
 ```
-Co když ale takovou funkci chceme využít i pro jiná čísla? Pak jsou tu takzvané parametry. Parametry už znáte z hodin matematiky nebo fyziky. Matematickým funckím, jako např. sinus, také předáváme parametry. Pak nám funkce nevrací vždy konstantní hodnotu. Její výstup je závislý na vstupu - parametrech. Vlastnosti algoritmů platí i pro funkce. Ona funkce je vlastně alogritmus. Mějme funkci `multiply`, která bude mít dva parametry. Tyto parametry funkce vynásobí a výsledek nám vrátí.
+Co když ale takovou funkci chceme využít i pro jiná čísla? Pak jsou tu takzvané parametry. Parametry už znáte z hodin matematiky nebo fyziky. Matematickým funkcím, jako např. sinus, také předáváme parametry. Pak nám funkce nevrací vždy konstantní hodnotu. Její výstup je závislý na vstupu - parametrech. Vlastnosti algoritmů platí i pro funkce. Ona funkce je vlastně algoritmus. Mějme funkci `multiply`, která bude mít dva parametry. Tyto parametry funkce vynásobí a výsledek nám vrátí.
 ```python
 def multiply(number1, number2):
     product = number1 * number2
@@ -41,7 +41,7 @@ Lze vrátit i výraz. Není tedy nutné hodnotu vypočítat, uložit do proměnn
 def multiply(number1, number2):
     return number1 * number2
 ```
-Silně doporučuji využívat tzv. type hinting. Je v Pythonu nepovinný, ale přináší mnoho výhod. Některá IDE vám zobrazí deklaraci, kde uvidíte i datové typy parametrů a výstupu. To vám může napovědět co očekávat, sniží to míru chybovosti a pádu programu. Zajdeme-li ještě dál, bude vás to při vytváření funkcí nutit vracet hodnotu stejného typu, dokonce vás to pobízí k vracení logicky stejných hodnot.
+Silně doporučuji využívat tzv. type hinting. Je v Pythonu nepovinný, ale přináší mnoho výhod. Některá IDE vám zobrazí deklaraci, kde uvidíte i datové typy parametrů a výstupu. To vám může napovědět co očekávat, sníží to míru chybovosti a pádu programu. Zajdeme-li ještě dál, bude vás to při vytváření funkcí nutit vracet hodnotu stejného typu, dokonce vás to pobízí k vracení logicky stejných hodnot.
 ```python
 def multiply(number1: int, number2: int) -> int:
     return number1 * number2
@@ -110,7 +110,7 @@ for _ in range(10):
     switch_on_traffic_lights()
 ```
 ### Popis řešení
-Nejprve je naimportován potřebný modul led a následně vytvořeny objekty diod. Na řádku osm je hlavička funkce `switch_on_traffic_lights()`, která nebere žádné parametry a vidíme, že vrací `None`. Následuje tělo funkce, které začáná vytvořením proměnné `sleep_time` udržující hodnotu délky svícení jedné barvy semaforu. Dále jsou jen rozsvěceny a zhasínány led diody v daném časovém intervalu. Již mimo funkci, vhlavním toku programu je cyklus for, který zajistí deset zavolámí výše vytvořené funkce `switch_on_traffic_lights()`.
+Nejprve je naimportován potřebný modul led a následně vytvořeny objekty diod. Na řádku osm je hlavička funkce `switch_on_traffic_lights()`, která nebere žádné parametry a vidíme, že vrací `None`. Následuje tělo funkce, které začáná vytvořením proměnné `sleep_time` udržující hodnotu délky svícení jedné barvy semaforu. Dále jsou jen rozsvěceny a zhasínány led diody v daném časovém intervalu. Již mimo funkci, vhlavním toku programu je cyklus for, který zajistí deset zavolání výše vytvořené funkce `switch_on_traffic_lights()`.
 ### Doplňující poznámky 
 Možná žáky napadne dále funkci rozdělit na menší funkce, pokud objeví opakující se vzor, který by stálo za to dát do funkce, nechte je to udělat.
 
@@ -122,7 +122,7 @@ Pro tuto úlohu bude z modulů stačit jedna led dioda z Nezha sady.
 ### Co se naučíte
 V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí, zároveň je součástí této úlohy metoda code review.
 ### Jak postupovat
-Funkce jsou malé a jak mají vypadat je popsané v zadání, můžete tedy zkusit dát ákům zadání a nechat je pracovat individuálně (případně ve dvojicích. Nejprve je je vytvořena funkce `dot_or_dash(pause_time)`, parametr pause time je číselná hodnota udávající, jak dlouho bude led svítit dle tohoto se jedná o čárku nebo tečku. Dále následují funkce pro zablikání písmene S a písmene O. Oba tyto znaky se skládají ze tří signálů, které jsou por O dlouhé a pro S krátké. Poslední funkce rozbliká celý kód SOS a to pomocí zavolání jendotlivých písmen. 
+Funkce jsou malé a jak mají vypadat je popsané v zadání, můžete tedy zkusit dát žákům zadání a nechat je pracovat individuálně (případně ve dvojicích. Nejprve je vytvořena funkce `dot_or_dash(pause_time)`, parametr pause time je číselná hodnota udávající, jak dlouho bude led svítit dle tohoto se jedná o čárku nebo tečku. Dále následují funkce pro zablikání písmene S a písmene O. Oba tyto znaky se skládají ze tří signálů, které jsou pro O dlouhé a pro S krátké. Poslední funkce rozbliká celý kód SOS a to pomocí zavolání jednotlivých písmen. 
 
 <p align="center">
   <img src=/img/semafor.png alt="semafor" width="100%">
@@ -160,10 +160,10 @@ def morse_SOS() -> None:
 morse_SOS()
 ```
 ### Popis řešení
-Řešení se skládá ze čtyř funkcí. První `dot_or_dash()`bere jako parametr délku svícení diody. Funkce morse_S a morse_O pomocí for cyklu třikrát zablikají v požadovaném intervalu. Ve funkci SOS, jsou využity vytvořené funkce a funkce `sleep()` pro oddělení jednotlivých písmen.
+Řešení se skládá ze čtyř funkcí. První `dot_or_dash()`bere jako parametr délku svícení diody. Funkce `morse_S()` a `morse_O()` pomocí for cyklu třikrát zablikají v požadovaném intervalu. Ve funkci `morse_SOS()`, jsou využity vytvořené funkce a funkce `sleep()` pro oddělení jednotlivých písmen.
 
 ### Doplňující poznámky 
-Vzorová implementace by se jistě dala ještě vylepšit například využitím konstatních globálních proměnných, v nichž by byli uloženy hodnoty pro dobu čekání. 
+Vzorová implementace by se jistě dala ještě vylepšit například využitím konstantních globálních proměnných, v nichž by byli uloženy hodnoty pro dobu čekání. 
 
 ## Shrnutí <a name="conclusion"/>
 - Co je to funkce?
