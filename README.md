@@ -83,7 +83,7 @@ Po standardním importu modulu microbit následuje import funkce randint z modul
 Pro řešení této úlohy můžete využít některou z metod použitých v předchozích lekcích. Například kreslení diagramu, párové programování nebo PRIMM metodu.
 ## Úloha 2 - Memory test <a name="assignment2"/>
 ### Zadání
-Úkolem je napsat program, který bude simulovat test paměti. V minulé úloze jste si nachystali náhodné generování seznamu. Nyní budete ověřovat, zda si uživatel zapamatoval sekvenci správně. Uživatel bude mačkat tlačítka z modulu button (označená C, D) v zobrazeném pořadí. Pokud zadá správně rozsvítí se červená LED dioda, pokud špatně tak zelená. Na konci programu se zobrazí na micro:bit emoji. V případě, že byla celá sekvence správně, zobrazte `Image.HAPPY`, jinak `Image.SAD`.
+Úkolem je sestavit program, který bude simulovat test paměti. V minulé úloze jste si nachystali náhodné generování seznamu. Nyní budete ověřovat, zda si uživatel zapamatoval sekvenci správně. Uživatel bude mačkat tlačítka z modulu button (označená C, D) v zobrazeném pořadí. Pokud zadá správně rozsvítí se červená LED dioda, pokud špatně tak zelená. Na konci programu se zobrazí na micro:bit emoji. V případě, že byla celá sekvence správně, zobrazte `Image.HAPPY`, jinak `Image.SAD`.
 ### Co budete potřebovat
 Červenou a zelenou LED diodu a modul button. 
 ### Co se naučíte
