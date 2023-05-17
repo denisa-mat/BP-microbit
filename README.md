@@ -151,8 +151,8 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
 ### Fyzická komponenta
 
 ### Popis
-Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
-Pozor na použití motoru. Při špatném zapojení motoru do soustavy pohonu se vám obrátí polarita a motor se točí obráceně.
+:warning: Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
+:warning: Pozor na použití motoru. Při špatném zapojení motoru do soustavy pohonu se vám obrátí polarita a motor se točí obráceně.
 ### Dostupné metody
 `set_motor(self, speed: int) -> None`
   * Parametry:
@@ -196,7 +196,7 @@ TODO
 ### Dostupné metody
 
 ## Servo <a name="servo"></a>
-Třída `Servo` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
+:warning: Třída `Servo` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
 ### Fyzická komponenta
 . TODO
 
