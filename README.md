@@ -191,3 +191,6 @@ Je vhodné zmínit, možnost zavést si před cyklem proměnnou do níž uloží
 
 ## Poznámky pro učitele <a name="pozn"/>
 Oficiální infomace k Nezha kitu naleznete na [elecfreaks.com](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/Nezha-Inventor-s-kit-for-microbit.html).
+
+
+[1] ELECFREAKS. Obsah ELECFREAKS micro:bit Nezha Inventors Kitu.[B.r.]. Dostupné také z https://www.elecfreaks.com/nezha-inventor-s-kit-for-micro-bit-without-micro-bit-board.html
