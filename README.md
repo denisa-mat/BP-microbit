@@ -123,6 +123,12 @@ Pro tuto úlohu bude z modulů stačit jedna led dioda z Nezha sady.
 V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí, zároveň je součástí této úlohy metoda code review.
 ### Jak postupovat
 Funkce jsou malé a jak mají vypadat je popsané v zadání, můžete tedy zkusit dát ákům zadání a nechat je pracovat individuálně (případně ve dvojicích. Nejprve je je vytvořena funkce `dot_or_dash(pause_time)`, parametr pause time je číselná hodnota udávající, jak dlouho bude led svítit dle tohoto se jedná o čárku nebo tečku. Dále následují funkce pro zablikání písmene S a písmene O. Oba tyto znaky se skládají ze tří signálů, které jsou por O dlouhé a pro S krátké. Poslední funkce rozbliká celý kód SOS a to pomocí zavolání jendotlivých písmen. 
+
+<p align="center">
+  <img src=/img/semafor.png alt="semafor" width="100%">
+  <em>Sestavený semafor</em>
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import * 
