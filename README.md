@@ -1,5 +1,5 @@
 # Lekce 7
-### Seznamy, indexace, foreach
+#### Seznamy, indexace, foreach
 
 ## Obsah
 [Motivace](#motivace)  
