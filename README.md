@@ -1,5 +1,5 @@
 # Lekce 0
-#### Úvodem 
+#### Seznámení s materiálem
 
 ## Obsah
 [Co se žáci naučí](#napln)  
