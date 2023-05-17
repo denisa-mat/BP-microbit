@@ -98,6 +98,7 @@ from led import *
 from random import randint
 
 button = BUTTON(J1)
+
 green_led = LED(J2)
 red_led = LED(J3)
 
@@ -120,17 +121,21 @@ C_was_pressed = False
 D_was_pressed = False
     
 for i in range(memory_test_size):
-    while not C_was_pressed and not D_was_pressed:
+    while not C_was_pressed 
+            and not D_was_pressed:
         C_was_pressed = button.C_is_pressed()
         D_was_pressed = button.D_is_pressed()
+        
     if C_was_pressed: 
         input_list.append("C")
     elif D_was_pressed:
         input_list.append("D")
+        
     if memory_list[i] == input_list[i]:
         green_led.set_led_on()
     else:
-        red_led.set_led_on()	
+        red_led.set_led_on()
+        
     sleep(600)
     C_was_pressed = False
     D_was_pressed = False
@@ -143,7 +148,7 @@ else:
     display.show(Image.SAD)
 ```
 ### Popis vzorové implementace
-Část kódu následující po importech a vytvoření objektů následuje část programu, která je popsaná v úloze jedna. Na řádku 21 vytváříme prázdný seznam input_list, řádky 23 a 24 inicializují pomocné proměnné. Následuje for cyklus, v němž se vykonává hlavní část programu. nejprve na řádku 27 čekáme na stisknutí tlačítka, poté si uložíme, které tlačítko bylo zmáčknuto. Do seznamu input_list ukládáme "C" nebo "D" podle stisknutého tlačítka. Následně ověřujeme, jestli se hodnoty v seznamech na stejném indexu shodují a dle toho necháme rozsvítit příslušnou diodu. Nastavíme pomocné proměnné na výchozí stav, zhasneme led diody a ověřujeme podmínku for cyklu. Na závěr programu zobrazíme emoji podle toho, zda se odpovědi shodovali se zadáním.
+Část kódu následující po importech a vytvoření objektů následuje část programu, která je popsaná v úloze jedna. Na řádku 24 vytváříme prázdný seznam input_list, řádky 26 a 27 inicializují pomocné proměnné. Následuje for cyklus, v němž se vykonává hlavní část programu. nejprve na řádku 27 čekáme na stisknutí tlačítka, poté si uložíme, které tlačítko bylo zmáčknuto. Do seznamu input_list ukládáme "C" nebo "D" podle stisknutého tlačítka. Následně ověřujeme, jestli se hodnoty v seznamech na stejném indexu shodují a dle toho necháme rozsvítit příslušnou diodu. Nastavíme pomocné proměnné na výchozí stav, zhasneme led diody a ověřujeme podmínku for cyklu. Na závěr programu zobrazíme emoji podle toho, zda se odpovědi shodovali se zadáním.
 ### Doplňující poznámky 
 Obtížnost přizpůsobíte schopnostem skupiny podle toho, na jak velké bloky program rozdělíte. Nejnáročnější varianta je rozdělit kód na samostatné řádky. Tato metoda umožňuje škálovat zadání, rychlejší skupině žáků lze dát program rozdělen na menší části, pomalejší nechat větší bloky. 
 ## Shrnutí <a name="conclusion"/>
