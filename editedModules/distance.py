@@ -54,3 +54,4 @@ class DISTANCE(object):
             return distance
         elif unit == 1:
             return distance / 254
+        return 0
