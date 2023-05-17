@@ -32,7 +32,7 @@ from microbit import foo
         * True když je tlačítko C zmáčknuto, False jinak
     * Popis:
         * Slouží ke zjištění, zda je tlačítko C stisknuto či nikoliv.
-    
+
 `D_is_pressed(self) -> bool`
     * Paramatery: None
     * Návratová hodnota:
