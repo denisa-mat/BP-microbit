@@ -109,7 +109,7 @@ V této úloze budete pracovat s jedním motorem a potenciometrem, obojí je sou
 ### Co se naučíte
 Žáci si upevní schopnost číst a opravit cizí kód.
 ### Jak postupovat
-Podobně jako v předchozí úloze nechte žáky opravit zadaný kód. Úloha Tato úloha je jednodušší a po zvládnutí předchozí by s ní žáci neměli mít problém. Součástí je sestavení větráku, například dle obrázku níže.
+Podobně jako v předchozí úloze nechte žáky opravit zadaný kód. Úloha Tato úloha je jednodušší a po zvládnutí předchozí by s ní žáci neměli mít problém. Součástí je sestavení větráku.
 
 ### Implementace k opravení
 ```python
