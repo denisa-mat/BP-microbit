@@ -27,36 +27,36 @@ from microbit import foo
 [Button ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05017.html)
 ### Dostupné metody
 `C_is_pressed(self) -> bool`
-    * Paramatery: None
-    * Návratová hodnota:
-        * True když je tlačítko C zmáčknuto, False jinak
-    * Popis:
-        * Slouží ke zjištění, zda je tlačítko C stisknuto či nikoliv.
+  * Paramatery: None
+  * Návratová hodnota:
+    * True když je tlačítko C zmáčknuto, False jinak
+  * Popis:
+    * Slouží ke zjištění, zda je tlačítko C stisknuto či nikoliv.
 
 `D_is_pressed(self) -> bool`
-    * Paramatery: None
-    * Návratová hodnota:
-        * True když je tlačítko D zmáčknuto, False jinak
-    * Popis:
-        * Slouží ke zjištění, zda je tlačítko D stisknuto či nikoliv.
+  * Paramatery: None
+  * Návratová hodnota:
+    * True když je tlačítko D zmáčknuto, False jinak
+  * Popis:
+    * Slouží ke zjištění, zda je tlačítko D stisknuto či nikoliv.
 
 `CD_is_pressed(self) -> bool`
-    * Paramatery: None
-    * Návratová hodnota:
-        * True když jsou obě tlačítka zmáčknuta, False jinak
-    * Popis:
-        * Slouží ke zjištění, zda jsou obě tlačítka stisknuto či nikoliv.
+  * Paramatery: None
+  * Návratová hodnota:
+    * True když jsou obě tlačítka zmáčknuta, False jinak
+  * Popis:
+  * Slouží ke zjištění, zda jsou obě tlačítka stisknuto či nikoliv.
 
 ## Crash <a name="crash"></a>
 ### Fyzická komponenta
 [Crash ElecFreaks doc](https://www.elecfreaks.com/learn-en/microbitplanetX/Plant_X_EF05008.html)
 ### Dostupné metody
 `crash_is_pressed(self) -> bool`
-    * Paramatery: None
-    * Návratová hodnota:
-        * True když senzor zaznamenal náraz, False jinak
-    * Popis:
-        * Slouží ke zjištění, zda senzor zaznamenal náraz.
+  * Paramatery: None
+  * Návratová hodnota:
+    * True když senzor zaznamenal náraz, False jinak
+  * Popis:
+    * Slouží ke zjištění, zda senzor zaznamenal náraz.
 
 ## Distance <a name="distance"></a>
 ### Fyzická komponenta
