@@ -93,18 +93,18 @@ green_diod = LED(J3)
 def switch_on_traffic_lights() -> None:
     sleep_time = 2000
 
-    red_diod.turn_led_on()
+    red_diod.set_led_on()
     sleep(sleep_time)
-    red_diod.turn_led_off()
-    yellow_diod.turn_led_on()
+    red_diod.set_led_off()
+    yellow_diod.set_led_on()
     sleep(sleep_time/2)
-    yellow_diod.turn_led_off()
-    green_diod.turn_led_on()
+    yellow_diod.set_led_off()
+    green_diod.set_led_on()
     sleep(sleep_time)
-    green_diod.turn_led_off()
-    yellow_diod.turn_led_on()
+    green_diod.set_led_off()
+    yellow_diod.set_led_on()
     sleep(sleep_time/2)
-    yellow_diod.turn_led_off()
+    yellow_diod.set_led_off()
 
 for _ in range(10):
     switch_on_traffic_lights()
@@ -128,10 +128,13 @@ Funkce jsou malé a jak mají vypadat je popsané v zadání, můžete tedy zkus
 from microbit import * 
 from led import *
 
-def dot_or_dash(int: pause_time) -> None:
-    led_diod.turn_led_on()
+led_diod = LED(J1)
+
+def dot_or_dash(pause_time: int) -> None:
+    led_diod.set_led_on()
     sleep(pause_time)
-    led_diod.turn_led_off()
+    led_diod.set_led_off()
+    sleep(800)
 
 def morse_S() -> None:
     for _ in range(3):
@@ -143,13 +146,15 @@ def morse_O() -> None:
 
 def morse_SOS() -> None:
     morse_S()
-    sleep(800)
+    sleep(1000)
     morse_O()
-    sleep(800)
+    sleep(1000)
     morse_S()
+
+morse_SOS()
 ```
 ### Popis řešení
-Řešení se skládá ze čtyř funkcí. První `dot_or_dash()`bere jako parametr délku svícení diody. Funkce morse_S a morse_O pomocí for cyklu třikrát zablikají. Ve funkci SOS, jsou využity předchozí vytvořené funkce a funkce `sleep()` pro znázornění ukončení písmene.
+Řešení se skládá ze čtyř funkcí. První `dot_or_dash()`bere jako parametr délku svícení diody. Funkce morse_S a morse_O pomocí for cyklu třikrát zablikají v požadovaném intervalu. Ve funkci SOS, jsou využity vytvořené funkce a funkce `sleep()` pro oddělení jednotlivých písmen.
 
 ### Doplňující poznámky 
 Vzorová implementace by se jistě dala ještě vylepšit například využitím konstatních globálních proměnných, v nichž by byli uloženy hodnoty pro dobu čekání. 
