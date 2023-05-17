@@ -299,7 +299,8 @@ Sensor je schopen zobrazit čísla, např. čas.
 ### Dostupné metody
 `get_trimpot_value(self)`
   * Parametry: None
-  * Návratová hodnota: value: float
+  * Návratová hodnota:
+    * value (float): hodnota naměřené odporu
   * Popis: Vrací hodnotu naměřeného odporu.
 
 ## Další moduly <a name="more"></a>
