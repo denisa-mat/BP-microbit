@@ -199,13 +199,13 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
   * Návratová hodnota: None
   * Popis: Nastaví rychlost motoru na zpátky velmi rychle, vnitřně volá set_motor(-100).
 
-`get_motor_speed() -> int`
+`get_motor_speed(self) -> int`
   * Parametry: None
   * Návratová hodnota:
     * speed (int): rychlost, v rozsahu <-100, 100>
   * Popis: Slouží ke zjištění rychlosti.
 
-`get_motor_goes_forward() -> bool`
+`get_motor_goes_forward(self) -> bool`
   * Parametry: None
   * Návratová hodnota:
     * goes_forward (bool): True pokud motor jede vpřed, False jinak
@@ -300,8 +300,8 @@ Sensor je schopen zobrazit čísla, např. čas.
 `get_trimpot_value(self)`
   * Parametry: None
   * Návratová hodnota:
-    * value (float): hodnota naměřené odporu
-  * Popis: Vrací hodnotu naměřeného odporu.
+    * value (float): hodnota naměřené odporu v intervalu <0, 1023>
+  * Popis: Vrací hodnotu naměřeného odporu v intervalu <0, 1023>.
 
 ## Další moduly <a name="more"></a>
 Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html)
