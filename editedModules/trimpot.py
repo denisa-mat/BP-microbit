@@ -22,6 +22,6 @@ class TRIMPOT(object):
         returns value on trimpot
 
         Return:
-            analog: value
+            analog: value <0, 1023>
         """
         return self.__pin.read_analog()
