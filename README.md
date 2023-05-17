@@ -154,6 +154,13 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
 Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
 Pozor na použití motoru. Při špatném zapojení motoru do soustavy pohonu se vám obrátí polarita a motor se točí obráceně.
 ### Dostupné metody
+`set_motor(self, speed: int) -> None`
+  * Parametry:
+    * speed (int): rychlost v intervalu <-100, 100>
+  * Návratová hodnota: None
+  * Výjimka `ValueError` při hodnotě speed mimo rozsah
+  * Popis: Nastaví rychlost motoru
+
 
 ## Nezha <a name="nezha"></a>
 ### Fyzická komponenta
