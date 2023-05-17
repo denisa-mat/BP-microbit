@@ -1,5 +1,6 @@
 '''
 Úloha 1 - Seznámení s Nezha kitem, Fibonacciho posloupnost
+
 Použijte program vyvtvořený v minulé lekci a modifikujte ho tak,
 aby rozsvítil na matrix modulu diody, jejichž pořadí odpovídá
 hodnotám Fibonacciho posloupnosti. Naimportujte modul obsahující
@@ -24,6 +25,8 @@ while True:
     sleep(500)
 
 '''
+Úloha 2 - Parkovací asistent
+
 Vytvořte simulaci parkovacího asistenta. Napište program,
 který bude pomocí senzoru pro snímání vzdálenosti hlídat,
 jak daleko je překážka a tuto vzdálenost vypíše
