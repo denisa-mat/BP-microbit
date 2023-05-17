@@ -74,7 +74,7 @@ number = 0
 
 while number < 7:
     fact = factorial(0, 7)
-    //TODO: zobraz vysledek
+    //TODO: zobraz vysledek na segmentovy displej
 if fact % 3 != 0:
     //TODO: rozsvit diodu
 ```
@@ -109,7 +109,7 @@ number = 0
 
 while number < 7:
     fact = factorial(number)
-    //TODO: zobraz vysledek
+    //TODO: zobraz vysledek na segmentovy displej
 if fact % 3 != 0:
     //TODO: rozsvit diodu
 ```
@@ -124,9 +124,21 @@ TODO
 TODO
 ### Vzorová implementace
 ```python
-from microbit import * 
+from microbit import *
+from motor import *
+from trimpot import *
 
-#TODO
+motor = MOTOR(1)
+trimpot = TRIMPOT(J1)
+
+fan_setting()
+
+def fan_setting():
+    while button_a.is_pressed():
+        #vypocet hodnoty speed je korektni
+        speed = int((trimpot.get_trimpot_value()/1023)*100)
+        motor.set_motor(sped)
+    motor.stop()
 ```
 ### Popis řešení
 TODO
