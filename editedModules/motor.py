@@ -30,11 +30,11 @@ class MOTOR(object):
             raise ValueError('speed error, <-100, 100>')
 
         if speed < 0:
-            i2c.write(NEZHA_ADDR, bytearray([motor, 0x02, speed * -1, 0]))
+            i2c.write(NEZHA_ADDR, bytearray([self.__pin__, 0x02, speed * -1, 0]))
             self.__goes_forward__ = False
             self.__speed__ = speed * -1
         else:
-            i2c.write(NEZHA_ADDR, bytearray([motor, 0x01, speed, 0]))
+            i2c.write(NEZHA_ADDR, bytearray([self.__pin__, 0x01, speed, 0]))
             self.__goes_forward__ = True
             self.__speed__ = speed
 
@@ -102,7 +102,7 @@ class MOTOR(object):
         """
         self.set_motor(-100)
 
-    def get_motor_speed() -> int:
+    def get_motor_speed(self) -> int:
         """
         returns positive motor speed
         Params: NONE
@@ -111,7 +111,7 @@ class MOTOR(object):
         """
         return self.__speed__
 
-    def get_motor_goes_forward() -> bool:
+    def get_motor_goes_forward(self) -> bool:
         """
         returns True if motor goes forward, False otherwise
         Params: NONE
