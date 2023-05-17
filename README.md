@@ -161,7 +161,53 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
   * Výjimka `ValueError` při hodnotě speed mimo rozsah
   * Popis: Nastaví rychlost motoru
 
+`set_motor_forward_slow(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na pomalu, vnitřně volá set_motor(20).
 
+`set_motor_forward_fast(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na rychle, vnitřně volá set_motor(60).
+
+`set_motor_forward_very_fast(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na velmi rychle, vnitřně volá set_motor(100).
+
+`set_motor_stop(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Zastaví motor, vnitřně volá set_motor(0).
+
+`set_motor_backward_slow(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na zpátky pomalu, vnitřně volá set_motor(-20).
+
+`set_motor_backward_fast(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na zpátky rychle, vnitřně volá set_motor(-60).
+
+`set_motor_backward_very_fast(self) -> None`
+  * Parametry: None
+  * Návratová hodnota: None
+  * Popis: Nastaví rychlost motoru na zpátky velmi rychle, vnitřně volá set_motor(-100).
+
+`get_motor_speed() -> int`
+  * Parametry: None
+  * Návratová hodnota:
+    * speed (int): rychlost, v rozsahu <-100, 100>
+  * Popis: Slouží ke zjištění rychlosti.
+
+`get_motor_goes_forward() -> bool`
+  * Parametry: None
+  * Návratová hodnota:
+    * goes_forward (bool): True pokud motor jede vpřed, False jinak
+  * Popis: Slouží ke zjištění, zda motor jede vpřed. Pro zjištění, zda couvá, použijte metodu `get_motor_speed`
+  
 ## Nezha <a name="nezha"></a>
 ### Fyzická komponenta
 TODO

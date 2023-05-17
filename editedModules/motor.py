@@ -16,7 +16,8 @@ class MOTOR(object):
         i2c.init()
         self.__pin__ = motor_pin
         self.__speed__ = 0
-
+        self.__goes_forward__ = False
+        
     def set_motor(self, speed: int) -> None:
         """
         sets speed
@@ -101,7 +102,7 @@ class MOTOR(object):
         """
         self.set_motor(-100)
 
-    def get_motor_speed() -> None:
+    def get_motor_speed() -> int:
         """
         returns positive motor speed
         Params: NONE
@@ -110,7 +111,7 @@ class MOTOR(object):
         """
         return self.__speed__
 
-    def get_motor_goes_forward() -> None:
+    def get_motor_goes_forward() -> bool:
         """
         returns True if motor goes forward, False otherwise
         Params: NONE
