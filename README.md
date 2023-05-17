@@ -62,7 +62,7 @@ Micro:bit je programovatelný mikropočítač, jeho velikost je pouze 4 x 5 cm, 
 Micro:bit lze programovat na široké škále zařízení bez ohledu na platformu, což snižuje požadavky na hardwarové i programové vybavení. Program se do Micro:bitu přenáší pomocí přiloženého micro USB kabelu nebo bezdrátové komunikace Bluetooth.
 
 ### IDE
-Jako vhodný editor byl vybrán webový [python.microbit.org](python.microbit.org), se kterým budeme pracovat ve všech lekcích (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce). %TODO odkaz na BP
+Jako vhodný editor byl vybrán webový [python.microbit.org](python.microbit.org), se kterým budeme pracovat ve všech lekcích (podrobnosti výběru a další alternativy jsou popsány v kapitole 3.2 bakalářské práce).
 Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bitu, je přívětivý pro začínající programátory a snadno se používá. Výhodou python.microbit.org je simulátor micro:bitu, ovšem bez modulů. Další předností je panel reference neboli dokumentace, která umožňuje vyhledání kódu, klíčových slov nebo dokonce řídících struktur přímo v editoru. Navíc je ještě možné tento kód drag&drop nebo kopírováním přenést do editoru, upravit a ihned použít. Editor python.microbit.org je webová aplikace, která umožňuje spustit editor odkudkoli, což studentům usnadňuje samostudium.
 
 ## Úloha 1 - Hello World <a name="hello-world"/>
