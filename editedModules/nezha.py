@@ -33,27 +33,6 @@ class NEZHA(object):
             i2c.write(NEZHA_ADDR, bytearray([motor, 0x02, speed * -1, 0]))
         else:
             i2c.write(NEZHA_ADDR, bytearray([motor, 0x01, speed, 0]))
-
-    def set_motor_forward_slow(self, motor):
-        self.set_motor(motor, 20)
-
-    def set_motor_forward_fast(self, motor):
-        self.set_motor(motor, 60)
-
-    def set_motor_forward_very_fast(self, motor):
-        self.set_motor(motor, 100)
-
-    def set_motor_stop(self, motor):
-        self.set_motor(motor, 0)
-
-    def set_motor_backward_slow(self, motor):
-        self.set_motor(motor, -20)
-
-    def set_motor_backward_fast(self, motor):
-        self.set_motor(motor, -60)
-
-    def set_motor_backward_very_fast(self, motor):
-        self.set_motor(motor, -100)
     
     def set_servo(self, servo, angle):
         """        
