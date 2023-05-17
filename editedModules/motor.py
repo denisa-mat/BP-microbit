@@ -17,7 +17,7 @@ class MOTOR(object):
         self.__pin__ = motor_pin
         self.__speed__ = 0
 
-    def set_motor(self, speed):
+    def set_motor(self, speed: int) -> None:
         """
         sets speed
         Params:
@@ -38,7 +38,7 @@ class MOTOR(object):
             self.__speed__ = speed
 
 
-    def set_motor_forward_slow(self):
+    def set_motor_forward_slow(self) -> None:
         """
         sets speed to slow, 20
         Params: NONE
@@ -47,7 +47,7 @@ class MOTOR(object):
         """
         self.set_motor(20)
 
-    def set_motor_forward_fast(self):
+    def set_motor_forward_fast(self) -> None:
         """
         sets speed to fast, 60
         Params: NONE
@@ -56,7 +56,7 @@ class MOTOR(object):
         """
         self.set_motor(60)
 
-    def set_motor_forward_very_fast(self):
+    def set_motor_forward_very_fast(self) -> None:
         """
         sets speed to fast, 100
         Params: NONE
@@ -65,7 +65,7 @@ class MOTOR(object):
         """
         self.set_motor(100)
 
-    def set_motor_stop(self):
+    def set_motor_stop(self) -> None:
         """
         sets motor off, sets speed to 0
         Params: NONE
@@ -74,7 +74,7 @@ class MOTOR(object):
         """
         self.set_motor(0)
 
-    def set_motor_backward_slow(self):
+    def set_motor_backward_slow(self) -> None:
         """
         sets motor to go backward with slow speed, -20
         Params: NONE
@@ -83,7 +83,7 @@ class MOTOR(object):
         """
         self.set_motor(-20)
 
-    def set_motor_backward_fast(self):
+    def set_motor_backward_fast(self) -> None:
         """
         sets motor to go backward with fast speed, -60
         Params: NONE
@@ -92,7 +92,7 @@ class MOTOR(object):
         """
         self.set_motor(-60)
 
-    def set_motor_backward_very_fast(self):
+    def set_motor_backward_very_fast(self) -> None:
         """
         sets motor to go backward with very fast speed, -100
         Params: NONE
@@ -101,7 +101,7 @@ class MOTOR(object):
         """
         self.set_motor(-100)
 
-    def get_motor_speed():
+    def get_motor_speed() -> None:
         """
         returns positive motor speed
         Params: NONE
@@ -110,7 +110,7 @@ class MOTOR(object):
         """
         return self.__speed__
 
-    def get_motor_goes_forward():
+    def get_motor_goes_forward() -> None:
         """
         returns True if motor goes forward, False otherwise
         Params: NONE
