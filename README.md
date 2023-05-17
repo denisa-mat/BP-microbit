@@ -73,13 +73,14 @@ from microbit import *
  
 ## Úloha 1 - Semafor <a name="assignment1"/>
 ### Zadání
-Vytvořte funkci, která rozsvítí diody jako na semaforu. Zvolte vhodné konstanty pro délku svícení diod. Metodu poté zavolejte a opakujte desetkrát. K opakování použijte for cyklus.
+Vytvořte funkci, která rozsvítí diody jako na semaforu. Zvolte vhodnou délku svícení diod. Metodu poté zavolejte a opakujte desetkrát. K opakování použijte for cyklus.
 ### Co budete potřebovat
 K řešení úlohy využijete všechny tři LED diody, které jsou součástí Nezha sady.
 ### Co se naučíte
 Žáci se naučí vytvářet vlastní funkce a ve vhodnou chvíli je zavolat.
 ### Jak postupovat
-TODO
+Nejprve naimportujte potřebný modul led a následně vytvořte objekty reprezentující tři 
+
 ### Vzorová implementace
 ```python
 from microbit import * 
@@ -92,44 +93,54 @@ green_diod = LED(J3)
 def switch_on_traffic_lights() -> None:
     sleep_time = 2000
 
-    red_diod.turn_led_on()
+    red_diod.set_led_on()
     sleep(sleep_time)
-    red_diod.turn_led_off()
-    yellow_diod.turn_led_on()
+    red_diod.set_led_off()
+    yellow_diod.set_led_on()
+    sleep(sleep_time/2)
+    yellow_diod.set_led_off()
+    green_diod.set_led_on()
     sleep(sleep_time)
-    yellow_diod.turn_led_off()
-    green_diod.turn_led_on()
-    sleep(sleep_time)
-    green_diod.turn_led_off()
-    yellow_diod.turn_led_on()
-    sleep(sleep_time)
-    yellow_diod.turn_led_off()
+    green_diod.set_led_off()
+    yellow_diod.set_led_on()
+    sleep(sleep_time/2)
+    yellow_diod.set_led_off()
 
 for _ in range(10):
     switch_on_traffic_lights()
 ```
 ### Popis řešení
-TODO
+Nejprve je naimportován potřebný modul led a následně vytvořeny objekty diod. Na řádku osm je hlavička funkce `switch_on_traffic_lights()`, která nebere žádné parametry a vidíme, že vrací `None`. Následuje tělo funkce, které začáná vytvořením proměnné `sleep_time` udržující hodnotu délky svícení jedné barvy semaforu. Dále jsou jen rozsvěceny a zhasínány led diody v daném časovém intervalu. Již mimo funkci, vhlavním toku programu je cyklus for, který zajistí deset zavolámí výše vytvořené funkce `switch_on_traffic_lights()`.
 ### Doplňující poznámky 
-TODO
+Možná žáky napadne dále funkci rozdělit na menší funkce, pokud objeví opakující se vzor, který by stálo za to dát do funkce, nechte je to udělat.
+
 ## Úloha 2 - SOS <a name="assignment2"/>
 ### Zadání
 Napište funkci, která bude blikat SOS v Morseově abecedě. Nezapomeňte, že uvnitř funkce můžete volat jiné funkce. Nejprve napište funkci pro jeden znak, která bude brát jako parametr délku jednoho znaku v milisekundách. Dále vytvořte funkce pro obě potřebná písmena a teprve potom pro celý signál SOS.
 ### Co budete potřebovat
 Pro tuto úlohu bude z modulů stačit jedna led dioda z Nezha sady.
 ### Co se naučíte
-V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí.
+V úloze si žáci vyzkouší vytvořit funkci s parametrem a několik dalších malých funkcí, které budou volány uvnitř jiných funkcí, zároveň je součástí této úlohy metoda code review.
 ### Jak postupovat
-TODO - Code REWIEW
+Funkce jsou malé a jak mají vypadat je popsané v zadání, můžete tedy zkusit dát ákům zadání a nechat je pracovat individuálně (případně ve dvojicích. Nejprve je je vytvořena funkce `dot_or_dash(pause_time)`, parametr pause time je číselná hodnota udávající, jak dlouho bude led svítit dle tohoto se jedná o čárku nebo tečku. Dále následují funkce pro zablikání písmene S a písmene O. Oba tyto znaky se skládají ze tří signálů, které jsou por O dlouhé a pro S krátké. Poslední funkce rozbliká celý kód SOS a to pomocí zavolání jendotlivých písmen. 
+
+<p align="center">
+  <img src=/img/semafor.png alt="semafor" width="100%">
+  <em>Sestavený semafor</em>
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import * 
 from led import *
 
-def dot_or_dash(int: pause_time) -> None:
-    led_diod.turn_led_on()
+led_diod = LED(J1)
+
+def dot_or_dash(pause_time: int) -> None:
+    led_diod.set_led_on()
     sleep(pause_time)
-    led_diod.turn_led_off()
+    led_diod.set_led_off()
+    sleep(800)
 
 def morse_S() -> None:
     for _ in range(3):
@@ -141,17 +152,24 @@ def morse_O() -> None:
 
 def morse_SOS() -> None:
     morse_S()
-    sleep(800)
+    sleep(1000)
     morse_O()
-    sleep(800)
+    sleep(1000)
     morse_S()
+
+morse_SOS()
 ```
 ### Popis řešení
-TODO
+Řešení se skládá ze čtyř funkcí. První `dot_or_dash()`bere jako parametr délku svícení diody. Funkce morse_S a morse_O pomocí for cyklu třikrát zablikají v požadovaném intervalu. Ve funkci SOS, jsou využity vytvořené funkce a funkce `sleep()` pro oddělení jednotlivých písmen.
+
 ### Doplňující poznámky 
 Vzorová implementace by se jistě dala ještě vylepšit například využitím konstatních globálních proměnných, v nichž by byli uloženy hodnoty pro dobu čekání. 
+
 ## Shrnutí <a name="conclusion"/>
-TODO
+- Co je to funkce?
+- Jaký je rozdíl mezi funkcí a metodou?
+- Kolik parametrů může brát funkce?
+
 ## Poznámky pro učitele <a name="pozn"/>
 Pro zjednodušení je zde vynechán pojem procedura. Procedury jsou zahrnuty pod pojem funkce. Procedura je ucelený blok kódu, který má svůj identifikátor a na rozdíl od funkce jen něco provádí, například mění hodnoty v proměnných, upravuje soubory. Její návratový typ je vždy `None`.
 
