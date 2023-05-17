@@ -1,5 +1,22 @@
+'''
+Úloha 1 - Proměnné, výpis
+
+Napište program, na jehož začátku do proměnných uložíte vaše jméno
+a věk a následně zobrazte postupně na displej text ve tvaru
+`Vase jmeno je Anonym a vek je 99 let.`
+'''
+
+from microbit import *
+
+name = "Anonym"
+age = 99
+
+display.show("Vase jmeno je " + name + " a vek je " +
+             str(age) + " let.")
+
+
 """
-Úloha 1 - Proměnné, Fibonacciho posloupnost
+Úloha 2 - Proměnné, Fibonacciho posloupnost
 
 Napište program, který bude v nekonečném cyklu while True počítat Fibonaccioho
 posloupnost a vypisovat její výpočet na micro:bit (použijte metodu scroll
@@ -18,28 +35,3 @@ while True:
     display.scroll(str(number1) + "+" + str(number2) + "=" + str(sum))
     number1 = number2
     number2 = sum
-
-
-"""
-Úloha 2 - Seznámení s Nezha kitem, Fibonacciho posloupnost
-
-Použijte již vytvořený program a modifikujte ho tak, aby rozsvítil na 
-matrix modulu diody, jejichž pořadí odpovídá hodnotám Fibonacciho posloupnosti.
-Naimportujte modul obsahující metody a funkce pro matrix display a využijte 
-jeho metodu set_matrix_draw_index().
-"""
-from microbit import *
-from matrix import *
-
-matrix = MATRIX()
-
-number1 = 0
-number2 = 1
-sum = number1 + number2
-
-while True:
-    matrix.set_matrix_draw_index(sum-1)
-    number1 = number2
-    number2 = sum
-    sum = number1 + number2
-    sleep(500)
