@@ -23,7 +23,7 @@ I u cyklů je důležité dávat pozor na správné odsazení, bez toho nebude p
 Přestože jsme dosud pro zjednodušení používali nekonečný cyklus `while True`, od této chvíle je to něco, čemu se budeme chtít spíš vyhnout. Každý program má nějaký konečný stav, v němž chceme, aby skončil.
 ## Úloha 1 - Auto <a name="assignment1"/>
 ### Zadání
-Sestavte ze Nezha sady vozidlo, které bude pohánět motor a v předu bude mít distance senzor a crash senzor. Poté ho naprogramujte tak, že pojede rychlostí `fast` dokud crash senzor nebude zmačknutý. Pokud bude vozidlo překážce blíže než 40 centimetrů zpomalí na rychlost `slow`. Auto pojede až do chvíle, než sepne crash senzor, v tu chvíli se zastaví a program skončí.
+Sestavte ze Nezha sady vozidlo, které bude pohánět motor a v předu bude mít distance senzor a crash senzor. Poté ho naprogramujte tak, že pojede rychlostí `fast`, dokud crash senzor nezaznamená náraz. Pokud bude vozidlo překážce blíže než 40 centimetrů zpomalí na rychlost `slow`. Auto pojede až do chvíle, než sepne crash senzor, v tu chvíli se zastaví a program skončí.
 ### Co budete potřebovat
 Pro tuto úlohu si připravte crash senzor a distance senzor. Oba jsou součástí Nezha sady.
 ### Co se naučíte
