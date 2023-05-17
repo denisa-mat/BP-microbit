@@ -101,7 +101,7 @@ class NIXIETUBE(object):
             NONE
 
         """
-        intensity = max(0, min(val, 8))
+        intensity = max(0, min(intensity, 8))
         if intensity == 0:
             self.set_power_off()
         else:
