@@ -1,5 +1,5 @@
-# Lekce 3 - Nezha sada, podmínky
-#### Seznámení s Nezha sadou, if, elif, else, logické operátory
+# Lekce 3
+#### Nezha sada, větvení, podmínky a logické operátory
 
 ## Obsah
 [Motivace](#motivace)  
@@ -67,6 +67,12 @@ Pro rozsvícení diod na dané pozici modul obsahuje metodu `set_matrix_draw_ind
 
 Protože žáci ještě neznají práci s cykly a podmínkami, program skončí s výjimkou `ValueError`. Nicméně pokud diody svítí, znamená to, že se podařilo správně nahrát modul a upravit program. Funkce `sleep()` říká jak dlouho v milisekundách má na daném místě program pozastavit. Při práci s micro:bitem budeme `sleep()` používat poměrně často.
 
+### Diagram
+
+<p align="center">
+  <img src=/img/diagram2.png alt="diagram2" width="100%">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -85,11 +91,6 @@ while True:
     sum = number1 + number2
     sleep(500)
 ```
-### Diagram
-
-<p align="center">
-  <img src=/img/diagram2.png alt="diagram2" width="100%">
-</p>
 
 ### Popis vzorové implementace
 Na řádcích 1 a 2 provádíme potřebné importy. Na řádku 4 inicializujeme objekt `matrix` jako instanci třídy `MATRIX()`. Následně inicializujeme proměnné. Inicializace je proces přiřazení počáteční hodnoty proměnné, objektu nebo datové struktury před dalším použitím. V nekonečném `while True` pomocí metody `set_matrix_draw_index()`, které předáme `sum - 1` rozsvítíme diodu na příslušné pozici. Dále aktualizujeme hodnoty proměnných a zavoláme `sleep(500)`, aby bylo na displeji vidět, jak se diody postupně rozsvítí.
@@ -150,6 +151,12 @@ Můžte použít návodné otázky:
 - Skončí program někdy?
 
 Při vytváření proměnných distance a nixietube jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Vyvětlete studentům proč při ukládání do proměnné `dist` dělíte hodnotu celočíselně jednou. Metoda `set_show_number()` bere jako argument celé číslo typu `int`, metoda `get_distance()` vrací `double`, který na `int` nelze přetypovat, dělením dosteme hodnotu typu `float`, kterou už přetypovat lze. Následují jednoduché podmínky. Kdy chcete aby se dioda rozsvítila? Když je vzdálenost menší než 20 centimetrů, jinak ji zhasněte. Aby dioda změsile neblikala použijte `sleep(300)`.
+
+### Diagram
+<p align="center">
+  <img src=/img/diagram2.png alt="diagram2">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -170,10 +177,6 @@ while True:
         led.set_led_off()
     sleep(300)
 ```
-### Diagram
-<p align="center">
-  <img src=/img/diagram2.png alt="diagram2">
-</p>
 
 ### Popis vzorové implementace
 Po úvodních importech jsou na řádcích 6, 7 a 8 inicializované objekty příslušných tříd. Jako parametr předáváme J1 - J4 dle konektoru v němž je modul zapojen. Uvnitř nekonečného cyklu nejprve zjišťujeme vzdálenost od překážky, kterou celočíselně dělíme jedničkou abychom získali hodnotu typu `float` s nulovou destinnou částí. Na řádku 12 hodnotu přetypovanou na `integer` pomocí metody `int()` zobrazujeme na segmentovém displeji. Dále kontrolujeme zda je vzdálenost menší než 20, pokud ano rozsvítíme led diodu metodou `set_led_on()`, jinak ji zhasneme zavoláním metody `set_led_off()`.
