@@ -35,7 +35,7 @@ Další výhodou je kompatibilita Nezha kitu se stavebnicí lego a Fischertechni
 - mapa s čárou pro ježdění po čáře
 
 <p align="center">
-  <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu" width="100%">
+  <img src=/img/nezhaKit.jpg alt="Obsah Nezha kitu [1]" width="100%">
   <em>Obsah Nezha kitu</em>
 </p>
 
