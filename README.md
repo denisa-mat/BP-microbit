@@ -121,33 +121,39 @@ Modul 8 x 16 Matrix je druh maticové obrazovky 8 x 16, která dokáže zobrazov
 ### Použití
 Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
 ### Dostupné metody
-`def set_matrix_clear(self)`
+`def set_matrix_clear(self) -> None`
   * Parametry: None
   * Návratová hodnota: None
   * Popis: Zhasne všechny body matice
 
-`set_matrix_draw(self, x, y)`
+`set_matrix_draw(self, x: int, y: int) -> None`
   * Parametry:
     * Index souřadnice x (int) v intervalu 0-15,
     * Index souřadnice y (int) v intervalu 0-7
   * Návratová hodnota: None
+  * Výjimka `ValueError` při hodnotě souřadnic mimo rozsah
   * Popis: Rozsvítí diodu na daných souřadnicích
 
-`set_matrix_draw_position(self, position)`
+`set_matrix_draw_position(self, position: int) -> None`
   * Parametry:
     * Pozice (int) v intervalu 0-128,
   * Návratová hodnota: None
   * Popis: Rozsvítí diodu na dané pozici dle řádků matice 
 
-`set_matrix_expression(self, emoji)`
+`set_matrix_expression(self, emoji: str) -> Nonew`
   * Parametry:
     * Name of emoji (str), platné hodnoty jsou: Neutral, Sad, Smile, Angry
   * Návratová hodnota: None
+  * Výjimka `ValueError` při neznámé hodnotě emoji
   * Popis: Rozsvítí diody a vytvoří obraz zadaného emoji 
 
 ## Motor <a name="motor"></a>
 ### Fyzická komponenta
-. TODO
+
+### Popis
+Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
+Pozor na použití motoru. Při špatném zapojení motoru do soustavy pohonu se vám obrátí polarita a motor se točí obráceně.
+### Dostupné metody
 
 ## Nezha <a name="nezha"></a>
 ### Fyzická komponenta
@@ -183,6 +189,7 @@ TODO
 ### Dostupné metody
 
 ## Servo <a name="servo"></a>
+Třída `Servo` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
 ### Fyzická komponenta
 . TODO
 
