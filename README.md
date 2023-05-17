@@ -69,15 +69,15 @@ Editor python.microbit.org má tlačítko pro snadný přenos kódu do micro:bit
 ### Zadání
 Napište program, který na vestavěný displej vypíše řetězec "Hello World". Následně program nahrajte do micro:bitu.
 ### Co budete potřebovat
-K této úloze je potřeba pouze micro:bit a kabel k nahrání programu.
+K této úloze nejsou potřebné žádné senzory ani Nezha sada. Je však potřeba micro:bit a kabel pro přenesení programu. To již v dalších úlohách nebude zmiňováno.
 ### Co se naučíte
 Cílem úlohy je především vytvoření prvního programu v MicroPythonu. Dále prakticky seznámit žáky s vývojovým prostředím (IDE) a micro:bitem. Žáci také nahrají první program z počítače do micro:bitu. 
 ### Jak postupovat
 Do okna editoru naimportujte modul microbit pomocí příkazu `from microbit import *`. Tento zápis značí, že importujete vše co modul obsahuje. Symbol `*` lze nahradit za konkrétní funkci nebo metodu, pokud nepotřebujeme pracovat s celým modulem.
 
-Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte  Pro opětovná zobrazení, bez nutnosti restartování programu, obalte příkaz do nekonečného while cyklu. Nekonečný cyklus má jednoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
+Protože se celý řetězec na maticový displej micro:bitu nevejde, využijte pro opětovná zobrazení, bez nutnosti restartování programu, nekonečný while cyklu do něhož příkaz obalte. Nekonečný cyklus má jednoduchou podmínku, která se splní vždy. Stačí tedy použít `while True`.
 
-Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte `Send to micro:bit`, otevře se nápověda a poté okno s kompatibilními zařízeními. 
+Do micro:bitu program z počítače nahrajte pomocí přiloženého micro USB kabelu. Ve spodní části obrazovky vyberte `Send to micro:bit`. Otevře se nápověda a poté okno s kompatibilními zařízeními. 
 
 <p align="center">
   <img src=/img/send1.png alt="Jak připojit micro:bit" width="100%">
@@ -104,7 +104,7 @@ Na prvním řádku importujeme celý modul microbit. V tomto konkrétním příp
 
 ### Doplňující poznámky
 Cykly budou žákům podrobněji vysvětleny až v lekci 4, do té doby si vystačíme s `while True`, pro neustálé opakování programu.
-V případě zájmu si můžou žáci slovo `World` nahradit svým jménem. V Pythonu a stejně tak v MicroPythonu lze pro string použít dvojité uvozovky nebo apostrof.
+V případě zájmu si můžou žáci slovo `World` nahradit svým jménem.
 
 ## Shrnutí <a name="shrnuti"/>
 V této lekci byly představeny nástroje se kterými bude následně pracováno ve všech lekcích. Bylo zde mnoho infomací, které budou sloužit jako opěrné body pro následující kapitoly.
