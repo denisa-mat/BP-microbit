@@ -3,7 +3,7 @@
 
 ## Obsah
 [Motivace](#motivace)  
-[Prostředky I - Proměnné, datové typy](#resources1)  
+[Prostředky - Proměnné, datové typy](#resources1)  
 [Úloha 1 - Proměnné, výpis ](#assignment1)  
 [Úloha 2 - Proměnné, Fibonacciho posloupnost ](#assignment1)  
 [Shrnutí](#conclusion)  
@@ -122,6 +122,13 @@ Zkuste s žáky probrat, jak bude program vypadat, co jsou jeho klíčové body.
 - Podívejte se s žáky na metodu `scroll()`. Jaké bere parametry? Jakým způsobem ji zavoláme?
 
 Metoda `scroll` bere jako parametr `string`, my jí však chceme dávat hodnotu typu `int`, musíme ji proto přetypovat. Pro přetypování proměnné typu `int` na `string` využijte funkci `str()`. Dejte žákům dostatek prostoru zkusit problém diskutovat a následně vyřešit.
+
+### Diagram
+
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram1" width="100%">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import * 
@@ -135,11 +142,6 @@ while True:
     number1 = number2
     number2 = sum
 ```
-### Diagram
-
-<p align="center">
-  <img src=/img/diagram1.png alt="diagram1" width="100%">
-</p>
 
 ### Popis vzorové implementace
 Na řádcích 3 a 4 jsou vytvořené proměnné, do kterých jsou uložené výchozí hodnoty Fibonacciho posloupnosti 0 a 1. Zbytek programu je obalený v nekonečném while cyklu. Na řádku 7 je do proměnné `sum` přiřazen součet dvou předchozích členů posloupnosti, které jsou uložené v proměnných `number1` a `number2`. 
