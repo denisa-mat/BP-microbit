@@ -40,7 +40,7 @@ Tyto logické operátory můžeme využít pro sestavení složitějších podm�
 
 ## Úloha 1 - Test plnoletosti <a name="assignment1"/>
 ### Zadání
-Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba dosáhla osmnácti let zobrazte fajfku (`Image.YES`).
+Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte symbol smutného obličeje (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba dosáhla osmnácti let zobrazte fajfku (`Image.YES`).
 ### Co budete potřebovat
 Pro tuto úlohu jsou potřeba moduly `button` a `nixietube`, které nejsou součástí sady.
 ### Co se naučíte
