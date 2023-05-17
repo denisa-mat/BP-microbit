@@ -13,7 +13,7 @@ class DISTANCE(object):
         pin_echo (pin): Echo
 
     Returns:
-        distance: 距离
+        distance: (object)
     """
 
     def __init__(self, RJ_pin):
@@ -30,15 +30,15 @@ class DISTANCE(object):
             self.__pin_e = pin16
             self.__pin_t = pin15
 
-    def get_distance(self, unit=0):
+    def get_distance(self, unit=0) -> float:
         """
         returns distance
 
         Params:
-            unit (int): 0 for metric, 1 for inches
+            Optional[unit] (int): 0 for metric (default), 1 for inches
 
         Returns:
-            distance: 距离
+            distance (float): measured distance, unit depends on optional param, metric is default
         """
         if unit != 1 or unit != 0:
             raise ValueError('unit has to be 0 or 1')

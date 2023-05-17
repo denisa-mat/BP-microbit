@@ -56,7 +56,4 @@ class BUTTON(object):
             boolean: True/False
 
         """
-        if self.__pinD.read_digital() == 0 and self.__pinC.read_digital() == 0:
-            return True
-        else:
-            return False
+        return self.__pinD.read_digital() == 0 and self.__pinC.read_digital() == 0
