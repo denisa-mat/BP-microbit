@@ -81,7 +81,7 @@ for value in memory_list:
 Po standardním importu modulu microbit následuje import funkce randint z modulu random. Na řádku 4 definujeme délku seznamu, na řádku 5 vytváříme prázdný seznam. Poté počítaným for cyklem do seznamu generujeme náhodné hodnoty a ty díky podmínce transformujeme na požadované hodnoty, které přidáváme do seznamu. V závěru opět metodou `scroll()`, zobrazíme hodnoty z listu postupně na displej.
 ### Doplňující poznámky 
 Pro řešení této úlohy můžete využít některou z metod použitých v předchozích lekcích. Například kreslení diagramu, párové programování nebo PRIMM metodu.
-## Úloha 2 - Memory test <a name="assignment3"/>
+## Úloha 2 - Memory test <a name="assignment2"/>
 ### Zadání
 Úkolem je napsat program, který bude simulovat test paměti. V minulé úloze jste si nachystali náhodné generování seznamu. Nyní budete ověřovat, zda si uživatel zapamatoval sekvenci správně. Uživatel bude mačkat tlačítka z modulu button (označená C, D) v zobrazeném pořadí. Pokud zadá správně rozsvítí se červená LED dioda, pokud špatně tak zelená. Na konci programu se zobrazí na micro:bit emoji. V případě, že byla celá sekvence správně, zobrazte `Image.HAPPY`, jinak `Image.SAD`.
 ### Co budete potřebovat
@@ -123,17 +123,14 @@ for i in range(memory_test_size):
     while not C_was_pressed and not D_was_pressed:
         C_was_pressed = button.C_is_pressed()
         D_was_pressed = button.D_is_pressed()
-        
     if C_was_pressed: 
         input_list.append("C")
     elif D_was_pressed:
         input_list.append("D")
-        
     if memory_list[i] == input_list[i]:
         green_led.set_led_on()
     else:
-        red_led.set_led_on()
-		
+        red_led.set_led_on()	
     sleep(600)
     C_was_pressed = False
     D_was_pressed = False
