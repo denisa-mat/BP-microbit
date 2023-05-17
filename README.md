@@ -11,29 +11,29 @@
 
 
 ## Motivace
-Složené podmínky umožňují kombinovat více jednoduchých podmínek do jedné. To umožňuje vytvářet sofistikovanější rozhodovací struktury a ovládat tok programu na základě více podmínek najednou. Také podporuje v rozvoj kritického myšlení a logického uvažování. 
+Složené podmínky umožňují kombinovat více jednoduchých podmínek do jedné. To umožňuje vytvářet sofistikovanější rozhodovací struktury a ovládat tok programu na základě více podmínek najednou. Také podporuje v rozvoji kritického myšlení a logického uvažování. 
 
 Vyjadřuje složité logické vztahy: Složené podmínky umožňují žákům vyjádřit logické vztahy jako například AND (a), OR (nebo) a NOT (negace). To je důležité pro tvorbu komplexních logických podmínek, které odpovídají reálným situacím.
 
-## Prostředky I - Složené podmínky <a name="resources1"/> 
-V Pythonu se používají logické operátory pro kombinaci podmínek: `and`, `or` a operátor negace `not`.
+## Prostředky - Složené podmínky <a name="resources1"/> 
+V Pythonu se používají tyto logické operátory pro kombinaci podmínek: `and`, `or` a operátor negace `not`.
 
 Operátor `and` vrací `True`, pokud jsou obě podmínky pravdivé, jinak vrací `False`.
 ```python
 if podmínka1 and podmínka2:
-    # provede se, pokud jsou obě podmínky pravdivé
+    # tělo podmínky se vykoná, pokud jsou obě podmínky pravdivé
 ```
 
 Operátor `or` vrací `True`, pokud alespoň jedna z podmínek je pravdivá, jinak vrací `False`.
 ```python
 if podmínka1 or podmínka2:
-    # provede se, pokud je alespoň jedna z podmínek pravdivá
+    # tělo podmínky se vykoná, pokud je alespoň jedna z podmínek pravdivá
 ```
 
 Operátor `not` neguje pravdivostní hodnotu podmínky, tedy vrací `True`, pokud je podmínka nepravdivá, a `False`, pokud je podmínka pravdivá.
 ```python
 if not podmínka1:
-    # provede se, pokud je podmínka1 nepravdivá
+    # tělo podmínky se vykoná, pokud je podmínka1 nepravdivá
 ```
 
 Tyto logické operátory můžeme využít pro sestavení složitějších podmínek. Operátory a podmínky lze spojovat a pomocí závorek zanořovat, vyhodnocení podmínky začíná u levého nejvíce vnitřního výrazu a pokračuje postupně k vnějším výrazům.
@@ -42,19 +42,23 @@ Tyto logické operátory můžeme využít pro sestavení složitějších podm�
 ### Zadání
 Napište program, který bude kontrolovat věk osoby zadaný pomocí modulu `button`. Když se stiskne `button C` přičte se jeden rok až dokud není zmáčknut `button D`, kterým se věk potvrdí. Po celou dobu zobrazujte aktuální věk na segmentovém displeji (`nixietube`). Pokud je věk potvrzen a osoba je mladší pěti let zobrazte smutného smajlíka (`Image.SAD`). Pokud je mladší než osmnáct zobrazte křížek (`Image.NO`), pokud už osoba dosáhla osmnácti let zobrazte fajfku (`Image.YES`).
 ### Co budete potřebovat
-Pro tuto úlohu je potřeba modul `distance` z Nezha kitu a moduly `button` a `nixietube`, které nejsou součástí sady.
+Pro tuto úlohu jsou potřeba moduly `button` a `nixietube`, které nejsou součástí sady.
 ### Co se naučíte
 Cílem úlohy je vyzkoušet práci s podmínkami.
 ### Jak postupovat
-Dejte žákům k dispozici vzorovou implementaci, ideálně vytištěné na papíře a využijte metodu PRIMM. Nechte žáky odhadnout co program dělá, zatím jim nedávejte zadání. Žáci ve skupinách diskutují o fukci programu. Následně nechte žáky připojit moduly a kód spustit v editoru. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. Zadejte žákům otázku/úkol který slouží k důkladnému prozkoumání programu. Například:
+Dejte žákům k dispozici vzorovou implementaci, ideálně vytištěné na papíře a využijte výukovou metodu PRIMM. Nechte žáky odhadnout co program dělá, zatím jim nedávejte zadání. Žáci ve skupinách diskutují o fukci programu. Následně nechte žáky připojit moduly a kód spustit v editoru. Žáci diskutují ve skupinách, zda správně vyhodnotili, jak se bude program chovat. Případně rozeberou v čem se spletli a z jakého důvodu. Zadejte žákům otázku/úkol který slouží k důkladnému prozkoumání programu. Například:
 - Je mi přesně 5, jaký dostanu výstup? (odhadněte bez spuštění s danou hodnotou)
 - Co se stane, když zmáčknu obě tlačítka najednou?
 - Co když budu držet tlačítko C dlouhou dobu?
 - Jak by se program choval pokud by neobsahoval `sleep()`?
+### Diagram
+<p align="center">
+  <img src=/img/diagram3.png alt="diagram3">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import *
-from distance import *
 from nixietube import *
 from button import *
 
@@ -80,12 +84,9 @@ while True:
             age_confirmed = True
     nixietube.set_show_num(age)
 ```
-<p align="center">
-  <img src=/img/diagram3.png alt="diagram3">
-</p>
 
 ### Popis vzorové implementace
-Nejprve proveďte import modulů nixietube a button, z nichž následně vytvoříte objekty. Na řádcích 9 a 10 vytvořte pomocné proměnné pro věk a značku o potvrzení zadaného věku. Ve while cyklu kontrolujte, zda byl věk potvrzen pokud ano zobrazte dle výsledku příslušného smajlíka. Pokud věk potvrzen nebyl zkontrolujte, které tlačítko bylo zmačknuto. Při zmáčknutí tlačítka C přičtěte jedničku k věku, pokud bylo zmáčknuto D, nastavte značku o potvrzení na hodnotu `True`.
+Nejprve proveďte import modulů `nixietube` a `button`, z nichž následně vytvoříte objekty. Na řádcích 9 a 10 vytvořte pomocné proměnné pro věk a značku o potvrzení zadaného věku. Ve while cyklu kontrolujte, zda byl věk potvrzen pokud ano zobrazte dle výsledku příslušn7 symbol. Pokud věk potvrzen nebyl zkontrolujte, které tlačítko bylo zmáčknuto. Při zmáčknutí tlačítka C přičtěte jedničku k věku, pokud bylo zmáčknuto D, nastavte značku o potvrzení na hodnotu `True`.
 ### Doplňující poznámky 
 Pokud vynecháte `sleep()` přičte se jednička opakovaně, protože program stihne za dobu zmáčknutí tlačítka více opakování těla while cyklu.
 
@@ -135,7 +136,7 @@ while True:
     sleep(150)
 ```
 ### Popis řešení
-Podobně jako v minulé úloze naimportujte moduly a inicializujte objekty. Dále vytvořte pomocné proměnné. Zbytek kódu již bude v těle while cyklu. Kontrolujte, zda byl potvrzen pouze věk i výška, či ani jedno. Pokud bylo potvrzeno obojí zobrazte smajlíky dle zadání. Na řádcích 21 a 28 načítáme hodnotu do proměnné na základě zmáčknutí tlačítka C, v případě stisknutí tlačítka D je věk potvrzen. Na konci while cyklu využijte metodu sleep().
+Podobně jako v minulé úloze naimportujte moduly a inicializujte objekty. Dále vytvořte pomocné proměnné. Zbytek kódu již bude v těle while cyklu. Kontrolujte, zda byl potvrzen pouze věk i výška, či ani jedno. Pokud bylo potvrzeno obojí zobrazte smajlíky dle zadání. Na řádcích 21 a 28 načítáme hodnotu do proměnné na základě zmáčknutí tlačítka C, v případě stisknutí tlačítka D je věk potvrzen. Na konci while cyklu využijte metodu `sleep()`.
 ### Doplňující poznámky 
 Pokud máte pocit, že je úloha příliš komplexní nastavte hodnotu výšky staticky na začátku programu. Pak stačí upravit podmínky a kód zůstane z větší části stejný jako v předchozí úloze.
 
@@ -145,7 +146,7 @@ Zbyde-li vám čas, nechte žáky vytvořit vlastní program, který bude testov
 ## Shrnutí <a name="conclusion"/>
 - Jaké jsou základní logické operátory pro kombinaci podmínek?
 - Proč je vhodné znát složené podmínky a nestačí jednoduché?
-- K čemu slouží funkce sleep()?
+- K čemu slouží funkce `sleep()`?
 
 ## Poznámky pro učitele <a name="pozn"/>
-Operace AND, OR a NOT jsou v boolovské algebře jsou základními logickými operacemi, které se používají ke kombinování a transformaci logických hodnot. Booleovská algebra se zabývá algebraickými operacemi nad logickými hodnotami, používají se v mnoha oblastech informatiky a elektrotechniky, jako jsou návrh digitálních obvodů, programování, databázové dotazy a další.
+Operátory AND, OR a NOT jsou v boolovské algebře jsou základními logickými operacemi, které se používají ke kombinování a transformaci logických hodnot. Booleovská algebra se zabývá algebraickými operacemi nad logickými hodnotami, používají se v mnoha oblastech informatiky a elektrotechniky, jako jsou návrh digitálních obvodů, programování, databázové dotazy a další.
