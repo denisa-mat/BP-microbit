@@ -1,5 +1,5 @@
 # Lekce 1
-#### MicroPython, algoritmus, micro:bit, IDE, první program
+#### Úvod do algoritmizace a první program
 
 ## Obsah
 [Motivace](#motivace)  
