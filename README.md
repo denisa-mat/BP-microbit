@@ -18,7 +18,7 @@ Ve všech lekcích budou žáci pracovat s micro:bitem, počítačem a webovým 
 Spolu s micro:bitem bude využitá sada Nezha. Sada se dá pořídit i s micro:bitem, nebo zakoupit zvlášť pokud už micro:bita máte. V některých úlohách se využívají tři senzory planetX, které nejsou její součástí. Jedná se o matrix displej, segment displej a button. Konkrétní potřebné senzory budou specifikovány u každé úlohy. Tyto rozšiřující senzory a displeje využívají moduly, které je třeba naimportovat.
 <a name="cas"/>
 ## Časová náročnost
-Každá lekce je tvořena pro dvě vyučovací hodiny, v ideálním případě následujících po sobě v jednom bloku, tedy 90 minut. Lekcí je vytvořeno deset a v nich dohromady XX úloh pro programování micro:bitu pomocí MicroPythonu. TODO
+Každá lekce je tvořena pro dvě vyučovací hodiny, v ideálním případě následujících po sobě v jednom bloku, tedy 90 minut. Lekcí je vytvořeno deset a v nich dohromady 17 úloh pro programování micro:bitu pomocí MicroPythonu.
 <a name="struktura"/>
 ## Struktura materiálu
 ### Motivace
