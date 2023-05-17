@@ -34,7 +34,7 @@ Funkce `range()`, má argumenty typu `int`, první číslo značí ostrý počá
 ### Co se naučíte
 Žáci si na jednotlivých úlohách vyzkouší různé varianty for cyklu.
 ### Jak postupovat
-První dva úkoly jsou velmi podobné, nechte žáky se zamyslet v čem se liší a zjistit, co můžeme dát metodě `set_matrix_draw_index`. V třetím úkolu jde o zanoření dvou cyklů, pokud žáci zvládnou bez problému vyřešit první dva úkoly neměl by jim ani tento činit zásadní problémy. vysvětlete operaci modulo, která se pro tuto úlohu velmi hodí. Byť z matematiky žáci pravděpodobně neznají tento název, jedná se vlastně o zbytek po dělení. V informatice jde o velmi užitečnou a často používanou operaci. Celá část se zahodí a vrátí se pouze zbytek. Operaci modulo značíme symbolem procenta `%`. Hlídejte, aby si žáci při párovém programování ve svých dvojicích pravidelně střídali role.
+První dva úkoly jsou velmi podobné, nechte žáky se zamyslet v čem se liší a zjistit, co můžeme dát metodě `set_matrix_draw_index`. V třetím úkolu jde o zanoření dvou cyklů, pokud žáci zvládnou bez problému vyřešit první dva úkoly neměl by jim ani tento činit zásadní problémy. vysvětlete operaci modulo, která se pro tuto úlohu velmi hodí. Byť z matematiky žáci pravděpodobně neznají tento název, jedná se vlastně o zbytek po dělení. V informatice jde o velmi užitečnou a často používanou operaci. Celá část se zahodí a vrátí se pouze zbytek. Operaci modulo značíme symbolem procenta `%`. Pokračujte v párovém porogramování z minulé lekce, můžete zkusit vytvořit dvojice jinak. Hlídejte, aby si žáci při párovém programování ve svých dvojicích pravidelně střídali role.
 ### Vzorová implementace
 1.     
 ```python
