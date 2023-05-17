@@ -23,7 +23,7 @@ I u cyklů je důležité dávat pozor na správné odsazení, bez toho nebude p
 Přestože jsme dosud pro zjednodušení používali nekonečný cyklus `while True`, od této chvíle je to něco, čemu se budeme chtít spíš vyhnout. Každý program má nějaký konečný stav, v němž chceme, aby skončil.
 ## Úloha 1 - Auto <a name="assignment1"/>
 ### Zadání
-Sestavte ze Nezha sady vozidlo, které bude pohánět motor a v předu bude mít distance senzor a crash senzor. Poté ho naprogramujte tak, že pojede rychlostí `fast`, dokud crash senzor nezaznamená náraz. Pokud bude vozidlo překážce blíže než 40 centimetrů zpomalí na rychlost `slow`. Auto pojede až do chvíle, než sepne crash senzor, v tu chvíli se zastaví a program skončí.
+Sestavte z Nezha sady vozidlo, které bude pohánět motor a vpředu bude mít distance senzor a crash senzor. Poté ho naprogramujte tak, že pojede rychlostí `fast`, dokud crash senzor nezaznamená náraz. Pokud bude vozidlo překážce blíže než 40 centimetrů zpomalí na rychlost `slow`. Auto pojede až do chvíle, než sepne crash senzor, v tu chvíli se auto zastaví a program skončí.
 ### Co budete potřebovat
 Pro tuto úlohu si připravte crash senzor a distance senzor. Oba jsou součástí Nezha sady.
 ### Co se naučíte
@@ -39,6 +39,13 @@ Prvním krokem v této úloze je sestavit vozítko, které bude schopné pohybu 
  V této lekci zkuste využít metodu párového programování, kdy jsou žáci rozdělení do dvojic a jeden z žáků ovládá klávesnici a myš, soustředí se na drobné kroky, které má před sebou a aktuálně neřeší větší problémy. Druhý žák je v roli pozorovatele a navigátora, kontroluje kód, v případě nejasností nebo pochybností je sdílí. Zároveň si udržuje přehled o struktuře a celistvosti kódu.
 
 Nechte žáky ve dvojicích prozkoumat jaké metody jsou pro dané senzory dostupné a zamyslet se, jak by se mohly hodit při plnění zadání. Dohlížejte na dodržování metody párového programování. V případě, že některá dvojice nebude vědět, jak postupovat dále, zkuste sestavit diagram.
+
+### Diagram
+
+<p align="center">
+  <img src=/img/diagram1.png alt="diagram1" width="100%">
+</p>
+
 ### Vzorová implementace
 ```python
 from microbit import *
@@ -58,11 +65,6 @@ while not crash.crash_is_pressed():
         motor.set_motor_forward_fast()
 motor.set_motor_stop()
 ```
-### Diagram
-
-<p align="center">
-  <img src=/img/diagram1.png alt="diagram1" width="100%">
-</p>
 
 ### Popis řešení
 Provedeme potřebné importy modulů a vytvoříme instance daných tříd. Na řádku 10 vytvoříme cyklus s podmínkou, že není stisknut crash senzor. Uvnitř cyklu měříme vzdálenost a dle její hodnoty necháme auto zrychlit nebo zpomalit.
@@ -82,7 +84,7 @@ Pro tuto úlohu si připravte crash senzor a distance senzor. Oba jsou součást
 ### Co se naučíte
 Žáci si vyzkouší rozšířit vlastní program o funkcionalitu, kterou si sami zvolí. Budou muset vymyslet jakou funkci přidají, jaký použijí modul a jak ho zakomponují do již postaveného vozidla.
 ### Jak postupovat
-Nejprve modifikujte předchozí program. Před while cyklem změřte vzdálenost k nejbližší překážce a uložte ji do proměnné. Následně po zastavení auta přidejte druhý while cyklus, v němž bude vozidlo couvat, dokud senzor nenaměří vzdálenost menší než byla uložená do proměnné na začátku programu.
+Nejprve modifikujte předchozí program. Před while cyklem změřte vzdálenost k nejbližší překážce a uložte ji do proměnné. Následně po zastavení auta přidejte druhý while cyklus, v němž bude vozidlo couvat, dokud senzor nenaměří vzdálenost větší než byla uložená do proměnné na začátku programu.
 
 Druhá část úlohy záleží na tom, jak náročný úkol si žáci zvolí. Dejte jim prostor pro rozmyšlení toho, co chtějí vytvářet. Následně nechte žáky, aby vám popsali svůj záměr, budou tak více motivovaní pro jeho dokončení a nebudou ho v průběhu měnit. Pokud po dokončení zbude dostatek času nechte žáky své inovace krátce odprezentovat ostatním. Využít můžete následující otázky. Jaký modul využili a jak ho zakomponovali do konstrukce vozidla? Jak upravili program? Co nyní umí vozidlo navíc? Přišlo o nějakou svou funkcionalitu?
 ### Vzorová implementace
@@ -125,7 +127,7 @@ Možná vylepšení vozidla žáky:
 ## Shrnutí <a name="conclusion"/>
 - K čemu slouží cyklus?
 - Co se stane, když tělo cyklu nebude odsazené?
-- Jak se spustí program v micro:bitu, když skončí?
+- Jak se opakovaně spustí program v micro:bitu, když skončí?
 ## Poznámky pro učitele <a name="pozn"/>
 Inspiraci pro stavbu vozítek můžete čerpat například na webu [elecfraks](https://www.elecfreaks.com/learn-en/microbitKit/Nezha_Inventor_s_kit_for_microbit/index.html). Je zde mnoho různých projektů, z nichž některé využívají pohybující se roboty.
 
