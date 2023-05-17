@@ -1,7 +1,7 @@
-# Lekce 4 - Složené podmínky
+# Lekce 4
 #### Složené podmínky
 
-### Obsah
+## Obsah
 [Motivace](#motivace)  
 [Prostředky I – Složené podmínky](#resources1)  
 [Úloha 1 - Test plnoletosti](#assignment1)  
