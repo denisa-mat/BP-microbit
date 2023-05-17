@@ -73,7 +73,7 @@ class NIXIETUBE(object):
         self.__stop()
         self.__write_dsp_ctrl()
 
-    def set_power_on(self):
+    def set_power_on(self) -> None:
         """
         sets display on
 
@@ -82,7 +82,7 @@ class NIXIETUBE(object):
         self.__write_data_cmd()
         self.__write_dsp_ctrl()
 
-    def set_power_off(self):
+    def set_power_off(self) -> None:
         """
         sets display off
 
@@ -91,28 +91,26 @@ class NIXIETUBE(object):
         self.__write_data_cmd()
         self.__write_dsp_ctrl()
 
-    def set_intensity(self, val=None):
+    def set_intensity(self, intensity) -> None:
         """
         sets intensity
 
         Params:
-            val (number): intensity, valid within <0,8>
+            intensity (number): intensity, valid within <0,8>
         Return:
             NONE
 
         """
-        if val is None:
-            return self.__intensity
-        val = max(0, min(val, 8))
-        if val == 0:
+        intensity = max(0, min(val, 8))
+        if intensity == 0:
             self.set_power_off()
         else:
             self.__ON = 8
-            self.__intensity = val - 1
+            self.__intensity = intensity - 1
             self.__write_data_cmd()
             self.__write_dsp_ctrl()
 
-    def set_clear(self):
+    def set_clear(self) -> None:
         """
         clears nixie tube
         Params:
@@ -126,7 +124,7 @@ class NIXIETUBE(object):
         self.__dat(3, 0)
         self.__buf_d = [0, 0, 0, 0]
 
-    def set_show_bit(self, num, bit=0):
+    def set_show_bit(self, num: int, bit=0) -> None:
         """
         shows number on given bit, default is 0
 
@@ -138,7 +136,7 @@ class NIXIETUBE(object):
         self.__buf_d[bit % self.__LED] = _SEGMENTS[num % 16]
         self.__dat(bit, _SEGMENTS[num % 16])
 
-    def set_show_DP(self, bit=1, show=True):
+    def set_show_DP(self, bit=1, show=True) -> None:
         """
 
         Params:
@@ -148,13 +146,13 @@ class NIXIETUBE(object):
             NONE
 
         """
-        bit = bit % self.__LED
+        bit_var = bit % self.__LED
         if show:
-            self.__dat(bit, self.__buf_d[bit] | 0x80)
+            self.__dat(bit_var, self.__buf_d[bit_var] | 0x80)
         else:
-            self.__dat(bit, self.__buf_d[bit] & 0x7F)
+            self.__dat(bit_var, self.__buf_d[bit_var] & 0x7F)
 
-    def set_show_num(self, num):
+    def set_show_num(self, num: int) -> None:
         """
         shows number
 
