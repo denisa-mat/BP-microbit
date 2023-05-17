@@ -9,14 +9,16 @@ from microbit import *
 # nebo pouze konkrétní funkci foo pomocí
 from microbit import foo 
 ```
+:warning: Většina modulů je upravena pro potřeby tohoto kurzu. Funkcionalita byla přidávána, neubírána, ale plná zpětná kompatibilita přesto není zaručena. Některé metody se chovají trochu jinak, například přibyly výjimky pro nevalidní vstupy.
 
+:warning: Moduly byly oproti verzi dodané výrobcem v mnohém vylepšeny, ale stále nejsou dokonalé a nějakou úpravu by si jistě zaloužily.
 ## Obsah
 [Button](#button)  
 [Crash](#crash)  
 [Distance](#distance) 
 [Led](#led)   
 [Matrix](#matrix)  
-[Motor tbd](#motor)  
+[Motor](#motor)  
 [Nezha tbd](#nezha)  
 [Nixitube](#nixietube)  
 [Servo tbd](#servo)  
@@ -152,6 +154,7 @@ Dá se využít pro zobrazení konkrétních bodů v souřadnicovém systému.
 
 ### Popis
 :warning: Třída `Motor` není standardní součástí balíčku modulů výrobce. Pro usnadnění práce s ním byla původní třída Nezha rozdělena do dvou `Motor` a `Servo`.
+
 :warning: Pozor na použití motoru. Při špatném zapojení motoru do soustavy pohonu se vám obrátí polarita a motor se točí obráceně.
 ### Dostupné metody
 `set_motor(self, speed: int) -> None`
@@ -229,7 +232,9 @@ set_servo(self, servo, angle)
     * Konektor (int), do kterého je připojeno servo v intervalu 1-4
     * Úhel (int) nákolu v intervalu 0-180
   * Návratová hodnota: None
-  * Popis: ??? TODO
+  * Popis:
+
+
 
 
 ## Nixietube <a name="nixietube"></a>
