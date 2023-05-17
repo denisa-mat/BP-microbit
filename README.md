@@ -304,4 +304,4 @@ Sensor je schopen zobrazit čísla, např. čas.
   * Popis: Vrací hodnotu naměřeného odporu v intervalu <0, 1023>.
 
 ## Další moduly <a name="more"></a>
-Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html)
+Další moduly a jejich dokumentaci najdete v [dokumentaci eleckfreaks](https://www.elecfreaks.com/learn-en/microbitplanetX/index.html).
